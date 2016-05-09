@@ -1,0 +1,9 @@
+[#eo_service_model,reftext='7']
+== EO service model
+
+=== Overview
+
+This Clause defines request types and their responses for operations on EO
+Coverages. EO Coverages can be offered by a WCS server alongside with any other
+type of coverages. Behavior of the service on non-EO Coverages remains
+unchanged.EO data model
