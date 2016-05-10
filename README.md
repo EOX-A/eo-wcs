@@ -54,3 +54,13 @@ Complex changes and feature requests must go through the [change
 request](http://portal.opengeospatial.org/public_ogc/change_request.php)
 process. The details entered in the change request form will help the SWG
 adjudicate and prioritize the request.
+
+## Building
+
+To build this document run `rake build` and open `build/spec/index.html` in a
+browser.
+
+Before the first time also install dependencies via `bundle install`.
+
+The `gh-pages` branch holds the latest approved version of the build and is
+viewable at https://eox-a.github.io/eo-wcs/.
