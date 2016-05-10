@@ -3,6 +3,7 @@
 :toc2:
 :toclevels: 3
 :toc-placement!:
+:toc-title: Contents
 :appendix-caption: Annex
 :requirement-caption: Requirement
 :icons: font
@@ -142,7 +143,8 @@ strictly followed to conform to this standard.
 
 == Submitting organizations
 
-The following organizations have submitted this Interface Specification to the Open GeoSpatial Consortium, Inc.:
+The following organizations have submitted this Interface Specification to the
+Open GeoSpatial Consortium, Inc.:
 
 * Jacobs University Bremen
 * EOX IT Services GmbH
@@ -194,6 +196,7 @@ include::1_base.adoc[]
 include::2_data-model.adoc[]
 include::3_service-model.adoc[]
 include::4_wcs-extensions.adoc[]
+include::5_protocol-bindings.adoc[]
 
 :numbered!:
 
