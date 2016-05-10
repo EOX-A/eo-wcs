@@ -39,6 +39,7 @@ http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/.
 Annex A lists the conformance tests which shall be exercised on any software
 artefact claiming to implement EO-WCS.
 
+[#normative_references,reftext='3']
 == Normative references
 
 This _OGC WCS Application Profile - Earth Observation_ specification consists of

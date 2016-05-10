@@ -1,0 +1,17 @@
+[appendix]
+== Revision History
+
+[#revision_history,reftext='{table-caption} {counter:table-num}']
+[cols="2,1,3,2,4",options="header"]
+|===============================================================================
+|Date       |Release |Author                    |Paragraph modified |Description
+|2010-10-27 |0.1.0   |Peter Baumann, Stephan Meissl |All     |Created
+|2011-01-19 |0.2.0   |Peter Baumann, Stephan Meissl |All     |Various updates
+|2011-01-19 |0.3.0   |Jinsongdi Yu                  |Annex A |Added ATS
+|2011-06-10 |0.4.0   |Peter Baumann, Stephan Meissl |All     |Incorporated OAB
+comments
+|2013-06-19 |0.5.2   |Peter Baumann, Stephan Meissl |All     |Thorough review
+and adjustments to WCS and GMLCOV corrigenda
+|2014-03-05 |1.0     |Peter Baumann, Stephan Meissl, Jinsongdi Yu |Clause 9.2.2,
+Footer |Corrected example and copyright year in
+|===============================================================================
