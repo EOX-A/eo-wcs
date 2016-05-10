@@ -494,11 +494,15 @@ Test passes if all individual tests pass.
 
 *Test method:*
 
-For each EOWCS::DatasetSeries offered by the server under test:
-* Obtain the footprint of EOWCS::DatasetSeries via DescribeEOCoverageSet.
-* Check that the locations of the footprint are expressed in WGS84.
-* Obtain the footprints of all Stitched Mosaics and Datasets the Dataset Series refers to.
-* Check that these footprints are enclosed in the footprint of EOWCS::DatasetSeries.
+For each `EOWCS::DatasetSeries` offered by the server under test:
+
+* Obtain the `footprint` of `EOWCS::DatasetSeries` via _DescribeEOCoverageSet_.
+* Check that the locations of the `footprint` are expressed in WGS84.
+* Obtain the footprints of all Stitched Mosaics and Datasets the Dataset Series
+  refers to.
+* Check that these footprints are enclosed in the `footprint` of
+  `EOWCS::DatasetSeries`.
+
 Test passes if all individual tests pass.
 
 ==== TimePeriod in DatasetSeries
@@ -509,11 +513,16 @@ Test passes if all individual tests pass.
 
 *Test method:*
 
-For each EOWCS::DatasetSeries offered by the server under test:
-* Obtain the timePeriod element s of EOWCS::DatasetSeries via DescribeEOCoverageSet. Check that s is expressed in ISO 8601and that:
+For each `EOWCS::DatasetSeries` offered by the server under test:
+
+* Obtain the `timePeriod` element _s_ of `EOWCS::DatasetSeries` via
+  _DescribeEOCoverageSet_. Check that s is expressed in ISO 8601and that:
 * For each Stitched Mosaics and Datasets the Dataset Series refers to:
-** retrieve the time interval d via DescribeCoverage, DescribeEOCoverageSet, and GetCoverage operations. Check that all responses contain the same time interval information.
-** Check that d is enclosed by the temporal validities of s.
+** retrieve the time interval _d_ via _DescribeCoverage_,
+   _DescribeEOCoverageSet_, and _GetCoverage_ operations. Check that all
+   responses contain the same time interval information.
+** Check that _d_ is enclosed by the temporal validities of _s_.
+
 Test passes if all individual tests pass.
 
 ==== No circular references of Dataset Series
@@ -524,8 +533,12 @@ Test passes if all individual tests pass.
 
 *Test method:*
 
-For each EOWCS::DatasetSeries offered by the server under test:
-* Obtain the EOWCS::DatasetSeries via DescribeEOCoverageSet. Check that all EOWCS::DatasetSeries it refferes to do not refer to the EOWCS::DatasetSeries at hand.
+For each `EOWCS::DatasetSeries` offered by the server under test:
+
+* Obtain the `EOWCS::DatasetSeries` via _DescribeEOCoverageSet_. Check that all
+  `EOWCS::DatasetSeries` it refers to do not refer to the
+  `EOWCS::DatasetSeries` at hand.
+
 Test passes if all individual tests pass.
 
 ==== GetCapabilities Request Sections
@@ -534,9 +547,13 @@ Test passes if all individual tests pass.
 
 *Test Purpose: <<_requirement-29>>*
 
-If a GetCapabilities request contains an ows:Sections element then this element shall contain ows:Section elements with the values defined in OWS Common, or “DatasetSeriesSummary”, or “CoverageSummary”.
-Dependency: [OGC 06-121r9] clause 7.3.3
-Test method:    Send a valid GetCapabilities request contains a sections element and this element contains section elements with the values defined in OWS Common, or “DatasetSeriesSummary”, or “CoverageSummary” to the server under test, check the result consists of an XML document of type Capabilities and the appropriate components, as defined in the plac-es referenced.
+*Test method:*
+
+Send a valid _GetCapabilities_ request contains a `sections` element and this
+element contains `section` elements with the values defined in OWS Common, or
+"DatasetSeriesSummary", or "CoverageSummary" to the server under test, check the
+result consists of an XML document of type `Capabilities` and the appropriate
+components, as defined in the places referenced.
 
 ==== GetCapabilities Response Conformance Class in Profile
 
@@ -544,9 +561,10 @@ Test method:    Send a valid GetCapabilities request contains a sections element
 
 *Test Purpose: <<_requirement-30>>*
 
-A WCS service implementing this extension shall include the following URI in a Profile element in the ServiceIdentification in a GetCapabilities response:
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
+
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
 
 ==== GetCapabilities Response Structure
 
@@ -554,9 +572,11 @@ Test method:    Determine the list of supported extensions via a valid GetCapabi
 
 *Test Purpose: <<_requirement-31>>*
 
-The response to a successful GetCapabilities request shall consist of a data structure as defined in Figure 7, Table 7, and the XML Schema being part of this standard.
-Dependency: [OGC 09-110r4] Clause 8 (http://www.opengis.net/doc/IS/wcs-core-2.0.1/clause/8)
-Test method:    Send a valid GetCapabilities request to the server under test, check the result consists of an XML document of type Capabilities and the appropriate components, as defined in the places referenced.
+*Test method:*
+
+Send a valid _GetCapabilities_ request to the server under test, check the
+result consists of an XML document of type `Capabilities` and the appropriate
+components, as defined in the places referenced.
 
 ==== GetCapabilities Response DatasetSeriesSummary
 
@@ -566,7 +586,11 @@ Test method:    Send a valid GetCapabilities request to the server under test, c
 
 *Test method:*
 
-Send a valid GetCapabilities request to the service under test. If a EOWCS::DatasetSeriesSummary section is contained in the re-sponse then send, for each DatasetSeriesId, a valid DescribeEOCoverag-eSet request. Check that none of these requests results in an exception. Test passes if all checks are successful.
+Send a valid _GetCapabilities_ request to the service under test. If a
+`EOWCS::DatasetSeriesSummary` section is contained in the response then send,
+for each `DatasetSeriesId`, a valid _DescribeEOCoverageSet_ request. Check that
+none of these requests results in an exception. Test passes if all checks are
+successful.
 
 ==== GetCapabilities Response DatasetSeriesSummary no-duplicates
 
@@ -576,7 +600,9 @@ Send a valid GetCapabilities request to the service under test. If a EOWCS::Data
 
 *Test method:*
 
-Send a valid GetCapabilities request to the service under test. If a EOWCS::DatasetSeriesSummary section is contained in the re-sponse check that it does not contain any duplicate Dataset Series identifi-er.
+Send a valid _GetCapabilities_ request to the service under test. If a
+`EOWCS::DatasetSeriesSummary` section is contained in the response check that it
+does not contain any duplicate Dataset Series identifier.
 
 ==== GetCapabilities Response Coverage Summary
 
@@ -586,7 +612,11 @@ Send a valid GetCapabilities request to the service under test. If a EOWCS::Data
 
 *Test method:*
 
-Send a valid GetCapabilities request to the service under test. If a WCS::CoverageSummary section is contained in the response then send, for each coverage identifier, a valid DescribeCoverage and a valid DescribeEOCoverageSet request. Check that none of these requests re-sults in an exception. Test passes if all individual tests pass.
+Send a valid _GetCapabilities_ request to the service under test. If a
+`WCS::CoverageSummary` section is contained in the response then send, for each
+coverage identifier, a valid _DescribeCoverage_ and a valid
+_DescribeEOCoverageSet_ request. Check that none of these requests results in an
+exception. Test passes if all individual tests pass.
 
 ==== GetCapabilities Response Coverage Summary Section
 
@@ -596,7 +626,10 @@ Send a valid GetCapabilities request to the service under test. If a WCS::Covera
 
 *Test method:*
 
-Send valid GetCapabilities requests contains a sections parameter and the section parameter list contains one of the values “CoverageSummary”, “Contents”, or “All” to the service under test. Check that the response contains wcs:CoverageSummary elements.Test passes if all individual tests pass.
+Send valid _GetCapabilities_ requests contains a `sections` parameter and the
+section parameter list contains one of the values "CoverageSummary", "Contents",
+or "All" to the service under test. Check that the response contains
+`wcs:CoverageSummary` elements.Test passes if all individual tests pass.
 
 ==== GetCapabilities Response DatasetSeries Summary Section
 
@@ -606,7 +639,10 @@ Send valid GetCapabilities requests contains a sections parameter and the sectio
 
 *Test method:*
 
-Send valid GetCapabilities requests contains a sections parameter and the section parameter list contains one of the values “DatasetSeriesSum-mary” or “All” to the service under test. Check that the response contains a eowcs:DatasetSeriesSummary.Test passes if all individual tests pass.
+Send valid _GetCapabilities_ requests contains a `sections` parameter and the
+section parameter list contains one of the values "DatasetSeriesSummary" or
+"All" to the service under test. Check that the response contains a
+`eowcs:DatasetSeriesSummary`.Test passes if all individual tests pass.
 
 ==== GetCapabilities Response Coverage Subtype
 
@@ -616,7 +652,9 @@ Send valid GetCapabilities requests contains a sections parameter and the sectio
 
 *Test method:*
 
-Send a valid GetCapabilities request to the server under test, check that each EO Coverage listed contains the corresponding value in its WCS::CoverageSubtype element.
+Send a valid _GetCapabilities_ request to the server under test, check that each
+EO Coverage listed contains the corresponding value in its
+`WCS::CoverageSubtype` element.
 
 ==== GetCapabilities Response countDefault
 
@@ -626,7 +664,9 @@ Send a valid GetCapabilities request to the server under test, check that each E
 
 *Test method:*
 
-Send a valid GetCapabilities request to the server under test, check that its ows:OperationsMetadata element contains an ows:Constraint element, as defined in the places referenced.
+Send a valid _GetCapabilities_ request to the server under test, check that its
+`ows:OperationsMetadata` element contains an `ows:Constraint` element, as
+defined in the places referenced.
 
 ==== Describe Coverage Response EO Metadata
 
@@ -636,7 +676,9 @@ Send a valid GetCapabilities request to the server under test, check that its ow
 
 *Test method:*
 
-For each EO Coverage offered by the server, send a valid DescribeCover-age request to server under test. Check that the result contains an EOMetadata element. Test passes if all individual tests pass.
+For each EO Coverage offered by the server, send a valid _DescribeCoverage_
+request to server under test. Check that the result contains an `EOMetadata`
+element. Test passes if all individual tests pass.
 
 ==== Describe Coverage Response Coverage Subtype
 
@@ -646,7 +688,9 @@ For each EO Coverage offered by the server, send a valid DescribeCover-age reque
 
 *Test method:*
 
-Send a valid DescribeCoverage request to the server under test, check that each EO Coverage listed contains the corresponding value in its WCS::CoverageSubtype element.
+Send a valid _DescribeCoverage_ request to the server under test, check that
+each EO Coverage listed contains the corresponding value in its
+`WCS::CoverageSubtype` element.
 
 ==== GetCoverage Request no Slicing
 
@@ -657,8 +701,10 @@ Send a valid DescribeCoverage request to the server under test, check that each 
 *Test method:*
 
 For each EO Coverage offered by the server:
-* send otherwise GetCoverage requests with and without a slicing opera-tion.
-* Check whether appropriate valid results or exceptions, resp., are deliv-ered.
+
+* send otherwise _GetCoverage_ requests with and without a slicing operation.
+* Check whether appropriate valid results or exceptions, resp., are delivered.
+
 Test passes if all individual tests pass.
 
 ==== GetCoverage Response Coverage Type
@@ -667,14 +713,13 @@ Test passes if all individual tests pass.
 
 *Test Purpose: <<_requirement-42>>*
 
-The response to a successful GetCoverage request
-- on a Rectified Stitched Mosaic shall be of type RectifiedStitchedMosaic,
-- on a Rectified Dataset shall be of type RectifiedDataset,
-- on a Referenceable Stitched Mosaic shall be of type Referencea-bleStitchedMosaic, and
-- on a Referenceable Dataset shall be of type ReferenceableDataset,.
-Test method:    For each Rectified EO Coverage offered by the server:
-* send a valid GetCoverage request to server under test.
+*Test method:*
+
+For each Rectified EO Coverage offered by the server:
+
+* send a valid _GetCoverage_ request to server under test.
 * Check that the result is Coverage of correct type.
+
 Test passes if all individual tests pass.
 
 ==== GetCoverage Response EO Metadata
@@ -686,8 +731,10 @@ Test passes if all individual tests pass.
 *Test method:*
 
 For each EO Coverage offered by the server:
-* send a valid GetCoverage request to server under test.
-* Check that the responses contain a EOWCS::EOMetadata.
+
+* send a valid _GetCoverage_ request to server under test.
+* Check that the responses contain a `EOWCS::EOMetadata`.
+
 Test passes if all individual tests pass.
 
 ==== GetCoverage Response EO Metadata in Stitched Mosaic
@@ -699,8 +746,13 @@ Test passes if all individual tests pass.
 *Test method:*
 
 For each Stitched Mosaic offered by the server:
-* send a valid GetCoverage request with an effective spatio-temporal request trim interval to server under test.
-* Check that the EOWCS::EOMetadata of the coverage returned con-tains the original Stitched Mosaic’s references to those Datasets which have a non-empty intersection with the effective spatio-temporal re-quest trim interval.
+
+* send a valid _GetCoverage_ request with an effective spatio-temporal request
+  trim interval to server under test.
+* Check that the `EOWCS::EOMetadata` of the coverage returned contains the
+  original Stitched Mosaic’s references to those Datasets which have a non-empty
+  intersection with the effective spatio-temporal request trim interval.
+
 Test passes if all individual tests pass.
 
 ==== GetCoverage Response Footprint in EO Metadata
@@ -712,8 +764,15 @@ Test passes if all individual tests pass.
 *Test method:*
 
 For each EO Coverage offered by the server:
-* Send a valid GetCoverage request with a spatial request trim interval to server under test. Check that the footprint of the EOWCS::EOMe-tadata in the coverage returned is given by the intersection of the spatial request interval and the footprint of the coverage requested.
-* Send a valid GetCoverage request without a trimming interval to serv-er under test. Check that the footprint in the result coverage is given by the footprint of the coverage requested.
+
+* Send a valid _GetCoverage_ request with a spatial request trim interval to
+  server under test. Check that the footprint of the `EOWCS::EOMetadata` in the
+  coverage returned is given by the intersection of the spatial request interval
+  and the footprint of the coverage requested.
+* Send a valid _GetCoverage_ request without a trimming interval to server under
+  test. Check that the footprint in the result coverage is given by the
+  footprint of the coverage requested.
+
 Test passes if all individual tests pass.
 
 ==== GetCoverage Response Lineage in EO Metadata
@@ -725,8 +784,15 @@ Test passes if all individual tests pass.
 *Test method:*
 
 For each EO Coverage offered by the server under test:
-* retrieve Lineage component information via DescribeCoverage, DescribeEOCoverageSet, and GetCoverage operations. Check that all re-sponses contain the same information.
-* Send a valid GetCoverage request to server under test. Check that the Lineage component  consists of the Lineage component of the cover-age requested with one record appended containing the complete, ver-batim GetCoverage  request leading to this response.
+
+* retrieve Lineage component information via _DescribeCoverage_,
+  _DescribeEOCoverageSet_, and _GetCoverage_ operations. Check that all
+  responses contain the same information.
+* Send a valid _GetCoverage_ request to server under test. Check that the
+  Lineage component consists of the Lineage component of the coverage requested
+  with one record appended containing the complete, verbatim _GetCoverage_
+  request leading to this response.
+
 Test passes if all individual tests pass.
 
 ==== DescribeEOCoverageSet Request Structure
@@ -737,7 +803,8 @@ Test passes if all individual tests pass.
 
 *Test method:*
 
-Send DescribeEOCoverageSet requests with valid and invalid request structure.
+Send _DescribeEOCoverageSet_ requests with valid and invalid request structure.
+
 Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 ==== DescribeEOCoverageSet Request Sections
@@ -746,13 +813,16 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test Purpose: <<_requirement-48>>*
 
-If a DescribeEOCoverageSet request contains an ows:Sections element then this element shall contain one of the values “CoverageDescriptions”, “DatasetSeriesDescriptions”, or “All”.
-Dependency: [OGC 06-121r9] clause 7.3.3
-Test method:    Send otherwise valid DescribeEOCoverageSet requets contain a sec-tions element and this element contains one of the values:
-* “CoverageDescription”
-* “DatasetSeriesDescriptions”
-* “All”
+*Test method:*
+
+Send otherwise valid _DescribeEOCoverageSet_ requests containing a `sections`
+element and this element containing one of the values:
+
+* "CoverageDescription"
+* "DatasetSeriesDescriptions"
+* "All"
 * invalid values
+
 Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 ==== DescribeEOCoverageSet Request eoId
@@ -763,7 +833,11 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test method:*
 
-For each Dataset, Stitched Mosaic, and Dataset Series offered by the serv-er under test, sends a valid DescribeEOCoverageSet request to server un-der test. Check that the identifier of a Dataset, a Stitched Mosaic, or a Da-taset Series is equal to the eoId parameter value in the request. Test passes if all individual tests pass.
+For each Dataset, Stitched Mosaic, and Dataset Series offered by the server
+under test, sends a valid _DescribeEOCoverageSet_ request to server under test.
+Check that the identifier of a Dataset, a Stitched Mosaic, or a Dataset Series
+is equal to the eoId parameter value in the request. Test passes if all
+individual tests pass.
 
 ==== DescribeEOCoverageSet Request Containment
 
@@ -773,10 +847,13 @@ For each Dataset, Stitched Mosaic, and Dataset Series offered by the serv-er und
 
 *Test method:*
 
-Send otherwise DescribeEOCoverageSet requests contain a containment parameter and this parameter has one of the values:
-* “contains”
-* “overlaps”
+Send otherwise valid _DescribeEOCoverageSet_ requests contain a `containment`
+parameter and this parameter has one of the values:
+
+* "contains"
+* "overlaps"
 * invalid values
+
 Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 ==== DescribeEOCoverageSet Request Dimension
@@ -787,7 +864,11 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test method:*
 
-Send otherwise valid DescribeEOCoverageSet requests to server under test which contain duplicate, and send requests which contain no duplicate dimension parameters. Do so for requests with single,and multiple di-mensionTrim. Verify that, whenever at least one duplicate dimension occurs, an exception is returned and a normal response otherwise.
+Send otherwise valid _DescribeEOCoverageSet_ requests to server under test which
+contain duplicate, and send requests which contain no duplicate dimension
+parameters. Do so for requests with single, and multiple `dimensionTrim`. Verify
+that, whenever at least one duplicate dimension occurs, an exception is returned
+and a normal response otherwise.
 
 ==== DescribeEOCoverageSet Request CRS
 
@@ -797,9 +878,13 @@ Send otherwise valid DescribeEOCoverageSet requests to server under test which c
 
 *Test method:*
 
-Send otherwise valid DescribeEOCoverageSet requests to server under test which contain:
-* WGS84 [4] as spatial and ISO 8601 [2] as temporal CRS for the coor-dinates in trim request
-*  Other CRS for the coordinates in trim requests
+Send otherwise valid _DescribeEOCoverageSet_ requests to server under test which
+contain:
+
+* WGS84 <<4>> as spatial and ISO8601 <<2>> as temporal CRS for the coordinates
+  in trim request
+* Other CRS for the coordinates in trim requests
+
 Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 ==== DescribeEOCoverageSet Response Structure
@@ -808,9 +893,10 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test Purpose: <<_requirement-53>>*
 
-The response to a successful DescribeEOCoverageSet request shall con-sist of a EOWCS::EOCoverageSetDescription structure as defined in Table 11, Figure 9 and the XML Schema being part of this standard.
-Dependency: [OGC 09-110r4] Subclause 8.3.2 (http://www.opengis.net/doc/IS/WCS/2.0/clause/8)
-Test method:    Send a DescribeEOCoverageSet request to server under test, check the result consist of a EOWCS::EOCoverageSetDescription structure.
+*Test method:*
+
+Send a valid _DescribeEOCoverageSet_ request to the server under test, check
+that the result consist of a `EOWCS::EOCoverageSetDescription` structure.
 
 ==== DescribeEOCoverageSet Response EO Metadata
 
@@ -820,7 +906,10 @@ Test method:    Send a DescribeEOCoverageSet request to server under test, check
 
 *Test method:*
 
-Send a valid DescribeEOCoverageSet requests to server under test, check that each WCS::CoverageDescription listed in the response contains one EOWCS::EOMetadata element and this element contains the EO Metadata component of the EO Coverage to be described.
+Send a valid _DescribeEOCoverageSet_ requests to server under test, check that
+each `WCS::CoverageDescription` listed in the response contains one
+`EOWCS::EOMetadata` element and this element contains the EO Metadata component
+of the EO Coverage to be described.
 
 ==== DescribeEOCoverageSet Response EO Section CoverageDescriptions
 
@@ -830,10 +919,13 @@ Send a valid DescribeEOCoverageSet requests to server under test, check that eac
 
 *Test method:*
 
-Send otherwise valid DescribeEOCoverageSet requets contain a sec-tions element and this element contains one of the section parameter values:
-* “CoverageDescription”
-*  “All”
+Send otherwise valid _DescribeEOCoverageSet_ requests contain a `sections`
+element and this element contains one of the section parameter values:
+
+* "CoverageDescription"
+* "All"
 * invalid values
+
 Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 ==== DescribeEOCoverageSet Response EO Section DatasetSeriesDescriptions
@@ -844,10 +936,13 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test method:*
 
-Send otherwise valid DescribeEOCoverageSet requets contain a sec-tions element and this element contains one of the section parameter values:
-* “DatasetSeriesDescriptions”
-*  “All”
+Send otherwise valid _DescribeEOCoverageSet_ requests contain a `sections`
+element and this element contains one of the section parameter values:
+
+* "DatasetSeriesDescriptions"
+* "All"
 * invalid values
+
 Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 ==== DescribeEOCoverageSet Response eoId
@@ -858,7 +953,10 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test method:*
 
-Send a valid DescribeEOCoverageSet request containing a wcs:Cover-ageDescription section to server under test. Check that each EO Coverage referred to by one of the objects identified in the eoId request parameter appears at most once.
+Send a valid _DescribeEOCoverageSet_ request containing a
+`wcs:CoverageDescription` section to server under test. Check that each EO
+Coverage referred to by one of the objects identified in the `eoId` request
+parameter appears at most once.
 
 ==== DescribeEOCoverageSet Response Reffered
 
@@ -868,9 +966,17 @@ Send a valid DescribeEOCoverageSet request containing a wcs:Cover-ageDescription
 
 *Test method:*
 
-For each Send a valid DescribeEOCoverageSet requests to server under test, check that each WCS::CoverageDescription listed in the re-sponse is at least contained in one of the  EOWCS::EOMetadata element and that this element contains the EO Metadata component of the EO Coverage to be described.
-For each EOWCS::DatasetSeries offered by the server under test:
-* Send a valid DescribeEOCoverageSet request. Check that each WCS::CoverageDescription listed in the response is at least re-ferred to by one EOWCS::DatasetSeries also contained in the re-sponse.
+For each send a valid _DescribeEOCoverageSet_ requests to server under test,
+check that each `WCS::CoverageDescription` listed in the response is at least
+contained in one of the `EOWCS::EOMetadata` elements and that this element
+contains the EO Metadata component of the EO Coverage to be described.
+
+For each `EOWCS::DatasetSeries` offered by the server under test:
+
+* Send a valid _DescribeEOCoverageSet_ request. Check that each
+  `WCS::CoverageDescription` listed in the response is at least referred to by
+  one `EOWCS::DatasetSeries` also contained in the response.
+
 Test passes if all individual tests pass.
 
 ==== DescribeEOCoverageSet Response Containment
@@ -879,13 +985,22 @@ Test passes if all individual tests pass.
 
 *Test Purpose: <<_requirement-59>>*
 
-The response to a successful DescribeEOCoverageSet request containing a wcs:CoverageDescription section shall contain only descriptions of those EO Coverages whose spatial footprint defined by its eop:EarthObservation/om:featureOfInterest/eop:Foot-print
-- overlaps with the spatial request extent, and the request parameter con-tainment is of value overlaps or is omitted,
-- is completely contained within the spatial request extent, and the request parameter containment is of value contains
-whereby all spatial coordinates are expressed in WGS84 [2].
-Test method:    Send otherwise valid DescribeEOCoverageSet requests containing a wcs:CoverageDescription section and a spatial trim to server under test. Check that:
-* if the request parameter containment is of value overlaps or is omit-ted,  the response contains only descriptions of those EO Coverages whose spatial footprint defined by its eop:EarthObservat-ion/om:featureOfInterest/eop:Footprint overlaps with the spatial request extent;
-* if the request parameter containment is of value contains,  the re-sponse contains only descriptions of those EO Coverages whose spa-tial footprint defined by its eop:EarthObservation/om:featureOfInterest/eop:Footprint is completely contained within the spatial request extent.
+*Test method:*
+
+Send otherwise valid _DescribeEOCoverageSet_ requests containing a
+`wcs:CoverageDescription` section and a spatial trim to server under test. Check
+that:
+
+* if the request parameter `containment` is of value `overlaps` or is omitted,
+  the response contains only descriptions of those EO Coverages whose spatial
+  footprint defined by its
+  `eop:EarthObservation/om:featureOfInterest/eop:Footprint` overlaps with the
+  spatial request extent;
+* if the request parameter `containment` is of value `contains`, the response
+  contains only descriptions of those EO Coverages whose spatial footprint
+  defined by its `eop:EarthObservation/om:featureOfInterest/eop:Footprint` is
+  completely contained within the spatial request extent.
+
 Pass test if both checks succeed.
 
 ==== DescribeEOCoverageSet Response PhenomenonTime
@@ -894,13 +1009,24 @@ Pass test if both checks succeed.
 
 *Test Purpose: <<_requirement-60>>*
 
-The response to a successful DescribeEOCoverageSet request containing a wcs:CoverageDescription section shall contain only descriptions of EO Coverages whose time interval defined by its eop:Earth-Observation/om:phenomenon-Time/gml:TimePeriod/gml:beginPosition and eop:Earth-Observation/om:phenomenon-Time/gml:TimePeriod/gml:endPosition elements in eowcs:EOMetadata
-- overlaps with the request time extent,and the request parameter con-tainment is of value overlaps or is omitted,
-- is completely contained within the request time extent, and the request parameter containment is of value contains,
-whereby all temporal coordinates are expressed in ISO 8601 [2].
-Test method:    Send otherwise valid DescribeEOCoverageSet requests containing a wcs:CoverageDescription section and a time interval to server un-der test. Check that:
-* if the request parameter containment is of value overlaps or is omit-ted,  the response contains only descriptions of EO Coverages whose time interval defined by its eop:EarthObservation/om:phen-omenonTime/gml:TimePeriod/gml:beginPosition and eop:EarthObservation/om:phenomenonTime/gml:Time-Period/gml:endPosition elements in eowcs:EOMetadata overlaps with the request time extent;
-* if request parameter containment is of value contains,  the response contains only descriptions of EO Coverages whose time interval de-fined by its eop:EarthObservation/om:phenomenonTime/ gml:TimePeriod/gml:beginPosition and eop: Earth-Observation/om:phenomenonTime/gml:TimePeriod/ gml:endPosition elements in eowcs:EOMetadata is complete-ly contained within the request time extent;
+*Test method:*
+
+Send otherwise valid _DescribeEOCoverageSet_ requests containing a
+`wcs:CoverageDescription` section and a time interval to server under test.
+Check that:
+
+* if the request parameter `containment` is of value `overlaps` or is omitted,
+  the response contains only descriptions of EO Coverages whose time interval
+  defined by its
+  `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition`
+  elements in `eowcs:EOMetadata` overlaps with the request time extent;
+* if request parameter `containment` is of value `contains`, the response
+  contains only descriptions of EO Coverages whose time interval defined by its
+  `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
+  `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition`
+  elements in `eowcs:EOMetadata` is completely contained within the request time
+  extent;
+
 Pass test if both checks succeed.
 
 ==== DescribeEOCoverageSet Response Trim Omitted
@@ -911,7 +1037,9 @@ Pass test if both checks succeed.
 
 *Test method:*
 
-Send otherwise valid DescribeEOCoverageSet with a trimming in actual boundary of the object and without a trimming to server under test. Check that both responses are not exceptions and equal.
+Send otherwise valid _DescribeEOCoverageSet_ requests with a trimming in actual
+boundary of the object and without a trimming to server under test. Check that
+both responses are not exceptions and equal.
 
 ==== DescribeEOCoverageSet Response Bound Omitted
 
@@ -921,7 +1049,9 @@ Send otherwise valid DescribeEOCoverageSet with a trimming in actual boundary of
 
 *Test method:*
 
-Send otherwise valid DescribeEOCoverageSet requests with a lower or upper bound omitted to server under test. Check that the responses are the same when they are indicated in actual lower or upper bound of the ob-jects.
+Send otherwise valid _DescribeEOCoverageSet_ requests with a lower or upper
+bound omitted to server under test. Check that the responses are the same when
+they are indicated in actual lower or upper bound of the objects.
 
 ==== DescribeEOCoverageSet Response CoverageSubtype
 
@@ -931,7 +1061,9 @@ Send otherwise valid DescribeEOCoverageSet requests with a lower or upper bound 
 
 *Test method:*
 
-Send a valid DescribeEOCoverageSet request to server under test. Check that each Coverage listed contains the corresponding value in its WCS::CoverageSubtype element.
+Send a valid _DescribeEOCoverageSet_ request to server under test. Check that
+each Coverage listed contains the corresponding value in its
+`WCS::CoverageSubtype` element.
 
 ==== DescribeEOCoverageSet Response Count
 
@@ -941,7 +1073,11 @@ Send a valid DescribeEOCoverageSet request to server under test. Check that each
 
 *Test method:*
 
-Send a valid DescribeEOCoverageSet request containing a count param-eter with a value lower than the value of the CountDefault element to server under test. Check that the sum of the numbers of CoverageDe-scription and DatasetSeriesDescription elements is less or equal to the value of the count parameter.
+Send a valid _DescribeEOCoverageSet_ request containing a `count` parameter with
+a value lower than the value of the `CountDefault` element to server under test.
+Check that the sum of the numbers of `CoverageDescription` and
+`DatasetSeriesDescription` elements is less or equal to the value of the `count`
+parameter.
 
 ==== DescribeEOCoverageSet Response numberMatched
 
@@ -951,7 +1087,11 @@ Send a valid DescribeEOCoverageSet request containing a count param-eter with a 
 
 *Test method:*
 
-Send a valid DescribeEOCoverageSet request containing a count param-eter with a value lower than the value of the CountDefault element to server under test. Check that the sum of the numbers of CoverageDe-scription and DatasetSeriesDescription elements is higher or equal to the value of the reported numberMatched parameter.
+Send a valid _DescribeEOCoverageSet_ request containing a `count` parameter with
+a value lower than the value of the `CountDefault` element to server under test.
+Check that the sum of the numbers of `CoverageDescription` and
+`DatasetSeriesDescription` elements is higher or equal to the value of the
+reported `numberMatched` parameter.
 
 ==== DescribeEOCoverageSet Response numberReturned
 
@@ -961,7 +1101,11 @@ Send a valid DescribeEOCoverageSet request containing a count param-eter with a 
 
 *Test method:*
 
-Send a valid DescribeEOCoverageSet request containing a count param-eter with a value lower than the value of the CountDefault element to server under test. Check that the sum of the numbers of CoverageDe-scription and DatasetSeriesDescription elements is equal to the value of the reported numberReturned parameter.
+Send a valid _DescribeEOCoverageSet_ request containing a `count` parameter with
+a value lower than the value of the `CountDefault` element to server under test.
+Check that the sum of the numbers of `CoverageDescription` and
+`DatasetSeriesDescription` elements is equal to the value of the reported
+`numberReturned` parameter.
 
 ==== Band Subsetting
 
@@ -969,9 +1113,10 @@ Send a valid DescribeEOCoverageSet request containing a count param-eter with a 
 
 *Test Purpose: <<_requirement-67>>*
 
-Implementations of this EO-WCS shall support the WCS 2.0 Range Sub-setting Extension [OGC 12-040].
-Dependency: http://www.opengis.net/spec/WCS_service-extension_range-subsetting/1.0/conf/record-subsetting
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
+
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
 
 ==== Scaling
 
@@ -979,9 +1124,10 @@ Test method:    Determine the list of supported extensions via a valid GetCapabi
 
 *Test Purpose: <<_requirement-68>>*
 
-Implementations of this EO-WCS shall support the WCS 2.0 Scaling Ex-tension [OGC 12-039].
-Dependency: http://www.opengis.net/spec/WCS_service-extension_scaling/1.0/conf/scaling
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
+
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
 
 ==== Interpolation
 
@@ -989,9 +1135,10 @@ Test method:    Determine the list of supported extensions via a valid GetCapabi
 
 *Test Purpose: <<_requirement-69>>*
 
-Implementations of this EO-WCS shall support the WCS 2.0 Interpolation Extension [OGC 12-049].
-Dependency: http://www.opengis.net/spec/WCS_service-extension_interpolation/1.0/conf/interpolation
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
+
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
 
 ==== CRS-predefined
 
@@ -999,9 +1146,10 @@ Test method:    Determine the list of supported extensions via a valid GetCapabi
 
 *Test Purpose: <<_requirement-70>>*
 
-Implementations of this EO-WCS shall support the WCS 2.0 CRS Exten-sion [OGC 11-053].
-Dependency: http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
+
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
 
 ==== Encodings
 
@@ -1009,9 +1157,10 @@ Test method:    Determine the list of supported extensions via a valid GetCapabi
 
 *Test Purpose: <<_requirement-71>>*
 
-Implementations of this EO-WCS shall support at least one of the WCS 2.0 coverage format encodings GeoTIFF [OGC12-100r1], NetCDF [OGC 11-010], and JPEG2000 [OGC 11-011].
-Dependency: http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage, http://www.opengis.net/spec/WCS_encoding_netcdf/1.0/conf/netcdf, http://www.opengis.net/spec/WCS_encoding_jpeg2000/1.0/conf/jpeg2000
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
+
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
 
 ==== Protocol-bindings
 
@@ -1021,99 +1170,102 @@ Test method:    Determine the list of supported extensions via a valid GetCapabi
 
 *Test method:*
 
-Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
 
 === Conformance Test Class: eowcs_get-kvp
 
-==== Eowcs_get-kvp/Mandatory
+==== eowcs_get-kvp/Mandatory
 
 *Test id: /conf/eowcs/eowcs_get-kvp/mandatory*
 
 *Test Purpose: <<_requirement-73>>*
 
-Implementations of this EO-WCS which support the eowcs_get-kvp re-quirements class shall support the WCS 2.0 protocol extension GET/KVP [OGC 09-147r3].
-Dependency: http://www.opengis.net/spec/WCS_protocol-binding_get-kvp/1.0/conf/get-kvp
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
 
-==== Eowcs_get-kvp/Conformance Class in Profile
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
+
+==== eowcs_get-kvp/Conformance Class in Profile
 
 *Test id: /conf/eowcs/eowcs_get-kvp/conformance-class-in-profile*
 
 *Test Purpose: <<_requirement-74>>*
 
-Implementations of this EO-WCS which support the eowcs_get-kvp re-quirements class shall include the following URI in a Profile element in the ServiceIdentification in a GetCapabilities response:
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_get-kvp
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
 
-==== Eowcs_get-kvp/describeEOCoverageSet Request
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
+
+==== eowcs_get-kvp/describeEOCoverageSet Request
 
 *Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-request*
 
 *Test Purpose: <<_requirement-75>>*
 
-The request parameter in the DescribeEOCoverageSet request parameter of a DescribeEOCoverageSet request shall be indicated as fol-lows:
-    request=DescribeEOCoverageSet
-Test method:    Send a valid get-kvp DescribeEOCoverageSet request as defined. Check that the response is not an exception.
+*Test method:*
 
-==== Eowcs_get-kvp/describeEOCoverageSet eoid
+Send a valid get-kvp _DescribeEOCoverageSet_ request as defined. Check that the
+response is not an exception.
+
+==== eowcs_get-kvp/describeEOCoverageSet eoid
 
 *Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-eoid*
 
 *Test Purpose: <<_requirement-76>>*
 
-The eoId parameter in the DescribeEOCoverageSet request parame-ter of a DescribeEOCoverageSet request shall be indicated as follows, for parameter values v1, …, vn:
-    eoid= v1,…,vn
-Test method:    Send a valid get-kvp DescribeEOCoverageSet request as defined. Check that the response is not an exception.
+*Test method:*
 
-==== Eowcs_get-kvp/describeEOCoverageSet Containment
+Send a valid get-kvp _DescribeEOCoverageSet_ request as defined. Check that the
+response is not an exception.
+
+==== eowcs_get-kvp/describeEOCoverageSet Containment
 
 *Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-containment*
 
 *Test Purpose: <<_requirement-77>>*
 
-The containment parameter in the DescribeEOCoverageSet re-quest parameter of a DescribeEOCoverageSet request shall be indicated as follows:
-    containment=overlaps
-or  containment=contains
-Test method:    Send a valid get-kvp DescribeEOCoverageSet request as defined. Check that the response is not an exception.
+*Test method:*
 
-==== Eowcs_get-kvp/describeEOCoverageSet Subset
+Send a valid get-kvp _DescribeEOCoverageSet_ request as defined. Check that the
+response is not an exception.
+
+==== eowcs_get-kvp/describeEOCoverageSet Subset
 
 *Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-subset*
 
 *Test Purpose: <<_requirement-78>>*
 
-The trim parameters in the DescribeEOCoverageSet request parame-ter of a DescribeEOCoverageSet request shall be indicated through a pos-sibly empty set of subset specifications, each one with key “subset” and value specification given by a SubsetSpec adhering to this EBNF syn-tax [3] and the resp. XML definitions [6]:
-    SubsetSpec:     dimension ( interval )
-    dimension:      long | lat | phenomenonTime
-    interval:       low , high
-    low:                point   | *
-    high:           point   | *
-    point:          number  | " token "     // " = ASCII 0x42
-Test method:    Send a valid get-kvp DescribeEOCoverageSet request as defined. Check that the response is not an exception.
+*Test method:*
+
+Send a valid get-kvp _DescribeEOCoverageSet_ request as defined. Check that the
+response is not an exception.
 
 === Conformance Test Class: eowcs_soap
 
-==== Eowcs_soap/Mandatory
+==== eowcs_soap/Mandatory
 
 *Test id: /conf/eowcs/eowcs_soap/mandatory*
 
 *Test Purpose: <<_requirement-79>>*
 
-Implementations of this EO-WCS which support the eowcs_soap require-ments class shall support the WCS 2.0 protocol extension SOAP [OGC 09-149r1].
-Dependency: http://www.opengis.net/spec/WCS_protocol-binding_soap/1.0/conf/soap
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
 
-==== Eowcs_soap/Conformance Class in Profile
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
+
+==== eowcs_soap/Conformance Class in Profile
 
 *Test id: /conf/eowcs/eowcs_soap/conformance-class-in-profile*
 
 *Test Purpose: <<_requirement-80>>*
 
-Implementations of this EO-WCS which support the eowcs_soap require-ments class shall include the following URI in a Profile element in the ServiceIdentification in a GetCapabilities response:
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_soap
-Test method:    Determine the list of supported extensions via a valid GetCapabilities re-quest; check that the extension required is listed.
+*Test method:*
 
-==== Eowcs_soap/describeEOCoverageSet Request Structure
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
+
+==== eowcs_soap/describeEOCoverageSet Request Structure
 
 *Test id: /conf/eowcs/eowcs_soap/describeEOCoverageSet-request-structure*
 
@@ -1121,15 +1273,19 @@ Test method:    Determine the list of supported extensions via a valid GetCapabi
 
 *Test method:*
 
-Send otherwise soap DescribeEOCoverageSet requests contain:
-* exactly one Body element containing exactly one DescribeEOCover-ageSet element;
-* exactly one Body element containing more than one DescribeEOCov-erageSet element;
-* exactly one Body element containing no DescribeEOCoverageSet ele-ment;
+Send otherwise valid soap _DescribeEOCoverageSet_ requests containing:
+
+* exactly one Body element containing exactly one DescribeEOCover-ageSet
+  element;
+* exactly one Body element containing more than one DescribeEOCov-erageSet
+  element;
+* exactly one Body element containing no DescribeEOCoverageSet element;
 * more than one Body element;
-* without a Body elment;
+* without a Body element;
+
 Pass test if appropriate valid results or exceptions, resp., are delivered.
 
-==== Eowcs_soap/describeEOCoverageSet Request Structure
+==== eowcs_soap/describeEOCoverageSet Request Structure
 
 *Test id: /conf/eowcs/eowcs_soap/describeEOCoverageSet-request-structure*
 
@@ -1137,9 +1293,10 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test method:*
 
-Send a valid soap DescribeEOCoverageSet request to sever under test. Check response whether the condition is fulfilled.
+Send a valid soap _DescribeEOCoverageSet_ request to sever under test. Check
+response whether the condition is fulfilled.
 
-==== Eowcs_soap/wsdl
+==== eowcs_soap/wsdl
 
 *Test id: /conf/eowcs/eowcs_soap/wsdl*
 
@@ -1147,6 +1304,8 @@ Send a valid soap DescribeEOCoverageSet request to sever under test. Check respo
 
 *Test method:*
 
-For the service under test, retrieve the WSDL description and issue re-quests which make use of this service definition. Check that the service can be addressed and that queries can be retrieved properly.
+For the service under test, retrieve the WSDL description and issue requests
+which make use of this service definition. Check that the service can be
+addressed and that queries can be retrieved properly.
 
--- end of ATS –
+-- end of ATS --
