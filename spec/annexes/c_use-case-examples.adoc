@@ -4,7 +4,7 @@
 In the following two Use Cases are presented to illustrate possible application
 scenarios of EO-WCS in the domain of earth observation and remote sensing.
 
-=== C.1 Use Case 1
+=== Use Case 1
 
 Provider offers, through an EO-WCS service, one Dataset Series containing Sea
 Surface Temperature (SST) and another Dataset Series containing Ocean Color
@@ -44,7 +44,7 @@ depending on the WCS extensions implemented by the server; the Capabilities
 document contains pertinent information. Following download via GetCoverage, the
 SST and OC coverages can be analyzed and processed on User's local workstation.
 
-=== C.2 Use Case 2
+=== Use Case 2
 
 Provider offers, during harvesting seasons (e.g., March through August), three
 2-monthly Stitched Mosaics for a certain area. Whenever new images are available

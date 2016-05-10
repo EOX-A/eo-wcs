@@ -202,6 +202,8 @@ include::5_protocol-bindings.adoc[]
 
 include::bibliography.adoc[]
 
+:numbered:
+
 include::annexes/a_ats.adoc[]
 include::annexes/b_transitional-provisions.adoc[]
 include::annexes/c_use-case-examples.adoc[]
