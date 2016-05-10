@@ -13,13 +13,13 @@
 [id="ogcname"]
 Open Geospatial Consortium +
 [id="ogcheading"]
-Publication Date: 2014-02-26 +
-Approval Date: 2013-12-31 +
-Submission Date: 2013-08-22 +
+Publication Date: TBD +
+Approval Date: TBD +
+Submission Date: TBD +
 Reference number of this Document: OGC 10-140r1 +
 External identifier of this OGC® document: http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.0 +
 URL for this OGC® document: http://docs.opengeospatial.org/is/12-128r11/12-128r11.html +
-Version: 1.0 +
+Version: 1.1draft +
 Category: OGC® Interface Standard +
 Editor: Peter Baumann, Stephan Meissl, Jinsongdi Yu
 
@@ -39,7 +39,7 @@ documentation.
 
 Document type:          OGC Implementation Standard +
 Document subtype:       Interface +
-Document stage:         Approved +
+Document stage:         Draft update of Approved version +
 Document language:      English +
 
 == License Agreement
