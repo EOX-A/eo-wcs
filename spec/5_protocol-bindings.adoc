@@ -55,8 +55,8 @@ or +
 The `trim` parameters in the `DescribeEOCoverageSet` request parameter of a
 _DescribeEOCoverageSet_ request *shall* be indicated through a possibly empty
 set of subset specifications, each one with key "{zwsp}``subset``" and value
-specification given by a `SubsetSpec` adhering to this EBNF syntax [<<rfc2616>>]
-and the resp. XML definitions [<<xmlschema>>]: +
+specification given by a `SubsetSpec` adhering to this EBNF syntax <<3>>
+and the resp. XML definitions <<6>>: +
 `SubsetSpec: dimension [underline]#(# interval [underline]#)#` +
 `dimension: [underline]#long# | [underline]#lat# | [underline]#phenomenonTime#` +
 `interval: low [underline]#,# high` +
@@ -64,12 +64,12 @@ and the resp. XML definitions [<<xmlschema>>]: +
 `high: point | [underline]#*#` +
 `point: number | [underline]#"# token [underline]#"#` // [underline]#"# = ASCII 0x42
 
-Syntax follows the http standard [<<rfc2616>>]: underlined tokens represent
+Syntax follows the http standard <<3>>: underlined tokens represent
 literals which appear "as is" ("terminal symbols"), other tokens represent sub-
 expressions to be substituted ("non-terminals"). A vertical bar ("|"") denotes
 alternatives, items in brackets ("[ ]") are optional. Non-terminals `NCName`,
 `number`, `token`, and `anyURI` follow the resp. XML definitions
-[<<xmlschema>>].
+<<6>>.
 
 NOTE: Allowed values for points are determined by the CRS used. This ranges from
 "2009-11-06" for time to "-41.5" and "41°5’" for lat/long whereby non-numeric
@@ -78,7 +78,7 @@ values have to be enclosed in double quotes.
 NOTE: CRSs are fixed to WGS84 for space and ISO 8601 for time; still they need
 to be indicated in the request syntax to keep it in sync with WCS Core trimming.
 
-NOTE: As per http [<<rfc2616>>], keys are case insensitive whereas values are
+NOTE: As per http <<3>>, keys are case insensitive whereas values are
 case sensitive.
 
 Example: The following KVP-encoded _DescribeEOCoverageSet_ request addresses

@@ -180,7 +180,7 @@ NOTE: This typically is the time period where image acquisition has taken place.
 
 [requirement,uri="/req/eowcs/phenomenonTime-iso8601"]
 For any given EO Coverage, its temporal validity values *shall* be expressed in
-ISO 8601 [<<ISO8601>>].
+ISO 8601 <<2>>.
 
 ==== Range set
 
@@ -424,7 +424,7 @@ Dataset Series refers to.
 [requirement,uri="/req/eowcs/timePeriod-in-datasetSeries"]
 For any given Dataset Series, the `timePeriod` element *shall* enclose the
 temporal validities of all Stitched Mosaics, Datasets, and Dataset Series the
-Dataset Series refers to, expressed in ISO 8601 [<<iso8601>>].
+Dataset Series refers to, expressed in ISO 8601 <<2>>.
 
 A Dataset Series shall not refer to any Dataset Series that refers to it either
 directly or via other Dataset Series i.e. there shall be no circular references.

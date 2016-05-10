@@ -465,7 +465,7 @@ http://schemas.opengis.net/wcs/wcseo/1.0/wcsEOGetCoverage.xsd" gml:id="c1">
 A _DescribeEOCoverageSet_ request submits one or more Dataset Series, Stitched
 Mosaic, or Dataset identifiers together with a spatio-temporal subsetting
 criterion ("bounding box"). The spatial constraint is expressed in WGS84
-[<<epsg>>], the temporal constraint in ISO 8601 [<<iso8601>>].
+<<4>>, the temporal constraint in ISO 8601 <<2>>.
 
 The response to a successful request on a Dataset Series consists of a (possibly
 empty) set of descriptions of Datasets and Stitched Mosaics and a (possibly
@@ -520,8 +520,8 @@ the values "lat", "long", or "phenomenonTime". Each of these values *shall*
 appear at most once in a given request.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-request-crs"]
-A _DescribeEOCoverageSet_ request *shall* use WGS84 [<<epsg>>] as spatial and
-ISO 8601 [<<iso8601>>] as temporal CRS for the coordinates in trim requests.
+A _DescribeEOCoverageSet_ request *shall* use WGS84 <<4>> as spatial and
+ISO 8601 <<2>> as temporal CRS for the coordinates in trim requests.
 
 NOTE: Trim coordinates are not required to lie within the boundaries of the EO
 Coverage inquired.
@@ -663,7 +663,7 @@ Coverages whose spatial footprint defined by its
   `containment` is of value `overlaps` or is omitted, +
 - is completely contained within the spatial request extent, and the request
   parameter `containment` is of value `contains` +
-whereby all spatial coordinates are expressed in WGS84 [<<epsg>>].
+whereby all spatial coordinates are expressed in WGS84 <<4>>.
 
 Temporal subsetting is evaluated against the temporal validity of an EO
 Coverage.
@@ -679,7 +679,7 @@ in `eowcs:EOMetadata` +
   is of value `overlaps` or is omitted, +
 - is completely contained within the request time extent, and the request
   parameter `containment` is of value `contains`, +
-whereby all temporal coordinates are expressed in ISO 8601 [<<iso8601>>].
+whereby all temporal coordinates are expressed in ISO 8601 <<2>>.
 
 Boundary values omitted are substituted by the actual boundary value of the
 object inquired.
