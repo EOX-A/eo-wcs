@@ -14,4 +14,7 @@ comments
 and adjustments to WCS and GMLCOV corrigenda
 |2014-03-05 |1.0     |Peter Baumann, Stephan Meissl, Jinsongdi Yu |Clause 9.2.2,
 Footer |Corrected example and copyright year in
+|2016-05-10 |1.0     |Stephan Meissl                |None    |Made an Asciidoc
+copy and published it on GitHub (https://github.com/EOX-A/eo-wcs,
+https://eox-a.github.io/eo-wcs)
 |===============================================================================
