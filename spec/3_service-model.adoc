@@ -190,7 +190,7 @@ NOTE: A DescribeCoverage request is possible on the identifiers of EO Coverages
 offered by the server even if these are not listed in a GetCapabilities
 response.
 
-=== _DescribeCoverage_ response
+==== _DescribeCoverage_ response
 
 In a _DescribeCoverage_ response, EO Coverage descriptions additionally contain
 the EO Metadata record.
