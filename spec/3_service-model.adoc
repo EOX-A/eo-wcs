@@ -779,3 +779,31 @@ Example The following XML fragment shows parts of a possible
 any of the DatasetSeries or EO Coverages offered by this server |List of
 violating Dataset Series and/or EO Coverage identifiers
 |===============================================================================
+
+=== _GetEOCoverageSet_ operation
+
+==== Overview
+
+Just like the _DescribeEOCoverageSet_ request a _GetEOCoverageSet_ request
+submits one or more Dataset Series, Stitched Mosaic, or Dataset identifiers
+together with a spatio-temporal subsetting criterion ("bounding box"). The
+spatial constraint is expressed in WGS84 <<4>>, the temporal constraint in ISO
+8601 <<2>>.
+
+The response to a successful request on a Dataset Series consists of a (possibly
+empty) set of coverages of Datasets and Stitched Mosaics. The response to a
+successful request on a Stitched Mosaic consists of a (possibly empty) set of
+coverages of Datasets. In any case, the result items are those ones which are
+(i) referred to directly or via Dataset Series by the object submitted and (ii)
+matched by the bounding box. The type of matching - `contains` or `overlaps` -
+is specified in the request.
+
+==== _GetEOCoverageSet_ request
+
+
+
+==== _GetEOCoverageSet_ response
+
+
+
+==== _GetEOCoverageSet_ exceptions
