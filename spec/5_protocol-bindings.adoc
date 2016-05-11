@@ -54,7 +54,7 @@ or +
 [requirement,uri="/req/eowcs_get-kvp/describeEOCoverageSet-subset"]
 The `trim` parameters in the `DescribeEOCoverageSet` request parameter of a
 _DescribeEOCoverageSet_ request *shall* be indicated through a possibly empty
-set of subset specifications, each one with key "{zwsp}``subset``" and value
+set of subset specifications, each one with key \"``subset``" and value
 specification given by a `SubsetSpec` adhering to this EBNF syntax <<3>>
 and the resp. XML definitions <<6>>: +
 `SubsetSpec: dimension [underline]#(# interval [underline]#)#` +

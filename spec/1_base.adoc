@@ -43,8 +43,9 @@ artefact claiming to implement EO-WCS.
 == Normative references
 
 This _OGC WCS Application Profile - Earth Observation_ specification consists of
-the present document and an XML Schema. The complete specification is identified
-by OGC URI
+the present document and an
+http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema]. The complete
+specification is identified by OGC URI
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0,
 the document has OGC URI
 http://www.opengis.net/doc/ISx/WCS_application-profile_earth-observation/1.0.
@@ -204,4 +205,5 @@ Observation 1.0
 
 When multiple representations of the same information are given in a
 specification document these are consistent. Should this not be the case then
-this is considered an error, and the XML schema shall take precedence.
+this is considered an error, and the
+http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema] shall take precedence.
