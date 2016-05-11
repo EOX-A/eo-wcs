@@ -216,21 +216,21 @@ required by applicable law to make this license enforceable</p>
 <li><a href="#__em_describecoverage_em_operation">7.3. <em>DescribeCoverage</em> operation</a>
 <ul class="sectlevel3">
 <li><a href="#__em_describecoverage_em_request">7.3.1. <em>DescribeCoverage</em> request</a></li>
+<li><a href="#__em_describecoverage_em_response">7.3.2. <em>DescribeCoverage</em> response</a></li>
 </ul>
 </li>
-<li><a href="#__em_describecoverage_em_response">7.4. <em>DescribeCoverage</em> response</a></li>
-<li><a href="#__em_getcoverage_em_operation">7.5. <em>GetCoverage</em> operation</a>
+<li><a href="#__em_getcoverage_em_operation">7.4. <em>GetCoverage</em> operation</a>
 <ul class="sectlevel3">
-<li><a href="#__em_getcoverage_em_request">7.5.1. <em>GetCoverage</em> request</a></li>
-<li><a href="#__em_getcoverage_em_response">7.5.2. <em>GetCoverage</em> response</a></li>
+<li><a href="#__em_getcoverage_em_request">7.4.1. <em>GetCoverage</em> request</a></li>
+<li><a href="#__em_getcoverage_em_response">7.4.2. <em>GetCoverage</em> response</a></li>
 </ul>
 </li>
-<li><a href="#__em_describeeocoverageset_em_operation">7.6. <em>DescribeEOCoverageSet</em> operation</a>
+<li><a href="#__em_describeeocoverageset_em_operation">7.5. <em>DescribeEOCoverageSet</em> operation</a>
 <ul class="sectlevel3">
-<li><a href="#_overview_5">7.6.1. Overview</a></li>
-<li><a href="#__em_describeeocoverageset_em_request">7.6.2. <em>DescribeEOCoverageSet</em> request</a></li>
-<li><a href="#__em_describeeocoverageset_em_response">7.6.3. <em>DescribeEOCoverageSet</em> response</a></li>
-<li><a href="#__em_describeeocoverageset_em_exceptions">7.6.4. <em>DescribeEOCoverageSet</em> exceptions</a></li>
+<li><a href="#_overview_5">7.5.1. Overview</a></li>
+<li><a href="#__em_describeeocoverageset_em_request">7.5.2. <em>DescribeEOCoverageSet</em> request</a></li>
+<li><a href="#__em_describeeocoverageset_em_response">7.5.3. <em>DescribeEOCoverageSet</em> response</a></li>
+<li><a href="#__em_describeeocoverageset_em_exceptions">7.5.4. <em>DescribeEOCoverageSet</em> exceptions</a></li>
 </ul>
 </li>
 </ul>
@@ -2143,9 +2143,8 @@ response.
 </table>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="__em_describecoverage_em_response">7.4. <em>DescribeCoverage</em> response</h3>
+<div class="sect3">
+<h4 id="__em_describecoverage_em_response">7.3.2. <em>DescribeCoverage</em> response</h4>
 <div class="paragraph">
 <p>In a <em>DescribeCoverage</em> response, EO Coverage descriptions additionally contain
 the EO Metadata record.</p>
@@ -2270,10 +2269,11 @@ standard.
 </table>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="__em_getcoverage_em_operation">7.5. <em>GetCoverage</em> operation</h3>
+<h3 id="__em_getcoverage_em_operation">7.4. <em>GetCoverage</em> operation</h3>
 <div class="sect3">
-<h4 id="__em_getcoverage_em_request">7.5.1. <em>GetCoverage</em> request</h4>
+<h4 id="__em_getcoverage_em_request">7.4.1. <em>GetCoverage</em> request</h4>
 <div class="paragraph">
 <p>The <em>GetCoverage</em> request is unchanged over WCS Core [OGC 09-110r4], except that
 for EO Coverages slicing is disallowed as it would leave the EO Metadata
@@ -2301,7 +2301,7 @@ A <em>GetCoverage</em> request on EO Coverages <strong>shall</strong> not contai
 </div>
 </div>
 <div class="sect3">
-<h4 id="__em_getcoverage_em_response">7.5.2. <em>GetCoverage</em> response</h4>
+<h4 id="__em_getcoverage_em_response">7.4.2. <em>GetCoverage</em> response</h4>
 <div class="paragraph">
 <p>The <em>GetCoverage</em> response is as defined in the WCS Core [OGC 09-110r4], however
 extended in two respects:</p>
@@ -2500,9 +2500,9 @@ response for an EO Coverage:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="__em_describeeocoverageset_em_operation">7.6. <em>DescribeEOCoverageSet</em> operation</h3>
+<h3 id="__em_describeeocoverageset_em_operation">7.5. <em>DescribeEOCoverageSet</em> operation</h3>
 <div class="sect3">
-<h4 id="_overview_5">7.6.1. Overview</h4>
+<h4 id="_overview_5">7.5.1. Overview</h4>
 <div class="paragraph">
 <p>A <em>DescribeEOCoverageSet</em> request submits one or more Dataset Series, Stitched
 Mosaic, or Dataset identifiers together with a spatio-temporal subsetting
@@ -2521,7 +2521,7 @@ in the request.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="__em_describeeocoverageset_em_request">7.6.2. <em>DescribeEOCoverageSet</em> request</h4>
+<h4 id="__em_describeeocoverageset_em_request">7.5.2. <em>DescribeEOCoverageSet</em> request</h4>
 <div id="_requirement-47" class="quoteblock">
 <div class="title">Requirement 47 /req/eowcs/describeEOCoverageSet-request-structure</div>
 <blockquote>
@@ -2729,7 +2729,7 @@ operation request:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="__em_describeeocoverageset_em_response">7.6.3. <em>DescribeEOCoverageSet</em> response</h4>
+<h4 id="__em_describeeocoverageset_em_response">7.5.3. <em>DescribeEOCoverageSet</em> response</h4>
 <div class="paragraph">
 <p>The response to a successful <em>DescribeEOCoverageSet</em> request consists of a
 (possibly empty) set of EO Coverage descriptions and a (possibly empty) set of
@@ -3024,7 +3024,7 @@ its <code>numberReturned</code> attribute the sum of all <code>CoverageDescripti
 </div>
 </div>
 <div class="sect3">
-<h4 id="__em_describeeocoverageset_em_exceptions">7.6.4. <em>DescribeEOCoverageSet</em> exceptions</h4>
+<h4 id="__em_describeeocoverageset_em_exceptions">7.5.4. <em>DescribeEOCoverageSet</em> exceptions</h4>
 <table id="describeeocoverageset_except" class="tableblock frame-all grid-all spread">
 <caption class="title">Table 12. Exception codes for DescribeEOCoverageSet operation</caption>
 <colgroup>
@@ -5775,7 +5775,7 @@ copy and published it on GitHub (<a href="https://github.com/EOX-A/eo-wcs" class
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-05-10 15:01:49 CEST
+Last updated 2016-05-11 11:13:49 CEST
 </div>
 </div>
 </body>
