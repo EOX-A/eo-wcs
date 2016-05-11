@@ -3,14 +3,14 @@
     xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.0"
     xmlns:wcs="http://www.opengis.net/wcs/2.0"
     xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
-    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" version="1.0.0" xml:lang="en">
     <annotation>
         <appinfo>wcsEOAll.xsd</appinfo>
         <documentation>This XML Schema Document includes, directly and indirectly, all the XML Schema Documents defined by the OGC Web Coverage Service (WCS) - Earth Observation Application Profile (EO-WCS).
             The OGC Web Coverage Service (WCS) Earth Observation Application Profile (EO-WCS) is an OGC Standard.
-            Last updated: 2013-jun-11
-            Copyright (c) 2011, 2014 Open Geospatial Consortium. All Rights Reserved.
+            Last updated: 2016-may-11
+            Copyright (c) 2011, 2014, 2016 Open Geospatial Consortium. All Rights Reserved.
             To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
         </documentation>
     </annotation>
@@ -21,4 +21,5 @@
     <include schemaLocation="wcsEOCoverage.xsd"/>
     <include schemaLocation="wcsEOGetCapabilities.xsd"/>
     <include schemaLocation="wcsEODescribeEOCoverageSet.xsd"/>
+    <include schemaLocation="wcsEOGetEOCoverageSet.xsd"/>
 </schema>
