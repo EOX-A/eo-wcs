@@ -196,6 +196,11 @@
           </gml:MultiSurface>
         </eop:multiExtentOf>
       </eop:Footprint>
+      <ows:Metadata>
+        <wcseo:DatasetSeriesMetadata>
+          <wcseo:TODO>testing</wcseo:TODO>
+        </wcseo:DatasetSeriesMetadata>
+      </ows:Metadata>
       <wcseo:ServiceParameters>
         <wcseo:rectifiedDataset>
           <wcs:CoverageId>someEOCoverage1</wcs:CoverageId>

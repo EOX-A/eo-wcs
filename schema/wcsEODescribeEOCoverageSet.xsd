@@ -2,6 +2,7 @@
 <schema targetNamespace="http://www.opengis.net/wcs/wcseo/1.0"
     xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.0"
     xmlns:wcs="http://www.opengis.net/wcs/2.0"
+    xmlns:ows="http://www.opengis.net/ows/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
     xmlns:eop="http://www.opengis.net/eop/2.0"
@@ -20,6 +21,7 @@
     <!-- =========================================================== -->
     <!-- includes and imports                                        -->
     <!-- =========================================================== -->
+    <import namespace="http://www.opengis.net/ows/2.0" schemaLocation="http://schemas.opengis.net/ows/2.0/owsAll.xsd"/>
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="http://schemas.opengis.net/gmlcov/1.0/gmlcovAll.xsd"/>
     <import namespace="http://www.opengis.net/wcs/2.0" schemaLocation="http://schemas.opengis.net/wcs/2.0/wcsAll.xsd"/>
@@ -122,6 +124,7 @@
                     <element ref="wcseo:DatasetSeriesId"/>
                     <element ref="gml:TimePeriod"/>
                     <element ref="eop:Footprint" minOccurs="0"/>
+                    <element ref="ows:Metadata" minOccurs="0" maxOccurs="unbounded"/>
                     <element ref="wcseo:ServiceParameters" minOccurs="0"/>
                 </sequence>
             </extension>

@@ -78,6 +78,16 @@
         </sequence>
     </complexType>
     <!-- =========================================================== -->
+    <element name="DatasetSeriesMetadata" type="wcseo:DatasetSeriesMetadataType" substitutionGroup="ows:AbstractMetaData"/>
+    <complexType name="DatasetSeriesMetadataType">
+        <annotation>
+            <documentation></documentation>
+        </annotation>
+        <sequence>
+            <element name="TODO" type="anyURI" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <!-- =========================================================== -->
     <element name="datasets" type="wcseo:datasetsType">
          <annotation>
             <documentation>This element is used in stitched mosaics to reference datasets.
