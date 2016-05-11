@@ -128,7 +128,6 @@ listed *shall* contain in its `WCS::CoverageSubtype` element the value given in
 |===============================================================================
 
 [requirement,uri="/req/eowcs/getCapabilities-response-countDefault"]
-
 If the response to a successful _GetCapabilities_ request contains an
 `ows:Constraint` element in its `ows:OperationsMetadata` element then its name
 attribute *shall* hold a value as defined in <<contraint_values>> and the
@@ -150,6 +149,8 @@ means of self defence, so that a request may not clog the server.
 
 Example: The following XML excerpt shows a possible `Contents` section containing
 Dataset Series information:
+
+TODO: Add supported formats and default format for GetEOCOverageSet results.
 
 [source,xml]
 <wcs:Contents>
@@ -486,6 +487,30 @@ A _DescribeEOCoverageSet_ request *shall* consist of a structure as defined in
 http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema] being part of this
 standard.
 
+[#request_describeeocoverageset,reftext='{figure-caption} {counter:figure-num}']
+._DescribeEOCoverageSet_ request UML diagram
+image::request-describeeocoverageset.png[DescribeEOCoverageSet request]
+
+[#describeeocoverageset_comp,reftext='{table-caption} {counter:table-num}']
+.Components of `DescribeEOCoverageSet` operation request
+[cols="2,3,2,^1",options="header"]
+|===============================================================================
+|Name                  |Definition                      |Data type |Multiplicity
+|`request` |Request name |`String` , fixed to "DescribeEOCoverageSet" |one
+(mandatory)
+|`eoId` |Identifier of Dataset Series, Stitched Mosaic, or Dataset to be
+evaluated |`NCName` |one or more (mandatory)
+|`containment` |Intersection mode for evaluation of object bounding box against
+request parameters |`String` |zero or one (optional)
+|`count` |Maximum number of `CoverageDescription` and `DatasetSeriesDescription`
+elements to be included in the response |`Integer` greater than zero |zero or
+one (optional)
+|`sections` |Unordered list of zero or more names of the XML elements that shall
+be returned |`String` |zero or one (optional)
+|`dimensionTrim` |trim specification, as per WCS Core [OGC 09-110r4] Subclause
+8.4.1 |`WCS::DimensionTrim` |zero or more (optional)
+|===============================================================================
+
 The _DescribeEOCoverageSet_ request type contains two sections (cf. [OGC
 06-121r9] Clause 7.3.3) whose appearance in the response can be controlled by
 the client through the optional `sections` parameter.
@@ -528,30 +553,6 @@ ISO 8601 <<2>> as temporal CRS for the coordinates in trim requests.
 
 NOTE: Trim coordinates are not required to lie within the boundaries of the EO
 Coverage inquired.
-
-[#request_describeeocoverageset,reftext='{figure-caption} {counter:figure-num}']
-._DescribeEOCoverageSet_ request UML diagram
-image::request-describeeocoverageset.png[DescribeEOCoverageSet request]
-
-[#describeeocoverageset_comp,reftext='{table-caption} {counter:table-num}']
-.Components of `DescribeEOCoverageSet` operation request
-[cols="2,3,2,^1",options="header"]
-|===============================================================================
-|Name                  |Definition                      |Data type |Multiplicity
-|`request` |Request name |`String` , fixed to "DescribeEOCoverageSet" |one
-(mandatory)
-|`eoId` |Identifier of Dataset Series, Stitched Mosaic, or Dataset to be
-evaluated |`NCName` |one or more (mandatory)
-|`containment` |Intersection mode for evaluation of object bounding box against
-request parameters |`String` |zero or one (optional)
-|`count` |Maximum number of `CoverageDescription` and `DatasetSeriesDescription`
-elements to be included in the response |`Integer` greater than zero |zero or
-one (optional)
-|`sections` |Unordered list of zero or more names of the XML elements that shall
-be returned |`String` |zero or one (optional)
-|`dimensionTrim` |trim specification, as per WCS Core [OGC 09-110r4] Subclause
-8.4.1 |`WCS::DimensionTrim` |zero or more (optional)
-|===============================================================================
 
 Example: The following XML instance shows a possible _DescribeEOCoverageSet_
 operation request:

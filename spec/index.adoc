@@ -17,8 +17,8 @@ Publication Date: TBD +
 Approval Date: TBD +
 Submission Date: TBD +
 Reference number of this Document: OGC 10-140r1 +
-External identifier of this OGC® document: http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.0 +
-URL for this OGC® document: http://docs.opengeospatial.org/is/12-128r11/12-128r11.html +
+External reference for this OGC® document: http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.0 +
+URL for this OGC® document: https://eox-a.github.io/eo-wcs/ +
 Version: 1.1draft +
 Category: OGC® Interface Standard +
 Editor: Peter Baumann, Stephan Meissl, Jinsongdi Yu
@@ -26,7 +26,7 @@ Editor: Peter Baumann, Stephan Meissl, Jinsongdi Yu
 [title]
 = OGC® Web Coverage Service 2.0 Interface Standard - Earth Observation Application Profile
 
-Copyright © 2014 Open Geospatial Consortium. +
+Copyright © 2014, 2016 Open Geospatial Consortium. +
 To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ +
 
 *Warning*
@@ -131,7 +131,8 @@ suggested changes in an edited copy of this document.
 
 == Keywords
 
-ogcdoc, wcs, profile, eo
+ogcdoc, wcs, profile, eo, earth observation, dataset, dataset series, stitched
+mosaic
 
 == Terms and definitions
 
@@ -157,13 +158,13 @@ Additionally, rasdaman GmbH has made substantial contributions.
 == Document Contributor Contact Points
 
 [options="header"]
-|===========================================================
-|Name               |Organization
-|Peter Baumann      |Jacobs University Bremen, rasdaman GmbH
-|Jinsongdi Yu       |Jacobs University Bremen
-|Stephan Meissl     |EOX IT Services GmbH
-|Christian Schiller |EOX IT Services GmbH
-|===========================================================
+|===============================================================================
+|Name                                   |Organization
+|Peter Baumann                          |Jacobs University Bremen, rasdaman GmbH
+|Jinsongdi Yu                           |Jacobs University Bremen
+|Stephan Meissl <stephan.meissl@eox.at> |https://eox.at[EOX IT Services GmbH]
+|Christian Schiller                     |https://eox.at[EOX IT Services GmbH]
+|===============================================================================
 
 == Changes to the OGC ® Abstract Specification
 
@@ -176,11 +177,11 @@ Among the topics for future development are the following items:
 
 * Allow additional coverage representations (i.e., "multipart" and "special
 format" coverage encodings) once these are adopted for the GML Application
-Schema for Cover- ages [OGC 09-146].
+Schema for Coverages [OGC 09-146].
 
 * Extend the current 2-D EO Coverage footprint to 3-D footprints by extending
-them with elevation; this will involve extending footprints from bounding multi-
-curves (polygons) to multi-surfaces.
+  them with elevation; this will involve extending footprints from bounding
+  multi-curves (polygons) to multi-surfaces.
 
 * Specify usage and content of `EOWCS::Lineage` in more detail.
 

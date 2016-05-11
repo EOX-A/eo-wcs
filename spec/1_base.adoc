@@ -65,11 +65,11 @@ referred to applies.
 
 OGC 06-121r9, _OGC Web Services Common Standard_, version 2.0
 
-OGC 09-146r2, _GML 3.2.1 Application Schema for Coverages_, version 1.0 +
+TBD OGC 09-146r2, _Coverages Implementation Schema / GML 3.2.1 Application Schema for Coverages_, version 1.1 +
 Conformance classes used: gml-coverage
 
-OGC 09-110r4, OGC® _Web Coverage Service 2.0 Interface Standard Core_,
-version 2.0 +
+TBD OGC 09-110r4, OGC® _Web Coverage Service 2.0 Interface Standard Core_,
+version 2.1 +
 Conformance classes used: core
 
 OGC 11-053, OGC® _WCS 2.0 Interface Standard - CRS Service Model Extension_,
@@ -117,8 +117,9 @@ specifications are available as adopted OGC documents.
 
 == Terms and definitions
 
-For the purposes of this document, the terms and definitions given in the above references
-apply. In addition, the following terms and definitions apply. An arrow "->" indicates that the following term is defined in this Clause.
+For the purposes of this document, the terms and definitions given in the above
+references apply. In addition, the following terms and definitions apply. An
+arrow "->" indicates that the following term is defined in this Clause.
 
 === Coverage
 
@@ -188,17 +189,17 @@ to which the prefixes refer are normative, however.
 |xsd    |http://www.w3.org/2001/XMLSchema     |XML Schema namespace
 |ows    |http://www.opengis.net/ows/2.0       |OWS Common 2.0
 |gml    |http://www.opengis.net/gml/3.2       |GML 3.2.1
-|gmlcov |http://www.opengis.net/gmlcov/1.0    |GML Application Schema for
-Coverages 1.0
-|wcs    |http://www.opengis.net/wcs/2.0       |WCS 2.0
+|gmlcov |http://www.opengis.net/gmlcov/1.1    |Coverages Implementation Schema
+1.1
+|wcs    |http://www.opengis.net/wcs/2.1       |WCS 2.1
 |eop    |http://www.opengis.net/eop/2.0       |Earth Observation Metadata
 Profile of Observations and Measurements
 |opt    |http://www.opengis.net/opt/2.0       |Optical Earth Observation
 Metadata Profile of Observations and Measurements (extension of eop)
 |sar    |http://www.opengis.net/sar/2.0       |SAR Earth Observation Metadata
 Profile of Observations and Measurements (extension of eop)
-|wcseo  |http://www.opengis.net/wcs/wcseo/1.0 |WCS Application Profile - Earth
-Observation 1.0
+|wcseo  |http://www.opengis.net/wcs/wcseo/1.1 |WCS Application Profile - Earth
+Observation 1.1
 |===============================================================================
 
 === Multiple representations
