@@ -197,9 +197,175 @@
         </eop:multiExtentOf>
       </eop:Footprint>
       <ows:Metadata>
-        <wcseo:DatasetSeriesMetadata>
-          <wcseo:TODO>testing</wcseo:TODO>
-        </wcseo:DatasetSeriesMetadata>
+        <!-- Demonstrating the usage of various metadata versions. -->
+        <wcseo:EOMetadata>
+          <!-- EO-O&M or EOP -->
+          <eop:EarthObservation gml:id="eop_someDatasetSeries1">
+            <om:phenomenonTime>
+              <gml:TimePeriod gml:id="tp_someDatasetSeries1">
+                <gml:beginPosition>2008-03-13T00:00:00.000</gml:beginPosition>
+                <gml:endPosition>2008-03-13T23:59:59.999</gml:endPosition>
+              </gml:TimePeriod>
+            </om:phenomenonTime>
+            <om:resultTime />
+            <om:procedure />
+            <om:observedProperty />
+            <om:featureOfInterest>
+              <eop:Footprint gml:id="footprint2_someDatasetSeries1">
+                <eop:multiExtentOf>
+                  <gml:MultiSurface gml:id="multisurface2_someDatasetSeries1" srsName="EPSG:4326">
+                    <gml:surfaceMembers>
+                      <gml:Polygon gml:id="polygon2_someDatasetSeries1">
+                        <gml:exterior>
+                          <gml:LinearRing>
+                            <gml:posList>43.516667 2.1025 43.381667 2.861667 42.862778 2.65 42.996389 1.896944 43.516667 2.1025</gml:posList>
+                          </gml:LinearRing>
+                        </gml:exterior>
+                      </gml:Polygon>
+                    </gml:surfaceMembers>
+                  </gml:MultiSurface>
+                </eop:multiExtentOf>
+              </eop:Footprint>
+            </om:featureOfInterest>
+            <om:result />
+            <eop:metaDataProperty>
+              <eop:EarthObservationMetaData>
+                <eop:identifier>someDatasetSeries1</eop:identifier>
+                <eop:acquisitionType>NOMINAL</eop:acquisitionType>
+                <eop:status>ARCHIVED</eop:status>
+              </eop:EarthObservationMetaData>
+            </eop:metaDataProperty>
+          </eop:EarthObservation>
+        </wcseo:EOMetadata>
+      </ows:Metadata>
+      <ows:Metadata>
+        <wcseo:EOMetadata>
+          <!-- ISO 19139 -->
+          <gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd">
+            <gmd:contact />
+            <gmd:dateStamp />
+            <gmd:metadataStandardName>
+              <gco:CharacterString>ISO 19115:2003/19139</gco:CharacterString>
+            </gmd:metadataStandardName>
+            <gmd:identificationInfo>
+              <gmd:MD_DataIdentification>
+                <gmd:citation>
+                  <gmd:CI_Citation>
+                    <gmd:title>
+                      <gco:CharacterString>someDatasetSeries1</gco:CharacterString>
+                    </gmd:title>
+                    <gmd:date>
+                      <gmd:CI_Date>
+                        <gmd:date>
+                          <gco:DateTime>2008-03-31T23:59:59</gco:DateTime>
+                        </gmd:date>
+                        <gmd:dateType>
+                          <gmd:CI_DateTypeCode codeList="./resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+                        </gmd:dateType>
+                      </gmd:CI_Date>
+                    </gmd:date>
+                  </gmd:CI_Citation>
+                </gmd:citation>
+                <gmd:abstract>
+                  <gco:CharacterString>someDatasetSeries1</gco:CharacterString>
+                </gmd:abstract>
+                <gmd:language>
+                  <gco:CharacterString>en</gco:CharacterString>
+                </gmd:language>
+              </gmd:MD_DataIdentification>
+            </gmd:identificationInfo>
+          </gmd:MD_Metadata>
+        </wcseo:EOMetadata>
+      </ows:Metadata>
+      <ows:Metadata>
+        <wcseo:EOMetadata>
+          <!-- ISO 19139-2 -->
+          <gmi:MI_Metadata xmlns:gmi="http://standards.iso.org/iso/19115/-2/gmi/1.0" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.iso.org/iso/19115/-2/gmi/1.0 http://standards.iso.org/iso/19115/-2/gmi/1.0/gmi.xsd">
+            <gmd:contact />
+            <gmd:dateStamp />
+            <gmd:metadataStandardName>
+              <gco:CharacterString>ISO 19115:2003/19139</gco:CharacterString>
+            </gmd:metadataStandardName>
+            <gmd:identificationInfo>
+              <gmd:MD_DataIdentification>
+                <gmd:citation>
+                  <gmd:CI_Citation>
+                    <gmd:title>
+                      <gco:CharacterString>someDatasetSeries1</gco:CharacterString>
+                    </gmd:title>
+                    <gmd:date>
+                      <gmd:CI_Date>
+                        <gmd:date>
+                          <gco:DateTime>2008-03-31T23:59:59</gco:DateTime>
+                        </gmd:date>
+                        <gmd:dateType>
+                          <gmd:CI_DateTypeCode codeList="./resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+                        </gmd:dateType>
+                      </gmd:CI_Date>
+                    </gmd:date>
+                  </gmd:CI_Citation>
+                </gmd:citation>
+                <gmd:abstract>
+                  <gco:CharacterString>someDatasetSeries1</gco:CharacterString>
+                </gmd:abstract>
+                <gmd:language>
+                  <gco:CharacterString>en</gco:CharacterString>
+                </gmd:language>
+              </gmd:MD_DataIdentification>
+            </gmd:identificationInfo>
+          </gmi:MI_Metadata>
+        </wcseo:EOMetadata>
+      </ows:Metadata>
+      <ows:Metadata>
+        <wcseo:EOMetadata>
+          <!-- ISO 19115-3 -->
+          <mdb:MD_Metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0">
+             <mdb:contact>
+                <cit:CI_Responsibility>
+                   <cit:role>
+                      <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</cit:CI_RoleCode>
+                   </cit:role>
+                   <cit:party>
+                      <cit:CI_Organisation>
+                         <cit:name>
+                            <gco:CharacterString>someOrganisation</gco:CharacterString>
+                         </cit:name>
+                      </cit:CI_Organisation>
+                   </cit:party>
+                </cit:CI_Responsibility>
+             </mdb:contact>
+             <mdb:dateInfo>
+                <cit:CI_Date>
+                   <cit:date>
+                      <gco:DateTime>2008-03-31T23:59:59</gco:DateTime>
+                   </cit:date>
+                   <cit:dateType>
+                      <cit:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="creation">creation</cit:CI_DateTypeCode>
+                   </cit:dateType>
+                </cit:CI_Date>
+             </mdb:dateInfo>
+             <mdb:identificationInfo>
+                <mri:MD_DataIdentification>
+                   <mri:citation>
+                      <cit:CI_Citation>
+                         <cit:title>
+                            <gco:CharacterString>someDatasetSeries1</gco:CharacterString>
+                         </cit:title>
+                      </cit:CI_Citation>
+                   </mri:citation>
+                   <mri:abstract>
+                      <gco:CharacterString>someDatasetSeries1</gco:CharacterString>
+                   </mri:abstract>
+                </mri:MD_DataIdentification>
+             </mdb:identificationInfo>
+          </mdb:MD_Metadata>
+        </wcseo:EOMetadata>
+      </ows:Metadata>
+      <ows:Metadata>
+        <wcseo:EOMetadata>
+          <!-- Reference -->
+          <ows:Reference xlink:href="http://www.someCatalogue.org/eop-metadata-from-someDatasetSeries1" xlink:role="http://standards.iso.org/iso/19115/-3/mdb/1.0" xlink:title="ISO 19115-3 Metadata" />
+        </wcseo:EOMetadata>
       </ows:Metadata>
       <wcseo:ServiceParameters>
         <wcseo:rectifiedDataset>

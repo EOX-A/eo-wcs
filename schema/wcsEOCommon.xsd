@@ -6,6 +6,9 @@
     xmlns:ows="http://www.opengis.net/ows/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:eop="http://www.opengis.net/eop/2.0"
+    xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:gmi="http://standards.iso.org/iso/19115/-2/gmi/1.0"
+    xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
     xmlns="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" version="1.0.0" xml:lang="en">
     <annotation>
@@ -26,6 +29,12 @@
     <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="http://schemas.opengis.net/gmlcov/1.0/gmlcovAll.xsd"/>
     <import namespace="http://www.opengis.net/wcs/2.0" schemaLocation="http://schemas.opengis.net/wcs/2.0/wcsAll.xsd"/>
     <import namespace="http://www.opengis.net/eop/2.0" schemaLocation="http://schemas.opengis.net/omeo/1.0/eop.xsd"/>
+    <!-- ISO 19139 -->
+    <import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd"/>
+    <!-- ISO 19139-2 -->
+    <import namespace="http://standards.iso.org/iso/19115/-2/gmi/1.0" schemaLocation="http://standards.iso.org/iso/19115/-2/gmi/1.0/gmi.xsd"/>
+    <!-- ISO 19115-3 -->
+    <import namespace="http://standards.iso.org/iso/19115/-3/mdb/1.0" schemaLocation="http://standards.iso.org/iso/19115/-3/mdb/1.0/mdb.xsd"/>
     <include schemaLocation="wcsEOAll.xsd"/>
 
     <!-- =========================================================== -->
@@ -37,14 +46,16 @@
         </annotation>
     </element>
     <!-- =========================================================== -->
-    <element name="EOMetadata" type="wcseo:EOMetadataType"/>
+    <element name="EOMetadata" type="wcseo:EOMetadataType" substitutionGroup="ows:AbstractMetaData"/>
     <complexType name="EOMetadataType">
         <annotation>
-            <documentation></documentation>
+            <documentation>Used to include or reference metadata. Use "eop:EarthObservation" for Datasets or DatasetSeries if it is used to bundle Datasets of an EO Product. Use one of the other elements for DatasetSeries if used as Dataset Series (collection).</documentation>
         </annotation>
         <sequence>
             <choice>
                 <element ref="eop:EarthObservation"/>
+                <element ref="gmd:MD_Metadata"/><!-- "gmi:MI_Metadata" can be used here as well as it's in the substitutionGroup. -->
+                <element ref="mdb:MD_Metadata"/>
                 <element ref="ows:Reference"/>
             </choice>
             <element ref="wcseo:lineage" minOccurs="0" maxOccurs="unbounded"/>
@@ -75,16 +86,6 @@
         </annotation>
         <sequence>
             <element ref="ows:Reference"/>
-        </sequence>
-    </complexType>
-    <!-- =========================================================== -->
-    <element name="DatasetSeriesMetadata" type="wcseo:DatasetSeriesMetadataType" substitutionGroup="ows:AbstractMetaData"/>
-    <complexType name="DatasetSeriesMetadataType">
-        <annotation>
-            <documentation></documentation>
-        </annotation>
-        <sequence>
-            <element name="TODO" type="anyURI" minOccurs="0"/>
         </sequence>
     </complexType>
     <!-- =========================================================== -->
