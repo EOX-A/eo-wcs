@@ -8,19 +8,19 @@
     <sch:ns prefix="gmlcov" uri="http://www.opengis.net/gmlcov/1.0"/>
     <sch:ns prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
     <sch:ns prefix="wcs" uri="http://www.opengis.net/wcs/2.0"/>
-    <sch:ns prefix="wcseo" uri="http://www.opengis.net/wcs/wcseo/1.0"/>
+    <sch:ns prefix="wcseo" uri="http://www.opengis.net/wcs/wcseo/1.1"/>
     <sch:ns prefix="eop" uri="http://www.opengis.net/eop/2.0"/>
     <sch:ns prefix="om" uri="http://www.opengis.net/om/2.0"/>
     <sch:pattern>
         <sch:title>Requirement 1</sch:title>
         <sch:rule context="gmlcov:metadata">
             <sch:assert test="gmlcov:Extension/wcseo:EOMetadata">
-                A EOWCS::EOMetadata instance shall conform to Table 2, Figure 2, 
+                A EOWCS::EOMetadata instance shall conform to Table 2, Figure 2,
                 Figure 3, and the XML schema being part of this standard.
-                
-                Rule used in wcseo:RectifiedDataset, wcseo:RectifiedStitchedMosaic, 
-                wcseo:ReferenceableDataset, and wcseo:ReferenceableStitchedMosaic 
-                elements in GetCoverage responses and wcs:CoverageDescription 
+
+                Rule used in wcseo:RectifiedDataset, wcseo:RectifiedStitchedMosaic,
+                wcseo:ReferenceableDataset, and wcseo:ReferenceableStitchedMosaic
+                elements in GetCoverage responses and wcs:CoverageDescription
                 elements in DescribeEOCoverageSet and DescribeCoverage responses.
             </sch:assert>
         </sch:rule>
@@ -29,8 +29,8 @@
         <sch:title>Requirement 2</sch:title>
         <sch:rule context="wcseo:EOMetadata/eop:EarthObservation">
             <sch:assert test="om:featureOfInterest/eop:Footprint">
-                The EOWCS::EOMetadata element of EOWCS::ReferenceableEOCoverage 
-                and EOWCS::RectifiedEOCoverage instances shall contain an 
+                The EOWCS::EOMetadata element of EOWCS::ReferenceableEOCoverage
+                and EOWCS::RectifiedEOCoverage instances shall contain an
                 eop:EarthObservation/om:featureOfInterest/eop:Footprint element.
             </sch:assert>
         </sch:rule>
@@ -39,8 +39,8 @@
         <sch:title>Requirement 4</sch:title>
         <sch:rule context="wcseo:RectifiedDataset">
             <sch:assert test="gmlcov:metadata">
-                EOWCS::ReferenceableEOCoverage and EOWCS::RectifiedEOCoverage 
-                instances shall contain one metadata element of type 
+                EOWCS::ReferenceableEOCoverage and EOWCS::RectifiedEOCoverage
+                instances shall contain one metadata element of type
                 EOWCS::EOMetadata.
             </sch:assert>
         </sch:rule>
@@ -49,8 +49,8 @@
         <sch:title>Requirement 4</sch:title>
         <sch:rule context="wcseo:RectifiedStitchedMosaic">
             <sch:assert test="gmlcov:metadata">
-                EOWCS::ReferenceableEOCoverage and EOWCS::RectifiedEOCoverage 
-                instances shall contain one metadata element of type 
+                EOWCS::ReferenceableEOCoverage and EOWCS::RectifiedEOCoverage
+                instances shall contain one metadata element of type
                 EOWCS::EOMetadata.
             </sch:assert>
         </sch:rule>
@@ -59,8 +59,8 @@
         <sch:title>Requirement 4</sch:title>
         <sch:rule context="wcseo:ReferenceableDataset">
             <sch:assert test="gmlcov:metadata">
-                EOWCS::ReferenceableEOCoverage and EOWCS::RectifiedEOCoverage 
-                instances shall contain one metadata element of type 
+                EOWCS::ReferenceableEOCoverage and EOWCS::RectifiedEOCoverage
+                instances shall contain one metadata element of type
                 EOWCS::EOMetadata.
             </sch:assert>
         </sch:rule>
@@ -69,8 +69,8 @@
         <sch:title>Requirement 4</sch:title>
         <sch:rule context="wcseo:ReferenceableStitchedMosaic">
             <sch:assert test="gmlcov:metadata">
-                EOWCS::ReferenceableEOCoverage and EOWCS::RectifiedEOCoverage 
-                instances shall contain one metadata element of type 
+                EOWCS::ReferenceableEOCoverage and EOWCS::RectifiedEOCoverage
+                instances shall contain one metadata element of type
                 EOWCS::EOMetadata.
             </sch:assert>
         </sch:rule>

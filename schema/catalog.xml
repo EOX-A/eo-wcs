@@ -35,6 +35,6 @@ Unset: export -n XML_CATALOG_FILES (use standard catalog e.g., at /etc/xml/)
 <!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
 <!-- wcseo 1.0 -->
-  <rewriteSystem systemIdStartString="http://schemas.opengis.net/wcs/wcseo/1.0/" rewritePrefix="."/>
-  <rewriteURI uriStartString="http://schemas.opengis.net/wcs/wcseo/1.0/" rewritePrefix="."/>
+  <rewriteSystem systemIdStartString="http://schemas.opengis.net/wcs/wcseo/1.1/" rewritePrefix="."/>
+  <rewriteURI uriStartString="http://schemas.opengis.net/wcs/wcseo/1.1/" rewritePrefix="."/>
 </catalog>
