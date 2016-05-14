@@ -134,6 +134,7 @@
     <element name="ServiceParameters" type="wcseo:ServiceParametersType"/>
     <complexType name="ServiceParametersType">
         <sequence>
+            <element name="defaultPackageFormat" type="anyURI" minOccurs="0"/> <!-- Mandatory for the "eowcs_geteocoverageset" conformance class. -->
             <element ref="wcseo:rectifiedDataset" minOccurs="0" maxOccurs="unbounded"/>
             <element ref="wcseo:referenceableDataset" minOccurs="0" maxOccurs="unbounded"/>
             <element ref="wcseo:rectifiedStitchedMosaic" minOccurs="0" maxOccurs="unbounded"/>

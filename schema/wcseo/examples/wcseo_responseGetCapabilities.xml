@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wcs:Capabilities updateSequence="20160513T150000Z" version="2.0.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0" xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd">
+<wcs:Capabilities updateSequence="20160513T150000Z" version="2.0.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0" xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/2.0 http://schemas.opengis.net/wcs/2.0/wcsAll.xsd http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd">
   <ows:ServiceIdentification>
     <ows:Title>Title</ows:Title>
     <ows:Abstract>Abstract</ows:Abstract>
@@ -11,8 +11,9 @@
     </ows:Keywords>
     <ows:ServiceType codeSpace="OGC">OGC WCS</ows:ServiceType>
     <ows:ServiceTypeVersion>2.0.1</ows:ServiceTypeVersion>
-    <ows:Profile>http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs</ows:Profile>
-    <ows:Profile>http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_get-kvp</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_geteocoverageset</ows:Profile>
+    <ows:Profile>http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_get-kvp</ows:Profile>
     <ows:Profile>http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs</ows:Profile>
     <ows:Profile>http://www.opengis.net/spec/WCS/2.0/conf/core</ows:Profile>
     <ows:Profile>http://www.opengis.net/spec/WCS_protocol-binding_get-kvp/1.0/conf/get-kvp</ows:Profile>
@@ -91,6 +92,17 @@
   <wcs:ServiceMetadata>
     <wcs:formatSupported>application/gml+xml</wcs:formatSupported>
     <wcs:formatSupported>image/tiff</wcs:formatSupported>
+    <wcs:Extension>
+      <wcseo:packageFormatSupported>application/x-gzip</wcseo:packageFormatSupported>
+      <wcseo:packageFormatSupported>application/gzip</wcseo:packageFormatSupported>
+      <wcseo:packageFormatSupported>application/bzip</wcseo:packageFormatSupported>
+      <wcseo:packageFormatSupported>application/x-bzip</wcseo:packageFormatSupported>
+      <wcseo:packageFormatSupported>application/tar</wcseo:packageFormatSupported>
+      <wcseo:packageFormatSupported>application/x-tar</wcseo:packageFormatSupported>
+      <wcseo:packageFormatSupported>application/zip</wcseo:packageFormatSupported>
+      <wcseo:packageFormatSupported>application/metalink4+xml</wcseo:packageFormatSupported>
+      <wcseo:packageFormatSupported>application/metalink+xml</wcseo:packageFormatSupported>
+    </wcs:Extension>
   </wcs:ServiceMetadata>
   <wcs:Contents>
     <!-- CoverageSummary including mandatory elements only -->

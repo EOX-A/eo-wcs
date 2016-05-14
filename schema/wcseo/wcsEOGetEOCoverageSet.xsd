@@ -70,7 +70,7 @@
             <element ref="wcseo:ReferenceableDataset" minOccurs="0" maxOccurs="unbounded"/>
             <element ref="wcseo:RectifiedStitchedMosaic" minOccurs="0" maxOccurs="unbounded"/>
             <element ref="wcseo:ReferenceableStitchedMosaic" minOccurs="0" maxOccurs="unbounded"/>
-            <element ref="wcseo:DatasetSeriesDescriptions" minOccurs="0"/> <!-- TODO: Needed or rather wcseo:DatasetSeries ??? -->
+            <element ref="wcseo:DatasetSeries" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
         <attribute name="numberMatched" type="nonNegativeInteger" use="required"/> <!-- TODO: Needed? -->
         <attribute name="numberReturned" type="nonNegativeInteger" use="required"/> <!-- TODO: Needed? -->

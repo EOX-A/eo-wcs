@@ -300,4 +300,32 @@
       </gmlcov:Extension>
     </gmlcov:metadata>
   </wcseo:RectifiedDataset>
+  <wcseo:DatasetSeries>
+    <wcseo:DatasetSeriesId>someDatasetSeries1</wcseo:DatasetSeriesId>
+    <eop:Footprint gml:id="footprint_someDatasetSeries1">
+      <eop:multiExtentOf>
+        <gml:MultiSurface gml:id="multisurface_someDatasetSeries1" srsName="EPSG:4326">
+          <gml:surfaceMembers>
+            <gml:Polygon gml:id="polygon_someDatasetSeries1">
+              <gml:exterior>
+                <gml:LinearRing>
+                  <gml:posList>43.516667 2.1025 43.381667 2.861667 42.862778 2.65 42.996389 1.896944 43.516667 2.1025</gml:posList>
+                </gml:LinearRing>
+              </gml:exterior>
+            </gml:Polygon>
+          </gml:surfaceMembers>
+        </gml:MultiSurface>
+      </eop:multiExtentOf>
+    </eop:Footprint>
+    <gml:TimePeriod gml:id="someDatasetSeries1_timeperiod">
+      <gml:beginPosition>2008-03-13T00:00:00.000</gml:beginPosition>
+      <gml:endPosition>2008-03-13T23:59:59.999</gml:endPosition>
+    </gml:TimePeriod>
+    <ows:Metadata>
+      <wcseo:EOMetadata>
+        <!-- Reference -->
+        <ows:Reference xlink:href="http://www.someCatalogue.org/eop-metadata-from-someDatasetSeries1" xlink:role="http://standards.iso.org/iso/19115/-3/mdb/1.0" xlink:title="ISO 19115-3 Metadata" />
+      </wcseo:EOMetadata>
+    </ows:Metadata>
+  </wcseo:DatasetSeries>
 </wcseo:EOCoverageSet>

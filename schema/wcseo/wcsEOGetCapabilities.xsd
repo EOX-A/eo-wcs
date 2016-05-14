@@ -27,6 +27,8 @@
     <!-- =========================================================== -->
     <!-- elements and types                                          -->
     <!-- =========================================================== -->
+    <element name="packageFormatSupported" type="anyURI"/>
+    <!-- =========================================================== -->
     <element name="DatasetSeriesSummary" type="wcseo:DatasetSeriesSummaryType">
         <annotation>
             <documentation>A DatasetSeriesSummary contains information essential for accessing a Dataset Series served by an EO-WCS. The DatasetSeriesId is the identifier used to address a particular Dataset Series.</documentation>
