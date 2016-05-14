@@ -37,6 +37,11 @@ Dataset Series offered by the service on hand.
 of `CoverageDescription` and `DatasetSeriesDescription` elements reported in a
 `DescribeEOCoverageSet` response.
 
+* For the _eowcs_geteocoverageset_ conformance class there are additional
+`wcseo:packageFormatSupported` elements inside the `wcs:Extension` element of
+the `wcs:ServiceMetadata` element to specify supported package formats for the
+_GetEOCoverageSet_ operation.
+
 NOTE: An EO-WCS server may choose to not report, in the `CoverageSummary`
 section of a _GetCapabilities_ response, the identifiers of Stitched Mosaic
 coverages referred to by some Dataset Series and the identifiers of Dataset
@@ -49,7 +54,13 @@ like an extension.
 A WCS service implementing this extension *shall* include the following URI in a
 `Profile` element in the `ServiceIdentification` in a _GetCapabilities_
 response:
-`http://www.opengis.net/spec/WCS_application-profile_earthobservation/1.0/conf/eowcs`
+`http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs`
+
+[requirement,uri="/req/eowcs_geteocoverageset/getCapabilities-response-conformance-class-in-profile"]
+A WCS service implementing the _eowcs_geteocoverageset_ conformance class of
+this extension *shall* include the following URI in a `Profile` element in the
+`ServiceIdentification` in a _GetCapabilities_ response:
+`http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_geteocoverageset`
 
 [requirement,uri="/req/eowcs/getCapabilities-response-structure"]
 The response to a successful _GetCapabilities_ request *shall* consist of a data
@@ -145,12 +156,17 @@ _DescribeEOCoverageSet_ requests. |`Integer` greater than or equal to zero
 |===============================================================================
 
 NOTE: Servers are strongly encouraged to specify a value for CountDefault as
-means of self defence, so that a request may not clog the server.
+means of self defense, so that a request may not clog the server.
 
-Example: The following XML excerpt shows a possible `Contents` section containing
-Dataset Series information:
+[requirement,uri="/req/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported"]
+The response to a successful _GetCapabilities_ request of an EO-WCS supporting
+the _eowcs_geteocoverageset_ conformance class *shall* list in
+`wcseo:packageFormatSupported` elements inside the `wcs:Extension` element of
+its `wcs:ServiceMetadata` the MIME type identifiers one to one of all supported
+packaging formats for the _GetEOCoverageSet_ operation.
 
-TODO: Add supported formats and default format for GetEOCOverageSet results.
+Example: The following XML excerpt shows a possible `Contents` section
+containing Dataset Series information:
 
 [source,xml]
 <wcs:Contents>
@@ -181,6 +197,26 @@ containing a CountDefault value:
   <ows:NoValues />
   <ows:DefaultValue>100</ows:DefaultValue>
 </ows:Constraint>
+
+Example: The following XML excerpt shows a possible `wcs:ServiceMetadata`
+section containing valid `wcseo:packageFormatSupported` elements:
+
+[source,xml]
+<wcs:ServiceMetadata>
+  <wcs:formatSupported>application/gml+xml</wcs:formatSupported>
+  <wcs:formatSupported>image/tiff</wcs:formatSupported>
+  <wcs:Extension>
+    <wcseo:packageFormatSupported>application/x-gzip</wcseo:packageFormatSupported>
+    <wcseo:packageFormatSupported>application/gzip</wcseo:packageFormatSupported>
+    <wcseo:packageFormatSupported>application/bzip</wcseo:packageFormatSupported>
+    <wcseo:packageFormatSupported>application/x-bzip</wcseo:packageFormatSupported>
+    <wcseo:packageFormatSupported>application/tar</wcseo:packageFormatSupported>
+    <wcseo:packageFormatSupported>application/x-tar</wcseo:packageFormatSupported>
+    <wcseo:packageFormatSupported>application/zip</wcseo:packageFormatSupported>
+    <wcseo:packageFormatSupported>application/metalink4+xml</wcseo:packageFormatSupported>
+    <wcseo:packageFormatSupported>application/metalink+xml</wcseo:packageFormatSupported>
+  </wcs:Extension>
+</wcs:ServiceMetadata>
 
 === _DescribeCoverage_ operation
 
@@ -602,14 +638,20 @@ Dependency: [OGC 09-110r4] Subclause 8.3.2
 |===============================================================================
 |Name                  |Definition                      |Data type |Multiplicity
 |`datasetSeriesDescriptions` |Unordered sequence of DatasetSeries descriptions
-|`DatasetSeriesDescriptions` |zero or more (optional)
+|`DatasetSeriesDescriptions` |zero or one (optional)
 |`coverageDescriptions` |Unordered sequence of coverage descriptions
-|`WCS::CoverageDescriptions` |zero or more (optional)
+|`WCS::CoverageDescriptions` |zero or one (optional)
 |===============================================================================
 
 [#resp_describeeocoverageset,reftext='{figure-caption} {counter:figure-num}']
 ._DescribeEOCoverageSet_ response UML diagram
 image::response-describeeocoverageset.png[DescribeEOCoverageSet response]
+
+[requirement,uri="/req/eowcs_geteocoverageset/defaultPackageFormat"]
+In the response to a successful _DescribeEOCoverageSet_ request, each
+DatasetSeries listed *shall* contain in its `wcseo:defaultPackageFormat` element
+inside its `wcseo:ServiceParameters` element the default format used for
+_GetEOCoverageSet_ responses.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-eo-metadata"]
 Each `WCS::CoverageDescription` listed in the response to a successful
@@ -635,12 +677,12 @@ addressed in the request or via referred Dataset Series.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-eoId"]
 In the response to a successful _DescribeEOCoverageSet_ request containing a
-`wcs:CoverageDescription` section, each EO Coverage referred to by one of the
+`wcs:CoverageDescriptions` section, each EO Coverage referred to by one of the
 objects identified in the `eoId` request parameter *shall* appear at most once.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-referred"]
 The response to a successful _DescribeEOCoverageSet_ request containing a
-`wcs:CoverageDescription` section *shall* contain the descriptions of exactly
+`wcs:CoverageDescriptions` section *shall* contain the descriptions of exactly
 those EO Coverages referred to directly or indirectly via Dataset Series by one
 of the objects identified in the `eoId` request parameter, without any
 duplicates.
@@ -661,7 +703,7 @@ the `EOMetadata` element of an EO Coverage.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-containment"]
 The response to a successful _DescribeEOCoverageSet_ request containing a
-`wcs:CoverageDescription` section shall contain only descriptions of those EO
+`wcs:CoverageDescriptions` section shall contain only descriptions of those EO
 Coverages whose spatial footprint defined by its
 `eop:EarthObservation/om:featureOfInterest/eop:Footprint` +
 - overlaps with the spatial request extent, and the request parameter
@@ -675,7 +717,7 @@ Coverage.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-phenomenonTime"]
 The response to a successful _DescribeEOCoverageSet_ request containing a
-`wcs:CoverageDescription` section *shall* contain only descriptions of EO
+`wcs:CoverageDescriptions` section *shall* contain only descriptions of EO
 Coverages whose time interval defined by its
 `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
 `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` elements
@@ -769,6 +811,9 @@ Example The following XML fragment shows parts of a possible
         <gml:beginPosition>2010-01-01T00:00:00.000</gml:beginPosition>
         <gml:endPosition>2010-12-31T23:59:59.999</gml:endPosition>
       </gml:TimePeriod>
+      <wcseo:ServiceParameters>
+        <wcseo:defaultPackageFormat>application/metalink4+xml</wcseo:defaultPackageFormat>
+      </wcseo:ServiceParameters>
     </wcseo:DatasetSeriesDescription>
   </wcseo:DatasetSeriesDescriptions>
 </wcseo:EOCoverageSetDescription>
@@ -785,6 +830,7 @@ any of the DatasetSeries or EO Coverages offered by this server |List of
 violating Dataset Series and/or EO Coverage identifiers
 |===============================================================================
 
+[[geteocoverageset_operation,7.6]]
 === _GetEOCoverageSet_ operation
 
 ==== Overview
@@ -803,14 +849,14 @@ coverages of Datasets. In any case, the result items are those ones which are
 matched by the bounding box. The type of matching - `contains` or `overlaps` -
 is specified in the request.
 
-NOTE: Using the _GetEOCoverageSet_ operation allows to retrieve entire coverages
-in their native format and native CRS without any processing like subsetting
-applied. To request custom formats, CRSs, or processing like subsetting the
+NOTE: Using the _GetEOCoverageSet_ operation allows to retrieve entire or
+subsetted coverages in their native format with limited processing like
+subsetting applied. To request custom formats or advanced processing the
 _GetCoverage_ operation should be used.
 
 ==== _GetEOCoverageSet_ request
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-request-structure"]
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-structure"]
 A _GetEOCoverageSet_ request *shall* consist of a structure as defined in
 <<request_geteocoverageset>>, <<geteocoverageset_comp>> and the
 http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema] being part of this
@@ -839,13 +885,24 @@ response |`Integer` greater than zero |zero or one (optional)
 are to be packaged e.g., `application/x-gzip` |`anyURI` |zero or one (optional)
 |`mediaType` |If present, enforces a multipart encoding |`anyURI`, fixed to
 \"``multipart/related``" |zero or one (optional)
+
+scalefactor = kvp.Parameter("scalefactor", type=float, num="?")
+scaleaxes   = kvp.Parameter("scaleaxes", type=typelist(parse_scaleaxis_kvp, ","), default=(), num="?")
+scalesize   = kvp.Parameter("scalesize", type=typelist(parse_scalesize_kvp, ","), default=(), num="?")
+scaleextent = kvp.Parameter("scaleextent", type=typelist(parse_scaleextent_kvp, ","), default=(), num="?")
+
+subsettingcrs = kvp.Parameter("subsettingcrs", num="?")
+outputcrs   = kvp.Parameter("outputcrs", num="?")
+
+interpolation = kvp.Parameter("interpolation", type=parse_interpolation, num="?")
+
 |===============================================================================
 
 TODO NOTE: Future versions of EO-WCS are likely to use the `DimensionTrim` element
 defined in the forthcoming _Predefined CRSs_ Extension instead of
 `WCS::DimensionTrim`.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-request-eoId"]
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-eoId"]
 Each `eoId` parameter value in a _GetEOCoverageSet_ request *shall* be
 equal to the identifier of a Dataset, a Stitched Mosaic, or a Dataset Series
 offered by the server addressed.
@@ -854,17 +911,17 @@ NOTE: A _GetEOCoverageSet_ request is possible on the identifiers of
 objects offered by the server even if these are not listed in a GetCapabilities
 response.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-request-containment"]
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-containment"]
 If a _GetEOCoverageSet_ request contains a `containment` parameter then
 this parameter *shall* have one of the values "contains" or "overlaps".
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-request-dimensions"]
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-dimensions"]
 If a _GetEOCoverageSet_ request contains `dimensionTrim` elements with
 `dimension` parameters then each such `dimension` parameter *shall* have one of
 the values "lat", "long", or "phenomenonTime". Each of these values *shall*
 appear at most once in a given request.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-request-crs"]
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-crs"]
 A _GetEOCoverageSet_ request *shall* use WGS84 <<4>> as spatial and
 ISO 8601 <<2>> as temporal CRS for the coordinates in trim requests.
 
@@ -878,7 +935,7 @@ combination of `format` and `mediaType` parameter. Admissible values (i.e,
 formats supported) are those listed in the server’s Capabilities document.
 Default is the coverage’s Native Format.
 
-[requirement,uri="/req/core/getCoverage-acceptable-format"]
+[requirement,uri="/req/eowcs_geteocoverageset/getCoverage-acceptable-format"]
 If a _GetCoverage_ request contains a `format` parameter then this parameter
 *shall* contain a MIME type identifier occurring in some `wcs:formatSupported`
 element of the response to a successful _GetCapabilities_ request to this
@@ -887,7 +944,7 @@ server.
 NOTE: The default format for the coverage response is the coverage’s Native
 Format.
 
-[requirement,uri="/req/core/getCoverage-acceptable-mediaType"]
+[requirement,uri="/req/eowcs_geteocoverageset/getCoverage-acceptable-mediaType"]
 If a _GetCoverage_ request contains a `mediaType` parameter then this parameter
 shall contain a MIME type identifier of fixed value \"``multipart/related``".
 

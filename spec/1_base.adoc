@@ -18,6 +18,13 @@ defining EO-WCS on conceptual level in Clauses <<eo_data_model>>,
 class is _eowcs_, with URI
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs.
 
+* _eowcs_geteocoverageset_, of URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/req/eowcs_geteocoverageset,
+defining the GetEOCoverageSet request of EO-WCS in Clause <<eo_service_model>>
+where stated, particularly subclause <<geteocoverageset_operation>>; the
+corresponding conformance class is _eowcs_geteocoverageset_, with URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_geteocoverageset.
+
 * _eowcs_get-kvp_, of URI
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/req/eowcs_get-kvp,
 defining the GET-KVP protocol binding of EO-WCS in Subclause 9.2; the
@@ -30,14 +37,14 @@ defining the SOAP protocol binding of EO-WCS on conceptual level in Subclause
 9.3; the corresponding conformance class is _eowcs_soap_, with URI
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_soap.
 
-Standardisation target of all requirements and conformance classes are EO-WCS
+Standardization target of all requirements and conformance classes are EO-WCS
 implementations (currently: servers).
 
 Requirements and conformance test URIs defined in this document are relative to
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/.
 
 Annex A lists the conformance tests which shall be exercised on any software
-artefact claiming to implement EO-WCS.
+artifact claiming to implement EO-WCS.
 
 [#normative_references,reftext='3']
 == Normative references
