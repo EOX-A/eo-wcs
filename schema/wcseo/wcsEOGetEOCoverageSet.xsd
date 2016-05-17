@@ -6,6 +6,9 @@
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
     xmlns:eop="http://www.opengis.net/eop/2.0"
+    xmlns:scal="http://www.opengis.net/WCS_service-extension_scaling/1.0"
+    xmlns:int="http://www.opengis.net/WCS_service-extension_interpolation/1.0"
+    xmlns:crs="http://www.opengis.net/wcs/crs/1.0"
     xmlns="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" version="1.0.0" xml:lang="en">
     <annotation>
@@ -26,6 +29,11 @@
     <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="http://schemas.opengis.net/gmlcov/1.0/gmlcovAll.xsd"/>
     <import namespace="http://www.opengis.net/wcs/2.0" schemaLocation="http://schemas.opengis.net/wcs/2.0/wcsAll.xsd"/>
     <import namespace="http://www.opengis.net/eop/2.0" schemaLocation="http://schemas.opengis.net/omeo/1.0/eop.xsd"/>
+    <import namespace="http://www.opengis.net/WCS_service-extension_scaling/1.0" schemaLocation="http://schemas.opengis.net/wcs/scaling/1.0/wcsScal.xsd"/>
+<!--    <import namespace="http://www.opengis.net/wcs/scaling/1.0" schemaLocation="http://schemas.opengis.net/wcs/scaling/1.0/wcsScal.xsd"/>-->
+    <import namespace="http://www.opengis.net/WCS_service-extension_interpolation/1.0" schemaLocation="http://schemas.opengis.net/wcs/interpolation/1.0/wcsInt.xsd"/>
+<!--    <import namespace="http://www.opengis.net/wcs/interpolation/1.0" schemaLocation="http://schemas.opengis.net/wcs/interpolation/1.0/wcsInt.xsd"/>-->
+    <import namespace="http://www.opengis.net/wcs/crs/1.0" schemaLocation="http://schemas.opengis.net/wcs/crs/1.0/wcsCrs.xsd"/>
     <include schemaLocation="wcsEOAll.xsd"/>
 
     <!-- =========================================================== -->
@@ -53,6 +61,11 @@
                             <documentation>Optional element indicating the MimeType of the response of a GetEOCoverageSet request. Only allowed valued is "multipart/related".</documentation>
                         </annotation>
                     </element>
+                    <element name="format" type="anyURI" minOccurs="0"/>
+                    <element ref="scal:Scaling" minOccurs="0"/>
+                    <element ref="int:Interpolation" minOccurs="0"/>
+                    <element ref="crs:subsettingCrs" minOccurs="0"/>
+                    <element ref="crs:outputCrs" minOccurs="0"/>
                 </sequence>
                 <attribute name="count" type="nonNegativeInteger"/>
             </extension>

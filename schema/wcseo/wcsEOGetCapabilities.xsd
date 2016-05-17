@@ -27,7 +27,15 @@
     <!-- =========================================================== -->
     <!-- elements and types                                          -->
     <!-- =========================================================== -->
-    <element name="packageFormatSupported" type="anyURI"/>
+    <element name="wcseoMetadata" type="wcseo:wcseoMetadataType"/>
+    <complexType name="wcseoMetadataType">
+        <annotation>
+            <documentation>Package formats supported, reported in the Capabilities document of a WCS service supporting the EO-WCS.</documentation>
+        </annotation>
+        <sequence>
+            <element name="packageFormatSupported" type="anyURI" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
     <!-- =========================================================== -->
     <element name="DatasetSeriesSummary" type="wcseo:DatasetSeriesSummaryType">
         <annotation>
