@@ -62,6 +62,7 @@
                         </annotation>
                     </element>
                     <element name="format" type="anyURI" minOccurs="0"/>
+                    <element name="applySubset" type="boolean" minOccurs="0"/>
                     <element ref="scal:Scaling" minOccurs="0"/>
                     <element ref="int:Interpolation" minOccurs="0"/>
                     <element ref="crs:subsettingCrs" minOccurs="0"/>

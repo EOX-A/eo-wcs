@@ -368,7 +368,6 @@
         </wcseo:EOMetadata>
       </ows:Metadata>
       <wcseo:ServiceParameters>
-        <wcseo:defaultPackageFormat>application/metalink4+xml</wcseo:defaultPackageFormat>
         <wcseo:rectifiedDataset>
           <wcs:CoverageId>someEOCoverage1</wcs:CoverageId>
         </wcseo:rectifiedDataset>

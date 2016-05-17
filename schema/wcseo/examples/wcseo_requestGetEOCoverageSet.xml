@@ -20,6 +20,7 @@
   <wcseo:packageFormat>application/x-gzip</wcseo:packageFormat>
   <wcseo:mediaType>multipart/related</wcseo:mediaType>
   <wcseo:format>image/tiff</wcseo:format>
+  <wcseo:applySubset>true</wcseo:applySubset>
   <scal:Scaling>
     <scal:ScaleByFactor>
       <scal:scaleFactor>2.0</scal:scaleFactor>
