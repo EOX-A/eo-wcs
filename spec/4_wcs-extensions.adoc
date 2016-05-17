@@ -11,39 +11,41 @@ specifications required in this Clause.
 === Band subsetting
 
 [requirement,uri="/req/eowcs/band-subsetting"]
-Implementations of this EO-WCS *shall* support the WCS 2.0 Range Subsetting
-Extension [OGC 12-040]. +
+Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
+Interface Standard - Range Subsetting Extension [OGC 12-040]. +
 *Dependency*:
 http://www.opengis.net/spec/WCS_service-extension_range-subsetting/1.0/conf/record-subsetting
 
-=== Scaling & interpolation
+=== Scaling
 
 [requirement,uri="/req/eowcs/scaling"]
-Implementations of this EO-WCS *shall* support the WCS 2.0 Scaling Extension
-[OGC 12-039]. +
+Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
+Interface Standard - Scaling Extension [OGC 12-039]. +
 *Dependency*:
 http://www.opengis.net/spec/WCS_service-extension_scaling/1.0/conf/scaling
 
+=== Interpolation
+
 [requirement,uri="/req/eowcs/interpolation"]
-Implementations of this EO-WCS *shall* support the WCS 2.0 Interpolation
-Extension [OGC 12-049]. +
+Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
+Interface Standard - Interpolation Extension [OGC 12-049]. +
 *Dependency*:
 http://www.opengis.net/spec/WCS_service-extension_interpolation/1.0/conf/interpolation
 
 === CRSs
 
 [requirement,uri="/req/eowcs/crs"]
-Implementations of this EO-WCS *shall* support the WCS 2.0 CRS Extension
-[OGC 11-053]. +
+Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
+Interface Standard - CRS Extension [OGC 11-053r1]. +
 *Dependency*:
 http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs
 
 === Coverage format encodings
 
 [requirement,uri="/req/eowcs/encodings"]
-Implementations of this EO-WCS *shall* support at least one of the WCS 2.0
-coverage format encodings GeoTIFF [OGC12-100r1], NetCDF [OGC 11-010], and
-JPEG2000 [OGC 11-011]. +
+Implementations of this EO-WCS *shall* support at least one of the coverage
+format encodings GeoTIFF [OGC12-100r1], NetCDF [OGC 11-010], and JPEG2000
+[OGC 11-011]. +
 *Dependency*:
 http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage,
 http://www.opengis.net/spec/WCS_encoding_netcdf/1.0/conf/netcdf,

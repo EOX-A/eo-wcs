@@ -3,8 +3,10 @@
 
 === Overview
 
-This Clause 6, together with Clauses 7 and 8, establishes the EO-WCS core
-requirements class, _eowcs_.
+This Clause <<eo_data_model>>, together with Clauses <<eo_service_model>> and
+<<wcs_extensions>>, establishes the EO-WCS core requirements class, _eowcs_ as
+well as the _eowcs_geteocoverageset_ one where stated, particularly subclause
+<<geteocoverageset_operation>>.
 
 The data model of this EO-WCS centers around the data structure of an Earth
 Observation coverage (EO Coverage), which is a coverage extended with EO
@@ -32,6 +34,11 @@ Mosaics, and Dataset Series. A Dataset Series is not a coverage itself.
 
 NOTE: Annex C provides Use Cases to motivate the definition of these data
 elements.
+
+NOTE: Although named _Dataset Series_ technically speaking it is a heterogeneous
+grouping of coverages and/or Dataset Series and can thus be used for any other
+concept like an EO Product containing multiple coverages with different
+resolutions as well.
 
 <<datasetseries_conceptual>> informally symbolizes how the concepts of Dataset,
 Stitched Mosaic, and Dataset Series relate to each other spatio-temporally:
@@ -62,7 +69,7 @@ operations leading to the coverage on hand.
 [requirement,uri="/req/eowcs/eo-metadata-structure"]
 A `EOWCS::EOMetadata` instance *shall* conform to <<eometadata_components>>,
 <<uml_model>>, <<uml_lineage_class>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema] being part of this
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
 standard.
 
 [#eometadata_components,reftext='{table-caption} {counter:table-num}']
@@ -93,7 +100,7 @@ steps that has led to the coverage on hand. As at the time of this writing there
 is no canonical format for such histories available in OGC, for the purpose of
 this specification no assumption is made about the contents of a lineage record,
 except that GetCoverage appends its request verbatim as an additional record
-(see Requirement 46).
+(see <</req/eowcs/getCoverage-response-lineage-in-eo-metadata>>).
 
 The footprint of an EO Coverage, which contains one or more bounding polygons to
 describe the region of valid data more accurately than the EO Coverage’s
@@ -122,7 +129,7 @@ de- fined in [OGC 09-146r2].
 [requirement,uri="/req/eowcs/eo-coverage-structure"]
 `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances
 *shall* conform to <<uml_model>>, <<uml_lineage_class>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema] being part of this
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
 standard.
 
 ==== EO Metadata
@@ -204,7 +211,7 @@ image scene.
 [requirement,uri="/req/eowcs/dataset-structure"]
 A `EOWCS::ReferenceableDataset` and a `EOWCS::RectifiedDataset` *shall* conform
 to <<uml_model>>, <<uml_lineage_class>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema] being part of this
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
 standard.
 
 [#dataset_conceptual,reftext='{figure-caption} {counter:figure-num}']
@@ -232,11 +239,11 @@ contained Datasets carry nil values.
 .Conceptual view of a Stitched Mosaic as a 2-D coverage: composed from Datasets (Stitched Mosaic bounding box dashed)
 image::stitchedmosaic-conceptual.png[Stitched Mosaic Conceptual View]
 
-[requirement,uri="/req/eowcs/referenceableStitcheMosaic-structure"]
+[requirement,uri="/req/eowcs/referenceableStitchedMosaic-structure"]
 `EOWCS::ReferenceableStitchedMosaic` instances *shall* conform to <<uml_model>>,
 <<uml_lineage_class>>, <<refstitchedmosaic_components>>,
 <<datasetreference_components>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema] being part of this
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
 standard.
 
 [#refstitchedmosaic_components,reftext='{table-caption} {counter:table-num}']
@@ -252,7 +259,7 @@ Mosaic on hand |`EOWCS::DatasetReference` |one or more (mandatory)
 `EOWCS::RectifiedStitchedMosaic` instances *shall* conform to <<uml_model>>,
 <<uml_lineage_class>>, <<rectstitchedmosaic_components>>,
 <<datasetreference_components>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema] being part of this
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
 standard.
 
 [#rectstitchedmosaic_components,reftext='{table-caption} {counter:table-num}']
@@ -386,7 +393,7 @@ image::datasetseries-conceptual2.png[Dataset Series Conceptual View 2]
 [requirement,uri="/req/eowcs/datasetSeries-structure"]
 A `EOWCS::DatasetSeries` shall conform to <<uml_model>>, <<uml_lineage_class>>,
 <<datasetseries_components>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.0/[XML Schema] being part of this
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
 standard.
 
 [#datasetseries_components,reftext='{table-caption} {counter:table-num}']

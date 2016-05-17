@@ -689,6 +689,16 @@ defined in the places referenced.
 
 TODO
 
+==== DescribeEOCoverageSet Response defaultPackageFormat
+
+*Test id: /conf/eowcs_geteocoverageset/getCapabilities-response-defaultPackageFormat*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getCapabilities-response-defaultPackageFormat>>*
+
+*Test method:*
+
+TODO
+
 ==== GetCapabilities Response packageFormatSupported
 
 *Test id: /conf/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported*
@@ -928,16 +938,6 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 Send a valid _DescribeEOCoverageSet_ request to the server under test, check
 that the result consist of a `EOWCS::EOCoverageSetDescription` structure.
-
-==== DescribeEOCoverageSet Response defaultPackageFormat
-
-*Test id: /conf/eowcs_geteocoverageset/defaultPackageFormat*
-
-*Test Purpose: <</req/eowcs_geteocoverageset/defaultPackageFormat>>*
-
-*Test method:*
-
-TODO
 
 ==== DescribeEOCoverageSet Response EO Metadata
 
