@@ -43,7 +43,7 @@
                     <element ref="wcseo:eoId" maxOccurs="unbounded"/>
                     <element ref="wcseo:containment" minOccurs="0"/>
                     <element ref="wcs:DimensionTrim" minOccurs="0" maxOccurs="3"/>
-                    <element name="format" type="anyURI" minOccurs="0">
+                    <element name="packageFormat" type="anyURI" minOccurs="0">
                         <annotation>
                             <documentation>MimeType of the format the resulting set of coverages shall be packaged in. Default is specified in GetCapabilities response. Type is anyURI because of the type of the element "mimeType" in "gml:FileType".</documentation>
                         </annotation>
@@ -72,8 +72,8 @@
             <element ref="wcseo:ReferenceableStitchedMosaic" minOccurs="0" maxOccurs="unbounded"/>
             <element ref="wcseo:DatasetSeries" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
-        <attribute name="numberMatched" type="nonNegativeInteger" use="required"/> <!-- TODO: Needed? -->
-        <attribute name="numberReturned" type="nonNegativeInteger" use="required"/> <!-- TODO: Needed? -->
+        <attribute name="numberMatched" type="nonNegativeInteger" use="required"/>
+        <attribute name="numberReturned" type="nonNegativeInteger" use="required"/>
         <!-- TODO: Paging -->
 <!-- From WFS 2.0:
         <attribute name="next" type="anyURI"/>

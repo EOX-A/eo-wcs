@@ -88,6 +88,21 @@
             <element ref="ows:Reference"/>
         </sequence>
     </complexType>
+    <element name="referenceGetEOCoverageSet" type="wcseo:referenceGetEOCoverageSetType" substitutionGroup="wcseo:processing"/>
+    <complexType name="referenceGetEOCoverageSetType">
+        <annotation>
+            <documentation>The lineage records are supposed to describe the history of processing steps that has
+            led to the coverages on hand. As at the time of this writing there is no canonical format for such
+            histories available in OGC, for the purpose of this specification no assumption is made about the
+            contents of a lineage record, except that GetEOCoverageSet appends its request verbatim in an additional
+            record in the following way:
+             * In case of a GET/KVP request, this shall be the request URL with parameters as ows:Reference.
+             * In case of an XML or SOAP request this shall be an XML snippet as ows:ServiceReference which is in the substitutionGroup of ows:Reference.</documentation>
+        </annotation>
+        <sequence>
+            <element ref="ows:Reference"/>
+        </sequence>
+    </complexType>
     <!-- =========================================================== -->
     <element name="datasets" type="wcseo:datasetsType">
          <annotation>

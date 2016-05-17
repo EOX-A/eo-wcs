@@ -17,6 +17,6 @@
     <wcs:TrimLow>2008-03-13T10:10:00Z</wcs:TrimLow>
     <wcs:TrimHigh>2008-03-13T10:11:00Z</wcs:TrimHigh>
   </wcs:DimensionTrim>
-  <wcseo:format>application/x-gzip</wcseo:format>
+  <wcseo:packageFormat>application/x-gzip</wcseo:packageFormat>
   <wcseo:mediaType>multipart/related</wcseo:mediaType>
 </wcseo:GetEOCoverageSet>
