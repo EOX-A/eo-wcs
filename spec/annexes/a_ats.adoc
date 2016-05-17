@@ -16,7 +16,7 @@ http://www.opengis.net/spec/WCS/2.0/WCS_application-profile_eowcs/1.0/.
 
 *Test id: /conf/eowcs/eo-metadata-structure*
 
-*Test Purpose: <<_requirement-1>>*
+*Test Purpose: <</req/eowcs/eo-metadata-structure>>*
 
 *Test method:*
 
@@ -33,7 +33,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/footprint-in-eo-metadata*
 
-*Test Purpose: <<_requirement-2>>*
+*Test Purpose: <</req/eowcs/footprint-in-eo-metadata>>*
 
 *Test method:*
 
@@ -51,7 +51,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/eo-coverage-structure*
 
-*Test Purpose: <<_requirement-3>>*
+*Test Purpose: <</req/eowcs/eo-coverage-structure>>*
 
 *Test method:*
 
@@ -67,7 +67,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/eo-metadata-in-eo-coverage*
 
-*Test Purpose: <<_requirement-4>>*
+*Test Purpose: <</req/eowcs/eo-metadata-in-eo-coverage>>*
 
 *Test method:*
 
@@ -84,7 +84,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/eop-identifier-in-eo-metadata*
 
-*Test Purpose: <<_requirement-5>>*
+*Test Purpose: <</req/eowcs/eop-identifier-in-eo-metadata>>*
 
 *Test method:*
 
@@ -102,7 +102,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/footprint-inside-boundedBy*
 
-*Test Purpose: <<_requirement-6>>*
+*Test Purpose: <</req/eowcs/footprint-inside-boundedBy>>*
 
 *Test method:*
 
@@ -121,7 +121,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/phenomenonTime-in-eo-metadata*
 
-*Test Purpose: <<_requirement-7>>*
+*Test Purpose: <</req/eowcs/phenomenonTime-in-eo-metadata>>*
 
 *Test method:*
 
@@ -140,7 +140,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/phenomenonTime-iso8601*
 
-*Test Purpose: <<_requirement-8>>*
+*Test Purpose: <</req/eowcs/phenomenonTime-iso8601>>*
 
 *Test method:*
 
@@ -156,7 +156,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/range-set-of-eo-coverage*
 
-*Test Purpose: <<_requirement-9>>*
+*Test Purpose: <</req/eowcs/range-set-of-eo-coverage>>*
 
 *Test method:*
 
@@ -173,7 +173,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/dataset-structure*
 
-*Test Purpose: <<_requirement-10>>*
+*Test Purpose: <</req/eowcs/dataset-structure>>*
 
 *Test method:*
 
@@ -189,7 +189,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/referenceableStitchedMosaic-structure*
 
-*Test Purpose: <<_requirement-11>>*
+*Test Purpose: <</req/eowcs/referenceableStitchedMosaic-structure>>*
 
 *Test method:*
 
@@ -206,7 +206,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/rectifiedStitchedMosaic-structure*
 
-*Test Purpose: <<_requirement-12>>*
+*Test Purpose: <</req/eowcs/rectifiedStitchedMosaic-structure>>*
 
 *Test method:*
 
@@ -223,7 +223,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/composedOf-in-stitched-mosaic*
 
-*Test Purpose: <<_requirement-13>>*
+*Test Purpose: <</req/eowcs/composedOf-in-stitched-mosaic>>*
 
 *Test method:*
 
@@ -248,7 +248,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/contributingFootprint-inside-footprint*
 
-*Test Purpose: <<_requirement-14>>*
+*Test Purpose: <</req/eowcs/contributingFootprint-inside-footprint>>*
 
 *Test method:*
 
@@ -270,9 +270,9 @@ Test passes if all individual tests pass.
 
 ==== Contributing Footprint-pairwise-disjoint
 
-*Test id: /conf/eowcs/contributinFootprint-pairwise-disjoint*
+*Test id: /conf/eowcs/contributingFootprint-pairwise-disjoint*
 
-*Test Purpose: <<_requirement-15>>*
+*Test Purpose: <</req/eowcs/contributingFootprint-pairwise-disjoint>>*
 
 *Test method:*
 
@@ -289,7 +289,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/contributingFootprint-union-of-footprints*
 
-*Test Purpose: <<_requirement-16>>*
+*Test Purpose: <</req/eowcs/contributingFootprint-union-of-footprints>>*
 
 *Test method:*
 
@@ -306,7 +306,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/dataset-domain-set-in-stitched-mosaic-domain-set*
 
-*Test Purpose: <<_requirement-17>>*
+*Test Purpose: <</req/eowcs/dataset-domain-set-in-stitched-mosaic-domain-set>>*
 
 *Test method:*
 
@@ -326,7 +326,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/datasets-in-rectifiedStitcheMosaic-same-offsetVector*
 
-*Test Purpose: <<_requirement-18>>*
+*Test Purpose: <</req/eowcs/datasets-in-rectifiedStitcheMosaic-same-offsetVector>>*
 
 *Test method:*
 
@@ -346,7 +346,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/rectifiedStitchedMosaic-offsetVector*
 
-*Test Purpose: <<_requirement-19>>*
+*Test Purpose: <</req/eowcs/rectifiedStitchedMosaic-offsetVector>>*
 
 *Test method:*
 
@@ -370,7 +370,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/referenceableStitchedMosaic-domain-set*
 
-*Test Purpose: <<_requirement-20>>*
+*Test Purpose: <</req/eowcs/referenceableStitchedMosaic-domain-set>>*
 
 *Test method:*
 
@@ -387,7 +387,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/temporal-validity-stitched-mosaic*
 
-*Test Purpose: <<_requirement-21>>*
+*Test Purpose: <</req/eowcs/temporal-validity-stitched-mosaic>>*
 
 *Test method:*
 
@@ -415,7 +415,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/datasets-in-stitched-mosaic-same-range-type*
 
-*Test Purpose: <<_requirement-22>>*
+*Test Purpose: <</req/eowcs/datasets-in-stitched-mosaic-same-range-type>>*
 
 *Test method:*
 
@@ -436,7 +436,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/nil-values-in-stitched-mosaic*
 
-*Test Purpose: <<_requirement-23>>*
+*Test Purpose: <</req/eowcs/nil-values-in-stitched-mosaic>>*
 
 *Test method:*
 
@@ -455,7 +455,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/range-values-of-stitched-mosaic*
 
-*Test Purpose: <<_requirement-24>>*
+*Test Purpose: <</req/eowcs/range-values-of-stitched-mosaic>>*
 
 *Test method:*
 
@@ -475,7 +475,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/datasetSeries-structure*
 
-*Test Purpose: <<_requirement-25>>*
+*Test Purpose: <</req/eowcs/datasetSeries-structure>>*
 
 *Test method:*
 
@@ -490,7 +490,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/footprint-in-datasetSeries*
 
-*Test Purpose: <<_requirement-26>>*
+*Test Purpose: <</req/eowcs/footprint-in-datasetSeries>>*
 
 *Test method:*
 
@@ -509,7 +509,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/timePeriod-in-datasetSeries*
 
-*Test Purpose: <<_requirement-27>>*
+*Test Purpose: <</req/eowcs/timePeriod-in-datasetSeries>>*
 
 *Test method:*
 
@@ -529,7 +529,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/nocircularreference-of-datasetSeries*
 
-*Test Purpose: <<_requirement-28>>*
+*Test Purpose: <</req/eowcs/nocircularreference-of-datasetSeries>>*
 
 *Test method:*
 
@@ -545,7 +545,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/getCapabilities-request-sections*
 
-*Test Purpose: <<_requirement-29>>*
+*Test Purpose: <</req/eowcs/getCapabilities-request-sections>>*
 
 *Test method:*
 
@@ -555,11 +555,22 @@ element contains `section` elements with the values defined in OWS Common, or
 result consists of an XML document of type `Capabilities` and the appropriate
 components, as defined in the places referenced.
 
-==== GetCapabilities Response Conformance Class in Profile
+==== GetCapabilities Response _eowcs_ Conformance Class in Profile
 
 *Test id: /conf/eowcs/getCapabilities-response-conformance-class-in-profile*
 
-*Test Purpose: <<_requirement-30>>*
+*Test Purpose: <</req/eowcs/getCapabilities-response-conformance-class-in-profile>>*
+
+*Test method:*
+
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
+
+==== GetCapabilities Response _eowcs_geteocoverageset_ Conformance Class in Profile
+
+*Test id: /conf/eowcs_geteocoverageset/getCapabilities-response-conformance-class-in-profile*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getCapabilities-response-conformance-class-in-profile>>*
 
 *Test method:*
 
@@ -570,7 +581,7 @@ request; check that the extension required is listed.
 
 *Test id: /conf/eowcs/getCapabilities-response-structure*
 
-*Test Purpose: <<_requirement-31>>*
+*Test Purpose: <</req/eowcs/getCapabilities-response-structure>>*
 
 *Test method:*
 
@@ -580,9 +591,9 @@ components, as defined in the places referenced.
 
 ==== GetCapabilities Response DatasetSeriesSummary
 
-*Test id: /conf/eowcs/getCapabilities-response- datasetSeriesSummary*
+*Test id: /conf/eowcs/getCapabilities-response-datasetSeriesSummary*
 
-*Test Purpose: <<_requirement-32>>*
+*Test Purpose: <</req/eowcs/getCapabilities-response-datasetSeriesSummary>>*
 
 *Test method:*
 
@@ -594,9 +605,9 @@ successful.
 
 ==== GetCapabilities Response DatasetSeriesSummary no-duplicates
 
-*Test id: /conf/eowcs/ getCapabilities-response-datasetSeriesSummary-no-duplicates*
+*Test id: /conf/eowcs/getCapabilities-response-datasetSeriesSummary-no-duplicates*
 
-*Test Purpose: <<_requirement-33>>*
+*Test Purpose: <</req/eowcs/getCapabilities-response-datasetSeriesSummary-no-duplicates>>*
 
 *Test method:*
 
@@ -608,7 +619,7 @@ does not contain any duplicate Dataset Series identifier.
 
 *Test id: /conf/eowcs/getCapabilities-response-coverageSummary*
 
-*Test Purpose: <<_requirement-34>>*
+*Test Purpose: <</req/eowcs/getCapabilities-response-coverageSummary>>*
 
 *Test method:*
 
@@ -620,9 +631,9 @@ exception. Test passes if all individual tests pass.
 
 ==== GetCapabilities Response Coverage Summary Section
 
-*Test id: /conf/eowcs /getCapabilities-response-coverageSummary-section*
+*Test id: /conf/eowcs/getCapabilities-response-coverageSummary-section*
 
-*Test Purpose: <<_requirement-35>>*
+*Test Purpose: <</req/eowcs/getCapabilities-response-coverageSummary-section>>*
 
 *Test method:*
 
@@ -635,7 +646,7 @@ or "All" to the service under test. Check that the response contains
 
 *Test id: /conf/eowcs/getCapabilities-response-datasetSeriesSummary-section*
 
-*Test Purpose: <<_requirement-36>>*
+*Test Purpose: <</req/eowcs/getCapabilities-response-datasetSeriesSummary-section>>*
 
 *Test method:*
 
@@ -648,7 +659,7 @@ section parameter list contains one of the values "DatasetSeriesSummary" or
 
 *Test id: /conf/eowcs/getCapabilities-response-coverageSubtype*
 
-*Test Purpose: <<_requirement-37>>*
+*Test Purpose: <</req/eowcs/getCapabilities-response-coverageSubtype>>*
 
 *Test method:*
 
@@ -660,7 +671,7 @@ EO Coverage listed contains the corresponding value in its
 
 *Test id: /conf/eowcs/getCapabilities-response-countDefault*
 
-*Test Purpose: <<_requirement-38>>*
+*Test Purpose: <</req/eowcs/getCapabilities-response-countDefault>>*
 
 *Test method:*
 
@@ -668,11 +679,31 @@ Send a valid _GetCapabilities_ request to the server under test, check that its
 `ows:OperationsMetadata` element contains an `ows:Constraint` element, as
 defined in the places referenced.
 
+==== GetCapabilities Response wcseoMetadata
+
+*Test id: /conf/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata>>*
+
+*Test method:*
+
+TODO
+
+==== GetCapabilities Response packageFormatSupported
+
+*Test id: /conf/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported>>*
+
+*Test method:*
+
+TODO
+
 ==== Describe Coverage Response EO Metadata
 
 *Test id: /conf/eowcs/describeCoverage-response-eo-metadata*
 
-*Test Purpose: <<_requirement-39>>*
+*Test Purpose: <</req/eowcs/describeCoverage-response-eo-metadata>>*
 
 *Test method:*
 
@@ -684,7 +715,7 @@ element. Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/describeCoverage-response-coverageSubtype*
 
-*Test Purpose: <<_requirement-40>>*
+*Test Purpose: <</req/eowcs/describeCoverage-response-coverageSubtype>>*
 
 *Test method:*
 
@@ -696,7 +727,7 @@ each EO Coverage listed contains the corresponding value in its
 
 *Test id: /conf/eowcs/getCoverage-request-no-slicing*
 
-*Test Purpose: <<_requirement-41>>*
+*Test Purpose: <</req/eowcs/getCoverage-request-no-slicing>>*
 
 *Test method:*
 
@@ -711,7 +742,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/getCoverage-response-coverage-type*
 
-*Test Purpose: <<_requirement-42>>*
+*Test Purpose: <</req/eowcs/getCoverage-response-coverage-type>>*
 
 *Test method:*
 
@@ -724,9 +755,9 @@ Test passes if all individual tests pass.
 
 ==== GetCoverage Response EO Metadata
 
-*Test id: /conf/eowcs/getCoverage-response-eo-metedata*
+*Test id: /conf/eowcs/getCoverage-response-eo-metadata*
 
-*Test Purpose: <<_requirement-43>>*
+*Test Purpose: <</req/eowcs/getCoverage-response-eo-metadata>>*
 
 *Test method:*
 
@@ -739,9 +770,9 @@ Test passes if all individual tests pass.
 
 ==== GetCoverage Response EO Metadata in Stitched Mosaic
 
-*Test id: /conf/eowcs/getCoverage-response-eo-metedata-in-stitched-mosaic*
+*Test id: /conf/eowcs/getCoverage-response-eo-metadata-in-stitched-mosaic*
 
-*Test Purpose: <<_requirement-44>>*
+*Test Purpose: <</req/eowcs/getCoverage-response-eo-metadata-in-stitched-mosaic>>*
 
 *Test method:*
 
@@ -757,9 +788,9 @@ Test passes if all individual tests pass.
 
 ==== GetCoverage Response Footprint in EO Metadata
 
-*Test id: /conf/eowcs/getCoverage-response-footprint-in-eo-metedata*
+*Test id: /conf/eowcs/getCoverage-response-footprint-in-eo-metadata*
 
-*Test Purpose: <<_requirement-45>>*
+*Test Purpose: <</req/eowcs/getCoverage-response-footprint-in-eo-metadata>>*
 
 *Test method:*
 
@@ -777,9 +808,9 @@ Test passes if all individual tests pass.
 
 ==== GetCoverage Response Lineage in EO Metadata
 
-*Test id: /conf/eowcs/getCoverage-response-lineage-in-eo-metedata*
+*Test id: /conf/eowcs/getCoverage-response-lineage-in-eo-metadata*
 
-*Test Purpose: <<_requirement-46>>*
+*Test Purpose: <</req/eowcs/getCoverage-response-lineage-in-eo-metadata>>*
 
 *Test method:*
 
@@ -799,7 +830,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-request-structure*
 
-*Test Purpose: <<_requirement-47>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-request-structure>>*
 
 *Test method:*
 
@@ -811,7 +842,7 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-request-sections*
 
-*Test Purpose: <<_requirement-48>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-request-sections>>*
 
 *Test method:*
 
@@ -829,7 +860,7 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-request-eoId*
 
-*Test Purpose: <<_requirement-49>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-request-eoId>>*
 
 *Test method:*
 
@@ -843,7 +874,7 @@ individual tests pass.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-request-containment*
 
-*Test Purpose: <<_requirement-50>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-request-containment>>*
 
 *Test method:*
 
@@ -858,9 +889,9 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 ==== DescribeEOCoverageSet Request Dimension
 
-*Test id: /conf/eowcs/describeEOCoverageSet-request-dimension*
+*Test id: /conf/eowcs/describeEOCoverageSet-request-dimensions*
 
-*Test Purpose: <<_requirement-51>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-request-dimensions>>*
 
 *Test method:*
 
@@ -874,7 +905,7 @@ and a normal response otherwise.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-request-crs*
 
-*Test Purpose: <<_requirement-52>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-request-crs>>*
 
 *Test method:*
 
@@ -891,18 +922,28 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-structure*
 
-*Test Purpose: <<_requirement-53>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-structure>>*
 
 *Test method:*
 
 Send a valid _DescribeEOCoverageSet_ request to the server under test, check
 that the result consist of a `EOWCS::EOCoverageSetDescription` structure.
 
+==== DescribeEOCoverageSet Response defaultPackageFormat
+
+*Test id: /conf/eowcs_geteocoverageset/defaultPackageFormat*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/defaultPackageFormat>>*
+
+*Test method:*
+
+TODO
+
 ==== DescribeEOCoverageSet Response EO Metadata
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-eo-metadata*
 
-*Test Purpose: <<_requirement-54>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-eo-metadata>>*
 
 *Test method:*
 
@@ -915,7 +956,7 @@ of the EO Coverage to be described.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-section-coverageDescriptions*
 
-*Test Purpose: <<_requirement-55>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-section-coverageDescriptions>>*
 
 *Test method:*
 
@@ -932,7 +973,7 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions*
 
-*Test Purpose: <<_requirement-56>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions>>*
 
 *Test method:*
 
@@ -949,7 +990,7 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-eoId*
 
-*Test Purpose: <<_requirement-57>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-eoId>>*
 
 *Test method:*
 
@@ -962,7 +1003,7 @@ parameter appears at most once.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-referred*
 
-*Test Purpose: <<_requirement-58>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-referred>>*
 
 *Test method:*
 
@@ -983,7 +1024,7 @@ Test passes if all individual tests pass.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-containment*
 
-*Test Purpose: <<_requirement-59>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-containment>>*
 
 *Test method:*
 
@@ -1007,7 +1048,7 @@ Pass test if both checks succeed.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-phenomenonTime*
 
-*Test Purpose: <<_requirement-60>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-phenomenonTime>>*
 
 *Test method:*
 
@@ -1033,7 +1074,7 @@ Pass test if both checks succeed.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-trim-omitted*
 
-*Test Purpose: <<_requirement-61>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-trim-omitted>>*
 
 *Test method:*
 
@@ -1045,7 +1086,7 @@ both responses are not exceptions and equal.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-bound-omitted*
 
-*Test Purpose: <<_requirement-62>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-bound-omitted>>*
 
 *Test method:*
 
@@ -1057,7 +1098,7 @@ they are indicated in actual lower or upper bound of the objects.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-coverageSubtype*
 
-*Test Purpose: <<_requirement-63>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-coverageSubtype>>*
 
 *Test method:*
 
@@ -1069,7 +1110,7 @@ each Coverage listed contains the corresponding value in its
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-count*
 
-*Test Purpose: <<_requirement-64>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-count>>*
 
 *Test method:*
 
@@ -1083,7 +1124,7 @@ parameter.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-numberMatched*
 
-*Test Purpose: <<_requirement-65>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-numberMatched>>*
 
 *Test method:*
 
@@ -1097,7 +1138,7 @@ reported `numberMatched` parameter.
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-numberReturned*
 
-*Test Purpose: <<_requirement-66>>*
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-numberReturned>>*
 
 *Test method:*
 
@@ -1107,11 +1148,81 @@ Check that the sum of the numbers of `CoverageDescription` and
 `DatasetSeriesDescription` elements is equal to the value of the reported
 `numberReturned` parameter.
 
+==== TODO
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-request-structure*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-request-structure>>*
+
+*Test method:*
+
+TODO
+
+==== TODO
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-request-eoId*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-request-eoId>>*
+
+*Test method:*
+
+TODO
+
+==== TODO
+
+*Test id: /conf*
+
+*Test Purpose: <</req>>*
+
+*Test method:*
+
+TODO
+
+==== TODO
+
+*Test id: /conf*
+
+*Test Purpose: <</req>>*
+
+*Test method:*
+
+TODO
+
+==== TODO
+
+*Test id: /conf*
+
+*Test Purpose: <</req>>*
+
+*Test method:*
+
+TODO
+
+==== TODO
+
+*Test id: /conf*
+
+*Test Purpose: <</req>>*
+
+*Test method:*
+
+TODO
+
+==== TODO
+
+*Test id: /conf*
+
+*Test Purpose: <</req>>*
+
+*Test method:*
+
+TODO
+
 ==== Band Subsetting
 
 *Test id: /conf/eowcs/band-subsetting*
 
-*Test Purpose: <<_requirement-67>>*
+*Test Purpose: <</req/eowcs/band-subsetting>>*
 
 *Test method:*
 
@@ -1120,9 +1231,9 @@ request; check that the extension required is listed.
 
 ==== Scaling
 
-*Test id: /conf/eowcs/scaling+interpolation*
+*Test id: /conf/eowcs/scaling*
 
-*Test Purpose: <<_requirement-68>>*
+*Test Purpose: <</req/eowcs/scaling>>*
 
 *Test method:*
 
@@ -1133,18 +1244,18 @@ request; check that the extension required is listed.
 
 *Test id: /conf/eowcs/interpolation*
 
-*Test Purpose: <<_requirement-69>>*
+*Test Purpose: <</req/eowcs/interpolation>>*
 
 *Test method:*
 
 Determine the list of supported extensions via a valid _GetCapabilities_
 request; check that the extension required is listed.
 
-==== CRS-predefined
+==== CRS
 
-*Test id: /conf/eowcs/crs-predefined*
+*Test id: /conf/eowcs/crs*
 
-*Test Purpose: <<_requirement-70>>*
+*Test Purpose: <</req/eowcs/crs>>*
 
 *Test method:*
 
@@ -1155,7 +1266,7 @@ request; check that the extension required is listed.
 
 *Test id: /conf/eowcs/encodings*
 
-*Test Purpose: <<_requirement-71>>*
+*Test Purpose: <</req/eowcs/encodings>>*
 
 *Test method:*
 
@@ -1166,7 +1277,7 @@ request; check that the extension required is listed.
 
 *Test id: /conf/eowcs/protocol-bindings*
 
-*Test Purpose: <<_requirement-72>>*
+*Test Purpose: <</req/eowcs/protocol-bindings>>*
 
 *Test method:*
 
@@ -1177,9 +1288,9 @@ request; check that the extension required is listed.
 
 ==== eowcs_get-kvp/Mandatory
 
-*Test id: /conf/eowcs/eowcs_get-kvp/mandatory*
+*Test id: /conf/eowcs_get-kvp/mandatory*
 
-*Test Purpose: <<_requirement-73>>*
+*Test Purpose: <</req/eowcs_get-kvp/mandatory>>*
 
 *Test method:*
 
@@ -1188,9 +1299,9 @@ request; check that the extension required is listed.
 
 ==== eowcs_get-kvp/Conformance Class in Profile
 
-*Test id: /conf/eowcs/eowcs_get-kvp/conformance-class-in-profile*
+*Test id: /conf/eowcs_get-kvp/conformance-class-in-profile*
 
-*Test Purpose: <<_requirement-74>>*
+*Test Purpose: <</req/eowcs_get-kvp/conformance-class-in-profile>>*
 
 *Test method:*
 
@@ -1199,9 +1310,9 @@ request; check that the extension required is listed.
 
 ==== eowcs_get-kvp/describeEOCoverageSet Request
 
-*Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-request*
+*Test id: /conf/eowcs_get-kvp/describeEOCoverageSet-request*
 
-*Test Purpose: <<_requirement-75>>*
+*Test Purpose: <</req/eowcs_get-kvp/describeEOCoverageSet-request>>*
 
 *Test method:*
 
@@ -1210,9 +1321,9 @@ response is not an exception.
 
 ==== eowcs_get-kvp/describeEOCoverageSet eoid
 
-*Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-eoid*
+*Test id: /conf/eowcs_get-kvp/describeEOCoverageSet-eoid*
 
-*Test Purpose: <<_requirement-76>>*
+*Test Purpose: <</req/eowcs_get-kvp/describeEOCoverageSet-eoid>>*
 
 *Test method:*
 
@@ -1221,9 +1332,9 @@ response is not an exception.
 
 ==== eowcs_get-kvp/describeEOCoverageSet Containment
 
-*Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-containment*
+*Test id: /conf/eowcs_get-kvp/describeEOCoverageSet-containment*
 
-*Test Purpose: <<_requirement-77>>*
+*Test Purpose: <</req/eowcs_get-kvp/describeEOCoverageSet-containment>>*
 
 *Test method:*
 
@@ -1232,9 +1343,9 @@ response is not an exception.
 
 ==== eowcs_get-kvp/describeEOCoverageSet Subset
 
-*Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-subset*
+*Test id: /conf/eowcs_get-kvp/describeEOCoverageSet-subset*
 
-*Test Purpose: <<_requirement-78>>*
+*Test Purpose: <</req/eowcs_get-kvp/describeEOCoverageSet-subset>>*
 
 *Test method:*
 
@@ -1245,9 +1356,9 @@ response is not an exception.
 
 ==== eowcs_soap/Mandatory
 
-*Test id: /conf/eowcs/eowcs_soap/mandatory*
+*Test id: /conf/eowcs_soap/mandatory*
 
-*Test Purpose: <<_requirement-79>>*
+*Test Purpose: <</req/eowcs_soap/mandatory>>*
 
 *Test method:*
 
@@ -1256,9 +1367,9 @@ request; check that the extension required is listed.
 
 ==== eowcs_soap/Conformance Class in Profile
 
-*Test id: /conf/eowcs/eowcs_soap/conformance-class-in-profile*
+*Test id: /conf/eowcs_soap/conformance-class-in-profile*
 
-*Test Purpose: <<_requirement-80>>*
+*Test Purpose: <</req/eowcs_soap/conformance-class-in-profile>>*
 
 *Test method:*
 
@@ -1267,9 +1378,9 @@ request; check that the extension required is listed.
 
 ==== eowcs_soap/describeEOCoverageSet Request Structure
 
-*Test id: /conf/eowcs/eowcs_soap/describeEOCoverageSet-request-structure*
+*Test id: /conf/eowcs_soap/describeEOCoverageSet-request-structure*
 
-*Test Purpose: <<_requirement-81>>*
+*Test Purpose: <</req/eowcs_soap/describeEOCoverageSet-request-structure>>*
 
 *Test method:*
 
@@ -1287,9 +1398,9 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 
 ==== eowcs_soap/describeEOCoverageSet Request Structure
 
-*Test id: /conf/eowcs/eowcs_soap/describeEOCoverageSet-request-structure*
+*Test id: /conf/eowcs_soap/describeEOCoverageSet-response-structure*
 
-*Test Purpose: <<_requirement-82>>*
+*Test Purpose: <</req/eowcs_soap/describeEOCoverageSet-response-structure>>*
 
 *Test method:*
 
@@ -1298,9 +1409,9 @@ response whether the condition is fulfilled.
 
 ==== eowcs_soap/wsdl
 
-*Test id: /conf/eowcs/eowcs_soap/wsdl*
+*Test id: /conf/eowcs_soap/wsdl*
 
-*Test Purpose: <<_requirement-83>>*
+*Test Purpose: <</req/eowcs_soap/wsdl>>*
 
 *Test method:*
 

@@ -12,7 +12,8 @@ class RequirementBlock < Extensions::BlockProcessor
     attributes['id'] = "_requirement-#{requirement_id}" unless attributes['id']
     attributes['title'] = "#{doc.attributes['requirement-caption'] || 'Requirement'} #{requirement_id}" unless attributes['title']
     if attributes['uri']
-        attributes['title'] = attributes['title'] + " " + attributes['uri']
+      attributes['id'] = attributes['uri']
+      attributes['title'] = attributes['title'] + " " + attributes['uri']
     end
 
     block = Asciidoctor::Block.new parent, :quote, :source => reader.lines, :attributes => attributes
