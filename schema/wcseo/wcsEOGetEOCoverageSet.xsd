@@ -75,7 +75,7 @@
     <!-- =========================================================== -->
     <element name="EOCoverageSet" type="wcseo:EOCoverageSetType">
         <annotation>
-            <documentation>Response from an EO-WCS GetEOCoverageSet operation, containing wcseo:RectifiedDataset, wcseo:ReferenceableDataset, wcseo:RectifiedStitchedMosaic, and a wcseo:ReferenceableStitchedMosaic elements.</documentation>
+            <documentation>Response from an EO-WCS GetEOCoverageSet operation, containing wcseo:RectifiedDataset, wcseo:ReferenceableDataset, wcseo:RectifiedStitchedMosaic, wcseo:ReferenceableStitchedMosaic, and wcseo:DatasetSeries elements.</documentation>
         </annotation>
     </element>
     <complexType name="EOCoverageSetType">

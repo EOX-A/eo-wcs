@@ -72,7 +72,7 @@ alternatives, items in brackets ("[ ]") are optional. Non-terminals `NCName`,
 <<6>>.
 
 NOTE: Allowed values for points are determined by the CRS used. This ranges from
-"2009-11-06" for time to "-41.5" and "41°5’" for lat/long whereby non-numeric
+"2009-11-06" for time to "-41.5" and "41°5'" for lat/long whereby non-numeric
 values have to be enclosed in double quotes.
 
 NOTE: CRSs are fixed to WGS84 for space and ISO 8601 for time; still they need

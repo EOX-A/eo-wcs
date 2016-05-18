@@ -403,7 +403,7 @@ In the response to a successful _GetCoverage_ request on an EO Coverage, the
 [requirement,uri="/req/eowcs/getCoverage-response-eo-metadata-in-stitched-mosaic"]
 In the response to a successful _GetCoverage_ request on a Stitched Mosaic, the
 `EOWCS::EOMetadata` of the coverage returned *shall* contain the original
-Stitched Mosaic’s references to those Datasets which have a non-empty
+Stitched Mosaic's references to those Datasets which have a non-empty
 intersection with the effective spatio-temporal request trim interval, and no
 other ones.
 
@@ -894,13 +894,13 @@ returned are to be packaged e.g., `application/x-gzip` |`anyURI` |zero or one
 \"``multipart/related``" |zero or one (optional)
 |`format` |MIME type identifier of the format in which the coverages returned are
 to be encoded |`anyURI` |zero or one (optional)
+|`applySubset` |Determining if the given subset should be applied to the
+coverages returned |`boolean` |zero or one (optional)
 |`Scaling` |Scaling to be applied to coverages returned |`scal:Scaling` |zero
 or one (optional)
 |`Interpolation` |Interpolation method to be applied on all axes during
 _GetEOCoverageSet_ result preparation |`int:Interpolation` |zero or one
 (optional)
-|`applySubset` |Determining if the given subset should be applied to the
-coverages returned |`boolean` |zero or one (optional)
 |`subsettingCrs` |CRS Identifier indicating the CRS in which the request
 subsetting coordinates are expressed |`crs:subsettingCrs` |zero or one
 (optional)
@@ -941,8 +941,8 @@ Coverage inquired.
 
 The package encoding format in which the coverages are returned is specified
 by the combination of the `packageFormat` and `mediaType` parameters. Admissible
-values (i.e, package formats supported) are those listed in the server’s
-Capabilities document. The default is the also reported in the server’s
+values (i.e, package formats supported) are those listed in the server's
+Capabilities document. The default is the also reported in the server's
 Capabilities document.
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-packageFormat"]
@@ -957,7 +957,7 @@ shall contain a MIME type identifier of fixed value \"``multipart/related``".
 
 The encoding format in which the coverages themselves are returned is specified
 by the `format` parameter. Admissible values (i.e, formats supported) are those
-listed in the server’s Capabilities document. Note that only one format
+listed in the server's Capabilities document. Note that only one format
 applicable for all coverages to be returned can be specified. Default is the
 coverage's Native Format of each coverage to be returned.
 
@@ -1030,16 +1030,45 @@ operation request:
 ==== _GetEOCoverageSet_ response
 
 The response to a successful _GetEOCoverageSet_ request is a packaged set of
-coverages as per the Coverages Implementation Schema [OGC 09-146r2].
-
-[requirement,uri=""]
-The contents ...
+coverages. Each coverage itself is structured the same way as resulting from a
+_GetCoverage_ request.
 
 TODO
-  add lineage element
 
+  eoId
+  containment
+  count
+  dimensionTrim
+  subsettingCrs in combination with dimensionTrim
+
+
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat"]
+The contents of the response to a successful _GetEOCoverageSet_ request *shall*
+be encoded as specified by the `packageFormat` parameter, if this parameter is
+present in the request, and in the service's default package format as reported
+in the `wcseo:defaultPackageFormat` element of the Capabilities if this
+parameter is not present.
+
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-mediaType"]
+The contents of the response to a successful _GetEOCoverageSet_ request *shall*
+follow the structure of the `wcseo:EOCoverageSet` element if the `mediaType`
+parameter is present and has the value `multipart/related`. The second part of
+the multipart response *shall* be encoded as specified by
+<</req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat>>.
+
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-format"]
+The coverages contained in the response to a successful _GetEOCoverageSet_
+request *shall* be encoded as specified by the `format` parameter, if this
+parameter is present, and in the coverage's Native Format if this parameter is
+not present.
+
+
+
+TODO
   applySubset default "false"
     The subset given in the request can be applied to the coverages to be returned. Default is to respond with entire coverages.
+
+  add lineage element
 
 
 
@@ -1048,19 +1077,20 @@ coverages returned.
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-scaling"]
 If a _GetCoverage_ request contains a `Scaling` parameter then this parameter
-*shall* be interpreted as specified by the WCS Scaling Extension [OGC 12-039].
+*shall* be applied individually to each coverage to be returned as specified by
+the WCS Scaling Extension [OGC 12-039].
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-interpolation"]
 If a _GetCoverage_ request contains a `Interpolation` parameter then this
-parameter *shall* be interpreted as specified by the WCS Interpolation Extension
-[OGC 12-049].
+parameter *shall* be applied individually to each coverage to be returned as
+specified by the WCS Interpolation Extension [OGC 12-049].
 
 A requested general output CRS as well as CRS for subsetting is equally applied
 to all coverages returned.
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss"]
 If a _GetCoverage_ request contains a `subsettingCrs` and/or `outputCrs`
-parameter then this parameter(s) *shall* be interpreted as specified by the
-WCS CRS Extension [OGC 11-053r1].
+parameter then this parameter(s) *shall* be applied individually to each
+coverage to be returned as specified by the WCS CRS Extension [OGC 11-053r1].
 
 ==== _GetEOCoverageSet_ exceptions

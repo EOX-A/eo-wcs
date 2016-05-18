@@ -151,7 +151,7 @@ Metadata record and a WGS84 bounding box
 
 === EO Metadata
 
--> EO Coverage’s metadata record
+-> EO Coverage's metadata record
 
 === Stitched Mosaic
 

@@ -165,7 +165,7 @@ For each EO Coverage offered by the server under test:
 * retrieve coverage information via _GetCoverage_ operation.
 * Check that all cells, whose locations are outside the EO Metadata footprint
   when both are evaluated in WGS84, contain some nil value as defined in the
-  bounding EO Coverage’s range type.
+  bounding EO Coverage's range type.
 
 Test passes if all individual tests pass.
 
@@ -791,7 +791,7 @@ For each Stitched Mosaic offered by the server:
 * send a valid _GetCoverage_ request with an effective spatio-temporal request
   trim interval to server under test.
 * Check that the `EOWCS::EOMetadata` of the coverage returned contains the
-  original Stitched Mosaic’s references to those Datasets which have a non-empty
+  original Stitched Mosaic's references to those Datasets which have a non-empty
   intersection with the effective spatio-temporal request trim interval.
 
 Test passes if all individual tests pass.

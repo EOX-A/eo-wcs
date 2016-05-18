@@ -46,8 +46,8 @@ Stitched Mosaic, and Dataset Series relate to each other spatio-temporally:
 * A - a Dataset with a particular validity in time;
 
 * B - a Stitched Mosaic; all its Datasets have a spatial extent contained in the
-Stitched Mosaic’s spatial extent and a timespan contained in the Stitched
-Mosaic’s time interval. The subsets contributing to the Stitched Mosaic do not
+Stitched Mosaic's spatial extent and a timespan contained in the Stitched
+Mosaic's time interval. The subsets contributing to the Stitched Mosaic do not
 overlap in space, but there may be empty (nil) areas.
 
 * C - the overall Dataset Series combining Datasets and Stitched Mosaics.
@@ -103,7 +103,7 @@ except that GetCoverage appends its request verbatim as an additional record
 (see <</req/eowcs/getCoverage-response-lineage-in-eo-metadata>>).
 
 The footprint of an EO Coverage, which contains one or more bounding polygons to
-describe the region of valid data more accurately than the EO Coverage’s
+describe the region of valid data more accurately than the EO Coverage's
 bounding box, is mandatory as opposed to [OGC 10-157r3].
 
 [requirement,uri="/req/eowcs/footprint-in-eo-metadata"]
@@ -165,8 +165,8 @@ equal.
 
 ==== Spatio-temporal extent
 
-The EO Coverage’s extent of valid data is given by its EO Metadata footprint,
-which refines the coverage’s envelope.
+The EO Coverage's extent of valid data is given by its EO Metadata footprint,
+which refines the coverage's envelope.
 
 [requirement,uri="/req/eowcs/footprint-inside-boundedBy"]
 In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
@@ -196,8 +196,8 @@ ISO 8601 <<2>>.
 [requirement,uri="/req/eowcs/range-set-of-eo-coverage"]
 In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
 all cells whose locations are outside the EO Metadata footprint when both are
-evalu- ated in WGS84, *shall* contain nil values as defined in the bounding EO
-Coverage’s range type.
+evaluated in WGS84, *shall* contain nil values as defined in the bounding EO
+Coverage's range type.
 
 === Dataset
 
@@ -283,7 +283,7 @@ Dataset contributing to the Stitched Mosaic on hand |`EOP::Footprint` |zero or
 one (optional)
 |===============================================================================
 
-The Dataset references of an EO Coverage shall be consistent with the coverage’s
+The Dataset references of an EO Coverage shall be consistent with the coverage's
 EO Metadata references.
 
 [requirement,uri="/req/eowcs/composedOf-in-stitched-mosaic"]
@@ -359,7 +359,7 @@ hold: The range type of _d_ is identical to the range type of _sm_.
 ==== Range set
 
 The content of a Stitched Mosaic is given by the Datasets it refers to; cells of
-a Stitched Mosaic with domain coordinates outside of any embedded Dataset’s
+a Stitched Mosaic with domain coordinates outside of any embedded Dataset's
 contributingFootprint carry nil values (cf. <<datasetseries_conceptual2>>).
 
 [requirement,uri="/req/eowcs/nil-values-in-stitched-mosaic"]
