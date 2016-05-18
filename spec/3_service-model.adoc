@@ -361,6 +361,7 @@ response.
 [requirement,uri="/req/eowcs/getCoverage-request-no-slicing"]
 A _GetCoverage_ request on EO Coverages *shall* not contain a slicing operation.
 
+[[getcoverage_response]]
 ==== _GetCoverage_ response
 
 The _GetCoverage_ response is as defined in the WCS Core [OGC 09-110r4], however
@@ -369,8 +370,8 @@ extended in two respects:
 * The coverage returned contains exactly one metadata element holding the EO
 Metadata record (it may contain further metadata elements in addition);
 
-* The lineage component of the EO Metadata record returned consists of the pre-
-existing lineage sequence plus one element appended which describes the
+* The lineage component of the EO Metadata record returned consists of the
+preexisting lineage sequence plus one element appended which describes the
 _GetCoverage_ request on hand.
 
 NOTE: As always, whether all these elements will be available to a client
@@ -708,7 +709,7 @@ the `EOMetadata` element of an EO Coverage.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-containment"]
 The response to a successful _DescribeEOCoverageSet_ request containing a
-`wcs:CoverageDescriptions` section shall contain only descriptions of those EO
+`wcs:CoverageDescriptions` section *shall* contain only descriptions of those EO
 Coverages whose spatial footprint defined by its
 `eop:EarthObservation/om:featureOfInterest/eop:Footprint` +
 - overlaps with the spatial request extent, and the request parameter
@@ -769,7 +770,7 @@ The response to a successful _DescribeEOCoverageSet_ request *shall* report in
 its `numberReturned` attribute the sum of all `CoverageDescription` and
 `DatasetSeriesDescription` elements included in the response.
 
-Example The following XML fragment shows parts of a possible
+Example: The following XML fragment shows parts of a possible
 `DescribeEOCoverageSet` operation response:
 
 [source,xml]
@@ -1029,18 +1030,9 @@ operation request:
 
 ==== _GetEOCoverageSet_ response
 
-The response to a successful _GetEOCoverageSet_ request is a packaged set of
-coverages. Each coverage itself is structured the same way as resulting from a
-_GetCoverage_ request.
-
-TODO
-
-  eoId
-  containment
-  count
-  dimensionTrim
-  subsettingCrs in combination with dimensionTrim
-
+The response to a successful _GetEOCoverageSet_ request consists of a (possibly
+empty) packaged set of EO Coverages. Each individual coverage itself is
+structured the same way as resulting from a _GetCoverage_ request.
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat"]
 The contents of the response to a successful _GetEOCoverageSet_ request *shall*
@@ -1050,39 +1042,138 @@ in the `wcseo:defaultPackageFormat` element of the Capabilities if this
 parameter is not present.
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-mediaType"]
-The contents of the response to a successful _GetEOCoverageSet_ request *shall*
-follow the structure of the `wcseo:EOCoverageSet` element if the `mediaType`
-parameter is present and has the value `multipart/related`. The second part of
-the multipart response *shall* be encoded as specified by
-<</req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat>>.
+The response to a successful _GetEOCoverageSet_ request containing a `mediaType`
+parameter with value `multipart/related` *shall* consist of a
+`wcseo:EOCoverageSet` structure as defined in the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
+standard. The second part of the multipart response *shall* be encoded as
+specified by <</req/eowcs_geteocoverageset /getEOCoverageSet-packageFormat>>.
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-format"]
-The coverages contained in the response to a successful _GetEOCoverageSet_
+The EO Coverages contained in the response to a successful _GetEOCoverageSet_
 request *shall* be encoded as specified by the `format` parameter, if this
 parameter is present, and in the coverage's Native Format if this parameter is
 not present.
 
+The requirements defined for the _GetCoverage_ response like containing EO
+Metadata or adding a lineage component apply to each EO Coverage included in a
+_GetEOCoverageSet_ response package.
 
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-getCoverage"]
+Each EO Coverage contained in the response to a successful _GetEOCoverageSet_
+request *shall* adhere to the requirements defined for the _GetCoverage_
+response in subclause <<getcoverage_response>>.
 
-TODO
-  applySubset default "false"
-    The subset given in the request can be applied to the coverages to be returned. Default is to respond with entire coverages.
+A _GetEOCoverageSet_ response contains only EO Coverages directly referred to by
+the object(s) addressed in the request or via referred Dataset Series.
 
-  add lineage element
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-eoId"]
+In the response to a successful _GetEOCoverageSet_ request each EO Coverage
+referred to by one of the objects identified in the `eoId` request parameter
+*shall* appear at most once.
 
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-referred"]
+The response to a successful _GetEOCoverageSet_ request *shall* contain exactly
+those EO Coverages referred to directly or indirectly via Dataset Series by one
+of the objects identified in the `eoId` request parameter, without any
+duplicates.
 
+NOTE: A Dataset referred to by a Dataset Series referred to by another Dataset
+Series is implicitly referred to by the later Dataset Series and thus always
+reported by a _GetEOCoverageSet_ request against the later Dataset Series.
+However, it is allowed that such a Dataset is also referred to by the first
+Dataset Series but it is only reported once.
+
+NOTE: A Dataset referred to by a Stitched Mosaic referred to by a Dataset Series
+is not per se referred to by that Dataset Series and thus not reported by a
+_GetEOCoverageSet_ request against the Dataset Series. However, it is allowed
+that such a Dataset is also referred to by the enclosing Dataset Series.
+
+Spatial subsetting is evaluated against the `eop:Footprint` element contained in
+the `EOMetadata` element of an EO Coverage.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-containment"]
+The response to a successful _GetEOCoverageSet_ request *shall* contain only
+those EO Coverages whose spatial footprint defined by its
+`eop:EarthObservation/om:featureOfInterest/eop:Footprint` +
+- overlaps with the spatial request extent, and the request parameter
+  `containment` is of value `overlaps` or is omitted, +
+- is completely contained within the spatial request extent, and the request
+  parameter `containment` is of value `contains` +
+whereby all spatial coordinates are expressed in WGS84 <<4>> if no
+`subsettingCrs` parameter is present.
+
+Temporal subsetting is evaluated against the temporal validity of an EO
+Coverage.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-phenomenonTime"]
+The response to a successful _GetEOCoverageSet_ request *shall* contain only EO
+Coverages whose time interval defined by its
+`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
+`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` elements
+in `eowcs:EOMetadata` +
+- overlaps with the request time extent, and the request parameter `containment`
+  is of value `overlaps` or is omitted, +
+- is completely contained within the request time extent, and the request
+  parameter `containment` is of value `contains`, +
+whereby all temporal coordinates are expressed in ISO 8601 <<2>> if no
+`subsettingCrs` parameter is present.
+
+Boundary values omitted are substituted by the actual boundary value of the
+object inquired.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-trim-omitted"]
+In a _GetEOCoverageSet_ request, a trim specification omitted *shall* be
+interpreted as the actual boundary of the objects requested in the axis omitted.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-bound-omitted"]
+In a _GetEOCoverageSet_ request, a lower or upper bound omitted *shall* be
+interpreted as indicating the actual lower or upper bound of the objects
+requested in the axis omitted.
+
+NOTE: This trim semantics is analogous to trimming in _GetCoverage_.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-count"]
+In the response to a successful _GetEOCoverageSet_ request the sum of
+`RectifiedDataset`, `ReferenceableDataset`, `RectifiedStitchedMosaic`,
+`ReferenceableStitchedMosaic`, and `DatasetSeries` elements *shall* be less or
+equal to the minimum of the value of the `CountDefault` element and the `count`
+parameter if present in the request. If none of both are present all matching
+elements *shall* be reported.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-numberMatched"]
+The response to a successful _GetEOCoverageSet_ request *shall* report in its
+`numberMatched` attribute the sum of all matching `RectifiedDataset`,
+`ReferenceableDataset`, `RectifiedStitchedMosaic`,
+`ReferenceableStitchedMosaic`, and `DatasetSeries` elements.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-numberReturned"]
+The response to a successful _GetEOCoverageSet_ request *shall* report in its
+`numberReturned` attribute the sum of all `RectifiedDataset`,
+`ReferenceableDataset`, `RectifiedStitchedMosaic`,
+`ReferenceableStitchedMosaic`, and `DatasetSeries` elements included in the
+response.
+
+The spatial subsetting requested may be applied to the EO Coverages to be
+returned. Default is to respond with entire coverages.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-applySubset"]
+Each EO Coverage contained in the response to a successful _GetEOCoverageSet_
+request containing an `applySubset` parameter with value `true` *shall* be
+subsetted as specified by the _crs-gridded-coverage_ conformance class of the
+WCS CRS Extension [OGC 11-053r1].
 
 A requested general scaling and interpolation is equally applied to all
 coverages returned.
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-scaling"]
 If a _GetCoverage_ request contains a `Scaling` parameter then this parameter
-*shall* be applied individually to each coverage to be returned as specified by
-the WCS Scaling Extension [OGC 12-039].
+*shall* be applied individually to each EO Coverage to be returned as specified
+by the WCS Scaling Extension [OGC 12-039].
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-interpolation"]
 If a _GetCoverage_ request contains a `Interpolation` parameter then this
-parameter *shall* be applied individually to each coverage to be returned as
+parameter *shall* be applied individually to each EO Coverage to be returned as
 specified by the WCS Interpolation Extension [OGC 12-049].
 
 A requested general output CRS as well as CRS for subsetting is equally applied
@@ -1091,6 +1182,118 @@ to all coverages returned.
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss"]
 If a _GetCoverage_ request contains a `subsettingCrs` and/or `outputCrs`
 parameter then this parameter(s) *shall* be applied individually to each
-coverage to be returned as specified by the WCS CRS Extension [OGC 11-053r1].
+EO Coverage to be returned as specified by the WCS CRS Extension [OGC 11-053r1].
+
+Example: The following XML fragment shows parts of the first part of a possible
+`GetEOCoverageSet` operation multipart response:
+
+[source,xml]
+<?xml version="1.0" encoding="UTF-8"?>
+<wcseo:EOCoverageSet numberMatched="3" numberReturned="3" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:eop="http://www.opengis.net/eop/2.0" xmlns:om="http://www.opengis.net/om/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd">
+  <wcseo:RectifiedDataset gml:id="someEOCoverage1">
+    <gml:boundedBy>
+      ...
+    </gml:boundedBy>
+    <gml:domainSet>
+      ...
+    </gml:domainSet>
+    <gml:rangeSet>
+      <gml:File>
+        <gml:rangeParameters xlink:arcrole="fileReference" xlink:href="cid:coverage/someEOCoverage1.tif" xlink:role="http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage" />
+        <gml:fileReference>cid:coverage/someEOCoverage1.tif</gml:fileReference>
+        <gml:fileStructure />
+        <gml:mimeType>image/tiff</gml:mimeType>
+      </gml:File>
+    </gml:rangeSet>
+    <gmlcov:rangeType>
+      ...
+    </gmlcov:rangeType>
+    <gmlcov:metadata>
+      <gmlcov:Extension>
+        <wcseo:EOMetadata>
+          <eop:EarthObservation gml:id="eop_someEOCoverage1">
+            ...
+          </eop:EarthObservation>
+          <wcseo:lineage>
+            <wcseo:referenceGetEOCoverageSet>
+              <ows:Reference xlink:href="http://www.someWCS.org?SERVICE=WCS&amp;VERSION=2.0.1&amp;REQUEST=GetEOCoverageSet&amp;EOID=someDatasetSeries1&amp;PACKAGEFORMAT=application/metalink4+xml&amp;MEDIATYPE=multipart/related" />
+            </wcseo:referenceGetEOCoverageSet>
+            <gml:timePosition>2016-05-17T12:25:40Z</gml:timePosition>
+          </wcseo:lineage>
+        </wcseo:EOMetadata>
+      </gmlcov:Extension>
+    </gmlcov:metadata>
+  </wcseo:RectifiedDataset>
+  <wcseo:RectifiedDataset gml:id="someEOCoverage2">
+    <gml:boundedBy>
+      ...
+    </gml:boundedBy>
+    <gml:domainSet>
+      ...
+    </gml:domainSet>
+    <gml:rangeSet>
+      <gml:File>
+        <gml:rangeParameters xlink:arcrole="fileReference" xlink:href="cid:coverage/someEOCoverage2.tif" xlink:role="http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage" />
+        <gml:fileReference>cid:coverage/someEOCoverage2.tif</gml:fileReference>
+        <gml:fileStructure />
+        <gml:mimeType>image/tiff</gml:mimeType>
+      </gml:File>
+    </gml:rangeSet>
+    <gmlcov:rangeType>
+      ...
+    </gmlcov:rangeType>
+    <gmlcov:metadata>
+      <gmlcov:Extension>
+        <wcseo:EOMetadata>
+          <eop:EarthObservation gml:id="eop_someEOCoverage2">
+            ...
+          </eop:EarthObservation>
+          <wcseo:lineage>
+            <wcseo:referenceGetEOCoverageSet>
+              <ows:Reference xlink:href="http://www.someWCS.org?SERVICE=WCS&amp;VERSION=2.0.1&amp;REQUEST=GetEOCoverageSet&amp;EOID=someDatasetSeries1&amp;PACKAGEFORMAT=application/metalink4+xml&amp;MEDIATYPE=multipart/related" />
+            </wcseo:referenceGetEOCoverageSet>
+            <gml:timePosition>2016-05-17T12:25:40Z</gml:timePosition>
+          </wcseo:lineage>
+        </wcseo:EOMetadata>
+      </gmlcov:Extension>
+    </gmlcov:metadata>
+  </wcseo:RectifiedDataset>
+  <wcseo:DatasetSeries>
+    <wcseo:DatasetSeriesId>someDatasetSeries1</wcseo:DatasetSeriesId>
+    <eop:Footprint gml:id="footprint_someDatasetSeries1">
+      ...
+    </eop:Footprint>
+    <gml:TimePeriod gml:id="someDatasetSeries1_timeperiod">
+      ...
+    </gml:TimePeriod>
+    <ows:Metadata>
+      <wcseo:EOMetadata>
+        <ows:Reference xlink:href="http://www.someCatalogue.org/eop-metadata-from-someDatasetSeries1" xlink:role="http://standards.iso.org/iso/19115/-3/mdb/1.0" xlink:title="ISO 19115-3 Metadata" />
+        <wcseo:lineage>
+          <wcseo:referenceGetEOCoverageSet>
+            <ows:Reference xlink:href="http://www.someWCS.org?SERVICE=WCS&amp;VERSION=2.0.1&amp;REQUEST=GetEOCoverageSet&amp;EOID=someDatasetSeries1&amp;PACKAGEFORMAT=application/metalink4+xml&amp;MEDIATYPE=multipart/related" />
+          </wcseo:referenceGetEOCoverageSet>
+          <gml:timePosition>2016-05-17T12:25:40Z</gml:timePosition>
+        </wcseo:lineage>
+      </wcseo:EOMetadata>
+    </ows:Metadata>
+    <wcseo:rectifiedDataset>
+      <wcs:CoverageId>someEOCoverage1</wcs:CoverageId>
+    </wcseo:rectifiedDataset>
+    <wcseo:rectifiedDataset>
+      <wcs:CoverageId>someEOCoverage2</wcs:CoverageId>
+    </wcseo:rectifiedDataset>
+  </wcseo:DatasetSeries>
+</wcseo:EOCoverageSet>
 
 ==== _GetEOCoverageSet_ exceptions
+
+[#geteocoverageset_except,reftext='{table-caption} {counter:table-num}']
+.Exception codes for GetEOCoverageSet operation
+[cols="2,^1,3,2",options="header"]
+|===============================================================================
+|`exceptionCode` value |HTTP code | Meaning of exception code |`locator` value
+|`NoSuchDatasetSeriesOrCoverage` |404 |The identifier passed does not match with
+any of the DatasetSeries or EO Coverages offered by this server |List of
+violating Dataset Series and/or EO Coverage identifiers
+|===============================================================================
