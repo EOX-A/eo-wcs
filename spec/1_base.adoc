@@ -227,6 +227,9 @@ http://www.opengis.net/WCS_service-extension_scaling/1.0) |WCS Scaling Extension
 http://www.opengis.net/WCS_service-extension_interpolation/1.0|WCS Interpolation
 Extension
 |crs    |http://www.opengis.net/wcs/crs/1.0     |WCS CRS Extension
+|gmd    |http://www.isotc211.org/2005/gmd       |ISO 19139 Metadata
+|gmi    |http://standards.iso.org/iso/19115/-2/gmi/1.0 |ISO 19139-2 Metadata
+|mdb    |http://standards.iso.org/iso/19115/-3/mdb/1.0 |ISO 19115-3 Metadata
 |===============================================================================
 
 === Multiple representations

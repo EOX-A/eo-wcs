@@ -407,6 +407,8 @@ standard.
 Dataset Series |`EOP::Footprint` |one (mandatory)
 |timePeriod |Temporal period of validity of all data in the Dataset Series
 |`GML::TimePeriod` |one (mandatory)
+|metadata |EO Metadata of the Dataset Series on hand |`ows:Metadata` |zero or
+more (optional)
 |referenceableStitchedMosaic |Referenceable Stitched Mosaic to which the Dataset
 Series on hand refers |`WCS::CoverageId` |zero or more (optional)
 |rectifiedStitchedMosaic |Rectified Stitched Mosaic to which the Dataset Series
@@ -431,7 +433,7 @@ footprints of all Stitched Mosaics, Datasets, and Dataset Series the Dataset
 Series refers to, expressed in WGS84.
 
 NOTE: As opposed to Stitched Mosaics, Dataset Series do not require disjointness
-of the EO Coverag- es they refer to.
+of the EO Coverages they refer to.
 
 The temporal validity of a Dataset Series is defined by the union of the
 temporal validities of all Stitched Mosaics, Datasets, and Dataset Series the
@@ -442,9 +444,56 @@ For any given Dataset Series, the `timePeriod` element *shall* enclose the
 temporal validities of all Stitched Mosaics, Datasets, and Dataset Series the
 Dataset Series refers to, expressed in ISO 8601 <<2>>.
 
+A Dataset Series has an EO Metadata record associated.
+
+[requirement,uri="/req/eowcs/metadata-in-datasetSeries"]
+A Dataset Series instance *shall* contain one metadata element of type
+`EOWCS::EOMetadata`.
+
+NOTE: A Dataset Series may contain multiple metadata elements holding the
+metadata in different formats. Explicitly supported metadata elements are
+`eop:EarthObservation`, `gmd:MD_Metadata`, `gmi:MI_Metadata`, `mdb:MD_Metadata`,
+or `ows:Reference` or any element in the substitutionGroup of any of these.
+
 A Dataset Series shall not refer to any Dataset Series that refers to it either
 directly or via other Dataset Series i.e. there shall be no circular references.
 
 [requirement,uri="/req/eowcs/nocircularreference-of-datasetSeries"]
 A Dataset Series *shall* only refer to Dataset Series that do not refer to the
 Dataset Series at hand either directly or via other Dataset Series.
+
+Example: The following XML fragment shows a DatasetSeries instance.
+
+[source,xml]
+<?xml version="1.0" encoding="UTF-8"?>
+<wcseo:DatasetSeries xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd">
+  <wcseo:DatasetSeriesId>someDatasetSeries1</wcseo:DatasetSeriesId>
+  <eop:Footprint gml:id="footprint_someDatasetSeries1">
+    <eop:multiExtentOf>
+      <gml:MultiSurface gml:id="multisurface_someDatasetSeries1" srsName="EPSG:4326">
+        <gml:surfaceMembers>
+          <gml:Polygon gml:id="polygon_someDatasetSeries1">
+            <gml:exterior>
+              <gml:LinearRing>
+                <gml:posList>43.516667 2.1025 43.381667 2.861667 42.862778 2.65 42.996389 1.896944 43.516667 2.1025</gml:posList>
+              </gml:LinearRing>
+            </gml:exterior>
+          </gml:Polygon>
+        </gml:surfaceMembers>
+      </gml:MultiSurface>
+    </eop:multiExtentOf>
+  </eop:Footprint>
+  <gml:TimePeriod gml:id="someDatasetSeries1_timeperiod">
+    <gml:beginPosition>2008-03-13T00:00:00.000</gml:beginPosition>
+    <gml:endPosition>2008-03-13T23:59:59.999</gml:endPosition>
+  </gml:TimePeriod>
+  <ows:Metadata>
+    <wcseo:EOMetadata>
+      <ows:Reference xlink:href="http://www.someCatalogue.org/eop-metadata-from-someDatasetSeries1" xlink:role="http://standards.iso.org/iso/19115/-3/mdb/1.0" xlink:title="ISO 19115-3 Metadata" />
+    </wcseo:EOMetadata>
+  </ows:Metadata>
+  <wcseo:rectifiedDataset>
+    <wcs:CoverageId>someEOCoverage1</wcs:CoverageId>
+  </wcseo:rectifiedDataset>
+</wcseo:DatasetSeries>
+

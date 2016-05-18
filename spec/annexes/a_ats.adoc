@@ -526,6 +526,16 @@ For each `EOWCS::DatasetSeries` offered by the server under test:
 
 Test passes if all individual tests pass.
 
+==== Metadata in DatasetSeries
+
+*Test id: /conf/eowcs/metadata-in-datasetSeries*
+
+*Test Purpose: <</req/eowcs/metadata-in-datasetSeries>>*
+
+*Test method:*
+
+TODO
+
 ==== No circular references of Dataset Series
 
 *Test id: /conf/eowcs/nocircularreference-of-datasetSeries*
