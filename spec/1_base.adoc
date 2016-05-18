@@ -12,36 +12,36 @@ Observation coverages offered by a WCS 2.0 server.
 This document establishes the following requirements and conformance classes:
 
 * _eowcs_, of URI
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/req/eowcs,
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/req/eowcs,
 defining EO-WCS on conceptual level in Clauses <<eo_data_model>>,
 <<eo_service_model>>, and <<wcs_extensions>>; the corresponding conformance
 class is _eowcs_, with URI
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs.
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs.
 
 * _eowcs_geteocoverageset_, of URI
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/req/eowcs_geteocoverageset,
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/req/eowcs_geteocoverageset,
 defining the GetEOCoverageSet request of EO-WCS in Clause <<eo_service_model>>
 where stated, particularly subclause <<geteocoverageset_operation>>; the
 corresponding conformance class is _eowcs_geteocoverageset_, with URI
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_geteocoverageset.
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_geteocoverageset.
 
 * _eowcs_get-kvp_, of URI
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/req/eowcs_get-kvp,
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/req/eowcs_get-kvp,
 defining the GET-KVP protocol binding of EO-WCS in Subclause 9.2; the
 corresponding conformance class is _eowcs_get-kvp_, with URI
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_get-kvp.
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_get-kvp.
 
 * _eowcs_soap_, of URI
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/req/eowcs_soap,
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/req/eowcs_soap,
 defining the SOAP protocol binding of EO-WCS on conceptual level in Subclause
 9.3; the corresponding conformance class is _eowcs_soap_, with URI
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_soap.
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_soap.
 
 Standardization target of all requirements and conformance classes are EO-WCS
 implementations (currently: servers).
 
 Requirements and conformance test URIs defined in this document are relative to
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/.
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/.
 
 Annex A lists the conformance tests which shall be exercised on any software
 artifact claiming to implement EO-WCS.
@@ -53,9 +53,9 @@ This _OGC WCS Application Profile - Earth Observation_ specification consists of
 the present document and an
 http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema]. The complete
 specification is identified by OGC URI
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0,
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1,
 the document has OGC URI
-http://www.opengis.net/doc/ISx/WCS_application-profile_earth-observation/1.0.
+http://www.opengis.net/doc/IS/WCS_application-profile_earth-observation/1.1.
 
 The complete specification is available for download from
 http://www.opengeospatial.org/standards/wcs; additionally, the XML Schema is
@@ -223,7 +223,8 @@ Profile of Observations and Measurements (extension of eop)
 Observation 1.1
 |scal   |http://www.opengis.net/wcs/scaling/1.0 (schema uses
 http://www.opengis.net/WCS_service-extension_scaling/1.0) |WCS Scaling Extension
-|int    |http://www.opengis.net/wcs/interpolation/1.0 |WCS Interpolation
+|int    |http://www.opengis.net/wcs/interpolation/1.0 (schema uses
+http://www.opengis.net/WCS_service-extension_interpolation/1.0|WCS Interpolation
 Extension
 |crs    |http://www.opengis.net/wcs/crs/1.0     |WCS CRS Extension
 |===============================================================================

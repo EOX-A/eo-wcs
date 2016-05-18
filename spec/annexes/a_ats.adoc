@@ -4,13 +4,14 @@
 A WCS implementation must satisfy the following system characteristics to be
 conformant with this specification.
 
-=== Conformance Test Class: eowcs
+Tests identifiers below are relative to:
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/
 
-The OGC URI identifier of this conformance class is:
-http://www.opengis.net/spec/WCS/2.0/conf/WCS_application-profile_eowcs/1.0/conf/eowcs.
+=== Conformance Test Classes: eowcs & eowcs_geteocoverageset
 
-Tests identifiers below are relative to
-http://www.opengis.net/spec/WCS/2.0/WCS_application-profile_eowcs/1.0/.
+The OGC URI identifier of this conformance classes are:
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_geteocoverageset
 
 ==== EO Metadata
 
@@ -1496,6 +1497,9 @@ request; check that the extension required is listed.
 
 === Conformance Test Class: eowcs_get-kvp
 
+The OGC URI identifier of this conformance class is:
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_get-kvp
+
 ==== eowcs_get-kvp/Mandatory
 
 *Test id: /conf/eowcs_get-kvp/mandatory*
@@ -1563,6 +1567,9 @@ Send a valid get-kvp _DescribeEOCoverageSet_ request as defined. Check that the
 response is not an exception.
 
 === Conformance Test Class: eowcs_soap
+
+The OGC URI identifier of this conformance class is:
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_soap
 
 ==== eowcs_soap/Mandatory
 

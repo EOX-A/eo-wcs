@@ -12,8 +12,8 @@ below.
 Implementations of this EO-WCS *shall* support at least one of the requirements
 classes _eowcs_get-kvp_ and _eowcs_soap_. +
 *Dependency*:
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_get-kvp,
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_soap
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_get-kvp,
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_soap
 
 === GET-KVP protocol conformance class
 
@@ -29,7 +29,7 @@ http://www.opengis.net/spec/WCS_protocol-binding_get-kvp/1.0/conf/get-kvp
 Implementations of this EO-WCS which support the _eowcs_get-kvp_ requirements
 class *shall* include the following URI in a `Profile` element in the
 `ServiceIdentification` in a _GetCapabilities_ response:
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_get-kvp
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_get-kvp
 
 ==== _DescribeEOCoverageSet_ GET/KVP encoding
 
@@ -111,7 +111,7 @@ http://www.opengis.net/spec/WCS_protocol-binding_soap/1.0/conf/soap
 Implementations of this EO-WCS which support the _eowcs_soap_ requirements class
 *shall* include the following URI in a `Profile` element in the
 `ServiceIdentification` in a _GetCapabilities_ response:
-http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0/conf/eowcs_soap
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_soap
 
 ==== _DescribeEOCoverageSet_ SOAP encoding
 
