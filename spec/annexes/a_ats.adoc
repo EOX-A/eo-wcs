@@ -999,7 +999,7 @@ Send a valid _DescribeEOCoverageSet_ request containing a
 Coverage referred to by one of the objects identified in the `eoId` request
 parameter appears at most once.
 
-==== DescribeEOCoverageSet Response Reffered
+==== DescribeEOCoverageSet Response Referred
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-referred*
 
@@ -1148,7 +1148,7 @@ Check that the sum of the numbers of `CoverageDescription` and
 `DatasetSeriesDescription` elements is equal to the value of the reported
 `numberReturned` parameter.
 
-==== TODO
+==== GetEOCoverageSet Request Structure
 
 *Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-request-structure*
 
@@ -1158,7 +1158,7 @@ Check that the sum of the numbers of `CoverageDescription` and
 
 TODO
 
-==== TODO
+==== GetEOCoverageSet Request eoId
 
 *Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-request-eoId*
 
@@ -1168,51 +1168,261 @@ TODO
 
 TODO
 
-==== TODO
+==== GetEOCoverageSet Request Containment
 
-*Test id: /conf*
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-request-containment*
 
-*Test Purpose: <</req>>*
-
-*Test method:*
-
-TODO
-
-==== TODO
-
-*Test id: /conf*
-
-*Test Purpose: <</req>>*
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-request-containment>>*
 
 *Test method:*
 
 TODO
 
-==== TODO
+==== GetEOCoverageSet Request Dimensions
 
-*Test id: /conf*
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-request-dimensions*
 
-*Test Purpose: <</req>>*
-
-*Test method:*
-
-TODO
-
-==== TODO
-
-*Test id: /conf*
-
-*Test Purpose: <</req>>*
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-request-dimensions>>*
 
 *Test method:*
 
 TODO
 
-==== TODO
+==== GetEOCoverageSet Request CRS
 
-*Test id: /conf*
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-request-crs*
 
-*Test Purpose: <</req>>*
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-request-crs>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Request packageFormat
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-acceptable-packageFormat*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-packageFormat>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Request mediaType
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-acceptable-mediaType*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-mediaType>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Request Format
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-acceptable-format*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-format>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Request Scaling
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-acceptable-scaling*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-scaling>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Request Interpolation
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-acceptable-interpolation*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-interpolation>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Request CRSs
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response packageFormat
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-packageFormat*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response mediaType
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-mediaType*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-mediaType>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response Format
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-format*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-format>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response GetCoverage Applicable
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-getCoverage*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-getCoverage>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response eoId
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-eoId*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-eoId>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response Referred
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-referred*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-referred>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response Containment
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-containment*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-containment>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response phenomenonTime
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-phenomenonTime*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-phenomenonTime>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response Trim Omitted
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-trim-omitted*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-trim-omitted>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response Bound Omitted
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-bound-omitted*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-bound-omitted>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response Count
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-count*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-count>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response numberMatched
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-numberMatched*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-numberMatched>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response numberReturned
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-numberReturned*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-numberReturned>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response applySubset
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-applySubset*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-applySubset>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response Scaling
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-scaling*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-scaling>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response Interpolation
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-interpolation*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-interpolation>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response CRSs
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-crss*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-crss>>*
 
 *Test method:*
 

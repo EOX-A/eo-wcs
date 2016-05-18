@@ -1166,12 +1166,12 @@ WCS CRS Extension [OGC 11-053r1].
 A requested general scaling and interpolation is equally applied to all
 coverages returned.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-scaling"]
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-scaling"]
 If a _GetCoverage_ request contains a `Scaling` parameter then this parameter
 *shall* be applied individually to each EO Coverage to be returned as specified
 by the WCS Scaling Extension [OGC 12-039].
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-interpolation"]
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-interpolation"]
 If a _GetCoverage_ request contains a `Interpolation` parameter then this
 parameter *shall* be applied individually to each EO Coverage to be returned as
 specified by the WCS Interpolation Extension [OGC 12-049].
@@ -1179,7 +1179,7 @@ specified by the WCS Interpolation Extension [OGC 12-049].
 A requested general output CRS as well as CRS for subsetting is equally applied
 to all coverages returned.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss"]
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-crss"]
 If a _GetCoverage_ request contains a `subsettingCrs` and/or `outputCrs`
 parameter then this parameter(s) *shall* be applied individually to each
 EO Coverage to be returned as specified by the WCS CRS Extension [OGC 11-053r1].
