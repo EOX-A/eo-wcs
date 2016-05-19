@@ -19,6 +19,7 @@ Submission Date: TBD +
 Reference number of this Document: OGC 10-140r1 +
 External reference for this OGC® document: http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.1 +
 URL for this OGC® document: https://eox-a.github.io/eo-wcs/ +
+PDF version: https://eox-a.github.io/eo-wcs/index.pdf +
 Version: 1.1draft +
 Category: OGC® Interface Standard +
 Editor: Peter Baumann, Stephan Meissl, Jinsongdi Yu
