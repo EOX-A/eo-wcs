@@ -73,7 +73,7 @@ standard. +
 
 [#response_getcapabilities,reftext='{figure-caption} {counter:figure-num}']
 ._GetCapabilities_ response UML class diagram
-image::response-getcapabilities.png[GetCapabilities response]
+image::images/response-getcapabilities.png[GetCapabilities response]
 
 [#datasetseriessummary_components,reftext='{table-caption} {counter:table-num}']
 .Components of `EOWCS::DatasetSeriesSummary` structure
@@ -541,7 +541,7 @@ standard.
 
 [#request_describeeocoverageset,reftext='{figure-caption} {counter:figure-num}']
 ._DescribeEOCoverageSet_ request UML diagram
-image::request-describeeocoverageset.png[DescribeEOCoverageSet request]
+image::images/request-describeeocoverageset.png[DescribeEOCoverageSet request]
 
 [#describeeocoverageset_comp,reftext='{table-caption} {counter:table-num}']
 .Components of `DescribeEOCoverageSet` operation request
@@ -657,7 +657,7 @@ Dependency: [OGC 09-110r4] Subclause 8.3.2
 
 [#resp_describeeocoverageset,reftext='{figure-caption} {counter:figure-num}']
 ._DescribeEOCoverageSet_ response UML diagram
-image::response-describeeocoverageset.png[DescribeEOCoverageSet response]
+image::images/response-describeeocoverageset.png[DescribeEOCoverageSet response]
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-eo-metadata"]
 Each `WCS::CoverageDescription` listed in the response to a successful
@@ -871,7 +871,7 @@ standard.
 
 [#request_geteocoverageset,reftext='{figure-caption} {counter:figure-num}']
 ._GetEOCoverageSet_ request UML diagram
-image::request-geteocoverageset.png[GetEOCoverageSet request]
+image::images/request-geteocoverageset.png[GetEOCoverageSet request]
 
 [#geteocoverageset_comp,reftext='{table-caption} {counter:table-num}']
 .Components of `GetEOCoverageSet` operation request

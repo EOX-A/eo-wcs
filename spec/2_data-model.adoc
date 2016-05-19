@@ -54,7 +54,7 @@ overlap in space, but there may be empty (nil) areas.
 
 [#datasetseries_conceptual,reftext='{figure-caption} {counter:figure-num}']
 .Conceptual view of a Dataset Series with Stitched Mosaic and Dataset
-image::datasetseries-conceptual.png[Dataset Series Conceptual View]
+image::images/datasetseries-conceptual.png[Dataset Series Conceptual View]
 
 <<uml_model>> contains the UML diagram defining classes (types) and their
 correlations in the EO-WCS.
@@ -85,7 +85,7 @@ to this object |`EOWCS::Lineage` |zero or more (optional)
 
 [#uml_model,reftext='{figure-caption} {counter:figure-num}']
 .UML Model of EO Application Profile Schema
-image::uml-model.png[UML Model]
+image::images/uml-model.png[UML Model]
 
 NOTE: Throughout this standard, `eop:` and `EOP::` can be substituted by `opt:`
 and `OPT::` or `sar:` and `SAR::`, respectively, as in [OGC 10-157r3] `opt` and
@@ -93,7 +93,7 @@ and `OPT::` or `sar:` and `SAR::`, respectively, as in [OGC 10-157r3] `opt` and
 
 [#uml_lineage_class,reftext='{figure-caption} {counter:figure-num}']
 .UML Lineage class diagram
-image::ums-lineage-class.png[UML Lineage class]
+image::images/ums-lineage-class.png[UML Lineage class]
 
 NOTE: The lineage records are supposed to describe the history of processing
 steps that has led to the coverage on hand. As at the time of this writing there
@@ -216,7 +216,7 @@ standard.
 
 [#dataset_conceptual,reftext='{figure-caption} {counter:figure-num}']
 .Conceptual view of a Dataset as a 2-D coverage: in referenced (left) and unreferenced coordinates (right)
-image::dataset-conceptual.png[Dataset Conceptual View]
+image::images/dataset-conceptual.png[Dataset Conceptual View]
 
 NOTE: This definition includes the "field-of-View" of a sensor, or "cut",
 according to sensor specific data specification at the resolution of the sensor
@@ -237,7 +237,7 @@ contained Datasets carry nil values.
 
 [#stitchedmosaic_conceptual,reftext='{figure-caption} {counter:figure-num}']
 .Conceptual view of a Stitched Mosaic as a 2-D coverage: composed from Datasets (Stitched Mosaic bounding box dashed)
-image::stitchedmosaic-conceptual.png[Stitched Mosaic Conceptual View]
+image::images/stitchedmosaic-conceptual.png[Stitched Mosaic Conceptual View]
 
 [requirement,uri="/req/eowcs/referenceableStitchedMosaic-structure"]
 `EOWCS::ReferenceableStitchedMosaic` instances *shall* conform to <<uml_model>>,
@@ -382,13 +382,18 @@ value set of _sm_.
 A Dataset Series is an identifiable, queryable collection of EO Coverages and
 Dataset Series.
 
+NOTE: Although named _Dataset Series_ technically speaking it is a heterogeneous
+grouping of coverages and/or Dataset Series and can thus be used for any other
+concept like an EO Product containing multiple coverages with different
+resolutions as well.
+
 NOTE: A Dataset referred to by a Stitched Mosaic referred to by a Dataset Series
 is not per se referred to by that Dataset Series. However, it is allowed that
 such a Dataset is also referred to by the enclosing Dataset Series.
 
 [#datasetseries_conceptual2,reftext='{figure-caption} {counter:figure-num}']
 .Conceptual view of a Dataset Series referring to Datasets and Stitched Mosaics (Dataset Series domain boundary dashed)
-image::datasetseries-conceptual2.png[Dataset Series Conceptual View 2]
+image::images/datasetseries-conceptual2.png[Dataset Series Conceptual View 2]
 
 [requirement,uri="/req/eowcs/datasetSeries-structure"]
 A `EOWCS::DatasetSeries` shall conform to <<uml_model>>, <<uml_lineage_class>>,
