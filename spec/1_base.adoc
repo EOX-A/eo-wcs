@@ -73,51 +73,52 @@ referred to applies.
 OGC 06-121r9, _OGC Web Services Common Standard_, version 2.0
 
 TBD OGC 09-146r2, _Coverages Implementation Schema / GML 3.2.1 Application Schema for Coverages_, version 1.1 +
-Conformance classes used: gml-coverage
+Conformance classes used: _gml-coverage_
 
-TBD OGC 09-110r4, OGC® _Web Coverage Service 2.0 Interface Standard Core_,
+TBD OGC 09-110r4, OGC® _Web Coverage Service 2.1 Interface Standard Core_,
 version 2.1 +
-Conformance classes used: core
+Conformance classes used: _core_
 
 OGC 11-053r1, _OGC® Web Coverage Service Interface Standard - CRS Extension_,
 version 1.0 +
-Conformance classes used: crs, crs-gridded-coverage
+Conformance classes used: _crs_, _crs-gridded-coverage_
 
 OGC 12-039, _OGC® Web Coverage Service Interface Standard - Scaling Extension_,
 version 1.0 +
-Conformance classes used: scaling
+Conformance classes used: _scaling_
 
 OGC 12-040, _OGC® Web Coverage Service Interface Standard - Range Subsetting
 Extension_, version 1.0 +
-Conformance classes used: record-subsetting
+Conformance classes used: _record-subsetting_
 
 OGC 12-049, _OGC® Web Coverage Service Interface Standard - Interpolation
 Extension_, version 1.0 +
-Conformance classes used: interpolation
+Conformance classes used: _interpolation_
 
 OGC 09-147r3, OGC® _WCS 2.0 Interface Standard - KVP Protocol Binding
 Extension_, version 1.0 +
-Conformance classes used: get-kvp
+Conformance classes used: _get-kvp_
 
 OGC 09-149r1, OGC® _WCS 2.0 Interface Standard - SOAP Protocol Binding
 Extension_, version 1.0 +
-Conformance classes used: soap
+Conformance classes used: _soap_
 
 OGC 12-100r1, _OGC® GML Application Schema - Coverages - GeoTIFF Coverage
 Encoding Profile_, version 1.0 +
-Conformance classes used: geotiff-coverage
+Conformance classes used: _geotiff-coverage_
 
-OGC 11-010, OGC® _WCS 2.0 Interface Standard - NetCDF Encoding Format
+OGC 14-100r2, _OGC® CF-netCDF 3.0 encoding using GML Coverage Application_,
+version 2.0 +
+Conformance classes used: _CF-netCDF-1.6 GML encoding_, _CF-netCDF-1.6 data
+format_, _CF-netCDF-1.6 multipart data encoding_
+
+OGC 12-108, _OGC® GML Application Schema - Coverages JPEG2000 Coverage Encoding
 Extension_, version 1.0 +
-Conformance classes used: netcdf
+Conformance classes used: _jpeg2000-coverage_
 
-OGC 11-011, OGC® _WCS 2.0 Interface Standard - JPEG2000 Encoding Format
-Extension_, version 1.0 +
-Conformance classes used: jpeg2000
-
-OGC 10-157r3, _Earth Observation Metadata Profile of Observations and
-Measurements_ +
-Conformance classes used: eop, sar, opt
+OGC 10-157r4, _Earth Observation Metadata Profile of Observations and
+Measurements_, version 1.1.0 +
+Conformance classes used: _eop_, _sar_, _opt_
 
 NOTE: Annex B lists transitional provisions until all of the above
 specifications are available as adopted OGC documents.

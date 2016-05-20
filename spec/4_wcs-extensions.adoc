@@ -44,9 +44,11 @@ http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs
 
 [requirement,uri="/req/eowcs/encodings"]
 Implementations of this EO-WCS *shall* support at least one of the coverage
-format encodings GeoTIFF [OGC12-100r1], NetCDF [OGC 11-010], and JPEG2000
-[OGC 11-011]. +
+format encodings GeoTIFF [OGC 12-100r1], NetCDF [OGC 14-100r2], and JPEG2000
+[OGC 12-108]. +
 *Dependency*:
 http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage,
-http://www.opengis.net/spec/WCS_encoding_netcdf/1.0/conf/netcdf,
-http://www.opengis.net/spec/WCS_encoding_jpeg2000/1.0/conf/jpeg2000
+http://www.opengis.net/spec/netCDF_data-model/conf/CF-netCDF-1.6-GML-encoding,
+http://www.opengis.net/spec/netCDF_data-model/conf/CF-netCDF-1.6-Data-format,
+http://www.opengis.net/spec/netCDF_data-model/conf/CF-netCDF-1.6-Multipart-encoding,
+http://www.opengis.net/spec/gmlcov_jpeg2000-coverages/1.0/conf/jpeg2000-coverage
