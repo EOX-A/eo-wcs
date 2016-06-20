@@ -69,6 +69,7 @@
                     <element ref="crs:outputCrs" minOccurs="0"/>
                 </sequence>
                 <attribute name="count" type="nonNegativeInteger"/>
+                <attribute name="startIndex" type="nonNegativeInteger" default="0"/>
             </extension>
         </complexContent>
     </complexType>
@@ -88,10 +89,8 @@
         </sequence>
         <attribute name="numberMatched" type="nonNegativeInteger" use="required"/>
         <attribute name="numberReturned" type="nonNegativeInteger" use="required"/>
-        <!-- TODO: Paging -->
-<!-- From WFS 2.0:
+        <attribute name="startIndex" type="nonNegativeInteger" default="0"/>
         <attribute name="next" type="anyURI"/>
         <attribute name="previous" type="anyURI"/>
--->
     </complexType>
 </schema>

@@ -33,6 +33,8 @@
             <documentation>Package formats supported, reported in the Capabilities document of a WCS service supporting the EO-WCS.</documentation>
         </annotation>
         <sequence>
+            <!-- Optional for backwards compatibility -->
+            <element name="pagingSupported" type="boolean" minOccurs="0"/>
             <!-- Optional for backwards compatibility but mandatory for the "eowcs_geteocoverageset" conformance class. -->
             <element name="defaultPackageFormat" type="anyURI" minOccurs="0"/>
             <element name="packageFormatSupported" type="anyURI" minOccurs="0" maxOccurs="unbounded"/>
