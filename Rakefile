@@ -8,7 +8,7 @@ task :generate do
   system './runasciidoctor -D build/spec -a stylesheet=./asciidoctor.css ./spec/index.adoc'
   system './runasciidoctor -b pdf -r asciidoctor-pdf -D build/spec -a pdf-stylesdir=stylesheets -a pdf-style=basic ./spec/index.adoc'
   FileUtils.cp_r 'spec/images/.', 'build/spec/images'
-  FileUtils.cp_r 'stylesheets/.', 'build/spec'
+  FileUtils.cp_r Dir.glob('stylesheets/*css'), 'build/spec'
 end
 
 desc 'Generate site'
