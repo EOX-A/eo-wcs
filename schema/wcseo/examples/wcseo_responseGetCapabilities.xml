@@ -84,10 +84,28 @@
         </ows:HTTP>
       </ows:DCP>
     </ows:Operation>
+    <ows:Operation name="GetEOCoverageSet">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://www.someu.rl?" xlink:type="simple" />
+          <ows:Post xlink:href="http://www.someu.rl?" xlink:type="simple">
+            <ows:Constraint name="PostEncoding">
+              <ows:AllowedValues>
+                <ows:Value>XML</ows:Value>
+              </ows:AllowedValues>
+            </ows:Constraint>
+          </ows:Post>
+        </ows:HTTP>
+      </ows:DCP>
+    </ows:Operation>
     <!-- CountDefault is used to limit the number of coverageDescriptions returned with DescribeEOCoverageSet operations by the server. -->
     <ows:Constraint name="CountDefault">
       <ows:NoValues />
       <ows:DefaultValue>100</ows:DefaultValue>
+    </ows:Constraint>
+    <ows:Constraint name="ImplementsResultPaging">
+      <ows:NoValues/>
+      <ows:DefaultValue>TRUE</ows:DefaultValue>
     </ows:Constraint>
   </ows:OperationsMetadata>
   <wcs:ServiceMetadata>
@@ -106,7 +124,6 @@
 -->
       <crs:supportedCrs>http://www.opengis.net/def/crs/EPSG/0/4326</crs:supportedCrs>
       <wcseo:wcseoMetadata>
-        <wcseo:pagingSupported>true</wcseo:pagingSupported>
         <wcseo:defaultPackageFormat>application/metalink4+xml</wcseo:defaultPackageFormat>
         <wcseo:packageFormatSupported>application/x-gzip</wcseo:packageFormatSupported>
         <wcseo:packageFormatSupported>application/gzip</wcseo:packageFormatSupported>
