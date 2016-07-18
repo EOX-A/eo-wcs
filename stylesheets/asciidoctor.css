@@ -283,7 +283,7 @@ td.hdlist1, td.hdlist2 { vertical-align: top; }
 .thumb, .th { line-height: 0; display: inline-block; border: solid 4px white; -webkit-box-shadow: 0 0 0 1px #dddddd; box-shadow: 0 0 0 1px #dddddd; }
 .imageblock.left, .imageblock[style*="float: left"] { margin: 0.25em 0.625em 1.25em 0; }
 .imageblock.right, .imageblock[style*="float: right"] { margin: 0.25em 0 1.25em 0.625em; }
-.imageblock > .title { margin-bottom: 0; }
+.imageblock > .title { margin-bottom: 0; text-align: center; }
 .imageblock.thumb, .imageblock.th { border-width: 6px; }
 .imageblock.thumb > .title, .imageblock.th > .title { padding: 0 0.125em; }
 .image.left, .image.right { margin-top: 0.25em; margin-bottom: 0.25em; display: inline-block; line-height: 0; }
