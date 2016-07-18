@@ -34,25 +34,34 @@ http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/e
 ==== _DescribeEOCoverageSet_ GET/KVP encoding
 
 [requirement,uri="/req/eowcs_get-kvp/describeEOCoverageSet-request"]
-The `request` parameter in the `DescribeEOCoverageSet` request parameter of a
-_DescribeEOCoverageSet_ request *shall* be indicated as follows: +
+The `request` parameter of a _DescribeEOCoverageSet_ request *shall* be
+indicated as follows: +
 `request=DescribeEOCoverageSet`
 
 [requirement,uri="/req/eowcs_get-kvp/describeEOCoverageSet-eoid"]
-The `eoId` parameter in the `DescribeEOCoverageSet` request parameter of a
-_DescribeEOCoverageSet_ request *shall* be indicated as follows, for parameter
-values _v~1~, ..., v~n~_: +
+The `eoId` parameter of a _DescribeEOCoverageSet_ request *shall* be indicated
+as follows, for parameter values _v~1~, ..., v~n~_: +
 `eoid=v~1~,...,v~n~`
 
 [requirement,uri="/req/eowcs_get-kvp/describeEOCoverageSet-containment"]
-The `containment` parameter in the `DescribeEOCoverageSet` request parameter of
-a _DescribeEOCoverageSet_ request *shall* be indicated as follows: +
+The `containment` parameter of a _DescribeEOCoverageSet_ request *shall* be
+indicated as follows: +
 `containment=overlaps` +
 or +
 `containment=contains`
 
+[requirement,uri="/req/eowcs_get-kvp/describeEOCoverageSet-count"]
+The `count` parameter of a _DescribeEOCoverageSet_ request *shall* be indicated
+as follows, for positive integer value _x_: +
+`count=x`
+
+[requirement,uri="/req/eowcs_get-kvp/describeEOCoverageSet-startIndex"]
+The `startIndex` parameter of a _DescribeEOCoverageSet_ request *shall* be
+indicated as follows, for positive integer value _x_: +
+`startindex=x`
+
 [requirement,uri="/req/eowcs_get-kvp/describeEOCoverageSet-subset"]
-The `trim` parameters in the `DescribeEOCoverageSet` request parameter of a
+The `trim` parameters of a
 _DescribeEOCoverageSet_ request *shall* be indicated through a possibly empty
 set of subset specifications, each one with key \"``subset``" and value
 specification given by a `SubsetSpec` adhering to this EBNF syntax <<3>>
@@ -64,7 +73,7 @@ and the resp. XML definitions <<6>>: +
 `high: point | [underline]#*#` +
 `point: number | [underline]#"# token [underline]#"#` // [underline]#"# = ASCII 0x42
 
-Syntax follows the http standard <<3>>: underlined tokens represent
+Syntax follows the HTTP standard <<3>>: underlined tokens represent
 literals which appear "as is" ("terminal symbols"), other tokens represent sub-
 expressions to be substituted ("non-terminals"). A vertical bar ("|"") denotes
 alternatives, items in brackets ("[ ]") are optional. Non-terminals `NCName`,
@@ -75,10 +84,7 @@ NOTE: Allowed values for points are determined by the CRS used. This ranges from
 "2009-11-06" for time to "-41.5" and "41°5'" for lat/long whereby non-numeric
 values have to be enclosed in double quotes.
 
-NOTE: CRSs are fixed to WGS84 for space and ISO 8601 for time; still they need
-to be indicated in the request syntax to keep it in sync with WCS Core trimming.
-
-NOTE: As per http <<3>>, keys are case insensitive whereas values are
+NOTE: As per HTTP <<3>>, keys are case insensitive whereas values are
 case sensitive.
 
 Example: The following KVP-encoded _DescribeEOCoverageSet_ request addresses
@@ -87,15 +93,98 @@ service `path` on server `www.myservice.org` at port `port` requests coverage
 latitude (-66,51), expressed in spatial CRS WGS84-2D and temporal CRS ISO:8601
 (which are assumed to be supported for the coverage):
 
-    http://www.myserver.org:port/path?
-    service=WCS
-    &version=2.0.1
-    &request=DescribeEOCoverageSet
-    &eoid=C0002
-    &containment=overlaps
-    &subset=long(-71,47)
-    &subset=lat(-66,51)
-    &subset=phenomenonTime( " 2009-11-06T23:20:52Z "," 2009-11-13T23:20:52Z " )
+[source]
+http://www.myserver.org:port/path?
+service=WCS
+&version=2.0.1
+&request=DescribeEOCoverageSet
+&eoid=C0002
+&containment=overlaps
+&subset=long(-71,47)
+&subset=lat(-66,51)
+&subset=phenomenonTime("2009-11-06T23:20:52Z","2009-11-13T23:20:52Z")
+
+==== _GetEOCoverageSet_ GET/KVP encoding
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-request"]
+The `request` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows: +
+`request=GetEOCoverageSet`
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-eoid"]
+The `eoId` parameter of a _GetEOCoverageSet_ request *shall* be indicated
+as follows, for parameter values _v~1~, ..., v~n~_: +
+`eoid=v~1~,...,v~n~`
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-containment"]
+The `containment` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows: +
+`containment=overlaps` +
+or +
+`containment=contains`
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-count"]
+The `count` parameter of a _GetEOCoverageSet_ request *shall* be indicated
+as follows, for positive integer value _x_: +
+`count=x`
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-startIndex"]
+The `startIndex` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows, for positive integer value _x_: +
+`startindex=x`
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-packageFormat"]
+The `packageFormat` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows, for parameter value _v~1~_: +
+`packageformat=v~1~`
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-mediaType"]
+The `mediaType` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows: +
+`mediatype=multipart/related`
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-format"]
+The `format` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows, for parameter value _v~1~_: +
+`format=v~1~`
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-applySubset"]
+The `applySubset` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows: +
+`applysubset=true` +
+or +
+`applysubset=false`
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-parameters"]
+The `Scaling`, `Interpolation`, `subsettingCrs`, and `outputCrs` parameters of
+a _GetEOCoverageSet_ request *shall* be indicated as defined in the respective
+WCS extension.
+
+[requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-subset"]
+The `trim` parameters of a _GetEOCoverageSet_ request *shall* be indicated
+through a possibly empty set of subset specifications, each one with key
+\"``subset``" and value specification given by a `SubsetSpec` adhering to this
+EBNF syntax <<3>> and the resp. XML definitions <<6>>: +
+`SubsetSpec: dimension [underline]#(# interval [underline]#)#` +
+`dimension: [underline]#long# | [underline]#lat# | [underline]#phenomenonTime#` +
+`interval: low [underline]#,# high` +
+`low: point | [underline]#\*#` +
+`high: point | [underline]#*#` +
+`point: number | [underline]#"# token [underline]#"#` // [underline]#"# = ASCII 0x42
+
+Syntax follows the HTTP standard <<3>>: underlined tokens represent
+literals which appear "as is" ("terminal symbols"), other tokens represent sub-
+expressions to be substituted ("non-terminals"). A vertical bar ("|"") denotes
+alternatives, items in brackets ("[ ]") are optional. Non-terminals `NCName`,
+`number`, `token`, and `anyURI` follow the resp. XML definitions
+<<6>>.
+
+NOTE: Allowed values for points are determined by the CRS used. This ranges
+from "2009-11-06" for time to "-41.5" and "41°5'" for lat/long whereby
+non-numeric values have to be enclosed in double quotes.
+
+NOTE: As per HTTP <<3>>, keys are case insensitive whereas values are
+case sensitive.
 
 === SOAP protocol conformance class
 
@@ -129,7 +218,30 @@ Example: See files `wcseo_requestDescribeEOCoverageSet.xml` and
 
 ==== _DescribeEOCoverageSet_ WSDL
 
-[requirement,uri="/req/eowcs_soap/wsdl"]
+[requirement,uri="/req/eowcs_soap/describeEOCoverageSet-wsdl"]
+Publication of a WCS SOAP service endpoint *shall* use the binding as defined
+in file `wsdl/wcs-soap-binding.wsdl` of the EO-WCS package.
+
+NOTE: A sample service description relying on this binding is provided in file
+`example-soap-endpoint.wsdl`.
+
+==== _GetEOCoverageSet_ SOAP encoding
+
+[requirement,uri="/req/eowcs_soap/getEOCoverageSet-request-structure"]
+A _GetEOCoverageSet_ request *shall* contain exactly one `Body` element
+containing exactly one `GetEOCoverageSet` element.
+
+[requirement,uri="/req/eowcs_soap/getEOCoverageSet-response-structure"]
+In the response to a successful _GetEOCoverageSet_ request, the SOAP
+`Envelope` *shall* contain exactly one `Body` element which contains a
+`EOWCS::EOCoverageSet` as its single element.
+
+Example: See files `wcseo_requestGetEOCoverageSet.xml` and
+`wcseo_responseGetEOCoverageSet.xml` being part of this standard.
+
+==== _GetEOCoverageSet_ WSDL
+
+[requirement,uri="/req/eowcs_soap/getEOCoverageSet-wsdl"]
 Publication of a WCS SOAP service endpoint *shall* use the binding as defined
 in file `wsdl/wcs-soap-binding.wsdl` of the EO-WCS package.
 

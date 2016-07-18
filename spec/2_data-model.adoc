@@ -84,7 +84,7 @@ to this object |`EOWCS::Lineage` |zero or more (optional)
 |===============================================================================
 
 [#uml_model,reftext='{figure-caption} {counter:figure-num}']
-.UML Model of EO Application Profile Schema
+.UML Model of WCS EO Application Profile Schema
 image::images/uml-model.png[UML Model]
 
 NOTE: Throughout this standard, `eop:` and `EOP::` can be substituted by `opt:`
@@ -93,7 +93,7 @@ and `OPT::` or `sar:` and `SAR::`, respectively, as in [OGC 10-157r3] `opt` and
 
 [#uml_lineage_class,reftext='{figure-caption} {counter:figure-num}']
 .UML Lineage class diagram
-image::images/ums-lineage-class.png[UML Lineage class]
+image::images/ums-lineage-class.png[UML Lineage class,width=40%,scaledwidth=40%,align="center"]
 
 NOTE: The lineage records are supposed to describe the history of processing
 steps that has led to the coverage on hand. As at the time of this writing there

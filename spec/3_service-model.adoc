@@ -80,11 +80,11 @@ image::images/response-getcapabilities.png[GetCapabilities response]
 [cols="2,3,2,^1",options="header"]
 |===============================================================================
 |Name                  |Definition                      |Data type |Multiplicity
-|datasetSeriesId |Identifier of a Dataset Series offered by this service
+|DatasetSeriesId |Identifier of a Dataset Series offered by this service
 |`NCName` |one (mandatory)
 |wgs84BoundingBox |Spatial extent of the Dataset Series
 |`OWS Common::WGS84BoundingBox` |one (mandatory)
-|timePeriod |Time interval of validity of the Dataset Series |`GML:TimePeriod`
+|TimePeriod |Time interval of validity of the Dataset Series |`GML:TimePeriod`
 |one (mandatory)
 |metadata |Reference to more metadata about this Dataset Series
 |`OWS Common::Metadata` |zero or one (optional)
@@ -151,18 +151,28 @@ standard.
 |===============================================================================
 |Name         |Definition                               |Data type |Multiplicity
 |CountDefault |Default value for the count parameter defined for
-_DescribeEOCoverageSet_ requests. |`Integer` greater than or equal to zero
-|zero or one (optional)
+_DescribeEOCoverageSet_ and _GetEOCoverageSet_ requests. |`Integer` greater
+than or equal to zero |zero or one (optional)
+|ImplementsResultPaging |Indicates if the server supports the ability to page
+through a result set responding with `count` features at a time. |`Boolean`;
+either `TRUE` or `FALSE` |zero or one (optional)
 |===============================================================================
 
 NOTE: Servers are strongly encouraged to specify a value for CountDefault as
 means of self defense, so that a request may not clog the server.
 
+[requirement,uri="/req/eowcs/getCapabilities-response-paging-supported"]
+The response to a successful _GetCapabilities_ request to an EO-WCS supporting
+paging *shall* contain `ows:Contraint` elements with name attribute values of
+`ImplementsResultPaging` and `CountDefault`. The `ImplementsResultPaging`
+constraint *shall* have a value of "TRUE".
+
 [requirement,uri="/req/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata"]
 The response to a successful _GetCapabilities_ request to an EO-WCS supporting
 the _eowcs_geteocoverageset_ conformance class *shall* contain a
 `wcseo:wcseoMetadata` element in the `wcs:Extension` element of
-`wcs:ServiceMetadata`.
+`wcs:ServiceMetadata` including at least a `wcseo:defaultPackageFormat`
+element.
 
 [requirement,uri="/req/eowcs_geteocoverageset/getCapabilities-response-defaultPackageFormat"]
 The `wcseo:defaultPackageFormat` element delivered in the `wcseo:wcseoMetadata`
@@ -203,10 +213,17 @@ Example: The following XML excerpt shows a possible `Constraint` section
 containing a CountDefault value:
 
 [source,xml]
-<ows:Constraint name="CountDefault">
-  <ows:NoValues />
-  <ows:DefaultValue>100</ows:DefaultValue>
-</ows:Constraint>
+<ows:OperationsMetadata>
+  ...
+  <ows:Constraint name="CountDefault">
+    <ows:NoValues />
+    <ows:DefaultValue>100</ows:DefaultValue>
+  </ows:Constraint>
+  <ows:Constraint name="ImplementsResultPaging">
+    <ows:NoValues/>
+    <ows:DefaultValue>TRUE</ows:DefaultValue>
+  </ows:Constraint>
+</ows:OperationsMetadata>
 
 Example: The following XML excerpt shows a possible `wcs:ServiceMetadata`
 section containing valid `wcseo:packageFormatSupported` elements:
@@ -557,6 +574,9 @@ request parameters |`String` |zero or one (optional)
 |`count` |Maximum number of `CoverageDescription` and `DatasetSeriesDescription`
 elements to be included in the response |`Integer` greater than zero |zero or
 one (optional)
+|`startIndex` |Index within the result set from which the server shall begin
+presenting results in the response |`Integer` greater than or equal to zero.
+Default `0` |zero or one (optional)
 |`sections` |Unordered list of zero or more names of the XML elements that shall
 be returned |`String` |zero or one (optional)
 |`dimensionTrim` |trim specification, as per WCS Core [OGC 09-110r4] Subclause
@@ -606,7 +626,7 @@ Example: The following XML instance shows a possible _DescribeEOCoverageSet_
 operation request:
 
 [source,xml]
-<wcseo:DescribeEOCoverageSet xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd" service="WCS" version="2.0.1" count="100">
+<wcseo:DescribeEOCoverageSet xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd" service="WCS" version="2.0.1" count="100" startIndex="1">
   <wcseo:eoId>DS1</wcseo:eoId>
   <wcseo:containment>overlaps</wcseo:containment>
   <wcseo:sections>
@@ -657,7 +677,7 @@ Dependency: [OGC 09-110r4] Subclause 8.3.2
 
 [#resp_describeeocoverageset,reftext='{figure-caption} {counter:figure-num}']
 ._DescribeEOCoverageSet_ response UML diagram
-image::images/response-describeeocoverageset.png[DescribeEOCoverageSet response]
+image::images/response-describeeocoverageset.png[DescribeEOCoverageSet response,width=60%,scaledwidth=60%,align="center"]
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-eo-metadata"]
 Each `WCS::CoverageDescription` listed in the response to a successful
@@ -755,10 +775,21 @@ corresponding value given in <<coveragesubtype_values>> according to its type.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-count"]
 In the response to a successful _DescribeEOCoverageSet_ request the sum of
-`CoverageDescription` and `DatasetSeriesDescription` elements *shall* be less or
-equal to the minimum of the value of the `CountDefault` element and the `count`
-parameter if present in the request. If none of both are present all matching
-elements *shall* be reported.
+`CoverageDescription` and `DatasetSeriesDescription` elements *shall* be less
+or equal to the minimum of the value of the `CountDefault` element and the
+`count` parameter if present in the request. If none of both are present all
+matching elements *shall* be reported.
+
+NOTE: The `count` parameter is used in the same ways as the `itemsPerPage`
+element in the OpenSearch Specification <<7>>.
+
+[requirement,uri="/req/eowcs/describeEOCoverageSet-response-startIndex"]
+If a _DescribeEOCoverageSet_ request contains a `wcs:startIndex` parameter then
+a successful response *shall* contain only those `CoverageDescription` and
+`DatasetSeriesDescription` elements whose index in the result set is equal or
+higher than the value of the `startIndex` parameter.
+
+NOTE: A server is assumed to apply a consistent ordering to the result set.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-numberMatched"]
 The response to a successful _DescribeEOCoverageSet_ request *shall* report in
@@ -770,11 +801,39 @@ The response to a successful _DescribeEOCoverageSet_ request *shall* report in
 its `numberReturned` attribute the sum of all `CoverageDescription` and
 `DatasetSeriesDescription` elements included in the response.
 
+[requirement,uri="/req/eowcs/describeEOCoverageSet-response-startIndex-attr"]
+The response to a successful _DescribeEOCoverageSet_ request *shall* report in
+its `startIndex` attribute the lowest index in the result set of all
+`CoverageDescription` and `DatasetSeriesDescription` elements returned.
+
+[requirement,uri="/req/eowcs/describeEOCoverageSet-response-next"]
+The response to a successful _DescribeEOCoverageSet_ request *shall* report in
+its `next` attribute the URI to retrieve the next page of results as specified
+by the `count` and `startIndex` parameters. The `next` attribute *shall* only
+be present if elements with a higher index in the result set than the returned
+ones are available.
+
+[requirement,uri="/req/eowcs/describeEOCoverageSet-response-previous"]
+The response to a successful _DescribeEOCoverageSet_ request *shall* report in
+its `previous` attribute the URI to retrieve the previous page of results as
+specified by the `count` and `startIndex` parameters. The `previous` attribute
+*shall* only be present if elements with a lower index in the result set than
+the returned ones are available.
+
+NOTE: The specific format of the next and previous URIs is implementation
+dependent as are the details of how or if the server caches the results of an
+operation in order to be able to present them to the client one subset at a
+time.
+
+NOTE: The `count`, `startIndex`, `next`, and `previous` parameters used for
+paging are defined in the same way as in the OpenGIS Web Feature Service 2.0
+Interface Standard <<8>>.
+
 Example: The following XML fragment shows parts of a possible
 `DescribeEOCoverageSet` operation response:
 
 [source,xml]
-<wcseo:EOCoverageSetDescription numberMatched="2" numberReturned="2">
+<wcseo:EOCoverageSetDescription numberMatched="2" numberReturned="2" startIndex="1">
   <wcs:CoverageDescriptions>
     <wcs:CoverageDescription gml:id="c1">
       <gml:boundedBy>
@@ -841,11 +900,11 @@ violating Dataset Series and/or EO Coverage identifiers
 Just like the _DescribeEOCoverageSet_ request a _GetEOCoverageSet_ request
 submits one or more Dataset Series, Stitched Mosaic, or Dataset identifiers
 together with a spatio-temporal subsetting criterion ("bounding box"). By
-default the spatial constraint is expressed in WGS84 <<4>>, the temporal
+default, the spatial constraint is expressed in WGS84 <<4>>, the temporal
 constraint in ISO 8601 <<2>>.
 
-Additionally the _GetEOCoverageSet_ request allows to submit simple processing
-like scaling, interpolation, output CRS, format, and to actually apply the
+Additionally, the _GetEOCoverageSet_ request allows to submit simple processing
+like scaling, interpolation, output CRS, format, and actually applying the
 subsetting.
 
 The response to a successful request on a Dataset Series consists of a (possibly
@@ -886,6 +945,9 @@ evaluated |`NCName` |one or more (mandatory)
 request parameters |`String` |zero or one (optional)
 |`count` |Maximum number of `WCS::Coverage` elements to be included in the
 response |`Integer` greater than zero |zero or one (optional)
+|`startIndex` |Index within the result set from which the server shall begin
+presenting results in the response |`Integer` greater than or equal to zero.
+Default `0` |zero or one (optional)
 |`dimensionTrim` |trim specification, as per WCS Core [OGC 09-110r4] Subclause
 8.4.1 |`WCS::DimensionTrim` |zero or more (optional)
 |`packageFormat` |MIME type identifier of the format in which the coverages
@@ -994,7 +1056,7 @@ operation request:
 
 [source,xml]
 <?xml version="1.0" encoding="UTF-8"?>
-<wcseo:GetEOCoverageSet xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:int="http://www.opengis.net/wcs/interpolation/1.0" xmlns:scal="http://www.opengis.net/wcs/scaling/1.0" xmlns:crs="http://www.opengis.net/wcs/crs/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd" service="WCS" version="2.0.1" count="100">
+<wcseo:GetEOCoverageSet xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:int="http://www.opengis.net/wcs/interpolation/1.0" xmlns:scal="http://www.opengis.net/wcs/scaling/1.0" xmlns:crs="http://www.opengis.net/wcs/crs/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd" service="WCS" version="2.0.1" count="100" startIndex="1">
   <wcseo:eoId>someDatasetSeries1</wcseo:eoId>
   <wcseo:containment>OVERLAPS</wcseo:containment>
   <wcs:DimensionTrim>
@@ -1141,6 +1203,18 @@ equal to the minimum of the value of the `CountDefault` element and the `count`
 parameter if present in the request. If none of both are present all matching
 elements *shall* be reported.
 
+NOTE: The `count` parameter is used in the same ways as the `itemsPerPage`
+element in the OpenSearch Specification <<7>>.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-startIndex"]
+If a _GetEOCoverageSet_ request contains a `wcs:startIndex` parameter then a
+successful response *shall* contain only those `RectifiedDataset`,
+`ReferenceableDataset`, `RectifiedStitchedMosaic`,
+`ReferenceableStitchedMosaic`, and `DatasetSeries` elements whose index in the
+result set is equal or higher than the value of the `startIndex` parameter.
+
+NOTE: A server is assumed to apply a consistent ordering to the result set.
+
 [requirement,uri="/req/eowcs/getEOCoverageSet-response-numberMatched"]
 The response to a successful _GetEOCoverageSet_ request *shall* report in its
 `numberMatched` attribute the sum of all matching `RectifiedDataset`,
@@ -1153,6 +1227,35 @@ The response to a successful _GetEOCoverageSet_ request *shall* report in its
 `ReferenceableDataset`, `RectifiedStitchedMosaic`,
 `ReferenceableStitchedMosaic`, and `DatasetSeries` elements included in the
 response.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-startIndex-attr"]
+The response to a successful _GetEOCoverageSet_ request *shall* report in
+its `startIndex` attribute the lowest index in the result set of all
+`RectifiedDataset`, `ReferenceableDataset`, `RectifiedStitchedMosaic`,
+`ReferenceableStitchedMosaic`, and `DatasetSeries` elements returned.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-next"]
+The response to a successful _GetEOCoverageSet_ request *shall* report in
+its `next` attribute the URI to retrieve the next page of results as specified
+by the `count` and `startIndex` parameters. The `next` attribute *shall* only
+be present if elements with a higher index in the result set than the returned
+ones are available.
+
+[requirement,uri="/req/eowcs/getEOCoverageSet-response-previous"]
+The response to a successful _GetEOCoverageSet_ request *shall* report in
+its `previous` attribute the URI to retrieve the previous page of results as
+specified by the `count` and `startIndex` parameters. The `previous` attribute
+*shall* only be present if elements with a lower index in the result set than
+the returned ones are available.
+
+NOTE: The specific format of the next and previous URIs is implementation
+dependent as are the details of how or if the server caches the results of an
+operation in order to be able to present them to the client one subset at a
+time.
+
+NOTE: The `count`, `startIndex`, `next`, and `previous` parameters used for
+paging are defined in the same way as in the OpenGIS Web Feature Service 2.0
+Interface Standard <<8>>.
 
 The spatial subsetting requested may be applied to the EO Coverages to be
 returned. Default is to respond with entire coverages.
@@ -1189,7 +1292,7 @@ Example: The following XML fragment shows parts of the first part of a possible
 
 [source,xml]
 <?xml version="1.0" encoding="UTF-8"?>
-<wcseo:EOCoverageSet numberMatched="3" numberReturned="3" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:eop="http://www.opengis.net/eop/2.0" xmlns:om="http://www.opengis.net/om/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd">
+<wcseo:EOCoverageSet numberMatched="3" numberReturned="3" startIndex="1" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:eop="http://www.opengis.net/eop/2.0" xmlns:om="http://www.opengis.net/om/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd">
   <wcseo:RectifiedDataset gml:id="someEOCoverage1">
     <gml:boundedBy>
       ...

@@ -690,6 +690,16 @@ Send a valid _GetCapabilities_ request to the server under test, check that its
 `ows:OperationsMetadata` element contains an `ows:Constraint` element, as
 defined in the places referenced.
 
+==== GetCapabilities Response pagingSupported
+
+*Test id: /conf/eowcs/getCapabilities-response-paging-supported*
+
+*Test Purpose: <</req/eowcs/getCapabilities-response-paging-supported>>*
+
+*Test method:*
+
+TODO
+
 ==== GetCapabilities Response wcseoMetadata
 
 *Test id: /conf/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata*
@@ -1131,7 +1141,17 @@ Check that the sum of the numbers of `CoverageDescription` and
 `DatasetSeriesDescription` elements is less or equal to the value of the `count`
 parameter.
 
-==== DescribeEOCoverageSet Response numberMatched
+==== DescribeEOCoverageSet Response startIndex
+
+*Test id: /conf/eowcs/describeEOCoverageSet-response-startIndex*
+
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-startIndex>>*
+
+*Test method:*
+
+TODO
+
+==== DescribeEOCoverageSet Response numberMatched attribute
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-numberMatched*
 
@@ -1145,7 +1165,7 @@ Check that the sum of the numbers of `CoverageDescription` and
 `DatasetSeriesDescription` elements is higher or equal to the value of the
 reported `numberMatched` parameter.
 
-==== DescribeEOCoverageSet Response numberReturned
+==== DescribeEOCoverageSet Response numberReturned attribute
 
 *Test id: /conf/eowcs/describeEOCoverageSet-response-numberReturned*
 
@@ -1158,6 +1178,36 @@ a value lower than the value of the `CountDefault` element to server under test.
 Check that the sum of the numbers of `CoverageDescription` and
 `DatasetSeriesDescription` elements is equal to the value of the reported
 `numberReturned` parameter.
+
+==== DescribeEOCoverageSet Response startIndex attribute
+
+*Test id: /conf/eowcs/describeEOCoverageSet-response-startIndex-attr*
+
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-startIndex-attr>>*
+
+*Test method:*
+
+TODO
+
+==== DescribeEOCoverageSet Response next attribute
+
+*Test id: /conf/eowcs/describeEOCoverageSet-response-next*
+
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-next>>*
+
+*Test method:*
+
+TODO
+
+==== DescribeEOCoverageSet Response previous attribute
+
+*Test id: /conf/eowcs/describeEOCoverageSet-response-previous*
+
+*Test Purpose: <</req/eowcs/describeEOCoverageSet-response-previous>>*
+
+*Test method:*
+
+TODO
 
 ==== GetEOCoverageSet Request Structure
 
@@ -1379,7 +1429,17 @@ TODO
 
 TODO
 
-==== GetEOCoverageSet Response numberMatched
+==== GetEOCoverageSet Response startIndex
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-startIndex*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-startIndex>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response numberMatched attribute
 
 *Test id: /conf/eowcs/getEOCoverageSet-response-numberMatched*
 
@@ -1389,11 +1449,41 @@ TODO
 
 TODO
 
-==== GetEOCoverageSet Response numberReturned
+==== GetEOCoverageSet Response numberReturned attribute
 
 *Test id: /conf/eowcs/getEOCoverageSet-response-numberReturned*
 
 *Test Purpose: <</req/eowcs/getEOCoverageSet-response-numberReturned>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response startIndex attribute
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-startIndex-attr*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-startIndex-attr>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response next attribute
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-next*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-next>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response previous attribute
+
+*Test id: /conf/eowcs/getEOCoverageSet-response-previous*
+
+*Test Purpose: <</req/eowcs/getEOCoverageSet-response-previous>>*
 
 *Test method:*
 
@@ -1532,7 +1622,7 @@ request; check that the extension required is listed.
 Determine the list of supported extensions via a valid _GetCapabilities_
 request; check that the extension required is listed.
 
-==== eowcs_get-kvp/describeEOCoverageSet Request
+==== eowcs_get-kvp/describeEOCoverageSet request
 
 *Test id: /conf/eowcs_get-kvp/describeEOCoverageSet-request*
 
@@ -1554,7 +1644,7 @@ response is not an exception.
 Send a valid get-kvp _DescribeEOCoverageSet_ request as defined. Check that the
 response is not an exception.
 
-==== eowcs_get-kvp/describeEOCoverageSet Containment
+==== eowcs_get-kvp/describeEOCoverageSet containment
 
 *Test id: /conf/eowcs_get-kvp/describeEOCoverageSet-containment*
 
@@ -1565,6 +1655,26 @@ response is not an exception.
 Send a valid get-kvp _DescribeEOCoverageSet_ request as defined. Check that the
 response is not an exception.
 
+==== eowcs_get-kvp/describeEOCoverageSet count
+
+*Test id: /conf/eowcs_get-kvp/describeEOCoverageSet-count*
+
+*Test Purpose: <</req/eowcs_get-kvp/describeEOCoverageSet-count>>*
+
+*Test method:*
+
+TODO
+
+==== eowcs_get-kvp/describeEOCoverageSet startIndex
+
+*Test id: /conf/eowcs_get-kvp/describeEOCoverageSet-startIndex*
+
+*Test Purpose: <</req/eowcs_get-kvp/describeEOCoverageSet-startIndex>>*
+
+*Test method:*
+
+TODO
+
 ==== eowcs_get-kvp/describeEOCoverageSet Subset
 
 *Test id: /conf/eowcs_get-kvp/describeEOCoverageSet-subset*
@@ -1574,6 +1684,120 @@ response is not an exception.
 *Test method:*
 
 Send a valid get-kvp _DescribeEOCoverageSet_ request as defined. Check that the
+response is not an exception.
+
+==== eowcs_get-kvp/getEOCoverageSet request
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-request*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-request>>*
+
+*Test method:*
+
+Send a valid get-kvp _GetEOCoverageSet_ request as defined. Check that the
+response is not an exception.
+
+==== eowcs_get-kvp/getEOCoverageSet eoid
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-eoid*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-eoid>>*
+
+*Test method:*
+
+Send a valid get-kvp _GetEOCoverageSet_ request as defined. Check that the
+response is not an exception.
+
+==== eowcs_get-kvp/getEOCoverageSet containment
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-containment*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-containment>>*
+
+*Test method:*
+
+Send a valid get-kvp _GetEOCoverageSet_ request as defined. Check that the
+response is not an exception.
+
+==== eowcs_get-kvp/getEOCoverageSet count
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-count*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-count>>*
+
+*Test method:*
+
+TODO
+
+==== eowcs_get-kvp/getEOCoverageSet startIndex
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-startIndex*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-startIndex>>*
+
+*Test method:*
+
+TODO
+
+==== eowcs_get-kvp/getEOCoverageSet packageFormat
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-packageFormat*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-packageFormat>>*
+
+*Test method:*
+
+TODO
+
+==== eowcs_get-kvp/getEOCoverageSet mediaType
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-mediaType*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-mediaType>>*
+
+*Test method:*
+
+TODO
+
+==== eowcs_get-kvp/getEOCoverageSet format
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-format*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-format>>*
+
+*Test method:*
+
+TODO
+
+==== eowcs_get-kvp/getEOCoverageSet applySubset
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-applySubset*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-applySubset>>*
+
+*Test method:*
+
+TODO
+
+==== eowcs_get-kvp/getEOCoverageSet parameters
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-parameters*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-parameters>>*
+
+*Test method:*
+
+TODO
+
+==== eowcs_get-kvp/getEOCoverageSet Subset
+
+*Test id: /conf/eowcs_get-kvp/getEOCoverageSet-subset*
+
+*Test Purpose: <</req/eowcs_get-kvp/getEOCoverageSet-subset>>*
+
+*Test method:*
+
+Send a valid get-kvp _GetEOCoverageSet_ request as defined. Check that the
 response is not an exception.
 
 === Conformance Test Class: eowcs_soap
@@ -1613,9 +1837,9 @@ request; check that the extension required is listed.
 
 Send otherwise valid soap _DescribeEOCoverageSet_ requests containing:
 
-* exactly one Body element containing exactly one DescribeEOCover-ageSet
+* exactly one Body element containing exactly one DescribeEOCoverageSet
   element;
-* exactly one Body element containing more than one DescribeEOCov-erageSet
+* exactly one Body element containing more than one DescribeEOCoverageSet
   element;
 * exactly one Body element containing no DescribeEOCoverageSet element;
 * more than one Body element;
@@ -1623,7 +1847,7 @@ Send otherwise valid soap _DescribeEOCoverageSet_ requests containing:
 
 Pass test if appropriate valid results or exceptions, resp., are delivered.
 
-==== eowcs_soap/describeEOCoverageSet Request Structure
+==== eowcs_soap/describeEOCoverageSet Response Structure
 
 *Test id: /conf/eowcs_soap/describeEOCoverageSet-response-structure*
 
@@ -1634,11 +1858,54 @@ Pass test if appropriate valid results or exceptions, resp., are delivered.
 Send a valid soap _DescribeEOCoverageSet_ request to sever under test. Check
 response whether the condition is fulfilled.
 
-==== eowcs_soap/wsdl
+==== eowcs_soap/describeEOCoverageSet-wsdl
 
-*Test id: /conf/eowcs_soap/wsdl*
+*Test id: /conf/eowcs_soap/describeEOCoverageSet-wsdl*
 
-*Test Purpose: <</req/eowcs_soap/wsdl>>*
+*Test Purpose: <</req/eowcs_soap/describeEOCoverageSet-wsdl>>*
+
+*Test method:*
+
+For the service under test, retrieve the WSDL description and issue requests
+which make use of this service definition. Check that the service can be
+addressed and that queries can be retrieved properly.
+
+==== eowcs_soap/getEOCoverageSet Request Structure
+
+*Test id: /conf/eowcs_soap/getEOCoverageSet-request-structure*
+
+*Test Purpose: <</req/eowcs_soap/getEOCoverageSet-request-structure>>*
+
+*Test method:*
+
+Send otherwise valid soap _GetEOCoverageSet_ requests containing:
+
+* exactly one Body element containing exactly one GetEOCoverageSet
+  element;
+* exactly one Body element containing more than one GetEOCoverageSet
+  element;
+* exactly one Body element containing no GetEOCoverageSet element;
+* more than one Body element;
+* without a Body element;
+
+Pass test if appropriate valid results or exceptions, resp., are delivered.
+
+==== eowcs_soap/getEOCoverageSet Response Structure
+
+*Test id: /conf/eowcs_soap/getEOCoverageSet-response-structure*
+
+*Test Purpose: <</req/eowcs_soap/getEOCoverageSet-response-structure>>*
+
+*Test method:*
+
+Send a valid soap _GetEOCoverageSet_ request to sever under test. Check
+response whether the condition is fulfilled.
+
+==== eowcs_soap/getEOCoverageSet-wsdl
+
+*Test id: /conf/eowcs_soap/getEOCoverageSet-wsdl*
+
+*Test Purpose: <</req/eowcs_soap/getEOCoverageSet-wsdl>>*
 
 *Test method:*
 
