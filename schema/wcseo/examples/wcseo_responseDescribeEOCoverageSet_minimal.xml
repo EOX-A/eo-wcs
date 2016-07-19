@@ -87,6 +87,7 @@
               </wcseo:RGBgenerationHint>
             </wcseo:rangeTypeExtension>
           </swe:extension>
+          <swe:label>Gray Channel/Band</swe:label>
           <swe:field name="gray">
             <swe:Quantity definition="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_ComplexObservation">
               <swe:extension>

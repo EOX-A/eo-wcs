@@ -153,6 +153,26 @@ For each EO Coverage offered by the server under test:
 
 Test passes if all individual tests pass.
 
+==== Range type extension
+
+*Test id: /conf/eowcs/rangeTypeExtension*
+
+*Test Purpose: <</req/eowcs/rangeTypeExtension>>*
+
+*Test method:*
+
+TODO
+
+==== Range type uom
+
+*Test id: /conf/eowcs/rangeType-uom*
+
+*Test Purpose: <</req/eowcs/rangeType-uom>>*
+
+*Test method:*
+
+TODO
+
 ==== Rangeset of Coverage
 
 *Test id: /conf/eowcs/range-set-of-eo-coverage*
