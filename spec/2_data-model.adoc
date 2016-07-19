@@ -10,7 +10,7 @@ well as the _eowcs_geteocoverageset_ one where stated, particularly subclause
 
 The data model of this EO-WCS centers around the data structure of an Earth
 Observation coverage (EO Coverage), which is a coverage extended with EO
-Metadata [OGC 10-157r3] and bound to a location on the Earth. EO Coverages are a
+Metadata [OGC 10-157r4] and bound to a location on the Earth. EO Coverages are a
 subtype of either `GMLCOV::RectifiedGridCoverage` or
 `GMLCOV::ReferenceableGridCoverage`.
 
@@ -63,7 +63,7 @@ correlations in the EO-WCS.
 
 Every EO Coverage contains _EO Metadata_, consisting of an EarthObservation
 record as defined in the OGC Earth Observation Metadata Profile of Observations
-and Measurements [OGC 10-157r3] and a lineage describing the history of
+and Measurements [OGC 10-157r4] and a lineage describing the history of
 operations leading to the coverage on hand.
 
 [requirement,uri="/req/eowcs/eo-metadata-structure"]
@@ -88,7 +88,7 @@ to this object |`EOWCS::Lineage` |zero or more (optional)
 image::images/uml-model.png[UML Model]
 
 NOTE: Throughout this standard, `eop:` and `EOP::` can be substituted by `opt:`
-and `OPT::` or `sar:` and `SAR::`, respectively, as in [OGC 10-157r3] `opt` and
+and `OPT::` or `sar:` and `SAR::`, respectively, as in [OGC 10-157r4] `opt` and
 `sar` are in the substitution group of `eop`.
 
 [#uml_lineage_class,reftext='{figure-caption} {counter:figure-num}']
@@ -104,14 +104,14 @@ except that GetCoverage appends its request verbatim as an additional record
 
 The footprint of an EO Coverage, which contains one or more bounding polygons to
 describe the region of valid data more accurately than the EO Coverage's
-bounding box, is mandatory as opposed to [OGC 10-157r3].
+bounding box, is mandatory as opposed to [OGC 10-157r4].
 
 [requirement,uri="/req/eowcs/footprint-in-eo-metadata"]
 The `EOWCS::EOMetadata` element of `EOWCS::ReferenceableEOCoverage` and
 `EOWCS::RectifiedEOCoverage` instances *shall* contain an
 `eop:EarthObservation/om:featureOfInterest/eop:Footprint` element.
 
-NOTE: As per [OGC 10-157r3], the footprint is always given in WGS84.
+NOTE: As per [OGC 10-157r4], the footprint is always given in WGS84.
 
 === EO Coverage
 

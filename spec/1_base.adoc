@@ -179,7 +179,7 @@ it is part of
 
 === refers to
 
-contains, in its -> EO Metadata element as defined in [OGC 10-157r3], the -> EO
+contains, in its -> EO Metadata element as defined in [OGC 10-157r4], the -> EO
 Metadata element of
 
 == Conventions

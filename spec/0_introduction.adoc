@@ -4,7 +4,7 @@
 This WCS Application Profile for Earth Observation is an OGC Interface Standard
 which relies on WCS 2.0 (the Core [OGC 09-110r4] plus selected extensions), the
 GML Application Schema for Coverages [OGC 09-146r2], the Earth Observation
-Metadata Profile of Observations and Measurements [OGC 10-157r3], and GML 3.2.1
+Metadata Profile of Observations and Measurements [OGC 10-157r4], and GML 3.2.1
 [OGC 07-036].
 
 This document includes three annexes; the first two annexes are normative.
@@ -34,7 +34,7 @@ EO-WCS provides the following specification elements:
 latitude/longitude or projected x/y spatial extent and a temporal validity
 extent. EO Coverages are derived from Referenceable Grid Coverages and Rectified
 Grid Coverages as defined in the GML Application Schema for Coverages [OGC
-09-146r2]. Each EO Coverage has an EO metadata set [OGC 10-157r3] contained in
+09-146r2]. Each EO Coverage has an EO metadata set [OGC 10-157r4] contained in
 its metadata which describes the coverage on hand on a higher semantic level.
 
 * Definition of a hierarchy which allows to group EO Coverages suitably for an
