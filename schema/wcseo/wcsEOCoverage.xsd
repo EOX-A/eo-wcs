@@ -85,4 +85,52 @@
             <element ref="wcseo:datasetSeries" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
     </complexType>
+    <!-- =========================================================== -->
+    <element name="rangeTypeExtension" type="wcseo:rangeTypeExtensionType"/>
+    <complexType name="rangeTypeExtensionType">
+        <annotation>
+            <documentation></documentation>
+        </annotation>
+        <sequence>
+            <element name="dataSemantics" type="anyURI" minOccurs="0"/>
+            <element name="dataType" type="anyURI" minOccurs="0"/>
+            <element ref="wcseo:dataType2dataSemantics" minOccurs="0"/>
+            <element ref="wcseo:RGBgenerationHint" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <simpleType name="RealPair">
+        <restriction>
+            <simpleType>
+                <list itemType="double"/>
+            </simpleType>
+            <length value="2"/>
+        </restriction>
+    </simpleType>
+    <element name="dataType2dataSemantics">
+        <complexType>
+            <sequence>
+                <element name="intervalFrom" type="wcseo:RealPair"/>
+                <element name="intervalTo" type="wcseo:RealPair"/>
+                <element name="type" type="anyURI"/>
+            </sequence>
+        </complexType>
+    </element>
+    <simpleType name="NameTriple">
+        <restriction>
+            <simpleType>
+                <list itemType="anyURI"/>
+            </simpleType>
+            <length value="3"/>
+        </restriction>
+    </simpleType>
+    <element name="RGBgenerationHint">
+        <complexType>
+            <sequence>
+                <element name="bandSequence" type="wcseo:NameTriple"/>
+                <element name="intervalFrom" type="wcseo:RealPair"/>
+                <element name="intervalTo" type="wcseo:RealPair"/>
+                <element name="type" type="anyURI"/>
+            </sequence>
+        </complexType>
+    </element>
 </schema>

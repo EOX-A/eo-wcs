@@ -75,20 +75,45 @@
         </gml:RectifiedGrid>
       </gml:domainSet>
       <gmlcov:rangeType>
-        <swe:DataRecord>
+        <swe:DataRecord definition="TODO">
+          <swe:extension>
+            <!-- Only hint to generate RGB version on this level -->
+            <wcseo:rangeTypeExtension>
+              <wcseo:RGBgenerationHint>
+                <wcseo:bandSequence>gray gray gray</wcseo:bandSequence>
+                <wcseo:intervalFrom>100 10000000</wcseo:intervalFrom>
+                <wcseo:intervalTo>1 255</wcseo:intervalTo>
+                <wcseo:type>logarithmic</wcseo:type>
+              </wcseo:RGBgenerationHint>
+            </wcseo:rangeTypeExtension>
+          </swe:extension>
           <swe:field name="gray">
-            <swe:Quantity definition="http://www.opengis.net/def/property/OGC/0/Radiance">
-              <swe:description>Gray Channel</swe:description>
+            <swe:Quantity definition="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_ComplexObservation">
+              <swe:extension>
+                <!-- Information for individual bands on this level -->
+                <wcseo:rangeTypeExtension>
+                  <wcseo:dataSemantics>http://www.opengis.net/def/property/OGC/0/Radiance</wcseo:dataSemantics>
+                  <wcseo:dataType>http://www.opengis.net/def/dataType/OGC/1.1/nonNegativeInteger</wcseo:dataType>
+                  <wcseo:dataType2dataSemantics>
+                    <wcseo:intervalFrom>100 10000000</wcseo:intervalFrom>
+                    <wcseo:intervalTo>400.0000 700.0000</wcseo:intervalTo>
+                    <wcseo:type>linear</wcseo:type>
+                  </wcseo:dataType2dataSemantics>
+                </wcseo:rangeTypeExtension>
+              </swe:extension>
+              <swe:identifier>gray</swe:identifier>
+              <swe:label>Gray Channel/Band</swe:label>
+              <swe:description>Gray Channel/Band</swe:description>
               <swe:nilValues>
                 <swe:NilValues>
                   <swe:nilValue reason="http://www.opengis.net/def/nil/OGC/0/unknown">0</swe:nilValue>
                 </swe:NilValues>
               </swe:nilValues>
-              <swe:uom code="W.m-2.sr-1.nm-1" />
+              <swe:uom code="W.m-2.sr-1.nm-1"/>
               <swe:constraint>
                 <swe:AllowedValues>
-                  <swe:interval>0 255</swe:interval>
-                  <swe:significantFigures>3</swe:significantFigures>
+                  <swe:interval>0 10000000</swe:interval>
+                  <swe:significantFigures>8</swe:significantFigures>
                 </swe:AllowedValues>
               </swe:constraint>
             </swe:Quantity>
@@ -147,7 +172,7 @@
                   <swe:nilValue reason="http://www.opengis.net/def/nil/OGC/0/unknown">0</swe:nilValue>
                 </swe:NilValues>
               </swe:nilValues>
-              <swe:uom code="W.m-2.sr-1.nm-1" />
+              <swe:uom code="W.m-2.sr-1.nm-1"/>
               <swe:constraint>
                 <swe:AllowedValues>
                   <swe:interval>0 255</swe:interval>
