@@ -5,7 +5,7 @@
     xmlns:ows="http://www.opengis.net/ows/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
-    xmlns:eop="http://www.opengis.net/eop/2.0"
+    xmlns:eop="http://www.opengis.net/eop/2.1"
     xmlns="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified" version="1.0.0" xml:lang="en">
     <annotation>
@@ -25,7 +25,7 @@
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="http://schemas.opengis.net/gmlcov/1.0/gmlcovAll.xsd"/>
     <import namespace="http://www.opengis.net/wcs/2.0" schemaLocation="http://schemas.opengis.net/wcs/2.0/wcsAll.xsd"/>
-    <import namespace="http://www.opengis.net/eop/2.0" schemaLocation="http://schemas.opengis.net/omeo/1.0/eop.xsd"/>
+    <import namespace="http://www.opengis.net/eop/2.1" schemaLocation="http://schemas.opengis.net/eompom/1.1/xsd/eop.xsd"/>
     <include schemaLocation="wcsEOAll.xsd"/>
 
     <!-- =========================================================== -->

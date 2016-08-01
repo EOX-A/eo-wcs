@@ -5,7 +5,7 @@
     xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
     xmlns:ows="http://www.opengis.net/ows/2.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:eop="http://www.opengis.net/eop/2.0"
+    xmlns:eop="http://www.opengis.net/eop/2.1"
     xmlns:gmd="http://www.isotc211.org/2005/gmd"
     xmlns:gmi="http://standards.iso.org/iso/19115/-2/gmi/1.0"
     xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
@@ -28,7 +28,7 @@
     <import namespace="http://www.opengis.net/ows/2.0" schemaLocation="http://schemas.opengis.net/ows/2.0/owsAll.xsd"/>
     <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="http://schemas.opengis.net/gmlcov/1.0/gmlcovAll.xsd"/>
     <import namespace="http://www.opengis.net/wcs/2.0" schemaLocation="http://schemas.opengis.net/wcs/2.0/wcsAll.xsd"/>
-    <import namespace="http://www.opengis.net/eop/2.0" schemaLocation="http://schemas.opengis.net/omeo/1.0/eop.xsd"/>
+    <import namespace="http://www.opengis.net/eop/2.1" schemaLocation="http://schemas.opengis.net/eompom/1.1/xsd/eop.xsd"/>
     <!-- ISO 19139 -->
     <import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd"/>
     <!-- ISO 19139-2 -->

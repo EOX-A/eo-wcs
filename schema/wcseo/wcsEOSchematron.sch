@@ -9,7 +9,7 @@
     <sch:ns prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
     <sch:ns prefix="wcs" uri="http://www.opengis.net/wcs/2.0"/>
     <sch:ns prefix="wcseo" uri="http://www.opengis.net/wcs/wcseo/1.1"/>
-    <sch:ns prefix="eop" uri="http://www.opengis.net/eop/2.0"/>
+    <sch:ns prefix="eop" uri="http://www.opengis.net/eop/2.1"/>
     <sch:ns prefix="om" uri="http://www.opengis.net/om/2.0"/>
     <sch:pattern>
         <sch:title>Requirement 1</sch:title>
