@@ -1106,13 +1106,31 @@ present in the request, and in the service's default package format as reported
 in the `wcseo:defaultPackageFormat` element of the Capabilities if this
 parameter is not present.
 
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-multipart"]
+The response to a successful _GetEOCoverageSet_ request containing a
+`mediaType` parameter with value `multipart/related` *shall* follow the
+definitions of conformance class _multipart_ of the OGC® Coverage
+Implementation Schema [OGC 09-146r2]. +
+*Dependency*:
+http://www.opengis.net/spec/GMLCOV/1.0/conf/multipart
+
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-mediaType"]
 The response to a successful _GetEOCoverageSet_ request containing a `mediaType`
 parameter with value `multipart/related` *shall* consist of a
 `wcseo:EOCoverageSet` structure as defined in the
 http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard. The second part of the multipart response *shall* be encoded as
-specified by <</req/eowcs_geteocoverageset /getEOCoverageSet-packageFormat>>.
+standard in its first part. The second part of the multipart response *shall*
+be encoded as specified by
+<</req/eowcs_geteocoverageset /getEOCoverageSet-packageFormat>>.
+
+[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-cid"]
+The first part of the response to a successful _GetEOCoverageSet_ request
+containing a `mediaType` parameter with value `multipart/related` *shall*
+reference individual coverages inside the package in the second part of the
+multipart response by appending the filename after a `;` character to the
+`cid`.
+
+NOTE: The usage of `cid` is defined in [OGC 09-146r2].
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-format"]
 The EO Coverages contained in the response to a successful _GetEOCoverageSet_
@@ -1307,8 +1325,8 @@ Example: The following XML fragment shows parts of the first part of a possible
     </gml:domainSet>
     <gml:rangeSet>
       <gml:File>
-        <gml:rangeParameters xlink:arcrole="fileReference" xlink:href="cid:coverage/someEOCoverage1.tif" xlink:role="http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage" />
-        <gml:fileReference>cid:coverage/someEOCoverage1.tif</gml:fileReference>
+        <gml:rangeParameters xlink:arcrole="fileReference" xlink:href="cid:coverages.meta4;someEOCoverage1.tif" xlink:role="http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage" />
+        <gml:fileReference>cid:coverages.meta4;someEOCoverage1.tif</gml:fileReference>
         <gml:fileStructure />
         <gml:mimeType>image/tiff</gml:mimeType>
       </gml:File>
@@ -1341,8 +1359,8 @@ Example: The following XML fragment shows parts of the first part of a possible
     </gml:domainSet>
     <gml:rangeSet>
       <gml:File>
-        <gml:rangeParameters xlink:arcrole="fileReference" xlink:href="cid:coverage/someEOCoverage2.tif" xlink:role="http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage" />
-        <gml:fileReference>cid:coverage/someEOCoverage2.tif</gml:fileReference>
+        <gml:rangeParameters xlink:arcrole="fileReference" xlink:href="cid:coverages.meta4;someEOCoverage2.tif" xlink:role="http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage" />
+        <gml:fileReference>cid:coverages.meta4;someEOCoverage2.tif</gml:fileReference>
         <gml:fileStructure />
         <gml:mimeType>image/tiff</gml:mimeType>
       </gml:File>

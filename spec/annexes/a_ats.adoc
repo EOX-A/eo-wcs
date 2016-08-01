@@ -1349,11 +1349,31 @@ TODO
 
 TODO
 
+==== GetEOCoverageSet Response multipart
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-multipart*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-multipart>>*
+
+*Test method:*
+
+TODO
+
 ==== GetEOCoverageSet Response mediaType
 
 *Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-mediaType*
 
 *Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-mediaType>>*
+
+*Test method:*
+
+TODO
+
+==== GetEOCoverageSet Response cid
+
+*Test id: /conf/eowcs_geteocoverageset/getEOCoverageSet-cid*
+
+*Test Purpose: <</req/eowcs_geteocoverageset/getEOCoverageSet-cid>>*
 
 *Test method:*
 
