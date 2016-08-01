@@ -178,17 +178,11 @@ technical contents of this (part of this) document.
 
 Among the topics for future development are the following items:
 
-* Allow additional coverage representations (i.e., "multipart" and "special
-format" coverage encodings) once these are adopted for the GML Application
-Schema for Coverages [OGC 09-146].
-
 * Extend the current 2-D EO Coverage footprint to 3-D footprints by extending
   them with elevation; this will involve extending footprints from bounding
   multi-curves (polygons) to multi-surfaces.
 
 * Specify usage and content of `EOWCS::Lineage` in more detail.
-
-* Add paging mechanism similar to WFS 2.0.
 
 include::0_introduction.adoc[]
 
