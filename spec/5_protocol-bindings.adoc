@@ -57,7 +57,7 @@ as follows, for positive integer value _x_: +
 
 [requirement,uri="/req/eowcs_get-kvp/describeEOCoverageSet-startIndex"]
 The `startIndex` parameter of a _DescribeEOCoverageSet_ request *shall* be
-indicated as follows, for positive integer value _x_: +
+indicated as follows, for a non-negative integer value _x_: +
 `startindex=x`
 
 [requirement,uri="/req/eowcs_get-kvp/describeEOCoverageSet-subset"]
@@ -130,7 +130,7 @@ as follows, for positive integer value _x_: +
 
 [requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-startIndex"]
 The `startIndex` parameter of a _GetEOCoverageSet_ request *shall* be
-indicated as follows, for positive integer value _x_: +
+indicated as follows, for a non-negative integer value _x_: +
 `startindex=x`
 
 [requirement,uri="/req/eowcs_get-kvp/getEOCoverageSet-packageFormat"]
