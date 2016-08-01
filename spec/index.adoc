@@ -1,4 +1,6 @@
 :doctype: book
+:encoding: utf-8
+:lang: en
 :linkcss:
 :toc2:
 :toclevels: 3
@@ -186,8 +188,6 @@ Schema for Coverages [OGC 09-146].
 
 * Specify usage and content of `EOWCS::Lineage` in more detail.
 
-* Align with forthcoming WCS 2.0 extensions once available.
-
 * Add paging mechanism similar to WFS 2.0.
 
 include::0_introduction.adoc[]
@@ -207,6 +207,5 @@ include::bibliography.adoc[]
 :numbered:
 
 include::annexes/a_ats.adoc[]
-include::annexes/b_transitional-provisions.adoc[]
-include::annexes/c_use-case-examples.adoc[]
-include::annexes/d_revision-history.adoc[]
+include::annexes/b_use-case-examples.adoc[]
+include::annexes/c_revision-history.adoc[]

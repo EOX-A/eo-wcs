@@ -38,7 +38,8 @@ http://www.opengis.net/spec/WCS_service-extension_interpolation/1.0/conf/interpo
 Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
 Interface Standard - CRS Extension [OGC 11-053r1]. +
 *Dependency*:
-http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs
+http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs,
+http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs-gridded-coverage
 
 === Coverage format encodings
 
