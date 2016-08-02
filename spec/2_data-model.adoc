@@ -233,14 +233,14 @@ as well as data conversion information on `swe:Quantity` level.
     </swe:extension>
     <swe:label>Gray Channel/Band</swe:label>
     <swe:field name="gray">
-      <swe:Quantity definition="http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_ComplexObservation">
+      <swe:Quantity definition="http://sweet.jpl.nasa.gov/2.3/propEnergyFlux.owl#SpectralRadiance">
         <swe:extension>
           <wcseo:rangeTypeExtension>
-            <wcseo:dataSemantics>http://www.opengis.net/def/property/OGC/0/Radiance</wcseo:dataSemantics>
+            <wcseo:dataSemantics>http://sweet.jpl.nasa.gov/2.3/stateSpectralBand.owl#Visible</wcseo:dataSemantics>
             <wcseo:dataType>http://www.opengis.net/def/dataType/OGC/1.1/nonNegativeInteger</wcseo:dataType>
             <wcseo:dataType2dataSemantics>
               <wcseo:intervalFrom>100 10000000</wcseo:intervalFrom>
-              <wcseo:intervalTo>400.0000 700.0000</wcseo:intervalTo>
+              <wcseo:intervalTo>390.0000 780.0000</wcseo:intervalTo>
               <wcseo:type>linear</wcseo:type>
             </wcseo:dataType2dataSemantics>
           </wcseo:rangeTypeExtension>

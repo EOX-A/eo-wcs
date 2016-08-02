@@ -35,7 +35,7 @@
   <gmlcov:rangeType>
     <swe:DataRecord>
       <swe:field name="gray">
-        <swe:Quantity definition="http://www.opengis.net/def/property/OGC/0/Radiance">
+        <swe:Quantity definition="http://sweet.jpl.nasa.gov/2.3/propEnergyFlux.owl#SpectralRadiance">
           <swe:description>Gray Channel</swe:description>
           <swe:nilValues />
           <swe:uom code="W.m-2.sr-1.nm-1" />
