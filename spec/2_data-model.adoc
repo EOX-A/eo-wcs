@@ -220,12 +220,12 @@ as well as data conversion information on `swe:Quantity` level.
 
 [source,xml]
 <gmlcov:rangeType>
-  <swe:DataRecord definition="TODO">
+  <swe:DataRecord definition="http://www.opengis.net/def/property/OGC-EO/0/opt/SpectralMode/PANCHROMATIC">
     <swe:extension>
       <wcseo:rangeTypeExtension>
         <wcseo:RGBgenerationHint>
           <wcseo:bandSequence>gray gray gray</wcseo:bandSequence>
-          <wcseo:intervalFrom>100 10000000</wcseo:intervalFrom>
+          <wcseo:intervalFrom>1 4095</wcseo:intervalFrom>
           <wcseo:intervalTo>1 255</wcseo:intervalTo>
           <wcseo:type>logarithmic</wcseo:type>
         </wcseo:RGBgenerationHint>
@@ -239,7 +239,7 @@ as well as data conversion information on `swe:Quantity` level.
             <wcseo:dataSemantics>http://sweet.jpl.nasa.gov/2.3/stateSpectralBand.owl#Visible</wcseo:dataSemantics>
             <wcseo:dataType>http://www.opengis.net/def/dataType/OGC/1.1/nonNegativeInteger</wcseo:dataType>
             <wcseo:dataType2dataSemantics>
-              <wcseo:intervalFrom>100 10000000</wcseo:intervalFrom>
+              <wcseo:intervalFrom>1 4095</wcseo:intervalFrom>
               <wcseo:intervalTo>390.0000 780.0000</wcseo:intervalTo>
               <wcseo:type>linear</wcseo:type>
             </wcseo:dataType2dataSemantics>
@@ -256,8 +256,8 @@ as well as data conversion information on `swe:Quantity` level.
         <swe:uom code="W.m-2.sr-1.nm-1"/>
         <swe:constraint>
           <swe:AllowedValues>
-            <swe:interval>0 10000000</swe:interval>
-            <swe:significantFigures>8</swe:significantFigures>
+            <swe:interval>0 4095</swe:interval>
+            <swe:significantFigures>4</swe:significantFigures>
           </swe:AllowedValues>
         </swe:constraint>
       </swe:Quantity>
