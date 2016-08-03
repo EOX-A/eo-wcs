@@ -98,7 +98,7 @@
                   <wcseo:dataType2dataSemantics>
                     <wcseo:intervalFrom>1 4095</wcseo:intervalFrom>
                     <wcseo:intervalTo>390.0000 780.0000</wcseo:intervalTo>
-                    <wcseo:type>linear</wcseo:type>
+                    <wcseo:type>http://sweet.jpl.nasa.gov/2.3/reprMathFunction.owl#Linear</wcseo:type>
                   </wcseo:dataType2dataSemantics>
                 </wcseo:rangeTypeExtension>
               </swe:extension>
