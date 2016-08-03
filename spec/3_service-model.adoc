@@ -115,7 +115,7 @@ or "All".
 
 [requirement,uri="/req/eowcs/getCapabilities-response-datasetSeriesSummary-section"]
 If a _GetCapabilities_ request contains a `sections` parameter then a successful
-response *shall* contain `eowcs:DatasetSeriesSummary` elements if and only if
+response *shall* contain `wcseo:DatasetSeriesSummary` elements if and only if
 the section parameter list contains one of the values "DatasetSeriesSummary",
 "Contents", or "All".
 
@@ -695,7 +695,7 @@ only if the section parameter list contains one of the values
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions"]
 If a _DescribeEOCoverageSet_ request contains a `sections` parameter then a
-successful response *shall* contain a `eowcs:DatasetSeriesDescriptions` element
+successful response *shall* contain a `wcseo:DatasetSeriesDescriptions` element
 if and only if the section parameter list contains one of the values
 "DatasetSeriesDescriptions" or "All".
 
@@ -748,7 +748,7 @@ The response to a successful _DescribeEOCoverageSet_ request containing a
 Coverages whose time interval defined by its
 `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
 `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` elements
-in `eowcs:EOMetadata` +
+in `wcseo:EOMetadata` +
 - overlaps with the request time extent, and the request parameter `containment`
   is of value `overlaps` or is omitted, +
 - is completely contained within the request time extent, and the request
@@ -1194,7 +1194,7 @@ The response to a successful _GetEOCoverageSet_ request *shall* contain only EO
 Coverages whose time interval defined by its
 `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
 `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` elements
-in `eowcs:EOMetadata` +
+in `wcseo:EOMetadata` +
 - overlaps with the request time extent, and the request parameter `containment`
   is of value `overlaps` or is omitted, +
 - is completely contained within the request time extent, and the request
