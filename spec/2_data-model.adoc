@@ -227,7 +227,7 @@ as well as data conversion information on `swe:Quantity` level.
           <wcseo:bandSequence>gray gray gray</wcseo:bandSequence>
           <wcseo:intervalFrom>1 4095</wcseo:intervalFrom>
           <wcseo:intervalTo>1 255</wcseo:intervalTo>
-          <wcseo:type>logarithmic</wcseo:type>
+          <wcseo:type>http://sweet.jpl.nasa.gov/2.3/reprMathFunction.owl#Logarithmic</wcseo:type>
         </wcseo:RGBgenerationHint>
       </wcseo:rangeTypeExtension>
     </swe:extension>
@@ -237,7 +237,7 @@ as well as data conversion information on `swe:Quantity` level.
         <swe:extension>
           <wcseo:rangeTypeExtension>
             <wcseo:dataSemantics>http://sweet.jpl.nasa.gov/2.3/stateSpectralBand.owl#Visible</wcseo:dataSemantics>
-            <wcseo:dataType>http://www.opengis.net/def/dataType/OGC/1.1/nonNegativeInteger</wcseo:dataType>
+            <wcseo:dataType>http://www.opengis.net/def/dataType/OGC/0/unsignedShort</wcseo:dataType>
             <wcseo:dataType2dataSemantics>
               <wcseo:intervalFrom>1 4095</wcseo:intervalFrom>
               <wcseo:intervalTo>390.0000 780.0000</wcseo:intervalTo>
@@ -421,7 +421,7 @@ of the Datasets the Stitched Mosaic refers to.
 For any given Stitched Mosaic, its temporal validity given by its
 `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
 `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` elements
-in `eowcs:EOMetadata` *shall* be defined as the minimal time interval containing
+in `wcseo:EOMetadata` *shall* be defined as the minimal time interval containing
 the temporal validities of all Datasets the Stitched Mosaic refers to.
 
 ==== Range type
