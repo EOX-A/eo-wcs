@@ -23,17 +23,17 @@ Dataset or a Referenceable Dataset, depending on the type of EO Coverage it is
 derived from.
 
 * A _Stitched Mosaic_ is a collection of 2-D horizontal EO Coverages referring
-to co-referenced Datasets; cf. Subclause 6.5. A Stiched Mosaic can be a
-Rectified Stiched Mosaic or a Referenceable Stitched Mosaic, depending on the
+to co-referenced Datasets; cf. Subclause 6.5. A Stitched Mosaic can be a
+Rectified Stitched Mosaic or a Referenceable Stitched Mosaic, depending on the
 type of EO Coverage it is derived from. A Stitched Mosaic can be interpreted
-(i.e. requested) as a single cov- erage.
+(i.e. requested) as a single coverage.
 
 * A _Dataset Series_ is a collection of coverages and/or Dataset Series; cf.
 Subclause 6.6. A Dataset Series can refer to any number of Datasets, Stitched
 Mosaics, and Dataset Series. A Dataset Series is not a coverage itself.
 
-NOTE: Annex C provides Use Cases to motivate the definition of these data
-elements.
+NOTE: <<__informative_use_case_examples>> provides Use Cases to motivate the
+definition of these data elements.
 
 NOTE: Although named _Dataset Series_ technically speaking it is a heterogeneous
 grouping of coverages and/or Dataset Series and can thus be used for any other
@@ -117,14 +117,15 @@ NOTE: As per [OGC 10-157r4], the footprint is always given in WGS84.
 
 ==== Overview
 
-An _EO Coverage_ is a coverage as defined in the GML Application Schema for
-Coverages [OGC 09-146r2]. EO Coverages appear in two variants:
+An _EO Coverage_ is a coverage as defined in the Coverages Implementation
+Schema (renamed from GML Application Schema - Coverages) [OGC 09-146r2]. EO
+Coverages appear in two variants:
 
 * _Rectified EO Coverages_ are derived from Rectified Grid Coverage as defined
 in [OGC 09-146r2];
 
 * _Referenceable EO Coverages_ are derived from Referenceable Grid Coverage as
-de- fined in [OGC 09-146r2].
+defined in [OGC 09-146r2].
 
 [requirement,uri="/req/eowcs/eo-coverage-structure"]
 `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances

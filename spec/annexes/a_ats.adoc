@@ -1,4 +1,4 @@
-[appendix]
+[appendix,reftext='Annex A']
 == (normative) Abstract test suite
 
 A WCS implementation must satisfy the following system characteristics to be

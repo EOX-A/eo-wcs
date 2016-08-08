@@ -43,8 +43,8 @@ implementations (currently: servers).
 Requirements and conformance test URIs defined in this document are relative to
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/.
 
-Annex A lists the conformance tests which shall be exercised on any software
-artifact claiming to implement EO-WCS.
+<<__normative_abstract_test_suite>> lists the conformance tests which shall be
+exercised on any software artifact claiming to implement EO-WCS.
 
 [#normative_references,reftext='3']
 == Normative references

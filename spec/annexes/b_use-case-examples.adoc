@@ -1,4 +1,4 @@
-[appendix]
+[appendix,reftext='Annex B']
 == (informative) Use Case examples
 
 In the following two Use Cases are presented to illustrate possible application

@@ -1,4 +1,4 @@
-[appendix]
+[appendix,reftext='Annex C']
 == Revision History
 
 [#revision_history,reftext='{table-caption} {counter:table-num}']
