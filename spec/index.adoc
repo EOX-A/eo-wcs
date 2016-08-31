@@ -17,8 +17,8 @@ Open Geospatial Consortium +
 [id="ogcheading"]
 Publication Date: TBD +
 Approval Date: TBD +
-Submission Date: TBD +
-Reference number of this Document: OGC 10-140r1 +
+Submission Date: 2016-08-31 +
+Reference number of this Document: OGC 10-140r2 +
 External reference for this OGC® document: http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.1 +
 URL for this OGC® document: https://eox-a.github.io/eo-wcs/ +
 PDF version: https://eox-a.github.io/eo-wcs/index.pdf +
