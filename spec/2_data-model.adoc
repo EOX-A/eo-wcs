@@ -215,6 +215,22 @@ property.
 NOTE: The data type is provided explicitly in the `wcseo:rangeTypeExtension`
 element or implicitly via the actual coverage encoding.
 
+[requirement,uri="/req/eowcs/rangeType-name"]
+In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
+the `swe:identifier` element of each `swe:Quantity` element under each
+`swe:field` element *shall* hold the URL-encoded identifier of the respective
+field (also referred to as band or channel) and the `name` attribute of each
+`swe:field` element *shall* hold the first word (NCNAME type substring i.e.
+starting from it’s first character up to and excluding the first character
+which is not allowed in an NCName) of the identifier of the respective field.
+
+NOTE: Typically the two values are identical. This requirement addresses cases
+where the identifier includes characters not allowed in `NCName` like `:`, `@`,
+`$`, `%`, `&`, `/`, `+`, `,`, `;`, or any whitespace characters or where it
+starts with a number, minus, or dot. For example an ID of `gray band` should
+use `gray` for the `name` attribute and `gray%20band` for the `swe:identifier`
+element.
+
 Example: The following provides an example `gmlcov:rangeType` element including
 additional range type information for RGB generation on `swe:DataRecord` level
 as well as data conversion information on `swe:Quantity` level.
@@ -246,7 +262,7 @@ as well as data conversion information on `swe:Quantity` level.
             </wcseo:dataType2dataSemantics>
           </wcseo:rangeTypeExtension>
         </swe:extension>
-        <swe:identifier>gray</swe:identifier>
+        <swe:identifier>gray%20band</swe:identifier>
         <swe:label>Gray Channel/Band</swe:label>
         <swe:description>Gray Channel/Band</swe:description>
         <swe:nilValues>

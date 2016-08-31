@@ -173,6 +173,16 @@ TODO
 
 TODO
 
+==== Range type name
+
+*Test id: /conf/eowcs/rangeType-name*
+
+*Test Purpose: <</req/eowcs/rangeType-name>>*
+
+*Test method:*
+
+TODO
+
 ==== Rangeset of Coverage
 
 *Test id: /conf/eowcs/range-set-of-eo-coverage*
