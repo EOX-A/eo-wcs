@@ -25,8 +25,8 @@ The OGC _Web Coverage Service (WCS) Application Profile - Earth Observation_
 Observation data. An Application Profile bundles several specifications and
 possibly adds additional requirements on an implementation. Extra requirements
 can be additions (for example, Dataset Series are introduced by this
-specification) or constraints (for example, coverages offered are restricted to
-2-D rasters).
+specification) or constraints (for example, coverages offered are required to
+include EO metadata).
 
 EO-WCS provides the following specification elements:
 
@@ -41,7 +41,7 @@ coverage on hand on a higher semantic level.
 * Definition of a hierarchy which allows to group EO Coverages suitably for an
 efficient retrieval:
 
-** Datasets as plain 2-D EO Coverages (and, hence, accessible as coverages);
+** Datasets as plain EO Coverages (and, hence, accessible as coverages);
 
 ** Stitched Mosaics as homogeneous collections of spatially non-overlapping
 subsets of Datasets, accessible themselves as coverages;

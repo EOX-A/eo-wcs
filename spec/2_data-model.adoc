@@ -17,12 +17,12 @@ subtype of either `GMLCOV::RectifiedGridCoverage` or
 Based on this EO Coverage concept (cf. Subclause 6.3), three main data elements
 are defined:
 
-* A _Dataset_ is a 2-D horizontal EO Coverage, which can represent, for example,
-a hyperspectral satellite scene; cf. Subclause 6.4. A Dataset can be a Rectified
-Dataset or a Referenceable Dataset, depending on the type of EO Coverage it is
-derived from.
+* A _Dataset_ is an EO Coverage, which can represent, for example, a
+hyperspectral 2D satellite scene or a 3D atmospheric model; cf. Subclause  6.4.
+A Dataset can be a Rectified Dataset or a Referenceable Dataset, depending on
+the type of EO Coverage it is derived from.
 
-* A _Stitched Mosaic_ is a collection of 2-D horizontal EO Coverages referring
+* A _Stitched Mosaic_ is a collection of EO Coverages referring
 to co-referenced Datasets; cf. Subclause 6.5. A Stitched Mosaic can be a
 Rectified Stitched Mosaic or a Referenceable Stitched Mosaic, depending on the
 type of EO Coverage it is derived from. A Stitched Mosaic can be interpreted
@@ -132,6 +132,10 @@ defined in [OGC 09-146r2].
 *shall* conform to <<uml_model>>, <<uml_lineage_class>>, and the
 http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
 standard.
+
+NOTE: An _EO Coverage_ can have any number of dimensions as long as it adheres
+to the requirements below. Particularly it needs a footprint bound to the Earth
+and a temporal validity.
 
 ==== EO Metadata
 
@@ -308,7 +312,7 @@ http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
 standard.
 
 [#dataset_conceptual,reftext='{figure-caption} {counter:figure-num}']
-.Conceptual view of a Dataset as a 2-D coverage: in referenced (left) and unreferenced coordinates (right)
+.Conceptual view of a Dataset: in referenced (left) and unreferenced coordinates (right)
 image::images/dataset-conceptual.png[Dataset Conceptual View]
 
 NOTE: This definition includes the "field-of-View" of a sensor, or "cut",
@@ -329,7 +333,7 @@ Mosaic which are not located inside any `contributingFootprint` of any of the
 contained Datasets carry nil values.
 
 [#stitchedmosaic_conceptual,reftext='{figure-caption} {counter:figure-num}']
-.Conceptual view of a Stitched Mosaic as a 2-D coverage: composed from Datasets (Stitched Mosaic bounding box dashed)
+.Conceptual view of a Stitched Mosaic: composed from Datasets (Stitched Mosaic bounding box dashed)
 image::images/stitchedmosaic-conceptual.png[Stitched Mosaic Conceptual View]
 
 [requirement,uri="/req/eowcs/referenceableStitchedMosaic-structure"]

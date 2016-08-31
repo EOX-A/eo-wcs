@@ -178,10 +178,6 @@ technical contents of this (part of this) document.
 
 Among the topics for future development are the following items:
 
-* Extend the current 2-D EO Coverage footprint to 3-D footprints by extending
-  them with elevation; this will involve extending footprints from bounding
-  multi-curves (polygons) to multi-surfaces.
-
 * Specify usage and content of `EOWCS::Lineage` in more detail.
 
 include::0_introduction.adoc[]

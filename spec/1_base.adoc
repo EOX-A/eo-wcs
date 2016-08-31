@@ -134,7 +134,7 @@ digital representation of a spatio-temporally varying phenomenon as defined in
 
 === Dataset
 
-2-D -> EO Coverage
+-> EO Coverage
 
 NOTE: A Dataset usually represents observations obtained by satellite
 instruments.
