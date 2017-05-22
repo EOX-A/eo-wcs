@@ -164,7 +164,7 @@ Additionally, rasdaman GmbH has made substantial contributions.
 |===============================================================================
 |Name                                   |Organization
 |Peter Baumann                          |Jacobs University Bremen, rasdaman GmbH
-|Jinsongdi Yu                           |Jacobs University Bremen
+|Jinsongdi Yu                           |Fuzhou University
 |Stephan Meissl <stephan.meissl@eox.at> |https://eox.at[EOX IT Services GmbH]
 |Christian Schiller                     |https://eox.at[EOX IT Services GmbH]
 |===============================================================================
