@@ -1,5 +1,6 @@
-[appendix,reftext='Annex B']
-== (informative) Use Case examples
+[appendix]
+:appendix-caption: Annex
+== Use Case Examples (Informative)
 
 In the following two Use Cases are presented to illustrate possible application
 scenarios of EO-WCS in the domain of earth observation and remote sensing.

@@ -537,7 +537,7 @@ http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOGetCoverage.xsd" gml:id="c1">
 A _DescribeEOCoverageSet_ request submits one or more Dataset Series, Stitched
 Mosaic, or Dataset identifiers together with a spatio-temporal subsetting
 criterion ("bounding box"). The spatial constraint is expressed in WGS84
-<<4>>, the temporal constraint in ISO 8601 <<2>>.
+<<b4>>, the temporal constraint in ISO 8601 <<b2>>.
 
 The response to a successful request on a Dataset Series consists of a (possibly
 empty) set of descriptions of Datasets and Stitched Mosaics and a (possibly
@@ -617,8 +617,8 @@ the values "lat", "long", or "phenomenonTime". Each of these values *shall*
 appear at most once in a given request.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-request-crs"]
-A _DescribeEOCoverageSet_ request *shall* use WGS84 <<4>> as spatial and
-ISO 8601 <<2>> as temporal CRS for the coordinates in trim requests.
+A _DescribeEOCoverageSet_ request *shall* use WGS84 <<b4>> as spatial and
+ISO 8601 <<b2>> as temporal CRS for the coordinates in trim requests.
 
 NOTE: Trim coordinates are not required to lie within the boundaries of the EO
 Coverage inquired.
@@ -737,7 +737,7 @@ Coverages whose spatial footprint defined by its
   `containment` is of value `overlaps` or is omitted, +
 - is completely contained within the spatial request extent, and the request
   parameter `containment` is of value `contains` +
-whereby all spatial coordinates are expressed in WGS84 <<4>>.
+whereby all spatial coordinates are expressed in WGS84 <<b4>>.
 
 Temporal subsetting is evaluated against the temporal validity of an EO
 Coverage.
@@ -753,7 +753,7 @@ in `wcseo:EOMetadata` +
   is of value `overlaps` or is omitted, +
 - is completely contained within the request time extent, and the request
   parameter `containment` is of value `contains`, +
-whereby all temporal coordinates are expressed in ISO 8601 <<2>>.
+whereby all temporal coordinates are expressed in ISO 8601 <<b2>>.
 
 Boundary values omitted are substituted by the actual boundary value of the
 object inquired.
@@ -782,7 +782,7 @@ or equal to the minimum of the value of the `CountDefault` element and the
 matching elements *shall* be reported.
 
 NOTE: The `count` parameter is used in the same ways as the `itemsPerPage`
-element in the OpenSearch Specification <<7>>.
+element in the OpenSearch Specification <<b7>>.
 
 [requirement,uri="/req/eowcs/describeEOCoverageSet-response-startIndex"]
 If a _DescribeEOCoverageSet_ request contains a `wcs:startIndex` parameter then
@@ -829,7 +829,7 @@ time.
 
 NOTE: The `count`, `startIndex`, `next`, and `previous` parameters used for
 paging are defined in the same way as in the OpenGIS Web Feature Service 2.0
-Interface Standard <<8>>.
+Interface Standard <<b8>>.
 
 Example: The following XML fragment shows parts of a possible
 `DescribeEOCoverageSet` operation response:
@@ -902,8 +902,8 @@ violating Dataset Series and/or EO Coverage identifiers
 Just like the _DescribeEOCoverageSet_ request a _GetEOCoverageSet_ request
 submits one or more Dataset Series, Stitched Mosaic, or Dataset identifiers
 together with a spatio-temporal subsetting criterion ("bounding box"). By
-default, the spatial constraint is expressed in WGS84 <<4>>, the temporal
-constraint in ISO 8601 <<2>>.
+default, the spatial constraint is expressed in WGS84 <<b4>>, the temporal
+constraint in ISO 8601 <<b2>>.
 
 Additionally, the _GetEOCoverageSet_ request allows to submit simple processing
 like scaling, interpolation, output CRS, format, and actually applying the
@@ -998,8 +998,8 @@ parameter *shall* have one of the values "lat", "long", or "phenomenonTime".
 Each of these values *shall* appear at most once in a given request.
 
 [requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-crs"]
-A _GetEOCoverageSet_ request *shall* use WGS84 <<4>> as spatial and
-ISO 8601 <<2>> as temporal CRS for the coordinates in trim requests if no
+A _GetEOCoverageSet_ request *shall* use WGS84 <<b4>> as spatial and
+ISO 8601 <<b2>> as temporal CRS for the coordinates in trim requests if no
 `subsettingCrs` element is present.
 
 NOTE: Trim coordinates are not required to lie within the boundaries of the EO
@@ -1183,7 +1183,7 @@ those EO Coverages whose spatial footprint defined by its
   `containment` is of value `overlaps` or is omitted, +
 - is completely contained within the spatial request extent, and the request
   parameter `containment` is of value `contains` +
-whereby all spatial coordinates are expressed in WGS84 <<4>> if no
+whereby all spatial coordinates are expressed in WGS84 <<b4>> if no
 `subsettingCrs` parameter is present.
 
 Temporal subsetting is evaluated against the temporal validity of an EO
@@ -1199,7 +1199,7 @@ in `wcseo:EOMetadata` +
   is of value `overlaps` or is omitted, +
 - is completely contained within the request time extent, and the request
   parameter `containment` is of value `contains`, +
-whereby all temporal coordinates are expressed in ISO 8601 <<2>> if no
+whereby all temporal coordinates are expressed in ISO 8601 <<b2>> if no
 `subsettingCrs` parameter is present.
 
 Boundary values omitted are substituted by the actual boundary value of the
@@ -1225,7 +1225,7 @@ parameter if present in the request. If none of both are present all matching
 elements *shall* be reported.
 
 NOTE: The `count` parameter is used in the same ways as the `itemsPerPage`
-element in the OpenSearch Specification <<7>>.
+element in the OpenSearch Specification <<b7>>.
 
 [requirement,uri="/req/eowcs/getEOCoverageSet-response-startIndex"]
 If a _GetEOCoverageSet_ request contains a `wcs:startIndex` parameter then a
@@ -1278,7 +1278,7 @@ time.
 
 NOTE: The `count`, `startIndex`, `next`, and `previous` parameters used for
 paging are defined in the same way as in the OpenGIS Web Feature Service 2.0
-Interface Standard <<8>>.
+Interface Standard <<b8>>.
 
 The spatial subsetting requested may be applied to the EO Coverages to be
 returned. Default is to respond with entire coverages.

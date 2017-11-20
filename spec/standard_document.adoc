@@ -190,12 +190,7 @@ include::3_service-model.adoc[]
 include::4_wcs-extensions.adoc[]
 include::5_protocol-bindings.adoc[]
 
-:numbered!:
-
-include::bibliography.adoc[]
-
-:numbered:
-
-include::annexes/a_ats.adoc[]
-include::annexes/b_use-case-examples.adoc[]
-include::annexes/c_revision-history.adoc[]
+include::annex-a.adoc[]
+include::annex-b.adoc[]
+include::annex-history.adoc[]
+include::annex-bibliography.adoc[]

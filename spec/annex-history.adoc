@@ -1,10 +1,11 @@
-[appendix,reftext='Annex C']
+[appendix]
+:appendix-caption: Annex
 == Revision History
 
 [#revision_history,reftext='{table-caption} {counter:table-num}']
-[cols="2,1,3,2,4",options="header"]
-|===============================================================================
-|Date       |Release |Author                    |Paragraph modified |Description
+[width="90%",cols="2,1,2,3,4",options="header"]
+|===
+|Date       |Release |Editor       |Primary clauses modified |Description
 |2010-10-27 |0.1.0   |Peter Baumann, Stephan Meissl |All     |Created
 |2011-01-19 |0.2.0   |Peter Baumann, Stephan Meissl |All     |Various updates
 |2011-01-19 |0.3.0   |Jinsongdi Yu                  |Annex A |Added ATS
@@ -19,4 +20,4 @@ copy and published it on GitHub (https://github.com/EOX-A/eo-wcs,
 https://eox-a.github.io/eo-wcs)
 |TBD        |TBD     |Stephan Meissl                |TBD     |Proposal from ESA
 project EVO-ODAS
-|===============================================================================
+|===

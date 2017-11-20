@@ -64,8 +64,8 @@ indicated as follows, for a non-negative integer value _x_: +
 The `trim` parameters of a
 _DescribeEOCoverageSet_ request *shall* be indicated through a possibly empty
 set of subset specifications, each one with key \"``subset``" and value
-specification given by a `SubsetSpec` adhering to this EBNF syntax <<3>>
-and the resp. XML definitions <<6>>: +
+specification given by a `SubsetSpec` adhering to this EBNF syntax <<b3>>
+and the resp. XML definitions <<b6>>: +
 `SubsetSpec: dimension [underline]#(# interval [underline]#)#` +
 `dimension: [underline]#long# | [underline]#lat# | [underline]#phenomenonTime#` +
 `interval: low [underline]#,# high` +
@@ -73,18 +73,18 @@ and the resp. XML definitions <<6>>: +
 `high: point | [underline]#*#` +
 `point: number | [underline]#"# token [underline]#"#` // [underline]#"# = ASCII 0x42
 
-Syntax follows the HTTP standard <<3>>: underlined tokens represent
+Syntax follows the HTTP standard <<b3>>: underlined tokens represent
 literals which appear "as is" ("terminal symbols"), other tokens represent sub-
 expressions to be substituted ("non-terminals"). A vertical bar ("|"") denotes
 alternatives, items in brackets ("[ ]") are optional. Non-terminals `NCName`,
 `number`, `token`, and `anyURI` follow the resp. XML definitions
-<<6>>.
+<<b6>>.
 
 NOTE: Allowed values for points are determined by the CRS used. This ranges from
 "2009-11-06" for time to "-41.5" and "41°5'" for lat/long whereby non-numeric
 values have to be enclosed in double quotes.
 
-NOTE: As per HTTP <<3>>, keys are case insensitive whereas values are
+NOTE: As per HTTP <<b3>>, keys are case insensitive whereas values are
 case sensitive.
 
 Example: The following KVP-encoded _DescribeEOCoverageSet_ request addresses
@@ -164,7 +164,7 @@ WCS extension.
 The `trim` parameters of a _GetEOCoverageSet_ request *shall* be indicated
 through a possibly empty set of subset specifications, each one with key
 \"``subset``" and value specification given by a `SubsetSpec` adhering to this
-EBNF syntax <<3>> and the resp. XML definitions <<6>>: +
+EBNF syntax <<b3>> and the resp. XML definitions <<b6>>: +
 `SubsetSpec: dimension [underline]#(# interval [underline]#)#` +
 `dimension: [underline]#long# | [underline]#lat# | [underline]#phenomenonTime#` +
 `interval: low [underline]#,# high` +
@@ -172,18 +172,18 @@ EBNF syntax <<3>> and the resp. XML definitions <<6>>: +
 `high: point | [underline]#*#` +
 `point: number | [underline]#"# token [underline]#"#` // [underline]#"# = ASCII 0x42
 
-Syntax follows the HTTP standard <<3>>: underlined tokens represent
+Syntax follows the HTTP standard <<b3>>: underlined tokens represent
 literals which appear "as is" ("terminal symbols"), other tokens represent sub-
 expressions to be substituted ("non-terminals"). A vertical bar ("|"") denotes
 alternatives, items in brackets ("[ ]") are optional. Non-terminals `NCName`,
 `number`, `token`, and `anyURI` follow the resp. XML definitions
-<<6>>.
+<<b6>>.
 
 NOTE: Allowed values for points are determined by the CRS used. This ranges
 from "2009-11-06" for time to "-41.5" and "41°5'" for lat/long whereby
 non-numeric values have to be enclosed in double quotes.
 
-NOTE: As per HTTP <<3>>, keys are case insensitive whereas values are
+NOTE: As per HTTP <<b3>>, keys are case insensitive whereas values are
 case sensitive.
 
 === SOAP protocol conformance class

@@ -1,5 +1,6 @@
-[appendix,reftext='Annex A']
-== (normative) Abstract test suite
+[appendix]
+:appendix-caption: Annex
+== Conformance Class Abstract Test Suite (Normative)
 
 A WCS implementation must satisfy the following system characteristics to be
 conformant with this specification.
@@ -13,8 +14,8 @@ The OGC URI identifier of this conformance classes are:
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_geteocoverageset
 
-include::../abstract_tests/TEST001.adoc[]
-include::../abstract_tests/TEST002.adoc[]
+include::abstract_tests/TEST001.adoc[]
+include::abstract_tests/TEST002.adoc[]
 
 ==== EO Coverage
 
@@ -941,8 +942,8 @@ and a normal response otherwise.
 Send otherwise valid _DescribeEOCoverageSet_ requests to server under test which
 contain:
 
-* WGS84 <<4>> as spatial and ISO8601 <<2>> as temporal CRS for the coordinates
-  in trim request
+* WGS84 <<b4>> as spatial and ISO8601 <<b2>> as temporal CRS for the
+  coordinates in trim request
 * Other CRS for the coordinates in trim requests
 
 Pass test if appropriate valid results or exceptions, resp., are delivered.
