@@ -66,11 +66,7 @@ record as defined in the OGC Earth Observation Metadata Profile of Observations
 and Measurements [OGC 10-157r4] and a lineage describing the history of
 operations leading to the coverage on hand.
 
-[requirement,uri="/req/eowcs/eo-metadata-structure"]
-A `EOWCS::EOMetadata` instance *shall* conform to <<eometadata_components>>,
-<<uml_model>>, <<uml_lineage_class>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard.
+include::requirements/REQ001.adoc[]
 
 [#eometadata_components,reftext='{table-caption} {counter:table-num}']
 .Components of `EOWCS::EOMetadata` structure
@@ -106,10 +102,7 @@ The footprint of an EO Coverage, which contains one or more bounding polygons to
 describe the region of valid data more accurately than the EO Coverage's
 bounding box, is mandatory as opposed to [OGC 10-157r4].
 
-[requirement,uri="/req/eowcs/footprint-in-eo-metadata"]
-The `EOWCS::EOMetadata` element of `EOWCS::ReferenceableEOCoverage` and
-`EOWCS::RectifiedEOCoverage` instances *shall* contain an
-`eop:EarthObservation/om:featureOfInterest/eop:Footprint` element.
+include::requirements/REQ002.adoc[]
 
 NOTE: As per [OGC 10-157r4], the footprint is always given in WGS84.
 

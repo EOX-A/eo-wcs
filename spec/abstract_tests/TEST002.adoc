@@ -1,0 +1,17 @@
+==== Footprint in EO Metadata
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/footprint-in-eo-metadata
+|Requirement: |<</req/eowcs/footprint-in-eo-metadata>>
+|Test purpose: | TODO
+|Test method:
+a|For each EO Coverage offered by the server under test:
+
+* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
+  and _GetCoverage_ operations.
+* Check that the responses contain an
+  `eop:EarthObservation/om:featureOfInterest/eop:Footprint` element in the
+  `EOWCS::EOMetadata` and that all responses contain the same information.
+
+Test passes if all individual tests pass.
+|===

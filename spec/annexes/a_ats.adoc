@@ -13,40 +13,8 @@ The OGC URI identifier of this conformance classes are:
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_geteocoverageset
 
-==== EO Metadata
-
-*Test id: /conf/eowcs/eo-metadata-structure*
-
-*Test Purpose: <</req/eowcs/eo-metadata-structure>>*
-
-*Test method:*
-
-For each EO Coverage offered by the server under test:
-
-* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
-  and _GetCoverage_ operations.
-* Check that the responses contain a `EOWCS::EOMetadata` corresponding to the
-  definition and that all responses contain the same information.
-
-Test passes if all individual tests pass.
-
-==== Footprint in EO Metadata
-
-*Test id: /conf/eowcs/footprint-in-eo-metadata*
-
-*Test Purpose: <</req/eowcs/footprint-in-eo-metadata>>*
-
-*Test method:*
-
-For each EO Coverage offered by the server under test:
-
-* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
-  and _GetCoverage_ operations.
-* Check that the responses contain an
-  `eop:EarthObservation/om:featureOfInterest/eop:Footprint` element in the
-  `EOWCS::EOMetadata` and that all responses contain the same information.
-
-Test passes if all individual tests pass.
+include::../abstract_tests/TEST001.adoc[]
+include::../abstract_tests/TEST002.adoc[]
 
 ==== EO Coverage
 
