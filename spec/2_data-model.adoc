@@ -32,7 +32,7 @@ type of EO Coverage it is derived from. A Stitched Mosaic can be interpreted
 Subclause 6.6. A Dataset Series can refer to any number of Datasets, Stitched
 Mosaics, and Dataset Series. A Dataset Series is not a coverage itself.
 
-NOTE: <<__informative_use_case_examples>> provides Use Cases to motivate the
+NOTE: <<_use_case_examples_informative>> provides Use Cases to motivate the
 definition of these data elements.
 
 NOTE: Although named _Dataset Series_ technically speaking it is a heterogeneous

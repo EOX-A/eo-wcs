@@ -1,0 +1,39 @@
+== Conformance
+
+This document establishes the following requirements and conformance classes:
+
+* _eowcs_, of URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/req/eowcs,
+defining EO-WCS on conceptual level in Clauses <<eo_data_model>>,
+<<eo_service_model>>, and <<wcs_extensions>>; the corresponding conformance
+class is _eowcs_, with URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs.
+
+* _eowcs_geteocoverageset_, of URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/req/eowcs_geteocoverageset,
+defining the GetEOCoverageSet request of EO-WCS in Clause <<eo_service_model>>
+where stated, particularly subclause <<geteocoverageset_operation>>; the
+corresponding conformance class is _eowcs_geteocoverageset_, with URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_geteocoverageset.
+
+* _eowcs_get-kvp_, of URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/req/eowcs_get-kvp,
+defining the GET-KVP protocol binding of EO-WCS in Subclause 9.2; the
+corresponding conformance class is _eowcs_get-kvp_, with URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_get-kvp.
+
+* _eowcs_soap_, of URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/req/eowcs_soap,
+defining the SOAP protocol binding of EO-WCS on conceptual level in Subclause
+9.3; the corresponding conformance class is _eowcs_soap_, with URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_soap.
+
+Standardization target of all requirements and conformance classes are EO-WCS
+implementations (currently: servers).
+
+Requirements and conformance test URIs defined in this document are relative to
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/.
+
+<<_conformance_class_abstract_test_suite_normative>> lists the conformance
+tests which shall be exercised on any software artifact claiming to implement
+EO-WCS.
