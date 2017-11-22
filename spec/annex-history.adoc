@@ -18,6 +18,8 @@ Footer |Corrected example and copyright year in
 |2016-05-10 |1.0     |Stephan Meissl                |None    |Made an Asciidoc
 copy and published it on GitHub (https://github.com/EOX-A/eo-wcs,
 https://eox-a.github.io/eo-wcs)
-|TBD        |TBD     |Stephan Meissl                |TBD     |Proposal from ESA
+|2016-08-31 |1.1draft |Stephan Meissl               |7.6     |Proposal from ESA
 project EVO-ODAS
+|2017-11-22 |1.1draft2 |Stephan Meissl              |None    |Adjusted
+document to new standards template
 |===

@@ -24,7 +24,7 @@
 |Internal reference number of this OGC(R) document: 10-140r2
 |URL for this OGC® document: https://schpidi.github.io/eo-wcs/
 |PDF version: https://schpidi.github.io/eo-wcs/index.pdf
-|Version: 1.1draft
+|Version: 1.1draft2
 |Category: OGC(R) Interface Standard
 |Editor: Peter Baumann, Stephan Meissl, Jinsongdi Yu
 |===
@@ -37,7 +37,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) 2016 Open Geospatial Consortium
+|Copyright (C) 2014, 2016, 2017 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 
