@@ -1,0 +1,10 @@
+[#/req/eowcs/describeEOCoverageSet-response-eo-metadata,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-eo-metadata']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-eo-metadata +
+ +
+Each `WCS::CoverageDescription` listed in the response to a successful
+_DescribeEOCoverageSet_ request *shall* contain one `EOWCS::EOMetadata` element
+containing the EO Metadata component of the EO Coverage to be described.
+{set:cellbgcolor:#FFFFFF}
+|===

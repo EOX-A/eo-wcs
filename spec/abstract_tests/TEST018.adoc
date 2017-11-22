@@ -1,0 +1,16 @@
+==== Contributing Footprint-pairwise-disjoint
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/contributingFootprint-pairwise-disjoint
+|Test purpose: |<</req/eowcs/contributingFootprint-pairwise-disjoint>>
+|Test method:
+a|
+For each Stitched Mosaic offered by the server under test:
+
+* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
+  and _GetCoverage_ operations. Check that all responses contain the same
+  contributingFootprint information.
+* Check that the contributingFootprints are pair-wise disjoint.
+
+Test passes if all individual tests pass.
+|===

@@ -1,0 +1,8 @@
+[#/req/eowcs/phenomenonTime-iso8601,reftext='Requirement {counter:requirement_id} /req/eowcs/phenomenonTime-iso8601']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/phenomenonTime-iso8601 +
+ +
+For any given EO Coverage, its temporal validity values *shall* be expressed in
+ISO 8601 <<b2>>. {set:cellbgcolor:#FFFFFF}
+|===

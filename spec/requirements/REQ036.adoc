@@ -1,0 +1,14 @@
+[#/req/eowcs/getCapabilities-response-structure,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-response-structure']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-response-structure +
+ +
+The response to a successful _GetCapabilities_ request *shall* consist of a data
+structure as defined in <<response_getcapabilities>>,
+<<datasetseriessummary_components>>, and the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
+standard. +
+*Dependency*: [OGC 09-110r4] Clause 8
+(http://www.opengis.net/doc/IS/wcs-core-2.0.1/clause/8)
+{set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Request mediaType
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getEOCoverageSet-acceptable-mediaType
+|Test purpose: |<</req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-mediaType>>
+|Test method:
+a|
+TODO
+|===

@@ -1,0 +1,11 @@
+[#/req/eowcs/band-subsetting,reftext='Requirement {counter:requirement_id} /req/eowcs/band-subsetting']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/band-subsetting +
+ +
+Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
+Interface Standard - Range Subsetting Extension [OGC 12-040]. +
+*Dependency*:
+http://www.opengis.net/spec/WCS_service-extension_range-subsetting/1.0/conf/record-subsetting
+{set:cellbgcolor:#FFFFFF}
+|===

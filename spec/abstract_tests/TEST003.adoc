@@ -1,0 +1,15 @@
+==== EO Coverage
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/eo-coverage-structure
+|Test purpose: |<</req/eowcs/eo-coverage-structure>>
+|Test method:
+a|
+For each EO Coverage offered by the server under test:
+
+* retrieve coverage information via _GetCoverage_ operation.
+* Check that all responses consist of an XML document as defined in the places
+  referenced.
+
+Test passes if all individual tests pass.
+|===

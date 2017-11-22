@@ -1,0 +1,15 @@
+==== No circular references of Dataset Series
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/nocircularreference-of-datasetSeries
+|Test purpose: |<</req/eowcs/nocircularreference-of-datasetSeries>>
+|Test method:
+a|
+For each `EOWCS::DatasetSeries` offered by the server under test:
+
+* Obtain the `EOWCS::DatasetSeries` via _DescribeEOCoverageSet_. Check that all
+  `EOWCS::DatasetSeries` it refers to do not refer to the
+  `EOWCS::DatasetSeries` at hand.
+
+Test passes if all individual tests pass.
+|===

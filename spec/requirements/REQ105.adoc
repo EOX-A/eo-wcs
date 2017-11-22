@@ -1,0 +1,11 @@
+[#/req/eowcs/getEOCoverageSet-response-numberMatched,reftext='Requirement {counter:requirement_id} /req/eowcs/getEOCoverageSet-response-numberMatched']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getEOCoverageSet-response-numberMatched +
+ +
+The response to a successful _GetEOCoverageSet_ request *shall* report in its
+`numberMatched` attribute the sum of all matching `RectifiedDataset`,
+`ReferenceableDataset`, `RectifiedStitchedMosaic`,
+`ReferenceableStitchedMosaic`, and `DatasetSeries` elements.
+{set:cellbgcolor:#FFFFFF}
+|===

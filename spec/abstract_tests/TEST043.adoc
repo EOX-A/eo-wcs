@@ -1,0 +1,11 @@
+==== GetCapabilities Response countDefault
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCapabilities-response-countDefault
+|Test purpose: |<</req/eowcs/getCapabilities-response-countDefault>>
+|Test method:
+a|
+Send a valid _GetCapabilities_ request to the server under test, check that its
+`ows:OperationsMetadata` element contains an `ows:Constraint` element, as
+defined in the places referenced.
+|===

@@ -1,0 +1,15 @@
+==== PhenomenonTime ISO9891
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/phenomenonTime-iso8601
+|Test purpose: |<</req/eowcs/phenomenonTime-iso8601>>
+|Test method:
+a|
+For each EO Coverage offered by the server under test:
+
+* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
+  and _GetCoverage_ operations.
+* Check that the temporal validity values are expressed in ISO 8601.
+
+Test passes if all individual tests pass.
+|===

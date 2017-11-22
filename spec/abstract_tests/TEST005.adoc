@@ -1,0 +1,17 @@
+==== EOP Identifier in EO Metadata
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/eop-identifier-in-eo-metadata
+|Test purpose: |<</req/eowcs/eop-identifier-in-eo-metadata>>
+|Test method:
+a|
+For each EO Coverage offered by the server under test:
+
+* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
+  and _GetCoverage_ operations.
+* Check that the responses contain an
+  `eop:EarthObservation/eop:metadataProperty/eop:EarthObservationMetaData/eop:identifier`
+  whose first word is identical to the EO Coverage identifier.
+
+Test passes if all individual tests pass.
+|===

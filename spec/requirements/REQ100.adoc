@@ -1,0 +1,17 @@
+[#/req/eowcs/getEOCoverageSet-response-phenomenonTime,reftext='Requirement {counter:requirement_id} /req/eowcs/getEOCoverageSet-response-phenomenonTime']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getEOCoverageSet-response-phenomenonTime +
+ +
+The response to a successful _GetEOCoverageSet_ request *shall* contain only EO
+Coverages whose time interval defined by its
+`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
+`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` elements
+in `wcseo:EOMetadata` +
+- overlaps with the request time extent, and the request parameter `containment`
+  is of value `overlaps` or is omitted, +
+- is completely contained within the request time extent, and the request
+  parameter `containment` is of value `contains`, +
+whereby all temporal coordinates are expressed in ISO 8601 <<b2>> if no
+`subsettingCrs` parameter is present. {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,18 @@
+==== PhenomenonTime in EO Metadata
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/phenomenonTime-in-eo-metadata
+|Test purpose: |<</req/eowcs/phenomenonTime-in-eo-metadata>>
+|Test method:
+a|
+For each EO Coverage offered by the server under test:
+
+* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
+  and _GetCoverage_ operations.
+* Check that the responses contain elements
+  `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
+  `eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` where
+  `beginPosition ≤ endPosition`.
+
+Test passes if all individual tests pass.
+|===

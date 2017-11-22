@@ -1,0 +1,19 @@
+==== Range Values of Stitched Mosaic
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/range-values-of-stitched-mosaic
+|Test purpose: |<</req/eowcs/range-values-of-stitched-mosaic>>
+|Test method:
+a|
+For each Stitched Mosaic offered by the server under test:
+
+* Obtain the contained cells via _GetCoverage_ operation.
+* For each obtained cell with location _p_ check that:
+** if _p_ is located within the contributingFootprint of some Dataset _d_
+   referred to by _s_ then it is the range value of _d_ at _p_;
+** if _p_ is not located within the contributingFootprint of any Dataset _d_
+   referred to by _s_ then it is one of the range values contained in the nil
+   value set of _s_.
+
+Test passes if all individual tests pass.
+|===

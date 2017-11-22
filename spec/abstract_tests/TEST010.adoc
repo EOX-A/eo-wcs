@@ -1,0 +1,9 @@
+==== Range type uom
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/rangeType-uom
+|Test purpose: |<</req/eowcs/rangeType-uom>>
+|Test method:
+a|
+TODO
+|===

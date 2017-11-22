@@ -1,0 +1,11 @@
+==== DescribeEOCoverageSet Response Trim Omitted
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-trim-omitted
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-trim-omitted>>
+|Test method:
+a|
+Send otherwise valid _DescribeEOCoverageSet_ requests with a trimming in actual
+boundary of the object and without a trimming to server under test. Check that
+both responses are not exceptions and equal.
+|===

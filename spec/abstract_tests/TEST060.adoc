@@ -1,0 +1,13 @@
+==== DescribeEOCoverageSet Request Dimension
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-request-dimensions
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-request-dimensions>>
+|Test method:
+a|
+Send otherwise valid _DescribeEOCoverageSet_ requests to server under test which
+contain duplicate, and send requests which contain no duplicate dimension
+parameters. Do so for requests with single, and multiple `dimensionTrim`. Verify
+that, whenever at least one duplicate dimension occurs, an exception is returned
+and a normal response otherwise.
+|===

@@ -1,0 +1,8 @@
+[#/req/eowcs/metadata-in-datasetSeries,reftext='Requirement {counter:requirement_id} /req/eowcs/metadata-in-datasetSeries']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/metadata-in-datasetSeries +
+ +
+A Dataset Series instance *shall* contain one metadata element of type
+`EOWCS::EOMetadata`. {set:cellbgcolor:#FFFFFF}
+|===

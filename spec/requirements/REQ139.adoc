@@ -1,0 +1,11 @@
+[#/req/eowcs_soap/mandatory,reftext='Requirement {counter:requirement_id} /req/eowcs_soap/mandatory']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_soap/mandatory +
+ +
+Implementations of this EO-WCS which support the _eowcs_soap_ requirements class
+*shall* support the WCS 2.0 protocol extension SOAP [OGC 09-149r1]. +
+*Dependency*:
+http://www.opengis.net/spec/WCS_protocol-binding_soap/1.0/conf/soap
+{set:cellbgcolor:#FFFFFF}
+|===

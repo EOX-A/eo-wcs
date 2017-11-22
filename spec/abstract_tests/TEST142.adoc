@@ -1,0 +1,10 @@
+==== eowcs_soap/describeEOCoverageSet Response Structure
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_soap/describeEOCoverageSet-response-structure
+|Test purpose: |<</req/eowcs_soap/describeEOCoverageSet-response-structure>>
+|Test method:
+a|
+Send a valid soap _DescribeEOCoverageSet_ request to sever under test. Check
+response whether the condition is fulfilled.
+|===

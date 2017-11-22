@@ -1,0 +1,13 @@
+==== GetCapabilities Request Sections
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCapabilities-request-sections
+|Test purpose: |<</req/eowcs/getCapabilities-request-sections>>
+|Test method:
+a|
+Send a valid _GetCapabilities_ request contains a `sections` element and this
+element contains `section` elements with the values defined in OWS Common, or
+"DatasetSeriesSummary", or "CoverageSummary" to the server under test, check the
+result consists of an XML document of type `Capabilities` and the appropriate
+components, as defined in the places referenced.
+|===

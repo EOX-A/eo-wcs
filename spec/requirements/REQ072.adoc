@@ -1,0 +1,10 @@
+[#/req/eowcs/describeEOCoverageSet-response-coverageSubtype,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-coverageSubtype']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-coverageSubtype +
+ +
+In the response to a successful _DescribeEOCoverageSet_ request, each EO
+Coverage listed *shall* contain in its `WCS::CoverageSubtype` element the
+corresponding value given in <<coveragesubtype_values>> according to its type.
+{set:cellbgcolor:#FFFFFF}
+|===

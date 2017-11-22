@@ -1,0 +1,11 @@
+[#/req/eowcs/describeEOCoverageSet-response-startIndex,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-startIndex']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-startIndex +
+ +
+If a _DescribeEOCoverageSet_ request contains a `wcs:startIndex` parameter then
+a successful response *shall* contain only those `CoverageDescription` and
+`DatasetSeriesDescription` elements whose index numbers in the result set are
+equal or higher than the value of the `startIndex` parameter.
+{set:cellbgcolor:#FFFFFF}
+|===

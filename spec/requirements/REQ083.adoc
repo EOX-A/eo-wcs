@@ -1,0 +1,11 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-request-dimensions,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-request-dimensions']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-request-dimensions +
+ +
+If a _GetEOCoverageSet_ request contains `dimensionTrim` elements with
+`dimension` parameters and no `subsettingCrs` element then each such `dimension`
+parameter *shall* have one of the values "lat", "long", or "phenomenonTime".
+Each of these values *shall* appear at most once in a given request.
+{set:cellbgcolor:#FFFFFF}
+|===

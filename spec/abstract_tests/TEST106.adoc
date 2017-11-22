@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response numberReturned attribute
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getEOCoverageSet-response-numberReturned
+|Test purpose: |<</req/eowcs/getEOCoverageSet-response-numberReturned>>
+|Test method:
+a|
+TODO
+|===

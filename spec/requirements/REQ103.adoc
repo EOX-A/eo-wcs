@@ -1,0 +1,12 @@
+[#/req/eowcs/getEOCoverageSet-response-count,reftext='Requirement {counter:requirement_id} /req/eowcs/getEOCoverageSet-response-count']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getEOCoverageSet-response-count +
+ +
+In the response to a successful _GetEOCoverageSet_ request the sum of
+`RectifiedDataset`, `ReferenceableDataset`, `RectifiedStitchedMosaic`,
+`ReferenceableStitchedMosaic`, and `DatasetSeries` elements *shall* be less or
+equal to the minimum of the value of the `CountDefault` element and the `count`
+parameter if present in the request. If none of both are present all matching
+elements *shall* be reported. {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,18 @@
+==== Footprint in Dataset Series
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/footprint-in-datasetSeries
+|Test purpose: |<</req/eowcs/footprint-in-datasetSeries>>
+|Test method:
+a|
+For each `EOWCS::DatasetSeries` offered by the server under test:
+
+* Obtain the `footprint` of `EOWCS::DatasetSeries` via _DescribeEOCoverageSet_.
+* Check that the locations of the `footprint` are expressed in WGS84.
+* Obtain the footprints of all Stitched Mosaics and Datasets the Dataset Series
+  refers to.
+* Check that these footprints are enclosed in the `footprint` of
+  `EOWCS::DatasetSeries`.
+
+Test passes if all individual tests pass.
+|===

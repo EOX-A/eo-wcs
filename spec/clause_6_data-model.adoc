@@ -120,11 +120,7 @@ in [OGC 09-146r2];
 * _Referenceable EO Coverages_ are derived from Referenceable Grid Coverage as
 defined in [OGC 09-146r2].
 
-[requirement,uri="/req/eowcs/eo-coverage-structure"]
-`EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances
-*shall* conform to <<uml_model>>, <<uml_lineage_class>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard.
+include::requirements/REQ003.adoc[]
 
 NOTE: An _EO Coverage_ can have any number of dimensions as long as it adheres
 to the requirements below. Particularly it needs a footprint bound to the Earth
@@ -134,9 +130,7 @@ and a temporal validity.
 
 An EO Coverage has an EO Metadata record associated.
 
-[requirement,uri="/req/eowcs/eo-metadata-in-eo-coverage"]
-`EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances
-*shall* contain one metadata element of type `EOWCS::EOMetadata`.
+include::requirements/REQ004.adoc[]
 
 NOTE: Besides this specific metadata element there may be further metadata
 elements.
@@ -148,14 +142,7 @@ place of the XML Schema where such a metadata record appears.
 The EO Metadata record associated with an EO Coverage contains a back reference
 to the coverage.
 
-[requirement,uri="/req/eowcs/eop-identifier-in-eo-metadata"]
-
-The `EOWCS::EOMetadata` element of `EOWCS::ReferenceableEOCoverage` and
-`EOWCS::RectifiedEOCoverage` instances shall contain an element
-`eop:EarthObservation/eop:metadataProperty/eop:EarthObservationMetaData/eop:identifier`
-whose first word (NCNAME type substring i.e. starting from it's first character
-up to and excluding the first character which is not allowed in an NCName) is
-identical to the EO Coverage identifier.
+include::requirements/REQ005.adoc[]
 
 NOTE: Normally, this word (i.e. NCName) acting as coverage identifier will be
 the only contents of the `eop:identifier` string and thus both elements will be
@@ -166,28 +153,17 @@ equal.
 The EO Coverage's extent of valid data is given by its EO Metadata footprint,
 which refines the coverage's envelope.
 
-[requirement,uri="/req/eowcs/footprint-inside-boundedBy"]
-In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
-all polygons listed in `eop:EarthObservation/om:featureOfInterest/eop:Footprint`
-element *shall* be geometrically contained in the bounding box of the
-`gml:boundedBy` element of the `gml:Envelope`.
+include::requirements/REQ006.adoc[]
 
 NOTE: By definition, the footprint is expressed in WGS84.
 
 An EO Coverage has a time period of validity associated.
 
-[requirement,uri="/req/eowcs/phenomenonTime-in-eo-metadata"]
-The `EOWCS::EOMetadata` element of a `EOWCS::ReferenceableEOCoverage` or
-`EOWCS::RectifiedEOCoverage` instance *shall* contain elements
-`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
-`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` where
-`beginPosition ≤ endPosition`.
+include::requirements/REQ007.adoc[]
 
 NOTE: This typically is the time period where image acquisition has taken place.
 
-[requirement,uri="/req/eowcs/phenomenonTime-iso8601"]
-For any given EO Coverage, its temporal validity values *shall* be expressed in
-ISO 8601 <<b2>>.
+include::requirements/REQ008.adoc[]
 
 ==== Range type
 
@@ -195,31 +171,14 @@ The range type of an EO Coverage is extended to include further useful
 information for example to know how to convert stored numbers to physical
 properties.
 
-[requirement,uri="/req/eowcs/rangeTypeExtension"]
-If additional range type information is made available then the
-`gmlcov:rangeType` element of `EOWCS::ReferenceableEOCoverage` and
-`EOWCS::RectifiedEOCoverage` instances *shall* contain
-`wcseo:rangeTypeExtension` elements either under the
-`swe:DataRecord/swe:extension` or each
-`swe:DataRecord/swe:field/swe:Quantity/swe:extension` element or both.
+include::requirements/REQ009.adoc[]
 
-[requirement,uri="/req/eowcs/rangeType-uom"]
-In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
-the `code` attribute of the `swe:uom` element of each `swe:Quantity` element in
-the `gmlcov:rangeType` element *shall* hold the unit of the measured physical
-property.
+include::requirements/REQ010.adoc[]
 
 NOTE: The data type is provided explicitly in the `wcseo:rangeTypeExtension`
 element or implicitly via the actual coverage encoding.
 
-[requirement,uri="/req/eowcs/rangeType-name"]
-In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
-the `swe:identifier` element of each `swe:Quantity` element under each
-`swe:field` element *shall* hold the URL-encoded identifier of the respective
-field (also referred to as band or channel) and the `name` attribute of each
-`swe:field` element *shall* hold the first word (NCNAME type substring i.e.
-starting from it’s first character up to and excluding the first character
-which is not allowed in an NCName) of the identifier of the respective field.
+include::requirements/REQ011.adoc[]
 
 NOTE: Typically the two values are identical. This requirement addresses cases
 where the identifier includes characters not allowed in `NCName` like `:`, `@`,
@@ -283,11 +242,7 @@ as well as data conversion information on `swe:Quantity` level.
 
 Cells outside the footprint hold only nil values.
 
-[requirement,uri="/req/eowcs/range-set-of-eo-coverage"]
-In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
-all cells whose locations are outside the EO Metadata footprint when both are
-evaluated in WGS84, *shall* contain nil values as defined in the bounding EO
-Coverage's range type.
+include::requirements/REQ012.adoc[]
 
 === Dataset
 
@@ -298,11 +253,7 @@ is either a Referenceable Dataset or a Rectified Dataset, derived from
 NOTE: Typically, a Dataset represents a (single- or multi-band) satellite/aerial
 image scene.
 
-[requirement,uri="/req/eowcs/dataset-structure"]
-A `EOWCS::ReferenceableDataset` and a `EOWCS::RectifiedDataset` *shall* conform
-to <<uml_model>>, <<uml_lineage_class>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard.
+include::requirements/REQ013.adoc[]
 
 [#dataset_conceptual,reftext='{figure-caption} {counter:figure-num}']
 .Conceptual view of a Dataset: in referenced (left) and unreferenced coordinates (right)
@@ -329,12 +280,7 @@ contained Datasets carry nil values.
 .Conceptual view of a Stitched Mosaic: composed from Datasets (Stitched Mosaic bounding box dashed)
 image::images/stitchedmosaic-conceptual.png[Stitched Mosaic Conceptual View]
 
-[requirement,uri="/req/eowcs/referenceableStitchedMosaic-structure"]
-`EOWCS::ReferenceableStitchedMosaic` instances *shall* conform to <<uml_model>>,
-<<uml_lineage_class>>, <<refstitchedmosaic_components>>,
-<<datasetreference_components>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard.
+include::requirements/REQ014.adoc[]
 
 [#refstitchedmosaic_components,reftext='{table-caption} {counter:table-num}']
 .Components of `EOWCS::ReferenceableStitchedMosaic` structure
@@ -345,12 +291,7 @@ standard.
 Mosaic on hand |`EOWCS::DatasetReference` |one or more (mandatory)
 |===============================================================================
 
-[requirement,uri="/req/eowcs/rectifiedStitchedMosaic-structure"]
-`EOWCS::RectifiedStitchedMosaic` instances *shall* conform to <<uml_model>>,
-<<uml_lineage_class>>, <<rectstitchedmosaic_components>>,
-<<datasetreference_components>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard.
+include::requirements/REQ015.adoc[]
 
 [#rectstitchedmosaic_components,reftext='{table-caption} {counter:table-num}']
 .Components of `EOWCS::RectifiedStitchedMosaic` structure
@@ -376,75 +317,45 @@ one (optional)
 The Dataset references of an EO Coverage shall be consistent with the coverage's
 EO Metadata references.
 
-[requirement,uri="/req/eowcs/composedOf-in-stitched-mosaic"]
-In `EOWCS::ReferenceableStitchedMosaic` and `EOWCS::RectifiedStitchedMosaic`
-instances with at least one `eop:EarthObservation/eop:metaDataProperty/eop:Earth
-ObservationMetaData/eop:composedOf`, the set of these elements *shall* be equal
-to the set of `dataset` identifiers of the Stitched Mosaic.
+include::requirements/REQ016.adoc[]
 
 ==== Spatio-temporal extent
 
 A Stitched Mosaic is defined through a collection of spatially non-overlapping
 subsets of Datasets it refers to.
 
-[requirement,uri="/req/eowcs/contributingFootprint-inside-footprint"]
-For all Stitched Mosaics _sm_ referring to some Datasets _d_ with an associated
-`contributingFootprint`, this `contributingFootprint` *shall* be geographically
-contained in the footprint of _d_.
+include::requirements/REQ017.adoc[]
 
-[requirement,uri="/req/eowcs/contributingFootprint-pairwise-disjoint"]
-For all Stitched Mosaics _sm_ referring to Datasets _d~1~_ and _d~2~_, with an
-associated `contributingFootprint`, the ``contributingFootprint``s of the _d~1~_
-and _d~2~_ references *shall* be pair-wise disjoint.
+include::requirements/REQ018.adoc[]
 
-[requirement,uri="/req/eowcs/contributingFootprint-union-of-footprints"]
-The footprint of a Stitched Mosaic *shall* be given by the union of the
-``contributingFootprint``s of the Datasets this Stitched Mosaic refers to.
+include::requirements/REQ019.adoc[]
 
-[requirement,uri="/req/eowcs/dataset-domain-set-in-stitched-mosaic-domain-set"]
-For all Datasets _d_ referred to by some Stitched Mosaics _sm_, all cells of _d_
-as defined by the domain set of _d_ *shall* be contained in the set of cells of
-_sm_ as defined by the domain set of _sm_.
+include::requirements/REQ020.adoc[]
 
 Datasets referred to by a Stitched Mosaic shall have aligned cell locations:
 
 * In case of Rectified EO Coverages, the grids of Datasets of a Stitched Mosaics shall
   have the same resolution.
 +
-[requirement,uri="/req/eowcs/datasets-in-rectifiedStitcheMosaic-same-offsetVector"]
-All Datasets referred to by a Rectified Stitched Mosaic *shall* have identical
-values in the `gml:offsetVector` elements of their domain sets.
+include::requirements/REQ021.adoc[]
 +
-[requirement,uri="/req/eowcs/rectifiedStitchedMosaic-offsetVector"]
-In a Rectified Stitched Mosaic instance, the value of the `gml:offsetVector`
-elements of the domain set *shall* be given by the corresponding values of the
-Rectified Datasets the Rectified Stitched Mosaic refers to.
+include::requirements/REQ022.adoc[]
 
 * In case of Referenceable EO Coverages, Datasets of Stitched Mosaics shall have
   aligned cell locations in overlapping areas.
 +
-[requirement,uri="/req/eowcs/referenceableStitchedMosaic-domain-set"]
-For any pair _d~1~_ and _d~2~_ of Datasets referred to by a given Stitched
-Mosaic, the set of point locations in the geographic overlap of the _d~1~_ and
-_d~2~_ domain set *shall* be identical.
+include::requirements/REQ023.adoc[]
 
 The temporal validity of Stitched Mosaics is defined by the temporal validities
 of the Datasets the Stitched Mosaic refers to.
 
-[requirement,uri="/req/eowcs/temporal-validity-stitched-mosaic"]
-For any given Stitched Mosaic, its temporal validity given by its
-`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
-`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` elements
-in `wcseo:EOMetadata` *shall* be defined as the minimal time interval containing
-the temporal validities of all Datasets the Stitched Mosaic refers to.
+include::requirements/REQ024.adoc[]
 
 ==== Range type
 
 Stitched Mosaics and their Datasets share the same range type.
 
-[requirement,uri="/req/eowcs/datasets-in-stitched-mosaic-same-range-type"]
-For all Datasets _d_ some Stitched Mosaic _sm_ refers to the following *shall*
-hold: The range type of _d_ is identical to the range type of _sm_.
+include::requirements/REQ025.adoc[]
 
 ==== Range set
 
@@ -452,20 +363,9 @@ The content of a Stitched Mosaic is given by the Datasets it refers to; cells of
 a Stitched Mosaic with domain coordinates outside of any embedded Dataset's
 contributingFootprint carry nil values (cf. <<datasetseries_conceptual2>>).
 
-[requirement,uri="/req/eowcs/nil-values-in-stitched-mosaic"]
-If the domain set of a Stitched Mosaic contains locations which are not inside
-any `contributingFootprint` of any Dataset the Stitched Mosaic refers to then
-the nil value set of that Stitched Mosaic *shall* not be empty.
+include::requirements/REQ026.adoc[]
 
-[requirement,uri="/req/eowcs/range-values-of-stitched-mosaic"]
-
-For a Stitched Mosaic _sm_ its range values of cells with location _p_,
-expressed in any of the CRSs supported by _sm_, *shall* be given as follows: +
-- if _p_ is located within the `contributingFootprint` of some Dataset _d_
-referred to by _sm_ then it is the range value of _d_ at _p_; +
-- if _p_ is not located within the `contributingFootprint` of any Dataset _d_
-referred to by _sm_ then it is one of the range values contained in the nil
-value set of _sm_.
+include::requirements/REQ027.adoc[]
 
 === Dataset Series
 
@@ -485,11 +385,7 @@ such a Dataset is also referred to by the enclosing Dataset Series.
 .Conceptual view of a Dataset Series referring to Datasets and Stitched Mosaics (Dataset Series domain boundary dashed)
 image::images/datasetseries-conceptual2.png[Dataset Series Conceptual View 2]
 
-[requirement,uri="/req/eowcs/datasetSeries-structure"]
-A `EOWCS::DatasetSeries` shall conform to <<uml_model>>, <<uml_lineage_class>>,
-<<datasetseries_components>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard.
+include::requirements/REQ028.adoc[]
 
 [#datasetseries_components,reftext='{table-caption} {counter:table-num}']
 .Components of `EOWCS::DatasetSeries` structure
@@ -522,10 +418,7 @@ the same Dataset.
 The spatial extent of a Dataset Series shall enclose the spatial extents of all
 Stitched Mosaics, Datasets, and Dataset Series the Dataset Series refers to.
 
-[requirement,uri="/req/eowcs/footprint-in-datasetSeries"]
-The `footprint` of a Dataset Series instance *shall* enclose the union of the
-footprints of all Stitched Mosaics, Datasets, and Dataset Series the Dataset
-Series refers to, expressed in WGS84.
+include::requirements/REQ029.adoc[]
 
 NOTE: As opposed to Stitched Mosaics, Dataset Series do not require disjointness
 of the EO Coverages they refer to.
@@ -534,16 +427,11 @@ The temporal validity of a Dataset Series is defined by the union of the
 temporal validities of all Stitched Mosaics, Datasets, and Dataset Series the
 Dataset Series refers to.
 
-[requirement,uri="/req/eowcs/timePeriod-in-datasetSeries"]
-For any given Dataset Series, the `timePeriod` element *shall* enclose the
-temporal validities of all Stitched Mosaics, Datasets, and Dataset Series the
-Dataset Series refers to, expressed in ISO 8601 <<b2>>.
+include::requirements/REQ030.adoc[]
 
 A Dataset Series has an EO Metadata record associated.
 
-[requirement,uri="/req/eowcs/metadata-in-datasetSeries"]
-A Dataset Series instance *shall* contain one metadata element of type
-`EOWCS::EOMetadata`.
+include::requirements/REQ031.adoc[]
 
 NOTE: A Dataset Series may contain multiple metadata elements holding the
 metadata in different formats. Explicitly supported metadata elements are
@@ -553,9 +441,7 @@ or `ows:Reference` or any element in the substitutionGroup of any of these.
 A Dataset Series shall not refer to any Dataset Series that refers to it either
 directly or via other Dataset Series i.e. there shall be no circular references.
 
-[requirement,uri="/req/eowcs/nocircularreference-of-datasetSeries"]
-A Dataset Series *shall* only refer to Dataset Series that do not refer to the
-Dataset Series at hand either directly or via other Dataset Series.
+include::requirements/REQ032.adoc[]
 
 Example: The following XML fragment shows a DatasetSeries instance.
 

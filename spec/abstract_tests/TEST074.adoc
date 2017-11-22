@@ -1,0 +1,9 @@
+==== DescribeEOCoverageSet Response startIndex
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-startIndex
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-startIndex>>
+|Test method:
+a|
+TODO
+|===

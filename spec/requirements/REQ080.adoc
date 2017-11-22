@@ -1,0 +1,10 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-request-structure,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-request-structure']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-request-structure +
+ +
+A _GetEOCoverageSet_ request *shall* consist of a structure as defined in
+<<request_geteocoverageset>>, <<geteocoverageset_comp>> and the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
+standard. {set:cellbgcolor:#FFFFFF}
+|===

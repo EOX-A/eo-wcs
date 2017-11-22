@@ -1,0 +1,16 @@
+==== Rangeset of Coverage
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/range-set-of-eo-coverage
+|Test purpose: |<</req/eowcs/range-set-of-eo-coverage>>
+|Test method:
+a|
+For each EO Coverage offered by the server under test:
+
+* retrieve coverage information via _GetCoverage_ operation.
+* Check that all cells, whose locations are outside the EO Metadata footprint
+  when both are evaluated in WGS84, contain some nil value as defined in the
+  bounding EO Coverage's range type.
+
+Test passes if all individual tests pass.
+|===

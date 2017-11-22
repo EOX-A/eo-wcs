@@ -1,0 +1,10 @@
+[#/req/eowcs/nil-values-in-stitched-mosaic,reftext='Requirement {counter:requirement_id} /req/eowcs/nil-values-in-stitched-mosaic']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/nil-values-in-stitched-mosaic +
+ +
+If the domain set of a Stitched Mosaic contains locations which are not inside
+any `contributingFootprint` of any Dataset the Stitched Mosaic refers to then
+the nil value set of that Stitched Mosaic *shall* not be empty.
+{set:cellbgcolor:#FFFFFF}
+|===

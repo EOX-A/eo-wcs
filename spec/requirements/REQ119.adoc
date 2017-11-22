@@ -1,0 +1,12 @@
+[#/req/eowcs/protocol-bindings,reftext='Requirement {counter:requirement_id} /req/eowcs/protocol-bindings']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/protocol-bindings +
+ +
+Implementations of this EO-WCS *shall* support at least one of the requirements
+classes _eowcs_get-kvp_ and _eowcs_soap_. +
+*Dependency*:
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_get-kvp,
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_soap
+{set:cellbgcolor:#FFFFFF}
+|===

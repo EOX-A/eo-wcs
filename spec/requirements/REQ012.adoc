@@ -1,0 +1,10 @@
+[#/req/eowcs/range-set-of-eo-coverage,reftext='Requirement {counter:requirement_id} /req/eowcs/range-set-of-eo-coverage']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/range-set-of-eo-coverage +
+ +
+In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
+all cells whose locations are outside the EO Metadata footprint when both are
+evaluated in WGS84, *shall* contain nil values as defined in the bounding EO
+Coverage's range type. {set:cellbgcolor:#FFFFFF}
+|===

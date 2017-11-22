@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response multipart
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getEOCoverageSet-multipart
+|Test purpose: |<</req/eowcs_geteocoverageset/getEOCoverageSet-multipart>>
+|Test method:
+a|
+TODO
+|===

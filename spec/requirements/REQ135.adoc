@@ -1,0 +1,9 @@
+[#/req/eowcs_get-kvp/getEOCoverageSet-format,reftext='Requirement {counter:requirement_id} /req/eowcs_get-kvp/getEOCoverageSet-format']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_get-kvp/getEOCoverageSet-format +
+ +
+The `format` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows, for parameter value _v~1~_: +
+`format=v~1~` {set:cellbgcolor:#FFFFFF}
+|===

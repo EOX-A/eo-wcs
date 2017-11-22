@@ -10,46 +10,20 @@ specifications required in this Clause.
 
 === Band subsetting
 
-[requirement,uri="/req/eowcs/band-subsetting"]
-Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
-Interface Standard - Range Subsetting Extension [OGC 12-040]. +
-*Dependency*:
-http://www.opengis.net/spec/WCS_service-extension_range-subsetting/1.0/conf/record-subsetting
+include::requirements/REQ114.adoc[]
 
 === Scaling
 
-[requirement,uri="/req/eowcs/scaling"]
-Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
-Interface Standard - Scaling Extension [OGC 12-039]. +
-*Dependency*:
-http://www.opengis.net/spec/WCS_service-extension_scaling/1.0/conf/scaling
+include::requirements/REQ115.adoc[]
 
 === Interpolation
 
-[requirement,uri="/req/eowcs/interpolation"]
-Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
-Interface Standard - Interpolation Extension [OGC 12-049]. +
-*Dependency*:
-http://www.opengis.net/spec/WCS_service-extension_interpolation/1.0/conf/interpolation
+include::requirements/REQ116.adoc[]
 
 === CRSs
 
-[requirement,uri="/req/eowcs/crs"]
-Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
-Interface Standard - CRS Extension [OGC 11-053r1]. +
-*Dependency*:
-http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs,
-http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs-gridded-coverage
+include::requirements/REQ117.adoc[]
 
 === Coverage format encodings
 
-[requirement,uri="/req/eowcs/encodings"]
-Implementations of this EO-WCS *shall* support at least one of the coverage
-format encodings GeoTIFF [OGC 12-100r1], NetCDF [OGC 14-100r2], and JPEG2000
-[OGC 12-108]. +
-*Dependency*:
-http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage,
-http://www.opengis.net/spec/netCDF_data-model/conf/CF-netCDF-1.6-GML-encoding,
-http://www.opengis.net/spec/netCDF_data-model/conf/CF-netCDF-1.6-Data-format,
-http://www.opengis.net/spec/netCDF_data-model/conf/CF-netCDF-1.6-Multipart-encoding,
-http://www.opengis.net/spec/gmlcov_jpeg2000-coverages/1.0/conf/jpeg2000-coverage
+include::requirements/REQ118.adoc[]

@@ -1,0 +1,16 @@
+==== Contributing Footprint-union-of-footprints
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/contributingFootprint-union-of-footprints
+|Test purpose: |<</req/eowcs/contributingFootprint-union-of-footprints>>
+|Test method:
+a|
+For each Stitched Mosaic offered by the server under test:
+
+* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
+  and _GetCoverage_ operations.
+* Check that there is a contributingFootprint for each dataset of the Stitched
+  Mosaic.
+
+Test passes if all individual tests pass.
+|===

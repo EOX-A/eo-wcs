@@ -1,0 +1,9 @@
+[#/req/eowcs/getCapabilities-response-coverageSubtype,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-response-coverageSubtype']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-response-coverageSubtype +
+ +
+In the response to a successful _GetCapabilities_ request, each EO Coverage
+listed *shall* contain in its `WCS::CoverageSubtype` element the value given in
+<<coveragesubtype_values>> corresponding to its type. {set:cellbgcolor:#FFFFFF}
+|===

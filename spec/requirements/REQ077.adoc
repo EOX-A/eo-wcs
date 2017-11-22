@@ -1,0 +1,10 @@
+[#/req/eowcs/describeEOCoverageSet-response-startIndex-attr,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-startIndex-attr']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-startIndex-attr +
+ +
+The response to a successful _DescribeEOCoverageSet_ request *shall* report in
+its `startIndex` attribute the index number of the first element in the result
+set of all `CoverageDescription` and `DatasetSeriesDescription` elements
+returned. {set:cellbgcolor:#FFFFFF}
+|===

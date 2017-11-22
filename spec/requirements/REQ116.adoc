@@ -1,0 +1,11 @@
+[#/req/eowcs/interpolation,reftext='Requirement {counter:requirement_id} /req/eowcs/interpolation']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/interpolation +
+ +
+Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
+Interface Standard - Interpolation Extension [OGC 12-049]. +
+*Dependency*:
+http://www.opengis.net/spec/WCS_service-extension_interpolation/1.0/conf/interpolation
+{set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,14 @@
+==== GetCoverage Response Coverage Type
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCoverage-response-coverage-type
+|Test purpose: |<</req/eowcs/getCoverage-response-coverage-type>>
+|Test method:
+a|
+For each Rectified EO Coverage offered by the server:
+
+* send a valid _GetCoverage_ request to server under test.
+* Check that the result is Coverage of correct type.
+
+Test passes if all individual tests pass.
+|===

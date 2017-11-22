@@ -1,0 +1,9 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-request-containment,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-request-containment']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-request-containment +
+ +
+If a _GetEOCoverageSet_ request contains a `containment` parameter then
+this parameter *shall* have one of the values "contains" or "overlaps".
+{set:cellbgcolor:#FFFFFF}
+|===

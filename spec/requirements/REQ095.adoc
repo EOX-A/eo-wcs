@@ -1,0 +1,10 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-format,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-format']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-format +
+ +
+The EO Coverages contained in the response to a successful _GetEOCoverageSet_
+request *shall* be encoded as specified by the `format` parameter, if this
+parameter is present, and in the coverage's Native Format if this parameter is
+not present. {set:cellbgcolor:#FFFFFF}
+|===

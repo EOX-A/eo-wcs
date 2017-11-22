@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Request Interpolation
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getEOCoverageSet-acceptable-interpolation
+|Test purpose: |<</req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-interpolation>>
+|Test method:
+a|
+TODO
+|===

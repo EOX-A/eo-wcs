@@ -1,0 +1,17 @@
+==== GetCoverage Response EO Metadata in Stitched Mosaic
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCoverage-response-eo-metadata-in-stitched-mosaic
+|Test purpose: |<</req/eowcs/getCoverage-response-eo-metadata-in-stitched-mosaic>>
+|Test method:
+a|
+For each Stitched Mosaic offered by the server:
+
+* send a valid _GetCoverage_ request with an effective spatio-temporal request
+  trim interval to server under test.
+* Check that the `EOWCS::EOMetadata` of the coverage returned contains the
+  original Stitched Mosaic's references to those Datasets which have a non-empty
+  intersection with the effective spatio-temporal request trim interval.
+
+Test passes if all individual tests pass.
+|===

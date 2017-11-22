@@ -1,0 +1,9 @@
+[#/req/eowcs/describeEOCoverageSet-response-numberMatched,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-numberMatched']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-numberMatched +
+ +
+The response to a successful _DescribeEOCoverageSet_ request *shall* report in
+its `numberMatched` attribute the sum of all matching `CoverageDescription` and
+`DatasetSeriesDescription` elements. {set:cellbgcolor:#FFFFFF}
+|===

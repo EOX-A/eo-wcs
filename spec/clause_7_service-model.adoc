@@ -19,11 +19,7 @@ follows:
 "CoverageSummary" are allowed in addition to those defined in OWS Common
 [06-121r9].
 
-[requirement,uri="/req/eowcs/getCapabilities-request-sections"]
-If a _GetCapabilities_ request contains an `ows:Sections` element then this
-element *shall* contain `ows:Section` elements with the values defined in OWS
-Common, or "DatasetSeriesSummary", or "CoverageSummary". +
-*Dependency*: [OGC 06-121r9] clause 7.3.3
+include::requirements/REQ033.adoc[]
 
 ==== _GetCapabilities_ response
 
@@ -50,26 +46,11 @@ coverages referred to by some Stitched Mosaic or Dataset Series.
 In a _GetCapabilities_ response, a server announces availability of this EO-WCS
 like an extension.
 
-[requirement,uri="/req/eowcs/getCapabilities-response-conformance-class-in-profile"]
-A WCS service implementing this extension *shall* include the following URI in a
-`Profile` element in the `ServiceIdentification` in a _GetCapabilities_
-response:
-`http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs`
+include::requirements/REQ034.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getCapabilities-response-conformance-class-in-profile"]
-A WCS service implementing the _eowcs_geteocoverageset_ conformance class of
-this extension *shall* include the following URI in a `Profile` element in the
-`ServiceIdentification` in a _GetCapabilities_ response:
-`http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_geteocoverageset`
+include::requirements/REQ035.adoc[]
 
-[requirement,uri="/req/eowcs/getCapabilities-response-structure"]
-The response to a successful _GetCapabilities_ request *shall* consist of a data
-structure as defined in <<response_getcapabilities>>,
-<<datasetseriessummary_components>>, and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard. +
-*Dependency*: [OGC 09-110r4] Clause 8
-(http://www.opengis.net/doc/IS/wcs-core-2.0.1/clause/8)
+include::requirements/REQ036.adoc[]
 
 [#response_getcapabilities,reftext='{figure-caption} {counter:figure-num}']
 ._GetCapabilities_ response UML class diagram
@@ -90,42 +71,22 @@ image::images/response-getcapabilities.png[GetCapabilities response]
 |`OWS Common::Metadata` |zero or one (optional)
 |===============================================================================
 
-[requirement,uri="/req/eowcs/getCapabilities-response-datasetSeriesSummary"]
-In the response to a successful _GetCapabilities_ request containing a
-`EOWCS::DatasetSeriesSummary` section, each Dataset Series identifier listed
-*shall* refer to a Dataset Series offered by the server.
+include::requirements/REQ037.adoc[]
 
-[requirement,uri="/req/eowcs/getCapabilities-response-datasetSeriesSummary-no-duplicates"]
-A response to a successful _GetCapabilities_ request containing a
-`EOWCS::DatasetSeriesSummary` section *shall* not contain any duplicate Dataset
-Series identifier.
+include::requirements/REQ038.adoc[]
 
-[requirement,uri="/req/eowcs/getCapabilities-response-coverageSummary"]
-In the response to a successful _GetCapabilities_ request containing an EO
-Coverage in a `WCS::CoverageSummary` section, each coverage identifier listed as
-EO Coverage *shall* refer to an EO Coverage offered by the server.
+include::requirements/REQ039.adoc[]
 
 The response shall respect the `sections` request parameter.
 
-[requirement,uri="/req/eowcs/getCapabilities-response-coverageSummary-section"]
-If a _GetCapabilities_ request contains a `sections` parameter then a successful
-response *shall* contain `wcs:CoverageSummary` elements if and only if the
-section parameter list contains one of the values "CoverageSummary", "Contents",
-or "All".
+include::requirements/REQ040.adoc[]
 
-[requirement,uri="/req/eowcs/getCapabilities-response-datasetSeriesSummary-section"]
-If a _GetCapabilities_ request contains a `sections` parameter then a successful
-response *shall* contain `wcseo:DatasetSeriesSummary` elements if and only if
-the section parameter list contains one of the values "DatasetSeriesSummary",
-"Contents", or "All".
+include::requirements/REQ041.adoc[]
 
 The coverage subtype shall indicate the specific type of the coverage returned, in case of an
 EO Coverage.
 
-[requirement,uri="/req/eowcs/getCapabilities-response-coverageSubtype"]
-In the response to a successful _GetCapabilities_ request, each EO Coverage
-listed *shall* contain in its `WCS::CoverageSubtype` element the value given in
-<<coveragesubtype_values>> corresponding to its type.
+include::requirements/REQ042.adoc[]
 
 [#coveragesubtype_values,reftext='{table-caption} {counter:table-num}']
 .Values for `CoverageSubtype` elements of EO Coverages
@@ -138,12 +99,7 @@ listed *shall* contain in its `WCS::CoverageSubtype` element the value given in
 |`EOWCS::ReferenceableStitchedMosaic`           |`ReferenceableStitchedMosaic`
 |===============================================================================
 
-[requirement,uri="/req/eowcs/getCapabilities-response-countDefault"]
-If the response to a successful _GetCapabilities_ request contains an
-`ows:Constraint` element in its `ows:OperationsMetadata` element then its name
-attribute *shall* hold a value as defined in <<contraint_values>> and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard.
+include::requirements/REQ043.adoc[]
 
 [#contraint_values,reftext='{table-caption} {counter:table-num}']
 .Values for `ows:Constraint` elements
@@ -161,29 +117,13 @@ either `TRUE` or `FALSE` |zero or one (optional)
 NOTE: Servers are strongly encouraged to specify a value for CountDefault as
 means of self defense, so that a request may not clog the server.
 
-[requirement,uri="/req/eowcs/getCapabilities-response-paging-supported"]
-The response to a successful _GetCapabilities_ request to an EO-WCS supporting
-paging *shall* contain `ows:Contraint` elements with name attribute values of
-`ImplementsResultPaging` and `CountDefault`. The `ImplementsResultPaging`
-constraint *shall* have a value of "TRUE".
+include::requirements/REQ044.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata"]
-The response to a successful _GetCapabilities_ request to an EO-WCS supporting
-the _eowcs_geteocoverageset_ conformance class *shall* contain a
-`wcseo:wcseoMetadata` element in the `wcs:Extension` element of
-`wcs:ServiceMetadata` including at least a `wcseo:defaultPackageFormat`
-element.
+include::requirements/REQ045.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getCapabilities-response-defaultPackageFormat"]
-The `wcseo:defaultPackageFormat` element delivered in the `wcseo:wcseoMetadata`
-element of the response to a successful _GetCapabilities_ request *shall*
-specify the default format used for _GetEOCoverageSet_ responses.
+include::requirements/REQ046.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported"]
-The `wcseo:packageFormatSupported` element(s) delivered in the
-`wcseo:wcseoMetadata` element of the response to a successful _GetCapabilities_
-request *shall* list one to one the MIME type identifiers of all supported
-packaging formats for the _GetEOCoverageSet_ operation.
+include::requirements/REQ047.adoc[]
 
 Example: The following XML excerpt shows a possible `Contents` section
 containing Dataset Series information:
@@ -264,18 +204,12 @@ response.
 In a _DescribeCoverage_ response, EO Coverage descriptions additionally contain
 the EO Metadata record.
 
-[requirement,uri="/req/eowcs/describeCoverage-response-eo-metadata"]
-In the response to a successful _DescribeCoverage_ request on an EO Coverage,
-one `EOWCS::EOMetadata` element *shall* be present containing the EO Metadata
-component of the coverage addressed.
+include::requirements/REQ048.adoc[]
 
 The coverage subtype shall indicate the specific type of the coverage returned,
 in case of an EO Coverage.
 
-[requirement,uri="/req/eowcs/describeCoverage-response-coverageSubtype"]
-In the response to a successful _DescribeCoverage_ request addressing an EO
-Coverage, each EO Coverage listed *shall* contain in its `WCS::CoverageSubtype`
-element the value given in <<coveragesubtype_values>> corresponding to its type.
+include::requirements/REQ049.adoc[]
 
 Example: The following XML fragment shows parts of a possible DescribeCoverage
 response on an EO Coverage:
@@ -375,8 +309,7 @@ NOTE: A _GetCoverage_ request is possible on the identifiers of EO Coverages
 offered by the server even if these are not listed in a _GetCapabilities_
 response.
 
-[requirement,uri="/req/eowcs/getCoverage-request-no-slicing"]
-A _GetCoverage_ request on EO Coverages *shall* not contain a slicing operation.
+include::requirements/REQ050.adoc[]
 
 [[getcoverage_response]]
 ==== _GetCoverage_ response
@@ -398,49 +331,22 @@ coverage encoding.
 On EO Coverages, a _GetCoverage_ request shall produce a coverage of the type
 corresponding to the coverage inspected.
 
-[requirement,uri="/req/eowcs/getCoverage-response-coverage-type"]
-The response to a successful _GetCoverage_ request +
-- on a Rectified Stitched Mosaic *shall* be of type RectifiedStitchedMosaic, +
-- on a Rectified Dataset *shall* be of type RectifiedDataset, +
-- on a Referenceable Stitched Mosaic *shall* be of type
-  ReferenceableStitchedMosaic, and +
-- on a Referenceable Dataset *shall* be of type ReferenceableDataset.
+include::requirements/REQ051.adoc[]
 
 The EO Metadata, including the extended lineage record, shall be delivered
 alongside with the coverage data, adjusted according to the operations executed
 during _GetCoverage_ evaluation.
 
-[requirement,uri="/req/eowcs/getCoverage-response-eo-metadata"]
-In the response to a successful _GetCoverage_ request on an EO Coverage, the
-`EOWCS::EOMetadata` of the coverage returned *shall* contain the complete
-`EOWCS::EOMetadata` of the coverage addressed, adjusted as specified in
-<</req/eowcs/getCoverage-response-eo-metadata-in-stitched-mosaic>>,
-<</req/eowcs/getCoverage-response-footprint-in-eo-metadata>>, and
-<</req/eowcs/getCoverage-response-lineage-in-eo-metadata>>.
+include::requirements/REQ052.adoc[]
 
-[requirement,uri="/req/eowcs/getCoverage-response-eo-metadata-in-stitched-mosaic"]
-In the response to a successful _GetCoverage_ request on a Stitched Mosaic, the
-`EOWCS::EOMetadata` of the coverage returned *shall* contain the original
-Stitched Mosaic's references to those Datasets which have a non-empty
-intersection with the effective spatio-temporal request trim interval, and no
-other ones.
+include::requirements/REQ053.adoc[]
 
-[requirement,uri="/req/eowcs/getCoverage-response-footprint-in-eo-metadata"]
-If, in a successful _GetCoverage_ request on an EO Coverage, trimming along
-spatial coordinates is specified then the footprint of the `EOWCS::EOMetadata`
-in the coverage returned *shall* be given by the intersection of the spatial
-request interval and the footprint of the coverage requested. Otherwise, the
-footprint in the result coverage *shall* be given by the footprint of the
-coverage requested.
+include::requirements/REQ054.adoc[]
 
 The lineage record shall be extended by a reproducible description of the
 _GetCoverage_ request originating this output.
 
-[requirement,uri="/req/eowcs/getCoverage-response-lineage-in-eo-metadata"]
-In the response to a successful _GetCoverage_ request, the Lineage component
-*shall* consist of the Lineage component of the coverage requested with one
-record appended containing the complete, verbatim _GetCoverage_ request leading
-to this response.
+include::requirements/REQ055.adoc[]
 
 NOTE: This content is dependent on the protocol used by the requester. In case
 of a GET/KVP request, this will be the request URL with parameters. In case of
@@ -550,11 +456,7 @@ in the request.
 
 ==== _DescribeEOCoverageSet_ request
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-request-structure"]
-A _DescribeEOCoverageSet_ request *shall* consist of a structure as defined in
-<<request_describeeocoverageset>>, <<describeeocoverageset_comp>> and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard.
+include::requirements/REQ056.adoc[]
 
 [#request_describeeocoverageset,reftext='{figure-caption} {counter:figure-num}']
 ._DescribeEOCoverageSet_ request UML diagram
@@ -588,37 +490,22 @@ The _DescribeEOCoverageSet_ request type contains two sections (cf. [OGC
 06-121r9] Clause 7.3.3) whose appearance in the response can be controlled by
 the client through the optional `sections` parameter.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-request-sections"]
-If a _DescribeEOCoverageSet_ request contains an `ows: Sections` element then
-this element *shall* contain one of the values "CoverageDescriptions",
-"DatasetSeriesDescriptions", or "All". +
-*Dependency*: [OGC 06-121r9] clause 7.3.3
+include::requirements/REQ057.adoc[]
 
 NOTE: This use of the sections parameter is similar to its use in
 _GetCapabilities_ as defined in OWS Common [OGC 06-121r9].
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-request-eoId"]
-Each `eoId` parameter value in a _DescribeEOCoverageSet_ request *shall* be
-equal to the identifier of a Dataset, a Stitched Mosaic, or a Dataset Series
-offered by the server addressed.
+include::requirements/REQ058.adoc[]
 
 NOTE: A _DescribeEOCoverageSet_ request is possible on the identifiers of
 objects offered by the server even if these are not listed in a GetCapabilities
 response.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-request-containment"]
-If a _DescribeEOCoverageSet_ request contains a `containment` parameter then
-this parameter *shall* have one of the values "contains" or "overlaps".
+include::requirements/REQ059.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-request-dimensions"]
-If a _DescribeEOCoverageSet_ request contains `dimensionTrim` elements with
-`dimension` parameters then each such `dimension` parameter *shall* have one of
-the values "lat", "long", or "phenomenonTime". Each of these values *shall*
-appear at most once in a given request.
+include::requirements/REQ060.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-request-crs"]
-A _DescribeEOCoverageSet_ request *shall* use WGS84 <<b4>> as spatial and
-ISO 8601 <<b2>> as temporal CRS for the coordinates in trim requests.
+include::requirements/REQ061.adoc[]
 
 NOTE: Trim coordinates are not required to lie within the boundaries of the EO
 Coverage inquired.
@@ -656,14 +543,7 @@ The response to a successful _DescribeEOCoverageSet_ request consists of a
 (possibly empty) set of EO Coverage descriptions and a (possibly empty) set of
 Dataset Series descriptions (cf. <<resp_describeeocoverageset>>).
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-structure"]
-The response to a successful _DescribeEOCoverageSet_ request *shall* consist of
-a `EOWCS::EOCoverageSetDescription` structure as defined in
-<<eocoveragesetdescription_comp>>, <<resp_describeeocoverageset>> and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard. +
-Dependency: [OGC 09-110r4] Subclause 8.3.2
-(http://www.opengis.net/doc/IS/WCS/2.0/clause/8)
+include::requirements/REQ062.adoc[]
 
 [#eocoveragesetdescription_comp,reftext='{table-caption} {counter:table-num}']
 .Components of `EOCoverageSetDescription` structure
@@ -680,39 +560,20 @@ Dependency: [OGC 09-110r4] Subclause 8.3.2
 ._DescribeEOCoverageSet_ response UML diagram
 image::images/response-describeeocoverageset.png[DescribeEOCoverageSet response,width=60%,scaledwidth=60%,align="center"]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-eo-metadata"]
-Each `WCS::CoverageDescription` listed in the response to a successful
-_DescribeEOCoverageSet_ request *shall* contain one `EOWCS::EOMetadata` element
-containing the EO Metadata component of the EO Coverage to be described.
+include::requirements/REQ063.adoc[]
 
 The response shall respect the `sections` request parameter.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-section-coverageDescriptions"]
-If a _DescribeEOCoverageSet_ request contains a `sections` parameter then a
-successful response *shall* contain a `wcs:CoverageDescriptions` element if and
-only if the section parameter list contains one of the values
-"CoverageDescriptions" or "All".
+include::requirements/REQ064.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions"]
-If a _DescribeEOCoverageSet_ request contains a `sections` parameter then a
-successful response *shall* contain a `wcseo:DatasetSeriesDescriptions` element
-if and only if the section parameter list contains one of the values
-"DatasetSeriesDescriptions" or "All".
+include::requirements/REQ065.adoc[]
 
 Such a response contains only EO Coverages directly referred to by the object(s)
 addressed in the request or via referred Dataset Series.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-eoId"]
-In the response to a successful _DescribeEOCoverageSet_ request containing a
-`wcs:CoverageDescriptions` section, each EO Coverage referred to by one of the
-objects identified in the `eoId` request parameter *shall* appear at most once.
+include::requirements/REQ066.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-referred"]
-The response to a successful _DescribeEOCoverageSet_ request containing a
-`wcs:CoverageDescriptions` section *shall* contain the descriptions of exactly
-those EO Coverages referred to directly or indirectly via Dataset Series by one
-of the objects identified in the `eoId` request parameter, without any
-duplicates.
+include::requirements/REQ067.adoc[]
 
 NOTE: A Dataset referred to by a Dataset Series referred to by another Dataset
 Series is implicitly referred to by the later Dataset Series and thus always
@@ -728,99 +589,42 @@ that such a Dataset is also referred to by the enclosing Dataset Series.
 Spatial subsetting is evaluated against the `eop:Footprint` element contained in
 the `EOMetadata` element of an EO Coverage.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-containment"]
-The response to a successful _DescribeEOCoverageSet_ request containing a
-`wcs:CoverageDescriptions` section *shall* contain only descriptions of those EO
-Coverages whose spatial footprint defined by its
-`eop:EarthObservation/om:featureOfInterest/eop:Footprint` +
-- overlaps with the spatial request extent, and the request parameter
-  `containment` is of value `overlaps` or is omitted, +
-- is completely contained within the spatial request extent, and the request
-  parameter `containment` is of value `contains` +
-whereby all spatial coordinates are expressed in WGS84 <<b4>>.
+include::requirements/REQ068.adoc[]
 
 Temporal subsetting is evaluated against the temporal validity of an EO
 Coverage.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-phenomenonTime"]
-The response to a successful _DescribeEOCoverageSet_ request containing a
-`wcs:CoverageDescriptions` section *shall* contain only descriptions of EO
-Coverages whose time interval defined by its
-`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
-`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` elements
-in `wcseo:EOMetadata` +
-- overlaps with the request time extent, and the request parameter `containment`
-  is of value `overlaps` or is omitted, +
-- is completely contained within the request time extent, and the request
-  parameter `containment` is of value `contains`, +
-whereby all temporal coordinates are expressed in ISO 8601 <<b2>>.
+include::requirements/REQ069.adoc[]
 
 Boundary values omitted are substituted by the actual boundary value of the
 object inquired.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-trim-omitted"]
-In a _DescribeEOCoverageSet_ request, a trim specification omitted *shall* be
-interpreted as the actual boundary of the objects requested in the axis omitted.
+include::requirements/REQ070.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-bound-omitted"]
-In a _DescribeEOCoverageSet_ request, a lower or upper bound omitted *shall* be
-interpreted as indicating the actual lower or upper bound of the objects
-requested in the axis omitted.
+include::requirements/REQ071.adoc[]
 
 NOTE: This trim semantics is analogous to trimming in _GetCoverage_.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-coverageSubtype"]
-In the response to a successful _DescribeEOCoverageSet_ request, each EO
-Coverage listed *shall* contain in its `WCS::CoverageSubtype` element the
-corresponding value given in <<coveragesubtype_values>> according to its type.
+include::requirements/REQ072.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-count"]
-In the response to a successful _DescribeEOCoverageSet_ request the sum of
-`CoverageDescription` and `DatasetSeriesDescription` elements *shall* be less
-or equal to the minimum of the value of the `CountDefault` element and the
-`count` parameter if present in the request. If none of both are present all
-matching elements *shall* be reported.
+include::requirements/REQ073.adoc[]
 
 NOTE: The `count` parameter is used in the same ways as the `itemsPerPage`
 element in the OpenSearch Specification <<b7>>.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-startIndex"]
-If a _DescribeEOCoverageSet_ request contains a `wcs:startIndex` parameter then
-a successful response *shall* contain only those `CoverageDescription` and
-`DatasetSeriesDescription` elements whose index numbers in the result set are
-equal or higher than the value of the `startIndex` parameter.
+include::requirements/REQ074.adoc[]
 
 NOTE: A server is assumed to apply a consistent ordering to the result set.
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-numberMatched"]
-The response to a successful _DescribeEOCoverageSet_ request *shall* report in
-its `numberMatched` attribute the sum of all matching `CoverageDescription` and
-`DatasetSeriesDescription` elements.
+include::requirements/REQ075.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-numberReturned"]
-The response to a successful _DescribeEOCoverageSet_ request *shall* report in
-its `numberReturned` attribute the sum of all `CoverageDescription` and
-`DatasetSeriesDescription` elements included in the response.
+include::requirements/REQ076.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-startIndex-attr"]
-The response to a successful _DescribeEOCoverageSet_ request *shall* report in
-its `startIndex` attribute the index number of the first element in the result
-set of all `CoverageDescription` and `DatasetSeriesDescription` elements
-returned.
+include::requirements/REQ077.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-next"]
-The response to a successful _DescribeEOCoverageSet_ request *shall* report in
-its `next` attribute the URI to retrieve the next page of results as specified
-by the `count` and `startIndex` parameters. The `next` attribute *shall* only
-be present if elements with a higher index in the result set than the returned
-ones are available.
+include::requirements/REQ078.adoc[]
 
-[requirement,uri="/req/eowcs/describeEOCoverageSet-response-previous"]
-The response to a successful _DescribeEOCoverageSet_ request *shall* report in
-its `previous` attribute the URI to retrieve the previous page of results as
-specified by the `count` and `startIndex` parameters. The `previous` attribute
-*shall* only be present if elements with a lower index in the result set than
-the returned ones are available.
+include::requirements/REQ079.adoc[]
 
 NOTE: The specific format of the next and previous URIs is implementation
 dependent as are the details of how or if the server caches the results of an
@@ -924,11 +728,7 @@ _GetCoverage_ operation may be used.
 
 ==== _GetEOCoverageSet_ request
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-structure"]
-A _GetEOCoverageSet_ request *shall* consist of a structure as defined in
-<<request_geteocoverageset>>, <<geteocoverageset_comp>> and the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard.
+include::requirements/REQ080.adoc[]
 
 [#request_geteocoverageset,reftext='{figure-caption} {counter:figure-num}']
 ._GetEOCoverageSet_ request UML diagram
@@ -974,33 +774,21 @@ subsetting coordinates are expressed |`crs:subsettingCrs` |zero or one
 |`crs:outputCrs` |zero or one (optional)
 |===============================================================================
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-eoId"]
-Each `eoId` parameter value in a _GetEOCoverageSet_ request *shall* be
-equal to the identifier of a Dataset, a Stitched Mosaic, or a Dataset Series
-offered by the server addressed.
+include::requirements/REQ081.adoc[]
 
 NOTE: A _GetEOCoverageSet_ request is possible on the identifiers of
 objects offered by the server even if these are not listed in a GetCapabilities
 response.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-containment"]
-If a _GetEOCoverageSet_ request contains a `containment` parameter then
-this parameter *shall* have one of the values "contains" or "overlaps".
+include::requirements/REQ082.adoc[]
 
 The subsetting is interpreted similar to the _DescribeEOCoverageSet_ operation.
 In addition alternative subsetting is allowed using the `subsettingCrs`
 parameter as defined by the WCS CRS Extension [OGC 11-053r1].
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-dimensions"]
-If a _GetEOCoverageSet_ request contains `dimensionTrim` elements with
-`dimension` parameters and no `subsettingCrs` element then each such `dimension`
-parameter *shall* have one of the values "lat", "long", or "phenomenonTime".
-Each of these values *shall* appear at most once in a given request.
+include::requirements/REQ083.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-request-crs"]
-A _GetEOCoverageSet_ request *shall* use WGS84 <<b4>> as spatial and
-ISO 8601 <<b2>> as temporal CRS for the coordinates in trim requests if no
-`subsettingCrs` element is present.
+include::requirements/REQ084.adoc[]
 
 NOTE: Trim coordinates are not required to lie within the boundaries of the EO
 Coverage inquired.
@@ -1011,15 +799,9 @@ values (i.e, package formats supported) are those listed in the server's
 Capabilities document. The default is the also reported in the server's
 Capabilities document.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-packageFormat"]
-If a _GetCoverage_ request contains a `packageFormat` parameter then this
-parameter *shall* contain a MIME type identifier occurring in some
-`wcseo:packageFormatSupported` element of the response to a successful
-_GetCapabilities_ request to this server.
+include::requirements/REQ085.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-mediaType"]
-If a _GetCoverage_ request contains a `mediaType` parameter then this parameter
-shall contain a MIME type identifier of fixed value \"``multipart/related``".
+include::requirements/REQ086.adoc[]
 
 The encoding format in which the coverages themselves are returned is specified
 by the `format` parameter. Admissible values (i.e, formats supported) are those
@@ -1027,32 +809,19 @@ listed in the server's Capabilities document. Note that only one format
 applicable for all coverages to be returned can be specified. Default is the
 coverage's Native Format of each coverage to be returned.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-format"]
-If a _GetCoverage_ request contains a `format` parameter then this parameter
-*shall* contain a MIME type identifier occurring in some `wcs:formatSupported`
-element of the response to a successful _GetCapabilities_ request to this
-server.
+include::requirements/REQ087.adoc[]
 
 A general scaling and interpolation can be requested that is equally applied to
 all coverages returned.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-scaling"]
-If a _GetCoverage_ request contains a `Scaling` parameter then this parameter
-*shall* follow the specification given in the WCS Scaling Extension
-[OGC 12-039].
+include::requirements/REQ088.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-interpolation"]
-If a _GetCoverage_ request contains a `Interpolation` parameter then this
-parameter *shall* follow the specification given in the WCS Interpolation
-Extension [OGC 12-049].
+include::requirements/REQ089.adoc[]
 
 A general output CRS as well as CRS for subsetting can be requested that is
 equally applied to all coverages returned.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss"]
-If a _GetCoverage_ request contains a `subsettingCrs` and/or `outputCrs`
-parameter then this parameter(s) *shall* follow the specification given in the
-WCS CRS Extension [OGC 11-053r1].
+include::requirements/REQ090.adoc[]
 
 Example: The following XML instance shows a possible _GetEOCoverageSet_
 operation request:
@@ -1099,67 +868,30 @@ The response to a successful _GetEOCoverageSet_ request consists of a (possibly
 empty) packaged set of EO Coverages. Each individual coverage itself is
 structured the same way as resulting from a _GetCoverage_ request.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat"]
-The contents of the response to a successful _GetEOCoverageSet_ request *shall*
-be encoded as specified by the `packageFormat` parameter, if this parameter is
-present in the request, and in the service's default package format as reported
-in the `wcseo:defaultPackageFormat` element of the Capabilities if this
-parameter is not present.
+include::requirements/REQ091.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-multipart"]
-The response to a successful _GetEOCoverageSet_ request containing a
-`mediaType` parameter with value `multipart/related` *shall* follow the
-definitions of conformance class _multipart_ of the OGC® Coverage
-Implementation Schema [OGC 09-146r2]. +
-*Dependency*:
-http://www.opengis.net/spec/GMLCOV/1.0/conf/multipart
+include::requirements/REQ092.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-mediaType"]
-The response to a successful _GetEOCoverageSet_ request containing a `mediaType`
-parameter with value `multipart/related` *shall* consist of a
-`wcseo:EOCoverageSet` structure as defined in the
-http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
-standard in its first part. The second part of the multipart response *shall*
-be encoded as specified by
-<</req/eowcs_geteocoverageset /getEOCoverageSet-packageFormat>>.
+include::requirements/REQ093.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-cid"]
-The first part of the response to a successful _GetEOCoverageSet_ request
-containing a `mediaType` parameter with value `multipart/related` *shall*
-reference individual coverages inside the package in the second part of the
-multipart response by appending the filename after a `;` character to the
-`cid`.
+include::requirements/REQ094.adoc[]
 
 NOTE: The usage of `cid` is defined in [OGC 09-146r2].
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-format"]
-The EO Coverages contained in the response to a successful _GetEOCoverageSet_
-request *shall* be encoded as specified by the `format` parameter, if this
-parameter is present, and in the coverage's Native Format if this parameter is
-not present.
+include::requirements/REQ095.adoc[]
 
 The requirements defined for the _GetCoverage_ response like containing EO
 Metadata or adding a lineage component apply to each EO Coverage included in a
 _GetEOCoverageSet_ response package.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-getCoverage"]
-Each EO Coverage contained in the response to a successful _GetEOCoverageSet_
-request *shall* adhere to the requirements defined for the _GetCoverage_
-response in subclause <<getcoverage_response>>.
+include::requirements/REQ096.adoc[]
 
 A _GetEOCoverageSet_ response contains only EO Coverages directly referred to by
 the object(s) addressed in the request or via referred Dataset Series.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-eoId"]
-In the response to a successful _GetEOCoverageSet_ request each EO Coverage
-referred to by one of the objects identified in the `eoId` request parameter
-*shall* appear at most once.
+include::requirements/REQ097.adoc[]
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-referred"]
-The response to a successful _GetEOCoverageSet_ request *shall* contain exactly
-those EO Coverages referred to directly or indirectly via Dataset Series by one
-of the objects identified in the `eoId` request parameter, without any
-duplicates.
+include::requirements/REQ098.adoc[]
 
 NOTE: A Dataset referred to by a Dataset Series referred to by another Dataset
 Series is implicitly referred to by the later Dataset Series and thus always
@@ -1175,101 +907,40 @@ that such a Dataset is also referred to by the enclosing Dataset Series.
 Spatial subsetting is evaluated against the `eop:Footprint` element contained in
 the `EOMetadata` element of an EO Coverage.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-containment"]
-The response to a successful _GetEOCoverageSet_ request *shall* contain only
-those EO Coverages whose spatial footprint defined by its
-`eop:EarthObservation/om:featureOfInterest/eop:Footprint` +
-- overlaps with the spatial request extent, and the request parameter
-  `containment` is of value `overlaps` or is omitted, +
-- is completely contained within the spatial request extent, and the request
-  parameter `containment` is of value `contains` +
-whereby all spatial coordinates are expressed in WGS84 <<b4>> if no
-`subsettingCrs` parameter is present.
+include::requirements/REQ099.adoc[]
 
 Temporal subsetting is evaluated against the temporal validity of an EO
 Coverage.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-phenomenonTime"]
-The response to a successful _GetEOCoverageSet_ request *shall* contain only EO
-Coverages whose time interval defined by its
-`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
-`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` elements
-in `wcseo:EOMetadata` +
-- overlaps with the request time extent, and the request parameter `containment`
-  is of value `overlaps` or is omitted, +
-- is completely contained within the request time extent, and the request
-  parameter `containment` is of value `contains`, +
-whereby all temporal coordinates are expressed in ISO 8601 <<b2>> if no
-`subsettingCrs` parameter is present.
+include::requirements/REQ100.adoc[]
 
 Boundary values omitted are substituted by the actual boundary value of the
 object inquired.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-trim-omitted"]
-In a _GetEOCoverageSet_ request, a trim specification omitted *shall* be
-interpreted as the actual boundary of the objects requested in the axis omitted.
+include::requirements/REQ101.adoc[]
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-bound-omitted"]
-In a _GetEOCoverageSet_ request, a lower or upper bound omitted *shall* be
-interpreted as indicating the actual lower or upper bound of the objects
-requested in the axis omitted.
+include::requirements/REQ102.adoc[]
 
 NOTE: This trim semantics is analogous to trimming in _GetCoverage_.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-count"]
-In the response to a successful _GetEOCoverageSet_ request the sum of
-`RectifiedDataset`, `ReferenceableDataset`, `RectifiedStitchedMosaic`,
-`ReferenceableStitchedMosaic`, and `DatasetSeries` elements *shall* be less or
-equal to the minimum of the value of the `CountDefault` element and the `count`
-parameter if present in the request. If none of both are present all matching
-elements *shall* be reported.
+include::requirements/REQ103.adoc[]
 
 NOTE: The `count` parameter is used in the same ways as the `itemsPerPage`
 element in the OpenSearch Specification <<b7>>.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-startIndex"]
-If a _GetEOCoverageSet_ request contains a `wcs:startIndex` parameter then a
-successful response *shall* contain only those `RectifiedDataset`,
-`ReferenceableDataset`, `RectifiedStitchedMosaic`,
-`ReferenceableStitchedMosaic`, and `DatasetSeries` elements whose index numbers
-in the result set are equal or higher than the value of the `startIndex`
-parameter.
+include::requirements/REQ104.adoc[]
 
 NOTE: A server is assumed to apply a consistent ordering to the result set.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-numberMatched"]
-The response to a successful _GetEOCoverageSet_ request *shall* report in its
-`numberMatched` attribute the sum of all matching `RectifiedDataset`,
-`ReferenceableDataset`, `RectifiedStitchedMosaic`,
-`ReferenceableStitchedMosaic`, and `DatasetSeries` elements.
+include::requirements/REQ105.adoc[]
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-numberReturned"]
-The response to a successful _GetEOCoverageSet_ request *shall* report in its
-`numberReturned` attribute the sum of all `RectifiedDataset`,
-`ReferenceableDataset`, `RectifiedStitchedMosaic`,
-`ReferenceableStitchedMosaic`, and `DatasetSeries` elements included in the
-response.
+include::requirements/REQ106.adoc[]
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-startIndex-attr"]
-The response to a successful _GetEOCoverageSet_ request *shall* report in
-its `startIndex` attribute the index number of the first element in the result
-set of all `RectifiedDataset`, `ReferenceableDataset`,
-`RectifiedStitchedMosaic`, `ReferenceableStitchedMosaic`, and `DatasetSeries`
-elements returned.
+include::requirements/REQ107.adoc[]
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-next"]
-The response to a successful _GetEOCoverageSet_ request *shall* report in
-its `next` attribute the URI to retrieve the next page of results as specified
-by the `count` and `startIndex` parameters. The `next` attribute *shall* only
-be present if elements with a higher index in the result set than the returned
-ones are available.
+include::requirements/REQ108.adoc[]
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-previous"]
-The response to a successful _GetEOCoverageSet_ request *shall* report in
-its `previous` attribute the URI to retrieve the previous page of results as
-specified by the `count` and `startIndex` parameters. The `previous` attribute
-*shall* only be present if elements with a lower index in the result set than
-the returned ones are available.
+include::requirements/REQ109.adoc[]
 
 NOTE: The specific format of the next and previous URIs is implementation
 dependent as are the details of how or if the server caches the results of an
@@ -1283,32 +954,19 @@ Interface Standard <<b8>>.
 The spatial subsetting requested may be applied to the EO Coverages to be
 returned. Default is to respond with entire coverages.
 
-[requirement,uri="/req/eowcs/getEOCoverageSet-response-applySubset"]
-Each EO Coverage contained in the response to a successful _GetEOCoverageSet_
-request containing an `applySubset` parameter with value `true` *shall* be
-subsetted as specified by the _crs-gridded-coverage_ conformance class of the
-WCS CRS Extension [OGC 11-053r1].
+include::requirements/REQ110.adoc[]
 
 A requested general scaling and interpolation is equally applied to all
 coverages returned.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-scaling"]
-If a _GetCoverage_ request contains a `Scaling` parameter then this parameter
-*shall* be applied individually to each EO Coverage to be returned as specified
-by the WCS Scaling Extension [OGC 12-039].
+include::requirements/REQ111.adoc[]
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-interpolation"]
-If a _GetCoverage_ request contains a `Interpolation` parameter then this
-parameter *shall* be applied individually to each EO Coverage to be returned as
-specified by the WCS Interpolation Extension [OGC 12-049].
+include::requirements/REQ112.adoc[]
 
 A requested general output CRS as well as CRS for subsetting is equally applied
 to all coverages returned.
 
-[requirement,uri="/req/eowcs_geteocoverageset/getEOCoverageSet-crss"]
-If a _GetCoverage_ request contains a `subsettingCrs` and/or `outputCrs`
-parameter then this parameter(s) *shall* be applied individually to each
-EO Coverage to be returned as specified by the WCS CRS Extension [OGC 11-053r1].
+include::requirements/REQ113.adoc[]
 
 Example: The following XML fragment shows parts of the first part of a possible
 `GetEOCoverageSet` operation multipart response:

@@ -1,0 +1,9 @@
+[#/req/eowcs/describeCoverage-response-eo-metadata,reftext='Requirement {counter:requirement_id} /req/eowcs/describeCoverage-response-eo-metadata']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeCoverage-response-eo-metadata +
+ +
+In the response to a successful _DescribeCoverage_ request on an EO Coverage,
+one `EOWCS::EOMetadata` element *shall* be present containing the EO Metadata
+component of the coverage addressed. {set:cellbgcolor:#FFFFFF}
+|===

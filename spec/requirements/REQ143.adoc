@@ -1,0 +1,9 @@
+[#/req/eowcs_soap/describeEOCoverageSet-wsdl,reftext='Requirement {counter:requirement_id} /req/eowcs_soap/describeEOCoverageSet-wsdl']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_soap/describeEOCoverageSet-wsdl +
+ +
+Publication of a WCS SOAP service endpoint *shall* use the binding as defined
+in file `wsdl/wcs-soap-binding.wsdl` of the EO-WCS package.
+{set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,9 @@
+==== eowcs_get-kvp/getEOCoverageSet applySubset
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_get-kvp/getEOCoverageSet-applySubset
+|Test purpose: |<</req/eowcs_get-kvp/getEOCoverageSet-applySubset>>
+|Test method:
+a|
+TODO
+|===

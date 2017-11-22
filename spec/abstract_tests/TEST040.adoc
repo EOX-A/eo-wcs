@@ -1,0 +1,12 @@
+==== GetCapabilities Response Coverage Summary Section
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCapabilities-response-coverageSummary-section
+|Test purpose: |<</req/eowcs/getCapabilities-response-coverageSummary-section>>
+|Test method:
+a|
+Send valid _GetCapabilities_ requests contains a `sections` parameter and the
+section parameter list contains one of the values "CoverageSummary", "Contents",
+or "All" to the service under test. Check that the response contains
+`wcs:CoverageSummary` elements.Test passes if all individual tests pass.
+|===

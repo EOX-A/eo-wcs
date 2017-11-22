@@ -1,0 +1,10 @@
+[#/req/eowcs/getEOCoverageSet-response-applySubset,reftext='Requirement {counter:requirement_id} /req/eowcs/getEOCoverageSet-response-applySubset']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getEOCoverageSet-response-applySubset +
+ +
+Each EO Coverage contained in the response to a successful _GetEOCoverageSet_
+request containing an `applySubset` parameter with value `true` *shall* be
+subsetted as specified by the _crs-gridded-coverage_ conformance class of the
+WCS CRS Extension [OGC 11-053r1]. {set:cellbgcolor:#FFFFFF}
+|===

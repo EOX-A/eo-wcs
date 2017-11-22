@@ -1,0 +1,9 @@
+[#/req/eowcs/dataset-domain-set-in-stitched-mosaic-domain-set,reftext='Requirement {counter:requirement_id} /req/eowcs/dataset-domain-set-in-stitched-mosaic-domain-set']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/dataset-domain-set-in-stitched-mosaic-domain-set +
+ +
+For all Datasets _d_ referred to by some Stitched Mosaics _sm_, all cells of _d_
+as defined by the domain set of _d_ *shall* be contained in the set of cells of
+_sm_ as defined by the domain set of _sm_. {set:cellbgcolor:#FFFFFF}
+|===

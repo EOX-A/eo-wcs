@@ -1,0 +1,11 @@
+==== Describe Coverage Response EO Metadata
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeCoverage-response-eo-metadata
+|Test purpose: |<</req/eowcs/describeCoverage-response-eo-metadata>>
+|Test method:
+a|
+For each EO Coverage offered by the server, send a valid _DescribeCoverage_
+request to server under test. Check that the result contains an `EOMetadata`
+element. Test passes if all individual tests pass.
+|===
