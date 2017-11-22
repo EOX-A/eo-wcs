@@ -63,5 +63,7 @@ standard_document.html standard_document.adoc`.
 To produce the PDF of this document run `bundle exec asciidoctor-pdf --safe -o
 standard_document.pdf standard_document.adoc`
 
+Before the first time also install dependencies via `bundle install`.
+
 The `gh-pages` branch holds the latest approved version of the build and is
 viewable at https://eox-a.github.io/eo-wcs/.
