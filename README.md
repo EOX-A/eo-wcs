@@ -60,7 +60,7 @@ adjudicate and prioritize the request.
 To produce the HTML of this document run `asciidoctor --safe -a data-uri -o
 standard_document.html standard_document.adoc`.
 
-To produce the PDF of this document run `asciidoctor-pdf --safe -o
+To produce the PDF of this document run `bundle exec asciidoctor-pdf --safe -o
 standard_document.pdf standard_document.adoc`
 
 The `gh-pages` branch holds the latest approved version of the build and is
