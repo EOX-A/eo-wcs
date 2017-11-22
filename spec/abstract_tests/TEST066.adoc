@@ -1,0 +1,12 @@
+==== DescribeEOCoverageSet Response eoId
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-eoId
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-eoId>>
+|Test method:
+a|
+Send a valid _DescribeEOCoverageSet_ request containing a
+`wcs:CoverageDescription` section to server under test. Check that each EO
+Coverage referred to by one of the objects identified in the `eoId` request
+parameter appears at most once.
+|===

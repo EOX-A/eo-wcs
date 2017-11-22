@@ -1,0 +1,10 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-format,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-format']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-format +
+ +
+If a _GetCoverage_ request contains a `format` parameter then this parameter
+*shall* contain a MIME type identifier occurring in some `wcs:formatSupported`
+element of the response to a successful _GetCapabilities_ request to this
+server. {set:cellbgcolor:#FFFFFF}
+|===

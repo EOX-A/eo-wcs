@@ -1,0 +1,11 @@
+==== DescribeEOCoverageSet Request Structure
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-request-structure
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-request-structure>>
+|Test method:
+a|
+Send _DescribeEOCoverageSet_ requests with valid and invalid request structure.
+
+Pass test if appropriate valid results or exceptions, resp., are delivered.
+|===

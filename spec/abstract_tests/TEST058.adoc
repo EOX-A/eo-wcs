@@ -1,0 +1,13 @@
+==== DescribeEOCoverageSet Request eoId
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-request-eoId
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-request-eoId>>
+|Test method:
+a|
+For each Dataset, Stitched Mosaic, and Dataset Series offered by the server
+under test, sends a valid _DescribeEOCoverageSet_ request to server under test.
+Check that the identifier of a Dataset, a Stitched Mosaic, or a Dataset Series
+is equal to the eoId parameter value in the request. Test passes if all
+individual tests pass.
+|===

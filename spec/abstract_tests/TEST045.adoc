@@ -1,0 +1,9 @@
+==== GetCapabilities Response wcseoMetadata
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata
+|Test purpose: |<</req/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata>>
+|Test method:
+a|
+TODO
+|===

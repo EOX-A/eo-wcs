@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response Format
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getEOCoverageSet-format
+|Test purpose: |<</req/eowcs_geteocoverageset/getEOCoverageSet-format>>
+|Test method:
+a|
+TODO
+|===

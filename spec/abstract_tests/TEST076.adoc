@@ -1,0 +1,13 @@
+==== DescribeEOCoverageSet Response numberReturned attribute
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-numberReturned
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-numberReturned>>
+|Test method:
+a|
+Send a valid _DescribeEOCoverageSet_ request containing a `count` parameter with
+a value lower than the value of the `CountDefault` element to server under test.
+Check that the sum of the numbers of `CoverageDescription` and
+`DatasetSeriesDescription` elements is equal to the value of the reported
+`numberReturned` parameter.
+|===

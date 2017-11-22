@@ -1,0 +1,9 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-mediaType,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-mediaType']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-mediaType +
+ +
+If a _GetCoverage_ request contains a `mediaType` parameter then this parameter
+shall contain a MIME type identifier of fixed value \"``multipart/related``".
+{set:cellbgcolor:#FFFFFF}
+|===

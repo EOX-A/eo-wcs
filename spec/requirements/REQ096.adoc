@@ -1,0 +1,9 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-getCoverage,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-getCoverage']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-getCoverage +
+ +
+Each EO Coverage contained in the response to a successful _GetEOCoverageSet_
+request *shall* adhere to the requirements defined for the _GetCoverage_
+response in subclause <<getcoverage_response>>. {set:cellbgcolor:#FFFFFF}
+|===

@@ -57,10 +57,11 @@ adjudicate and prioritize the request.
 
 ## Building
 
-To build this document run `rake build` and open `build/spec/index.html` in a
-browser.
+To produce the HTML of this document run `asciidoctor --safe -a data-uri -o
+standard_document.html standard_document.adoc`.
 
-Before the first time also install dependencies via `bundle install`.
+To produce the PDF of this document run `bundle exec asciidoctor-pdf --safe -o
+standard_document.pdf standard_document.adoc`
 
 The `gh-pages` branch holds the latest approved version of the build and is
 viewable at https://eox-a.github.io/eo-wcs/.

@@ -1,0 +1,9 @@
+[#/req/eowcs/datasets-in-rectifiedStitcheMosaic-same-offsetVector,reftext='Requirement {counter:requirement_id} /req/eowcs/datasets-in-rectifiedStitcheMosaic-same-offsetVector']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/datasets-in-rectifiedStitcheMosaic-same-offsetVector +
+ +
+All Datasets referred to by a Rectified Stitched Mosaic *shall* have identical
+values in the `gml:offsetVector` elements of their domain sets.
+{set:cellbgcolor:#FFFFFF}
+|===

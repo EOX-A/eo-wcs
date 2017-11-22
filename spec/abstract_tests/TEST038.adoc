@@ -1,0 +1,11 @@
+==== GetCapabilities Response DatasetSeriesSummary no-duplicates
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCapabilities-response-datasetSeriesSummary-no-duplicates
+|Test purpose: |<</req/eowcs/getCapabilities-response-datasetSeriesSummary-no-duplicates>>
+|Test method:
+a|
+Send a valid _GetCapabilities_ request to the service under test. If a
+`EOWCS::DatasetSeriesSummary` section is contained in the response check that it
+does not contain any duplicate Dataset Series identifier.
+|===

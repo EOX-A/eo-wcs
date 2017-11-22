@@ -1,0 +1,9 @@
+==== DescribeEOCoverageSet Response next attribute
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-next
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-next>>
+|Test method:
+a|
+TODO
+|===

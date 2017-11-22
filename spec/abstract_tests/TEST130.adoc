@@ -1,0 +1,10 @@
+==== eowcs_get-kvp/getEOCoverageSet containment
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_get-kvp/getEOCoverageSet-containment
+|Test purpose: |<</req/eowcs_get-kvp/getEOCoverageSet-containment>>
+|Test method:
+a|
+Send a valid get-kvp _GetEOCoverageSet_ request as defined. Check that the
+response is not an exception.
+|===

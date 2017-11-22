@@ -1,0 +1,20 @@
+==== DescribeEOCoverageSet Response Referred
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-referred
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-referred>>
+|Test method:
+a|
+For each send a valid _DescribeEOCoverageSet_ requests to server under test,
+check that each `WCS::CoverageDescription` listed in the response is at least
+contained in one of the `EOWCS::EOMetadata` elements and that this element
+contains the EO Metadata component of the EO Coverage to be described.
+
+For each `EOWCS::DatasetSeries` offered by the server under test:
+
+* Send a valid _DescribeEOCoverageSet_ request. Check that each
+  `WCS::CoverageDescription` listed in the response is at least referred to by
+  one `EOWCS::DatasetSeries` also contained in the response.
+
+Test passes if all individual tests pass.
+|===

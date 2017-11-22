@@ -1,0 +1,9 @@
+[#/req/eowcs/getEOCoverageSet-response-trim-omitted,reftext='Requirement {counter:requirement_id} /req/eowcs/getEOCoverageSet-response-trim-omitted']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getEOCoverageSet-response-trim-omitted +
+ +
+In a _GetEOCoverageSet_ request, a trim specification omitted *shall* be
+interpreted as the actual boundary of the objects requested in the axis omitted.
+{set:cellbgcolor:#FFFFFF}
+|===

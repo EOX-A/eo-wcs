@@ -1,0 +1,9 @@
+[#/req/eowcs/getCapabilities-response-datasetSeriesSummary-no-duplicates,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-response-datasetSeriesSummary-no-duplicates']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-response-datasetSeriesSummary-no-duplicates +
+ +
+A response to a successful _GetCapabilities_ request containing a
+`EOWCS::DatasetSeriesSummary` section *shall* not contain any duplicate Dataset
+Series identifier. {set:cellbgcolor:#FFFFFF}
+|===

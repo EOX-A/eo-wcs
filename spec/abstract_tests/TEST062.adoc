@@ -1,0 +1,10 @@
+==== DescribeEOCoverageSet Response Structure
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-structure
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-structure>>
+|Test method:
+a|
+Send a valid _DescribeEOCoverageSet_ request to the server under test, check
+that the result consist of a `EOWCS::EOCoverageSetDescription` structure.
+|===

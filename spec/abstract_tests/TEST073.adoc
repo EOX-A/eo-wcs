@@ -1,0 +1,13 @@
+==== DescribeEOCoverageSet Response Count
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-count
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-count>>
+|Test method:
+a|
+Send a valid _DescribeEOCoverageSet_ request containing a `count` parameter with
+a value lower than the value of the `CountDefault` element to server under test.
+Check that the sum of the numbers of `CoverageDescription` and
+`DatasetSeriesDescription` elements is less or equal to the value of the `count`
+parameter.
+|===

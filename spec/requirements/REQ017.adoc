@@ -1,0 +1,9 @@
+[#/req/eowcs/contributingFootprint-inside-footprint,reftext='Requirement {counter:requirement_id} /req/eowcs/contributingFootprint-inside-footprint']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/contributingFootprint-inside-footprint +
+ +
+For all Stitched Mosaics _sm_ referring to some Datasets _d_ with an associated
+`contributingFootprint`, this `contributingFootprint` *shall* be geographically
+contained in the footprint of _d_. {set:cellbgcolor:#FFFFFF}
+|===

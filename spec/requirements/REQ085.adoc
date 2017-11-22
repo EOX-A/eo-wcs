@@ -1,0 +1,10 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-packageFormat,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-packageFormat']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-packageFormat +
+ +
+If a _GetCoverage_ request contains a `packageFormat` parameter then this
+parameter *shall* contain a MIME type identifier occurring in some
+`wcseo:packageFormatSupported` element of the response to a successful
+_GetCapabilities_ request to this server. {set:cellbgcolor:#FFFFFF}
+|===

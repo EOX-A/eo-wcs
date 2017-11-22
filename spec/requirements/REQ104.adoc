@@ -1,0 +1,12 @@
+[#/req/eowcs/getEOCoverageSet-response-startIndex,reftext='Requirement {counter:requirement_id} /req/eowcs/getEOCoverageSet-response-startIndex']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getEOCoverageSet-response-startIndex +
+ +
+If a _GetEOCoverageSet_ request contains a `wcs:startIndex` parameter then a
+successful response *shall* contain only those `RectifiedDataset`,
+`ReferenceableDataset`, `RectifiedStitchedMosaic`,
+`ReferenceableStitchedMosaic`, and `DatasetSeries` elements whose index numbers
+in the result set are equal or higher than the value of the `startIndex`
+parameter. {set:cellbgcolor:#FFFFFF}
+|===

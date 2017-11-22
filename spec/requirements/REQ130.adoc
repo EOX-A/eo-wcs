@@ -1,0 +1,11 @@
+[#/req/eowcs_get-kvp/getEOCoverageSet-containment,reftext='Requirement {counter:requirement_id} /req/eowcs_get-kvp/getEOCoverageSet-containment']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_get-kvp/getEOCoverageSet-containment +
+ +
+The `containment` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows: +
+`containment=overlaps` +
+or +
+`containment=contains` {set:cellbgcolor:#FFFFFF}
+|===

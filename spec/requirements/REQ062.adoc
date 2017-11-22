@@ -1,0 +1,13 @@
+[#/req/eowcs/describeEOCoverageSet-response-structure,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-structure']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-structure +
+ +
+The response to a successful _DescribeEOCoverageSet_ request *shall* consist of
+a `EOWCS::EOCoverageSetDescription` structure as defined in
+<<eocoveragesetdescription_comp>>, <<resp_describeeocoverageset>> and the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
+standard. +
+*Dependency*: [OGC 09-110r4] Subclause 8.3.2
+(http://www.opengis.net/doc/IS/WCS/2.0/clause/8) {set:cellbgcolor:#FFFFFF}
+|===

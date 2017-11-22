@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Request Dimensions
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getEOCoverageSet-request-dimensions
+|Test purpose: |<</req/eowcs_geteocoverageset/getEOCoverageSet-request-dimensions>>
+|Test method:
+a|
+TODO
+|===

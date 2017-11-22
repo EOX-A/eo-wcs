@@ -1,0 +1,142 @@
+[#protocol_bindings,reftext='9']
+== Protocol Bindings
+
+=== Protocol choices
+
+At least one of the protocols, GET/KVP and SOAP shall be supported by an
+implementation. This choice is represented in this specification by two separate
+conformance classes, _eowcs_get-kvp_ and _eowcs_soap_ defined in the Subclauses
+below.
+
+include::requirements/REQ119.adoc[]
+
+=== GET-KVP protocol conformance class
+
+==== WCS GET/KVP encoding
+
+include::requirements/REQ120.adoc[]
+
+include::requirements/REQ121.adoc[]
+
+==== _DescribeEOCoverageSet_ GET/KVP encoding
+
+include::requirements/REQ122.adoc[]
+
+include::requirements/REQ123.adoc[]
+
+include::requirements/REQ124.adoc[]
+
+include::requirements/REQ125.adoc[]
+
+include::requirements/REQ126.adoc[]
+
+include::requirements/REQ127.adoc[]
+
+Syntax follows the HTTP standard <<b3>>: underlined tokens represent
+literals which appear "as is" ("terminal symbols"), other tokens represent sub-
+expressions to be substituted ("non-terminals"). A vertical bar ("|"") denotes
+alternatives, items in brackets ("[ ]") are optional. Non-terminals `NCName`,
+`number`, `token`, and `anyURI` follow the resp. XML definitions
+<<b6>>.
+
+NOTE: Allowed values for points are determined by the CRS used. This ranges from
+"2009-11-06" for time to "-41.5" and "41°5'" for lat/long whereby non-numeric
+values have to be enclosed in double quotes.
+
+NOTE: As per HTTP <<b3>>, keys are case insensitive whereas values are
+case sensitive.
+
+Example: The following KVP-encoded _DescribeEOCoverageSet_ request addresses
+service `path` on server `www.myservice.org` at port `port` requests coverage
+`C0002` in the domain specified by the bounding box with longitude (-71,47) and
+latitude (-66,51), expressed in spatial CRS WGS84-2D and temporal CRS ISO:8601
+(which are assumed to be supported for the coverage):
+
+[source]
+http://www.myserver.org:port/path?
+service=WCS
+&version=2.0.1
+&request=DescribeEOCoverageSet
+&eoid=C0002
+&containment=overlaps
+&subset=long(-71,47)
+&subset=lat(-66,51)
+&subset=phenomenonTime("2009-11-06T23:20:52Z","2009-11-13T23:20:52Z")
+
+==== _GetEOCoverageSet_ GET/KVP encoding
+
+include::requirements/REQ128.adoc[]
+
+include::requirements/REQ129.adoc[]
+
+include::requirements/REQ130.adoc[]
+
+include::requirements/REQ131.adoc[]
+
+include::requirements/REQ132.adoc[]
+
+include::requirements/REQ133.adoc[]
+
+include::requirements/REQ134.adoc[]
+
+include::requirements/REQ135.adoc[]
+
+include::requirements/REQ136.adoc[]
+
+include::requirements/REQ137.adoc[]
+
+include::requirements/REQ138.adoc[]
+
+Syntax follows the HTTP standard <<b3>>: underlined tokens represent
+literals which appear "as is" ("terminal symbols"), other tokens represent sub-
+expressions to be substituted ("non-terminals"). A vertical bar ("|"") denotes
+alternatives, items in brackets ("[ ]") are optional. Non-terminals `NCName`,
+`number`, `token`, and `anyURI` follow the resp. XML definitions
+<<b6>>.
+
+NOTE: Allowed values for points are determined by the CRS used. This ranges
+from "2009-11-06" for time to "-41.5" and "41°5'" for lat/long whereby
+non-numeric values have to be enclosed in double quotes.
+
+NOTE: As per HTTP <<b3>>, keys are case insensitive whereas values are
+case sensitive.
+
+=== SOAP protocol conformance class
+
+==== WCS SOAP encoding
+
+include::requirements/REQ139.adoc[]
+
+include::requirements/REQ140.adoc[]
+
+==== _DescribeEOCoverageSet_ SOAP encoding
+
+include::requirements/REQ141.adoc[]
+
+include::requirements/REQ142.adoc[]
+
+Example: See files `wcseo_requestDescribeEOCoverageSet.xml` and
+`wcseo_responseDescribeEOCoverageSet.xml` being part of this standard.
+
+==== _DescribeEOCoverageSet_ WSDL
+
+include::requirements/REQ143.adoc[]
+
+NOTE: A sample service description relying on this binding is provided in file
+`example-soap-endpoint.wsdl`.
+
+==== _GetEOCoverageSet_ SOAP encoding
+
+include::requirements/REQ144.adoc[]
+
+include::requirements/REQ145.adoc[]
+
+Example: See files `wcseo_requestGetEOCoverageSet.xml` and
+`wcseo_responseGetEOCoverageSet.xml` being part of this standard.
+
+==== _GetEOCoverageSet_ WSDL
+
+include::requirements/REQ146.adoc[]
+
+NOTE: A sample service description relying on this binding is provided in file
+`example-soap-endpoint.wsdl`.

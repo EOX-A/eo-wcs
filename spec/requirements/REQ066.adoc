@@ -1,0 +1,10 @@
+[#/req/eowcs/describeEOCoverageSet-response-eoId,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-eoId']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-eoId +
+ +
+In the response to a successful _DescribeEOCoverageSet_ request containing a
+`wcs:CoverageDescriptions` section, each EO Coverage referred to by one of the
+objects identified in the `eoId` request parameter *shall* appear at most once.
+{set:cellbgcolor:#FFFFFF}
+|===

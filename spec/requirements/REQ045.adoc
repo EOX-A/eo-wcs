@@ -1,0 +1,11 @@
+[#/req/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getCapabilities-response-wcseoMetadata +
+ +
+The response to a successful _GetCapabilities_ request to an EO-WCS supporting
+the _eowcs_geteocoverageset_ conformance class *shall* contain a
+`wcseo:wcseoMetadata` element in the `wcs:Extension` element of
+`wcs:ServiceMetadata` including at least a `wcseo:defaultPackageFormat`
+element. {set:cellbgcolor:#FFFFFF}
+|===

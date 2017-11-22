@@ -1,0 +1,9 @@
+[#/req/eowcs_get-kvp/getEOCoverageSet-startIndex,reftext='Requirement {counter:requirement_id} /req/eowcs_get-kvp/getEOCoverageSet-startIndex']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_get-kvp/getEOCoverageSet-startIndex +
+ +
+The `startIndex` parameter of a _GetEOCoverageSet_ request *shall* be
+indicated as follows, for a non-negative integer value _x_: +
+`startindex=x` {set:cellbgcolor:#FFFFFF}
+|===

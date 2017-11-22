@@ -1,0 +1,9 @@
+[#/req/eowcs/nocircularreference-of-datasetSeries,reftext='Requirement {counter:requirement_id} /req/eowcs/nocircularreference-of-datasetSeries']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/nocircularreference-of-datasetSeries +
+ +
+A Dataset Series *shall* only refer to Dataset Series that do not refer to the
+Dataset Series at hand either directly or via other Dataset Series.
+{set:cellbgcolor:#FFFFFF}
+|===

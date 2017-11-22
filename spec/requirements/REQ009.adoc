@@ -1,0 +1,13 @@
+[#/req/eowcs/rangeTypeExtension,reftext='Requirement {counter:requirement_id} /req/eowcs/rangeTypeExtension']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/rangeTypeExtension +
+ +
+If additional range type information is made available then the
+`gmlcov:rangeType` element of `EOWCS::ReferenceableEOCoverage` and
+`EOWCS::RectifiedEOCoverage` instances *shall* contain
+`wcseo:rangeTypeExtension` elements either under the
+`swe:DataRecord/swe:extension` or each
+`swe:DataRecord/swe:field/swe:Quantity/swe:extension` element or both.
+{set:cellbgcolor:#FFFFFF}
+|===

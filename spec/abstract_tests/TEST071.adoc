@@ -1,0 +1,11 @@
+==== DescribeEOCoverageSet Response Bound Omitted
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-bound-omitted
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-bound-omitted>>
+|Test method:
+a|
+Send otherwise valid _DescribeEOCoverageSet_ requests with a lower or upper
+bound omitted to server under test. Check that the responses are the same when
+they are indicated in actual lower or upper bound of the objects.
+|===

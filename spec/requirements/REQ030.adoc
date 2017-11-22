@@ -1,0 +1,10 @@
+[#/req/eowcs/timePeriod-in-datasetSeries,reftext='Requirement {counter:requirement_id} /req/eowcs/timePeriod-in-datasetSeries']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/timePeriod-in-datasetSeries +
+ +
+For any given Dataset Series, the `timePeriod` element *shall* enclose the
+temporal validities of all Stitched Mosaics, Datasets, and Dataset Series the
+Dataset Series refers to, expressed in ISO 8601 <<b2>>.
+{set:cellbgcolor:#FFFFFF}
+|===

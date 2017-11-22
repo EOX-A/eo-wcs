@@ -1,0 +1,11 @@
+[#/req/eowcs/composedOf-in-stitched-mosaic,reftext='Requirement {counter:requirement_id} /req/eowcs/composedOf-in-stitched-mosaic']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/composedOf-in-stitched-mosaic +
+ +
+In `EOWCS::ReferenceableStitchedMosaic` and `EOWCS::RectifiedStitchedMosaic`
+instances with at least one `eop:EarthObservation/eop:metaDataProperty/eop:Earth
+ObservationMetaData/eop:composedOf`, the set of these elements *shall* be equal
+to the set of `dataset` identifiers of the Stitched Mosaic.
+{set:cellbgcolor:#FFFFFF}
+|===

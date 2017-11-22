@@ -1,0 +1,74 @@
+[#normative_references,reftext='3']
+== Normative references
+
+This _OGC WCS Application Profile - Earth Observation_ specification consists of
+the present document and an
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema]. The complete
+specification is identified by OGC URI
+http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1,
+the document has OGC URI
+http://www.opengis.net/doc/IS/WCS_application-profile_earth-observation/1.1.
+
+The complete specification is available for download from
+http://www.opengeospatial.org/standards/wcs; additionally, the XML Schema is
+posted online at http://schemas.opengis.net/wcs/wcseo/1.1 as part of the OGC
+schema repository. In the event of a discrepancy between bundled and schema
+repository versions of the XML Schema files, the schema repository shall be
+considered authoritative.
+
+The following normative documents contain provisions that, through reference in
+this text, constitute provisions of this specification. For dated references,
+subsequent amendments to, or revisions of, any of these publications do not
+apply. For undated references, the latest edition of the normative document
+referred to applies.
+
+OGC 06-121r9, _OGC Web Services Common Standard_, version 2.0
+
+OGC 09-146r2, _OGC® Coverage Implementation Schema_ (renamed from _OGC®
+GML Application Schema - Coverages_), version 1.0 +
+Conformance classes used: _gml-coverage_, _gml_, _multipart_, _special-format_
+
+OGC 09-110r4, _OGC® WCS 2.0 Interface Standard- Core: Corrigendum_, version
+2.0 +
+Conformance classes used: _core_
+
+OGC 11-053r1, _OGC® Web Coverage Service Interface Standard - CRS Extension_,
+version 1.0 +
+Conformance classes used: _crs_, _crs-gridded-coverage_
+
+OGC 12-039, _OGC® Web Coverage Service Interface Standard - Scaling Extension_,
+version 1.0 +
+Conformance classes used: _scaling_
+
+OGC 12-040, _OGC® Web Coverage Service Interface Standard - Range Subsetting
+Extension_, version 1.0 +
+Conformance classes used: _record-subsetting_
+
+OGC 12-049, _OGC® Web Coverage Service Interface Standard - Interpolation
+Extension_, version 1.0 +
+Conformance classes used: _interpolation_
+
+OGC 09-147r3, _OGC® Web Coverage Service 2.0 Interface Standard - KVP Protocol
+Binding Extension - Corrigendum_, version 1.0 +
+Conformance classes used: _get-kvp_
+
+OGC 09-149r1, _OGC® Web Coverage Service 2.0 Interface Standard - XML/SOAP
+Protocol Binding Extension_, version 1.0 +
+Conformance classes used: _soap_
+
+OGC 12-100r1, _OGC® GML Application Schema - Coverages - GeoTIFF Coverage
+Encoding Profile_, version 1.0 +
+Conformance classes used: _geotiff-coverage_
+
+OGC 14-100r2, _OGC® CF-netCDF 3.0 encoding using GML Coverage Application
+Schema_, version 2.0 +
+Conformance classes used: _CF-netCDF-1.6 GML encoding_, _CF-netCDF-1.6 data
+format_, _CF-netCDF-1.6 multipart data encoding_
+
+OGC 12-108, _OGC® GML Application Schema - Coverages JPEG2000 Coverage Encoding
+Extension_, version 1.0 +
+Conformance classes used: _jpeg2000-coverage_
+
+OGC 10-157r4, _OGC® Earth Observation Metadata profile of Observations &
+Measurements_, version 1.1 +
+Conformance classes used: _eop_, _sar_, _opt_

@@ -1,0 +1,10 @@
+[#/req/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions +
+ +
+If a _DescribeEOCoverageSet_ request contains a `sections` parameter then a
+successful response *shall* contain a `wcseo:DatasetSeriesDescriptions` element
+if and only if the section parameter list contains one of the values
+"DatasetSeriesDescriptions" or "All". {set:cellbgcolor:#FFFFFF}
+|===

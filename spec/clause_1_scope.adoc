@@ -1,0 +1,37 @@
+== Scope
+
+This OGC WCS Application Profile - Earth Observation Interface Standard -
+henceforth abbreviated as: _WCS Earth Observation Application Profile (EO-
+WCS)_ - defines data structures and operations which together allow retrieval
+of Earth Observation coverages offered by a WCS 2.0 server.
+
+EO- WCS, defines a profile of WCS 2.0 [OGC 09-110r4] for use on Earth
+Observation data. An Application Profile bundles several specifications and
+possibly adds additional requirements on an implementation. Extra requirements
+can be additions (for example, Dataset Series are introduced by this
+specification) or constraints (for example, coverages offered are required to
+include EO metadata).
+
+EO-WCS provides the following specification elements:
+
+* Definition of specific Earth Observation coverages (EO Coverages) which have
+a latitude/longitude or projected x/y spatial extent and a temporal validity
+extent. EO Coverages are derived from Referenceable Grid Coverages and
+Rectified Grid Coverages as defined in the Coverage Implementation Schema
+(renamed from GML Application Schema - Coverages) [OGC 09-146r2]. Each EO
+Coverage has an EO metadata set [OGC 10-157r4] contained in its metadata which
+describes the coverage on hand on a higher semantic level.
+
+* Definition of a hierarchy which allows to group EO Coverages suitably for an
+efficient retrieval:
+
+** Datasets as plain EO Coverages (and, hence, accessible as coverages);
+
+** Stitched Mosaics as homogeneous collections of spatially non-overlapping
+subsets of Datasets, accessible themselves as coverages;
+
+** Dataset Series as collections of Stitched Mosaics, Datasets, and/or Dataset
+Series; Dataset Series themselves are not coverages.
+
+* Bundling of several mandatory and optional WCS extensions for EO-WCS
+implementations.

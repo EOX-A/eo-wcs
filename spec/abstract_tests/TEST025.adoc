@@ -1,0 +1,20 @@
+==== Datasets in Stitched Mosaic Same Rangetype
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/datasets-in-stitched-mosaic-same-range-type
+|Test purpose: |<</req/eowcs/datasets-in-stitched-mosaic-same-range-type>>
+|Test method:
+a|
+For each Stitched Mosaic offered by the server under test:
+
+* Obtain range type via _DescribeCoverage_, _DescribeEOCoverageSet_, and
+  _GetCoverage_ operations. Check that all responses contain the same range type
+  information _s_.
+* For each obtained `dataset`:
+** Obtain range type via _DescribeCoverage_, _DescribeEOCoverageSet_, and
+   _GetCoverage_ operations.
+** Check that all responses contain the same range type _d_, and check that _d_
+   is identical to the range type of _s_.
+
+Test passes if all individual tests pass.
+|===

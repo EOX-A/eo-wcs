@@ -1,0 +1,9 @@
+==== Range type name
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/rangeType-name
+|Test purpose: |<</req/eowcs/rangeType-name>>
+|Test method:
+a|
+TODO
+|===

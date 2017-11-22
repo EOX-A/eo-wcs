@@ -1,0 +1,10 @@
+[#/req/eowcs/getCoverage-response-lineage-in-eo-metadata,reftext='Requirement {counter:requirement_id} /req/eowcs/getCoverage-response-lineage-in-eo-metadata']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCoverage-response-lineage-in-eo-metadata +
+ +
+In the response to a successful _GetCoverage_ request, the Lineage component
+*shall* consist of the Lineage component of the coverage requested with one
+record appended containing the complete, verbatim _GetCoverage_ request leading
+to this response. {set:cellbgcolor:#FFFFFF}
+|===

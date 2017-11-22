@@ -1,0 +1,11 @@
+[#/req/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported +
+ +
+The `wcseo:packageFormatSupported` element(s) delivered in the
+`wcseo:wcseoMetadata` element of the response to a successful _GetCapabilities_
+request *shall* list one to one the MIME type identifiers of all supported
+packaging formats for the _GetEOCoverageSet_ operation.
+{set:cellbgcolor:#FFFFFF}
+|===

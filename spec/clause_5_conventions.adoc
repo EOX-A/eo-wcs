@@ -1,0 +1,58 @@
+== Conventions
+
+=== UML notation
+
+Unified Modeling Language (UML) static structure diagrams appearing in this
+specification are used as described in Subclause 5.2 of OGC Web Services
+Common [OGC 06-121r9].
+
+=== Data dictionary tables
+
+The UML model data dictionary is specified herein in a series of tables. The
+contents of the columns in these tables are described in Subclause 5.5 of [OGC
+06-121r9]. The contents of these data dictionary tables are normative,
+including any table footnotes.
+
+=== Namespace prefix conventions
+
+The following namespaces are used in this document. The prefix abbreviations
+used constitute conventions used here, but are *not* normative. The namespaces
+to which the prefixes refer are normative, however.
+
+[#namespace_mappings,reftext='{table-caption} {counter:table-num}']
+.Namespace mappings
+[cols="^1,2*4",options="header"]
+|===============================================================================
+|Prefix |Namespace URI                          |Description
+|xsd    |http://www.w3.org/2001/XMLSchema       |XML Schema namespace
+|ows    |http://www.opengis.net/ows/2.0         |OWS Common 2.0
+|gml    |http://www.opengis.net/gml/3.2         |GML 3.2.1
+|gmlcov |http://www.opengis.net/gmlcov/1.0      |Coverages Implementation Schema
+1.0
+|wcs    |http://www.opengis.net/wcs/2.0         |WCS 2.0
+|eop    |http://www.opengis.net/eop/2.1         |Earth Observation Metadata
+Profile of Observations and Measurements
+|opt    |http://www.opengis.net/opt/2.1         |Optical Earth Observation
+Metadata Profile of Observations and Measurements (extension of eop)
+|sar    |http://www.opengis.net/sar/2.1         |SAR Earth Observation Metadata
+Profile of Observations and Measurements (extension of eop)
+|wcseo  |http://www.opengis.net/wcs/wcseo/1.1   |WCS Application Profile - Earth
+Observation 1.1
+|scal   |http://www.opengis.net/wcs/scaling/1.0 (schema uses
+http://www.opengis.net/WCS_service-extension_scaling/1.0) |WCS Scaling Extension
+|int    |http://www.opengis.net/wcs/interpolation/1.0 (schema uses
+http://www.opengis.net/WCS_service-extension_interpolation/1.0|WCS Interpolation
+Extension
+|crs    |http://www.opengis.net/wcs/crs/1.0     |WCS CRS Extension
+|gmd    |http://www.isotc211.org/2005/gmd       |ISO 19139 Metadata
+|gmi    |http://standards.iso.org/iso/19115/-2/gmi/1.0 or
+http://www.isotc211.org/2005/gmi |ISO 19139-2 Metadata
+|mdb    |http://standards.iso.org/iso/19115/-3/mdb/1.0 |ISO 19115-3 Metadata
+|===============================================================================
+
+=== Multiple representations
+
+When multiple representations of the same information are given in a
+specification document these are consistent. Should this not be the case then
+this is considered an error, and the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] shall take precedence.

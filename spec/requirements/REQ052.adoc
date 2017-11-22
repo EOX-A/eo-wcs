@@ -1,0 +1,13 @@
+[#/req/eowcs/getCoverage-response-eo-metadata,reftext='Requirement {counter:requirement_id} /req/eowcs/getCoverage-response-eo-metadata']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCoverage-response-eo-metadata +
+ +
+In the response to a successful _GetCoverage_ request on an EO Coverage, the
+`EOWCS::EOMetadata` of the coverage returned *shall* contain the complete
+`EOWCS::EOMetadata` of the coverage addressed, adjusted as specified in
+<</req/eowcs/getCoverage-response-eo-metadata-in-stitched-mosaic>>,
+<</req/eowcs/getCoverage-response-footprint-in-eo-metadata>>, and
+<</req/eowcs/getCoverage-response-lineage-in-eo-metadata>>.
+{set:cellbgcolor:#FFFFFF}
+|===

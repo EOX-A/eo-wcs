@@ -1,0 +1,10 @@
+==== eowcs_get-kvp/describeEOCoverageSet request
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_get-kvp/describeEOCoverageSet-request
+|Test purpose: |<</req/eowcs_get-kvp/describeEOCoverageSet-request>>
+|Test method:
+a|
+Send a valid get-kvp _DescribeEOCoverageSet_ request as defined. Check that the
+response is not an exception.
+|===

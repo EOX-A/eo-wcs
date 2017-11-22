@@ -1,0 +1,11 @@
+[#/req/eowcs/phenomenonTime-in-eo-metadata,reftext='Requirement {counter:requirement_id} /req/eowcs/phenomenonTime-in-eo-metadata']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/phenomenonTime-in-eo-metadata +
+ +
+The `EOWCS::EOMetadata` element of a `EOWCS::ReferenceableEOCoverage` or
+`EOWCS::RectifiedEOCoverage` instance *shall* contain elements
+`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition` and
+`eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition` where
+`beginPosition ≤ endPosition`. {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,11 @@
+[#/req/eowcs/rectifiedStitchedMosaic-structure,reftext='Requirement {counter:requirement_id} /req/eowcs/rectifiedStitchedMosaic-structure']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/rectifiedStitchedMosaic-structure +
+ +
+`EOWCS::RectifiedStitchedMosaic` instances *shall* conform to <<uml_model>>,
+<<uml_lineage_class>>, <<rectstitchedmosaic_components>>,
+<<datasetreference_components>>, and the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
+standard. {set:cellbgcolor:#FFFFFF}
+|===

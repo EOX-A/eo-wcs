@@ -1,0 +1,13 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-multipart,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-multipart']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-multipart +
+ +
+The response to a successful _GetEOCoverageSet_ request containing a
+`mediaType` parameter with value `multipart/related` *shall* follow the
+definitions of conformance class _multipart_ of the OGC® Coverage
+Implementation Schema [OGC 09-146r2]. +
+*Dependency*:
+http://www.opengis.net/spec/GMLCOV/1.0/conf/multipart
+{set:cellbgcolor:#FFFFFF}
+|===

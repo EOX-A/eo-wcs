@@ -1,0 +1,25 @@
+[appendix]
+:appendix-caption: Annex
+== Revision History
+
+[#revision_history,reftext='{table-caption} {counter:table-num}']
+[width="90%",cols="2,1,2,3,4",options="header"]
+|===
+|Date       |Release |Editor       |Primary clauses modified |Description
+|2010-10-27 |0.1.0   |Peter Baumann, Stephan Meissl |All     |Created
+|2011-01-19 |0.2.0   |Peter Baumann, Stephan Meissl |All     |Various updates
+|2011-01-19 |0.3.0   |Jinsongdi Yu                  |Annex A |Added ATS
+|2011-06-10 |0.4.0   |Peter Baumann, Stephan Meissl |All     |Incorporated OAB
+comments
+|2013-06-19 |0.5.2   |Peter Baumann, Stephan Meissl |All     |Thorough review
+and adjustments to WCS and GMLCOV corrigenda
+|2014-03-05 |1.0     |Peter Baumann, Stephan Meissl, Jinsongdi Yu |Clause 9.2.2,
+Footer |Corrected example and copyright year in
+|2016-05-10 |1.0     |Stephan Meissl                |None    |Made an Asciidoc
+copy and published it on GitHub (https://github.com/EOX-A/eo-wcs,
+https://eox-a.github.io/eo-wcs)
+|2016-08-31 |1.1draft |Stephan Meissl               |7.6     |Proposal from ESA
+project EVO-ODAS
+|2017-11-22 |1.1draft2 |Stephan Meissl              |None    |Adjusted
+document to new standards template
+|===

@@ -1,0 +1,10 @@
+[#/req/eowcs/getEOCoverageSet-response-referred,reftext='Requirement {counter:requirement_id} /req/eowcs/getEOCoverageSet-response-referred']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getEOCoverageSet-response-referred +
+ +
+The response to a successful _GetEOCoverageSet_ request *shall* contain exactly
+those EO Coverages referred to directly or indirectly via Dataset Series by one
+of the objects identified in the `eoId` request parameter, without any
+duplicates. {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response applySubset
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getEOCoverageSet-response-applySubset
+|Test purpose: |<</req/eowcs/getEOCoverageSet-response-applySubset>>
+|Test method:
+a|
+TODO
+|===

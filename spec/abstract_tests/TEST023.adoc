@@ -1,0 +1,16 @@
+==== Referenceable Stitched Mosaic Domainset
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/referenceableStitchedMosaic-domain-set
+|Test purpose: |<</req/eowcs/referenceableStitchedMosaic-domain-set>>
+|Test method:
+a|
+For each Referenceable Stitched Mosaic offered by the server under test:
+
+* For any pair _d~1~_ and _d~2~_ of Datasets referred to by the given Stitched
+  Mosaic:
+** Check that the set of point locations in the geographic overlap of the _d~1~_
+   and _d~2~_ domain set are identical.
+
+Test passes if all individual tests pass.
+|===

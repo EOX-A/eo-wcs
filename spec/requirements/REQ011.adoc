@@ -1,0 +1,14 @@
+[#/req/eowcs/rangeType-name,reftext='Requirement {counter:requirement_id} /req/eowcs/rangeType-name']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/rangeType-name +
+ +
+In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
+the `swe:identifier` element of each `swe:Quantity` element under each
+`swe:field` element *shall* hold the URL-encoded identifier of the respective
+field (also referred to as band or channel) and the `name` attribute of each
+`swe:field` element *shall* hold the first word (NCNAME type substring i.e.
+starting from it’s first character up to and excluding the first character
+which is not allowed in an NCName) of the identifier of the respective field.
+{set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,10 @@
+[#/req/eowcs_geteocoverageset/getCapabilities-response-defaultPackageFormat,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getCapabilities-response-defaultPackageFormat']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getCapabilities-response-defaultPackageFormat +
+ +
+The `wcseo:defaultPackageFormat` element delivered in the `wcseo:wcseoMetadata`
+element of the response to a successful _GetCapabilities_ request *shall*
+specify the default format used for _GetEOCoverageSet_ responses.
+{set:cellbgcolor:#FFFFFF}
+|===

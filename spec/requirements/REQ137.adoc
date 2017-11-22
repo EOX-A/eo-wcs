@@ -1,0 +1,9 @@
+[#/req/eowcs_get-kvp/getEOCoverageSet-parameters,reftext='Requirement {counter:requirement_id} /req/eowcs_get-kvp/getEOCoverageSet-parameters']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_get-kvp/getEOCoverageSet-parameters +
+ +
+The `Scaling`, `Interpolation`, `subsettingCrs`, and `outputCrs` parameters of
+a _GetEOCoverageSet_ request *shall* be indicated as defined in the respective
+WCS extension. {set:cellbgcolor:#FFFFFF}
+|===

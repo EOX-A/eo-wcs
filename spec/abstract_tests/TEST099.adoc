@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response Containment
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getEOCoverageSet-response-containment
+|Test purpose: |<</req/eowcs/getEOCoverageSet-response-containment>>
+|Test method:
+a|
+TODO
+|===

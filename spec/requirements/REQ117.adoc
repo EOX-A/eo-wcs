@@ -1,0 +1,12 @@
+[#/req/eowcs/crs,reftext='Requirement {counter:requirement_id} /req/eowcs/crs']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/crs +
+ +
+Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
+Interface Standard - CRS Extension [OGC 11-053r1]. +
+*Dependency*:
+http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs,
+http://www.opengis.net/spec/WCS_service-extension_crs/1.0/conf/crs-gridded-coverage
+{set:cellbgcolor:#FFFFFF}
+|===

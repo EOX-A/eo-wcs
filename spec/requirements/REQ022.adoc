@@ -1,0 +1,10 @@
+[#/req/eowcs/rectifiedStitchedMosaic-offsetVector,reftext='Requirement {counter:requirement_id} /req/eowcs/rectifiedStitchedMosaic-offsetVector']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/rectifiedStitchedMosaic-offsetVector +
+ +
+In a Rectified Stitched Mosaic instance, the value of the `gml:offsetVector`
+elements of the domain set *shall* be given by the corresponding values of the
+Rectified Datasets the Rectified Stitched Mosaic refers to.
+{set:cellbgcolor:#FFFFFF}
+|===

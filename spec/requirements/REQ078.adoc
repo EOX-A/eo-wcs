@@ -1,0 +1,11 @@
+[#/req/eowcs/describeEOCoverageSet-response-next,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-next']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-next +
+ +
+The response to a successful _DescribeEOCoverageSet_ request *shall* report in
+its `next` attribute the URI to retrieve the next page of results as specified
+by the `count` and `startIndex` parameters. The `next` attribute *shall* only
+be present if elements with a higher index in the result set than the returned
+ones are available. {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response phenomenonTime
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getEOCoverageSet-response-phenomenonTime
+|Test purpose: |<</req/eowcs/getEOCoverageSet-response-phenomenonTime>>
+|Test method:
+a|
+TODO
+|===

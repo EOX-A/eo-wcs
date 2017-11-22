@@ -1,0 +1,9 @@
+[#/req/eowcs/datasets-in-stitched-mosaic-same-range-type,reftext='Requirement {counter:requirement_id} /req/eowcs/datasets-in-stitched-mosaic-same-range-type']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/datasets-in-stitched-mosaic-same-range-type +
+ +
+For all Datasets _d_ some Stitched Mosaic _sm_ refers to the following *shall*
+hold: The range type of _d_ is identical to the range type of _sm_.
+{set:cellbgcolor:#FFFFFF}
+|===

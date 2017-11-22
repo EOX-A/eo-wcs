@@ -1,0 +1,11 @@
+[#/req/eowcs_get-kvp/mandatory,reftext='Requirement {counter:requirement_id} /req/eowcs_get-kvp/mandatory']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_get-kvp/mandatory +
+ +
+Implementations of this EO-WCS which support the _eowcs_get-kvp_ requirements
+class *shall* support the WCS 2.0 protocol extension GET/KVP [OGC 09-147r3]. +
+*Dependency*:
+http://www.opengis.net/spec/WCS_protocol-binding_get-kvp/1.0/conf/get-kvp
+{set:cellbgcolor:#FFFFFF}
+|===

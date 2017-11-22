@@ -1,0 +1,10 @@
+[#/req/eowcs/getCapabilities-response-datasetSeriesSummary,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-response-datasetSeriesSummary']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-response-datasetSeriesSummary +
+ +
+In the response to a successful _GetCapabilities_ request containing a
+`EOWCS::DatasetSeriesSummary` section, each Dataset Series identifier listed
+*shall* refer to a Dataset Series offered by the server.
+{set:cellbgcolor:#FFFFFF}
+|===

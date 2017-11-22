@@ -1,0 +1,9 @@
+[#/req/eowcs/describeEOCoverageSet-request-eoId,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-request-eoId']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-request-eoId +
+ +
+Each `eoId` parameter value in a _DescribeEOCoverageSet_ request *shall* be
+equal to the identifier of a Dataset, a Stitched Mosaic, or a Dataset Series
+offered by the server addressed. {set:cellbgcolor:#FFFFFF}
+|===

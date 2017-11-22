@@ -1,0 +1,10 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-interpolation,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-interpolation']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-interpolation +
+ +
+If a _GetCoverage_ request contains a `Interpolation` parameter then this
+parameter *shall* be applied individually to each EO Coverage to be returned as
+specified by the WCS Interpolation Extension [OGC 12-049].
+{set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,9 @@
+[#/req/eowcs/contributingFootprint-union-of-footprints,reftext='Requirement {counter:requirement_id} /req/eowcs/contributingFootprint-union-of-footprints']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/contributingFootprint-union-of-footprints +
+ +
+The footprint of a Stitched Mosaic *shall* be given by the union of the
+``contributingFootprint``s of the Datasets this Stitched Mosaic refers to.
+{set:cellbgcolor:#FFFFFF}
+|===
