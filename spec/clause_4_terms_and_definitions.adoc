@@ -12,8 +12,8 @@ in this Clause.
 
 === Coverage
 
-digital representation of a spatio-temporally varying phenomenon as defined in
-[OGC 09-146r2]
+digital representation of a spatio-temporally varying phenomenon as defined
+in [OGC 09-146r2]
 
 === Dataset
 
