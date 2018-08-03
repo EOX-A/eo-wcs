@@ -123,7 +123,7 @@ Example: See files `wcseo_requestDescribeEOCoverageSet.xml` and
 include::requirements/REQ143.adoc[]
 
 NOTE: A sample service description relying on this binding is provided in file
-`example-soap-endpoint.wsdl`.
+`example-soap-endpoint.wsdl.`
 
 ==== _GetEOCoverageSet_ SOAP encoding
 
@@ -139,4 +139,4 @@ Example: See files `wcseo_requestGetEOCoverageSet.xml` and
 include::requirements/REQ146.adoc[]
 
 NOTE: A sample service description relying on this binding is provided in file
-`example-soap-endpoint.wsdl`.
+`example-soap-endpoint.wsdl.`

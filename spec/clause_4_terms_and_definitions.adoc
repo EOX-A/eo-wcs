@@ -57,9 +57,9 @@ in an image format. The -> <<EO Product>> Dataset may combine different bands.
 === Lineage record
 
 Data structure documenting an operation that has been applied to the ->
-<<Coverage>> it is part of
+<<Coverage>> of which it is part
 
 === refers to
 
 contains, in its -> <<EO Metadata>> element as defined in [OGC 10-157r4], the
--> <<EO Metadata>> element of
+-> <<EO Metadata>> element

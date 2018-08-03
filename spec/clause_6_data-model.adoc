@@ -12,10 +12,10 @@ The data model of this EO-WCS centers around the data structure of an Earth
 Observation coverage (EO Coverage), which is a coverage extended with EO
 Metadata [OGC 10-157r4] and bound to a location on the Earth. EO Coverages are a
 subtype of either `GMLCOV::RectifiedGridCoverage` or
-`GMLCOV::ReferenceableGridCoverage`.
+`GMLCOV::ReferenceableGridCoverage.`
 
 Based on this EO Coverage concept (cf. Subclause 6.3), three main data elements
-are defined:
+are defined, as follows.
 
 * A _Dataset_ is an EO Coverage, which can represent, for example, a
 hyperspectral 2D satellite scene or a 3D atmospheric model; cf. Subclause  6.4.
@@ -41,9 +41,9 @@ concept like an EO Product containing multiple coverages with different
 resolutions as well.
 
 <<datasetseries_conceptual>> informally symbolizes how the concepts of Dataset,
-Stitched Mosaic, and Dataset Series relate to each other spatio-temporally:
+Stitched Mosaic, and Dataset Series relate to each other spatio-temporally, as follows.
 
-* A - a Dataset with a particular validity in time;
+* A - a Dataset with a particular validity in time.
 
 * B - a Stitched Mosaic; all its Datasets have a spatial extent contained in the
 Stitched Mosaic's spatial extent and a timespan contained in the Stitched
@@ -115,7 +115,7 @@ Schema (renamed from GML Application Schema - Coverages) [OGC 09-146r2]. EO
 Coverages appear in two variants:
 
 * _Rectified EO Coverages_ are derived from Rectified Grid Coverage as defined
-in [OGC 09-146r2];
+in [OGC 09-146r2]; and
 
 * _Referenceable EO Coverages_ are derived from Referenceable Grid Coverage as
 defined in [OGC 09-146r2].
@@ -347,7 +347,7 @@ include::requirements/REQ022.adoc[]
 include::requirements/REQ023.adoc[]
 
 The temporal validity of Stitched Mosaics is defined by the temporal validities
-of the Datasets the Stitched Mosaic refers to.
+of the Datasets to which the Stitched Mosaic refers.
 
 include::requirements/REQ024.adoc[]
 
@@ -359,7 +359,7 @@ include::requirements/REQ025.adoc[]
 
 ==== Range set
 
-The content of a Stitched Mosaic is given by the Datasets it refers to; cells of
+The content of a Stitched Mosaic is given by the Datasets to which it refers; cells of
 a Stitched Mosaic with domain coordinates outside of any embedded Dataset's
 contributingFootprint carry nil values (cf. <<datasetseries_conceptual2>>).
 
@@ -421,11 +421,11 @@ Stitched Mosaics, Datasets, and Dataset Series the Dataset Series refers to.
 include::requirements/REQ029.adoc[]
 
 NOTE: As opposed to Stitched Mosaics, Dataset Series do not require disjointness
-of the EO Coverages they refer to.
+of the EO Coverages to which they refer.
 
 The temporal validity of a Dataset Series is defined by the union of the
-temporal validities of all Stitched Mosaics, Datasets, and Dataset Series the
-Dataset Series refers to.
+temporal validities of all Stitched Mosaics, Datasets, and Dataset Series to which the
+Dataset Series refers.
 
 include::requirements/REQ030.adoc[]
 
@@ -477,4 +477,3 @@ Example: The following XML fragment shows a DatasetSeries instance.
     <wcs:CoverageId>someEOCoverage1</wcs:CoverageId>
   </wcseo:rectifiedDataset>
 </wcseo:DatasetSeries>
-
