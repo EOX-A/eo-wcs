@@ -28,8 +28,8 @@ defining the SOAP protocol binding of EO-WCS on conceptual level in Subclause
 9.3; the corresponding conformance class is _eowcs_soap_, with URI
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs_soap.
 
-Standardization target of all requirements and conformance classes are EO-WCS
-implementations (currently: servers).
+The standardization target of all requirements and conformance classes are EO-WCS
+implementations (currently servers).
 
 Requirements and conformance test URIs defined in this document are relative to
 http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/.

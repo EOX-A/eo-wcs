@@ -5,8 +5,8 @@
 
 This Clause defines request types and their responses for operations on EO
 Coverages. EO Coverages can be offered by a WCS server alongside with any other
-type of coverages. Behavior of the service on non-EO Coverages remains
-unchanged.EO data model
+type of coverage. Behavior of the service on non-EO Coverages remains
+unchanged.
 
 === _GetCapabilities_ operation
 
@@ -27,11 +27,11 @@ The _GetCapabilities_ response is extended over WCS Core [OGC 09-110r4] as
 follows:
 
 * There is an additional `DatasetSeriesSummary` section reporting identifiers of
-Dataset Series offered by the service on hand.
+Dataset Series offered by the service on hand;
 
 * There is an optional constraint `CountDefault` specifying the maximum number
 of `CoverageDescription` and `DatasetSeriesDescription` elements reported in a
-`DescribeEOCoverageSet` response.
+`DescribeEOCoverageSet` response; and
 
 * For the _eowcs_geteocoverageset_ conformance class there is an additional
 `<wcseo:wcseoMetadata` element inside the `wcs:Extension` element of
@@ -318,7 +318,7 @@ The _GetCoverage_ response is as defined in the WCS Core [OGC 09-110r4], however
 extended in two respects:
 
 * The coverage returned contains exactly one metadata element holding the EO
-Metadata record (it may contain further metadata elements in addition);
+Metadata record (it may contain further metadata elements in addition); and
 
 * The lineage component of the EO Metadata record returned consists of the
 preexisting lineage sequence plus one element appended which describes the
@@ -703,7 +703,7 @@ violating Dataset Series and/or EO Coverage identifiers
 
 ==== Overview
 
-Just like the _DescribeEOCoverageSet_ request a _GetEOCoverageSet_ request
+Just like the _DescribeEOCoverageSet_ request, a _GetEOCoverageSet_ request
 submits one or more Dataset Series, Stitched Mosaic, or Dataset identifiers
 together with a spatio-temporal subsetting criterion ("bounding box"). By
 default, the spatial constraint is expressed in WGS84 <<b4>>, the temporal

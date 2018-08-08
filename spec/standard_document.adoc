@@ -18,14 +18,14 @@
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
 |Submission Date: 2016-08-31
-|Approval Date: TBD
+|Approval Date: 2018-01-02
 |Publication Date: TBD
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.1
 |Internal reference number of this OGC(R) document: 10-140r2
 |URL for this OGC® document: https://schpidi.github.io/eo-wcs/
 |PDF version: https://schpidi.github.io/eo-wcs/index.pdf
-|Version: 1.1draft2
-|Category: OGC(R) Interface Standard
+|Version: 1.1
+|Category: OGC(R) Implementation Standard
 |Editor: Peter Baumann, Stephan Meissl, Jinsongdi Yu
 |===
 
@@ -37,7 +37,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) 2014, 2016, 2017 Open Geospatial Consortium
+|Copyright (C) 2014, 2016, 2018 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 
@@ -46,15 +46,13 @@
 |*Warning*
 |===
 
-This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.
-
-Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+This document is an OGC Member approved international standard.  This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
 
 [width = "50%", grid = "none"]
 |===
 |Document type: OGC® Standard
-|Document subtype: Interface
-|Document stage: Draft update of Approved version
+|Document subtype: Implementation
+|Document stage: Approved
 |Document language: English
 |===
 

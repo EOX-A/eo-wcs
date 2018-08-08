@@ -1,12 +1,8 @@
 [big]*i.     Abstract*
 
 The OGC _Web Coverage Service (WCS) Application Profile - Earth Observation_
-(EO- WCS), defines a profile of WCS 2.0 [OGC 09-110r4] for use on Earth
+(EO- WCS) defines a profile of WCS 2.0 [OGC 09-110r4] for use on Earth
 Observation data.
-
-Suggested additions, changes, and comments on this draft document are welcome
-and encouraged. Such suggestions may be submitted by email message or by
-making suggested changes in an edited copy of this document.
 
 [big]*ii.    Keywords*
 
@@ -18,7 +14,7 @@ series, stitched mosaic
 
 [big]*iii.   Preface*
 
-This WCS Application Profile for Earth Observation is an OGC Interface
+This WCS Application Profile for Earth Observation is an OGC Implementation
 Standard which relies on WCS 2.0 (the Core [OGC 09-110r4] plus selected
 extensions), the Coverages Implementation Schema (renamed from GML Application
 Schema - Coverages) [OGC 09-146r2], the Earth Observation Metadata Profile of

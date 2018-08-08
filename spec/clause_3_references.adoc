@@ -22,53 +22,53 @@ subsequent amendments to, or revisions of, any of these publications do not
 apply. For undated references, the latest edition of the normative document
 referred to applies.
 
-OGC 06-121r9, _OGC Web Services Common Standard_, version 2.0
+OGC: OGC 06-121r9, _OGC Web Services Common Standard_, version 2.0, 2010
 
-OGC 09-146r2, _OGC® Coverage Implementation Schema_ (renamed from _OGC®
-GML Application Schema - Coverages_), version 1.0 +
+OGC: OGC 09-146r2, _OGC® Coverage Implementation Schema_ (renamed from _OGC®
+GML Application Schema - Coverages_), version 1.0, 2012 +
 Conformance classes used: _gml-coverage_, _gml_, _multipart_, _special-format_
 
-OGC 09-110r4, _OGC® WCS 2.0 Interface Standard- Core: Corrigendum_, version
-2.0 +
+OGC: OGC 09-110r4, _OGC® WCS 2.0 Interface Standard- Core: Corrigendum_, version
+2.0, 2012 +
 Conformance classes used: _core_
 
-OGC 11-053r1, _OGC® Web Coverage Service Interface Standard - CRS Extension_,
-version 1.0 +
+OGC: OGC 11-053r1, _OGC® Web Coverage Service Interface Standard - CRS Extension_,
+version 1.0, 2014 +
 Conformance classes used: _crs_, _crs-gridded-coverage_
 
-OGC 12-039, _OGC® Web Coverage Service Interface Standard - Scaling Extension_,
-version 1.0 +
+OGC: OGC 12-039, _OGC® Web Coverage Service Interface Standard - Scaling Extension_,
+version 1.0, 2014 +
 Conformance classes used: _scaling_
 
-OGC 12-040, _OGC® Web Coverage Service Interface Standard - Range Subsetting
-Extension_, version 1.0 +
+OGC: OGC 12-040, _OGC® Web Coverage Service Interface Standard - Range Subsetting
+Extension_, version 1.0, 2013 +
 Conformance classes used: _record-subsetting_
 
-OGC 12-049, _OGC® Web Coverage Service Interface Standard - Interpolation
-Extension_, version 1.0 +
+OGC: OGC 12-049, _OGC® Web Coverage Service Interface Standard - Interpolation
+Extension_, version 1.0, 2014 +
 Conformance classes used: _interpolation_
 
-OGC 09-147r3, _OGC® Web Coverage Service 2.0 Interface Standard - KVP Protocol
-Binding Extension - Corrigendum_, version 1.0 +
+OGC: OGC 09-147r3, _OGC® Web Coverage Service 2.0 Interface Standard - KVP Protocol
+Binding Extension - Corrigendum_, version 1.0, 2013 +
 Conformance classes used: _get-kvp_
 
-OGC 09-149r1, _OGC® Web Coverage Service 2.0 Interface Standard - XML/SOAP
-Protocol Binding Extension_, version 1.0 +
+OGC: OGC 09-149r1, _OGC® Web Coverage Service 2.0 Interface Standard - XML/SOAP
+Protocol Binding Extension_, version 1.0, 2010 +
 Conformance classes used: _soap_
 
-OGC 12-100r1, _OGC® GML Application Schema - Coverages - GeoTIFF Coverage
-Encoding Profile_, version 1.0 +
+OGC: OGC 12-100r1, _OGC® GML Application Schema - Coverages - GeoTIFF Coverage
+Encoding Profile_, version 1.0, 2014 +
 Conformance classes used: _geotiff-coverage_
 
-OGC 14-100r2, _OGC® CF-netCDF 3.0 encoding using GML Coverage Application
-Schema_, version 2.0 +
+OGC: OGC 14-100r2, _OGC® CF-netCDF 3.0 encoding using GML Coverage Application
+Schema_, version 2.0, 2015 +
 Conformance classes used: _CF-netCDF-1.6 GML encoding_, _CF-netCDF-1.6 data
 format_, _CF-netCDF-1.6 multipart data encoding_
 
-OGC 12-108, _OGC® GML Application Schema - Coverages JPEG2000 Coverage Encoding
-Extension_, version 1.0 +
+OGC: OGC 12-108, _OGC® GML Application Schema - Coverages JPEG2000 Coverage Encoding
+Extension_, version 1.0, 2015 +
 Conformance classes used: _jpeg2000-coverage_
 
-OGC 10-157r4, _OGC® Earth Observation Metadata profile of Observations &
-Measurements_, version 1.1 +
+OGC: OGC 10-157r4, _OGC® Earth Observation Metadata profile of Observations &
+Measurements_, version 1.1, 2016 +
 Conformance classes used: _eop_, _sar_, _opt_

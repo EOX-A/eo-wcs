@@ -12,7 +12,7 @@ can be additions (for example, Dataset Series are introduced by this
 specification) or constraints (for example, coverages offered are required to
 include EO metadata).
 
-EO-WCS provides the following specification elements:
+EO-WCS provides the following specification elements.
 
 * Definition of specific Earth Observation coverages (EO Coverages) which have
 a latitude/longitude or projected x/y spatial extent and a temporal validity
@@ -28,7 +28,7 @@ efficient retrieval:
 ** Datasets as plain EO Coverages (and, hence, accessible as coverages);
 
 ** Stitched Mosaics as homogeneous collections of spatially non-overlapping
-subsets of Datasets, accessible themselves as coverages;
+subsets of Datasets, accessible themselves as coverages; and
 
 ** Dataset Series as collections of Stitched Mosaics, Datasets, and/or Dataset
 Series; Dataset Series themselves are not coverages.
