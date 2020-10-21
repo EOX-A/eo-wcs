@@ -1,0 +1,9 @@
+[#/req/eowcs/eo-metadata-in-eo-coverage,reftext='Requirement {counter:requirement_id} /req/eowcs/eo-metadata-in-eo-coverage']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/eo-metadata-in-eo-coverage +
+ +
+`EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances
+*shall* contain one metadata element of type `EOWCS::EOMetadata`.
+{set:cellbgcolor:#FFFFFF}
+|===

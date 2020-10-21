@@ -1,0 +1,15 @@
+[#/req/eowcs/getEOCoverageSet-response-containment,reftext='Requirement {counter:requirement_id} /req/eowcs/getEOCoverageSet-response-containment']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getEOCoverageSet-response-containment +
+ +
+The response to a successful _GetEOCoverageSet_ request *shall* contain only
+those EO Coverages whose spatial footprint defined by its
+`eop:EarthObservation/om:featureOfInterest/eop:Footprint` +
+- overlaps with the spatial request extent, and the request parameter
+  `containment` is of value `overlaps` or is omitted, +
+- is completely contained within the spatial request extent, and the request
+  parameter `containment` is of value `contains` +
+whereby all spatial coordinates are expressed in WGS84 <<b4>> if no
+`subsettingCrs` parameter is present. {set:cellbgcolor:#FFFFFF}
+|===

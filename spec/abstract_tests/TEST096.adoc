@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response GetCoverage Applicable
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getEOCoverageSet-getCoverage
+|Test purpose: |<</req/eowcs_geteocoverageset/getEOCoverageSet-getCoverage>>
+|Test method:
+a|
+TODO
+|===

@@ -1,0 +1,10 @@
+[#/req/eowcs/describeEOCoverageSet-request-dimensions,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-request-dimensions']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-request-dimensions +
+ +
+If a _DescribeEOCoverageSet_ request contains `dimensionTrim` elements with
+`dimension` parameters then each such `dimension` parameter *shall* have one of
+the values "lat", "long", or "phenomenonTime". Each of these values *shall*
+appear at most once in a given request. {set:cellbgcolor:#FFFFFF}
+|===

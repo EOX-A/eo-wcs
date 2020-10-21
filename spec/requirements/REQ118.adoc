@@ -1,0 +1,16 @@
+[#/req/eowcs/encodings,reftext='Requirement {counter:requirement_id} /req/eowcs/encodings']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/encodings +
+ +
+Implementations of this EO-WCS *shall* support at least one of the coverage
+format encodings GeoTIFF [OGC 12-100r1], NetCDF [OGC 14-100r2], and JPEG2000
+[OGC 12-108]. +
+*Dependency*:
+http://www.opengis.net/spec/GMLCOV_geotiff-coverages/1.0/conf/geotiff-coverage,
+http://www.opengis.net/spec/netCDF_data-model/conf/CF-netCDF-1.6-GML-encoding,
+http://www.opengis.net/spec/netCDF_data-model/conf/CF-netCDF-1.6-Data-format,
+http://www.opengis.net/spec/netCDF_data-model/conf/CF-netCDF-1.6-Multipart-encoding,
+http://www.opengis.net/spec/gmlcov_jpeg2000-coverages/1.0/conf/jpeg2000-coverage
+{set:cellbgcolor:#FFFFFF}
+|===

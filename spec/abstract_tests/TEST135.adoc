@@ -1,0 +1,9 @@
+==== eowcs_get-kvp/getEOCoverageSet format
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_get-kvp/getEOCoverageSet-format
+|Test purpose: |<</req/eowcs_get-kvp/getEOCoverageSet-format>>
+|Test method:
+a|
+TODO
+|===

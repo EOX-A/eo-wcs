@@ -1,0 +1,9 @@
+[#/req/eowcs/footprint-in-datasetSeries,reftext='Requirement {counter:requirement_id} /req/eowcs/footprint-in-datasetSeries']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/footprint-in-datasetSeries +
+ +
+The `footprint` of a Dataset Series instance *shall* enclose the union of the
+footprints of all Stitched Mosaics, Datasets, and Dataset Series the Dataset
+Series refers to, expressed in WGS84. {set:cellbgcolor:#FFFFFF}
+|===

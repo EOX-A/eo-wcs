@@ -1,0 +1,18 @@
+[#/req/eowcs_get-kvp/describeEOCoverageSet-subset,reftext='Requirement {counter:requirement_id} /req/eowcs_get-kvp/describeEOCoverageSet-subset']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_get-kvp/describeEOCoverageSet-subset +
+ +
+The `trim` parameters of a
+_DescribeEOCoverageSet_ request *shall* be indicated through a possibly empty
+set of subset specifications, each one with key \"``subset``" and value
+specification given by a `SubsetSpec` adhering to this EBNF syntax <<b3>>
+and the resp. XML definitions <<b6>>: +
+`SubsetSpec: dimension [underline]#(# interval [underline]#)#` +
+`dimension: [underline]#long# \| [underline]#lat# \| [underline]#phenomenonTime#` +
+`interval: low [underline]#,# high` +
+`low: point \| [underline]#\*#` +
+`high: point \| [underline]#*#` +
+`point: number \| [underline]#"# token [underline]#"#` // [underline]#"# = ASCII 0x42
+{set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,10 @@
+[#/req/eowcs/footprint-inside-boundedBy,reftext='Requirement {counter:requirement_id} /req/eowcs/footprint-inside-boundedBy']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/footprint-inside-boundedBy +
+ +
+In `EOWCS::ReferenceableEOCoverage` and `EOWCS::RectifiedEOCoverage` instances,
+all polygons listed in `eop:EarthObservation/om:featureOfInterest/eop:Footprint`
+element *shall* be geometrically contained in the bounding box of the
+`gml:boundedBy` element of the `gml:Envelope`. {set:cellbgcolor:#FFFFFF}
+|===

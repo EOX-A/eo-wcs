@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response Bound Omitted
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getEOCoverageSet-response-bound-omitted
+|Test purpose: |<</req/eowcs/getEOCoverageSet-response-bound-omitted>>
+|Test method:
+a|
+TODO
+|===

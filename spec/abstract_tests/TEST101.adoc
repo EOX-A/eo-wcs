@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response Trim Omitted
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getEOCoverageSet-response-trim-omitted
+|Test purpose: |<</req/eowcs/getEOCoverageSet-response-trim-omitted>>
+|Test method:
+a|
+TODO
+|===

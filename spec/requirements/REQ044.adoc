@@ -1,0 +1,10 @@
+[#/req/eowcs/getCapabilities-response-paging-supported,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-response-paging-supported']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-response-paging-supported +
+ +
+The response to a successful _GetCapabilities_ request to an EO-WCS supporting
+paging *shall* contain `ows:Contraint` elements with name attribute values of
+`ImplementsResultPaging` and `CountDefault`. The `ImplementsResultPaging`
+constraint *shall* have a value of "TRUE". {set:cellbgcolor:#FFFFFF}
+|===

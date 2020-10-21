@@ -1,0 +1,9 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss +
+ +
+If a _GetCoverage_ request contains a `subsettingCrs` and/or `outputCrs`
+parameter then this parameter(s) *shall* follow the specification given in the
+WCS CRS Extension [OGC 11-053r1]. {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,10 @@
+[#/req/eowcs/getCapabilities-request-sections,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-request-sections']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-request-sections +
+ +
+If a _GetCapabilities_ request contains an `ows:Sections` element then this
+element *shall* contain `ows:Section` elements with the values defined in OWS
+Common, or "DatasetSeriesSummary", or "CoverageSummary". +
+*Dependency*: [OGC 06-121r9] clause 7.3.3 {set:cellbgcolor:#FFFFFF}
+|===

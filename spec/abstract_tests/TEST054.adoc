@@ -1,0 +1,19 @@
+==== GetCoverage Response Footprint in EO Metadata
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCoverage-response-footprint-in-eo-metadata
+|Test purpose: |<</req/eowcs/getCoverage-response-footprint-in-eo-metadata>>
+|Test method:
+a|
+For each EO Coverage offered by the server:
+
+* Send a valid _GetCoverage_ request with a spatial request trim interval to
+  server under test. Check that the footprint of the `EOWCS::EOMetadata` in the
+  coverage returned is given by the intersection of the spatial request interval
+  and the footprint of the coverage requested.
+* Send a valid _GetCoverage_ request without a trimming interval to server under
+  test. Check that the footprint in the result coverage is given by the
+  footprint of the coverage requested.
+
+Test passes if all individual tests pass.
+|===

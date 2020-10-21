@@ -1,0 +1,12 @@
+==== DescribeEOCoverageSet Response EO Metadata
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-eo-metadata
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-eo-metadata>>
+|Test method:
+a|
+Send a valid _DescribeEOCoverageSet_ requests to server under test, check that
+each `WCS::CoverageDescription` listed in the response contains one
+`EOWCS::EOMetadata` element and this element contains the EO Metadata component
+of the EO Coverage to be described.
+|===

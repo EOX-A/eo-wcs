@@ -1,0 +1,9 @@
+[#/req/eowcs_get-kvp/describeEOCoverageSet-eoid,reftext='Requirement {counter:requirement_id} /req/eowcs_get-kvp/describeEOCoverageSet-eoid']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_get-kvp/describeEOCoverageSet-eoid +
+ +
+The `eoId` parameter of a _DescribeEOCoverageSet_ request *shall* be indicated
+as follows, for parameter values _v~1~, ..., v~n~_: +
+`eoid=v~1~,...,v~n~` {set:cellbgcolor:#FFFFFF}
+|===

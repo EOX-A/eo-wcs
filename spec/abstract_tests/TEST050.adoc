@@ -1,0 +1,14 @@
+==== GetCoverage Request no Slicing
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCoverage-request-no-slicing
+|Test purpose: |<</req/eowcs/getCoverage-request-no-slicing>>
+|Test method:
+a|
+For each EO Coverage offered by the server:
+
+* send otherwise _GetCoverage_ requests with and without a slicing operation.
+* Check whether appropriate valid results or exceptions, resp., are delivered.
+
+Test passes if all individual tests pass.
+|===

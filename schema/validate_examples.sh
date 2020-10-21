@@ -29,15 +29,17 @@
 export XML_CATALOG_FILES="catalog.xml"
 
 echo "Validating EO-WCS examples against wcsEOAll.xsd"
-find examples/ -name "*[^S][^O][^A][^P].xml" -exec xmllint --noout --schema http://schemas.opengis.net/wcs/wcseo/1.0/wcsEOAll.xsd {} \;
+find wcseo/examples/ -name "*[^S][^O][^A][^P].xml" -exec xmllint --noout --schema http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd {} \;
 
 echo "\nValidating EO-WCS examples against wcsEOSchematron.sch"
-xsltproc schematron_xslt1/iso_dsdl_include.xsl wcsEOSchematron.sch | xsltproc schematron_xslt1/iso_abstract_expand.xsl - | xsltproc schematron_xslt1/iso_svrl_for_xslt1.xsl - | xsltproc - \
-    examples/wcseo_requestGetCapabilities.xml \
-    examples/wcseo_responseGetCapabilities.xml \
-    examples/wcseo_requestDescribeEOCoverageSet.xml \
-    examples/wcseo_responseDescribeEOCoverageSet_minimal.xml \
-    examples/wcseo_responseDescribeEOCoverageSet.xml \
-    examples/wcseo_requestGetCoverage.xml \
-    examples/wcseo_responseGetCoverage.xml \
-    examples/wcseo_responseGetCoverage_StitchedMosaic.xml
+xsltproc schematron_xslt1/iso_dsdl_include.xsl wcseo/wcsEOSchematron.sch | xsltproc schematron_xslt1/iso_abstract_expand.xsl - | xsltproc schematron_xslt1/iso_svrl_for_xslt1.xsl - | xsltproc - \
+    wcseo/examples/wcseo_requestGetCapabilities.xml \
+    wcseo/examples/wcseo_responseGetCapabilities.xml \
+    wcseo/examples/wcseo_requestDescribeEOCoverageSet.xml \
+    wcseo/examples/wcseo_responseDescribeEOCoverageSet_minimal.xml \
+    wcseo/examples/wcseo_responseDescribeEOCoverageSet.xml \
+    wcseo/examples/wcseo_requestGetCoverage.xml \
+    wcseo/examples/wcseo_responseGetCoverage.xml \
+    wcseo/examples/wcseo_responseGetCoverage_StitchedMosaic.xml \
+    wcseo/examples/wcseo_requestGetEOCoverageSet.xml \
+    wcseo/examples/wcseo_responseGetEOCoverageSet.xml

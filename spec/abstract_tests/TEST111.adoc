@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response Scaling
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getEOCoverageSet-scaling
+|Test purpose: |<</req/eowcs_geteocoverageset/getEOCoverageSet-scaling>>
+|Test method:
+a|
+TODO
+|===

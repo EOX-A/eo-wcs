@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response Referred
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getEOCoverageSet-response-referred
+|Test purpose: |<</req/eowcs/getEOCoverageSet-response-referred>>
+|Test method:
+a|
+TODO
+|===

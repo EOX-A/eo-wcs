@@ -1,0 +1,10 @@
+==== Scaling
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/scaling
+|Test purpose: |<</req/eowcs/scaling>>
+|Test method:
+a|
+Determine the list of supported extensions via a valid _GetCapabilities_
+request; check that the extension required is listed.
+|===

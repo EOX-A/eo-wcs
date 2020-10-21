@@ -1,0 +1,12 @@
+[#/req/eowcs/getCoverage-response-footprint-in-eo-metadata,reftext='Requirement {counter:requirement_id} /req/eowcs/getCoverage-response-footprint-in-eo-metadata']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCoverage-response-footprint-in-eo-metadata +
+ +
+If, in a successful _GetCoverage_ request on an EO Coverage, trimming along
+spatial coordinates is specified then the footprint of the `EOWCS::EOMetadata`
+in the coverage returned *shall* be given by the intersection of the spatial
+request interval and the footprint of the coverage requested. Otherwise, the
+footprint in the result coverage *shall* be given by the footprint of the
+coverage requested. {set:cellbgcolor:#FFFFFF}
+|===

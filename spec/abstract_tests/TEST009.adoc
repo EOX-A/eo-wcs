@@ -1,0 +1,9 @@
+==== Range type extension
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/rangeTypeExtension
+|Test purpose: |<</req/eowcs/rangeTypeExtension>>
+|Test method:
+a|
+TODO
+|===

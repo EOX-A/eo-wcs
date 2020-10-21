@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wcseo:GetEOCoverageSet xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1" xmlns:wcs="http://www.opengis.net/wcs/2.0" xmlns:int="http://www.opengis.net/WCS_service-extension_interpolation/1.0" xmlns:scal="http://www.opengis.net/WCS_service-extension_scaling/1.0" xmlns:crs="http://www.opengis.net/wcs/crs/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wcs/wcseo/1.1 http://schemas.opengis.net/wcs/wcseo/1.1/wcsEOAll.xsd" service="WCS" version="2.0.1" count="100" startIndex="0">
+  <wcseo:eoId>someDatasetSeries1</wcseo:eoId>
+  <wcseo:containment>OVERLAPS</wcseo:containment>
+  <wcs:DimensionTrim>
+    <wcs:Dimension>long</wcs:Dimension>
+    <wcs:TrimLow>16</wcs:TrimLow>
+    <wcs:TrimHigh>18</wcs:TrimHigh>
+  </wcs:DimensionTrim>
+  <wcs:DimensionTrim>
+    <wcs:Dimension>lat</wcs:Dimension>
+    <wcs:TrimLow>40</wcs:TrimLow>
+    <wcs:TrimHigh>42</wcs:TrimHigh>
+  </wcs:DimensionTrim>
+  <wcs:DimensionTrim>
+    <wcs:Dimension>phenomenonTime</wcs:Dimension>
+    <wcs:TrimLow>2008-03-13T10:10:00Z</wcs:TrimLow>
+    <wcs:TrimHigh>2008-03-13T10:11:00Z</wcs:TrimHigh>
+  </wcs:DimensionTrim>
+  <wcseo:packageFormat>application/x-gzip</wcseo:packageFormat>
+  <wcseo:mediaType>multipart/related</wcseo:mediaType>
+  <wcseo:format>image/tiff</wcseo:format>
+  <wcseo:applySubset>true</wcseo:applySubset>
+  <scal:Scaling>
+    <scal:ScaleByFactor>
+      <scal:scaleFactor>2.0</scal:scaleFactor>
+    </scal:ScaleByFactor>
+  </scal:Scaling>
+  <int:Interpolation>
+    <int:globalInterpolation>http://www.opengis.net/def/interpolation/OGC/1/nearest-neighbor</int:globalInterpolation>
+  </int:Interpolation>
+  <crs:subsettingCrs>http://www.opengis.net/def/crs/EPSG/0/4326</crs:subsettingCrs>
+  <crs:outputCrs>http://www.opengis.net/def/crs/EPSG/0/4326</crs:outputCrs>
+</wcseo:GetEOCoverageSet>

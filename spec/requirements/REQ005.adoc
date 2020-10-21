@@ -1,0 +1,12 @@
+[#/req/eowcs/eop-identifier-in-eo-metadata,reftext='Requirement {counter:requirement_id} /req/eowcs/eop-identifier-in-eo-metadata']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/eop-identifier-in-eo-metadata +
+ +
+The `EOWCS::EOMetadata` element of `EOWCS::ReferenceableEOCoverage` and
+`EOWCS::RectifiedEOCoverage` instances shall contain an element
+`eop:EarthObservation/eop:metadataProperty/eop:EarthObservationMetaData/eop:identifier`
+whose first word (NCNAME type substring i.e. starting from it's first character
+up to and excluding the first character which is not allowed in an NCName) is
+identical to the EO Coverage identifier. {set:cellbgcolor:#FFFFFF}
+|===

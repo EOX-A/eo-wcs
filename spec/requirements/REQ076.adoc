@@ -1,0 +1,10 @@
+[#/req/eowcs/describeEOCoverageSet-response-numberReturned,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-numberReturned']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-numberReturned +
+ +
+The response to a successful _DescribeEOCoverageSet_ request *shall* report in
+its `numberReturned` attribute the sum of all `CoverageDescription` and
+`DatasetSeriesDescription` elements included in the response.
+{set:cellbgcolor:#FFFFFF}
+|===

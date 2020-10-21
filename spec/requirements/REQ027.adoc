@@ -1,0 +1,13 @@
+[#/req/eowcs/range-values-of-stitched-mosaic,reftext='Requirement {counter:requirement_id} /req/eowcs/range-values-of-stitched-mosaic']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/range-values-of-stitched-mosaic +
+ +
+For a Stitched Mosaic _sm_ its range values of cells with location _p_,
+expressed in any of the CRSs supported by _sm_, *shall* be given as follows: +
+- if _p_ is located within the `contributingFootprint` of some Dataset _d_
+referred to by _sm_ then it is the range value of _d_ at _p_; +
+- if _p_ is not located within the `contributingFootprint` of any Dataset _d_
+referred to by _sm_ then it is one of the range values contained in the nil
+value set of _sm_. {set:cellbgcolor:#FFFFFF}
+|===

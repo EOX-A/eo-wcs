@@ -1,0 +1,10 @@
+[#/req/eowcs/dataset-structure,reftext='Requirement {counter:requirement_id} /req/eowcs/dataset-structure']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/dataset-structure +
+ +
+A `EOWCS::ReferenceableDataset` and a `EOWCS::RectifiedDataset` *shall* conform
+to <<uml_model>>, <<uml_lineage_class>>, and the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
+standard. {set:cellbgcolor:#FFFFFF}
+|===

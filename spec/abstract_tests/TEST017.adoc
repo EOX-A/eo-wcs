@@ -1,0 +1,23 @@
+==== Contributing Footprint inside Footprint
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/contributingFootprint-inside-footprint
+|Test purpose: |<</req/eowcs/contributingFootprint-inside-footprint>>
+|Test method:
+a|
+For each Stitched Mosaic offered by the server under test:
+
+* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
+  and _GetCoverage_ operations.
+* For each obtained `dataset` _d_:
+** obtain the contributingFootprint associated with the reference to _d_ and
+   check that all responses contain the same contributingFootprint information
+   with the reference to _d_.
+** obtain the footprint of _d_ coverage via _DescribeCoverage_,
+   _DescribeEOCoverageSet_, and _GetCoverage_ operations, and check that all
+   responses contain the same footprint information.
+** Check that the contributingFootprint associated with the reference to _d_ is
+   contained in the footprint of _d_.
+
+Test passes if all individual tests pass.
+|===

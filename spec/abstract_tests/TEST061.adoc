@@ -1,0 +1,16 @@
+==== DescribeEOCoverageSet Request CRS
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-request-crs
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-request-crs>>
+|Test method:
+a|
+Send otherwise valid _DescribeEOCoverageSet_ requests to server under test which
+contain:
+
+* WGS84 <<b4>> as spatial and ISO8601 <<b2>> as temporal CRS for the
+  coordinates in trim request
+* Other CRS for the coordinates in trim requests
+
+Pass test if appropriate valid results or exceptions, resp., are delivered.
+|===

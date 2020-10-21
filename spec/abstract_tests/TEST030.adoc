@@ -1,0 +1,19 @@
+==== TimePeriod in DatasetSeries
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/timePeriod-in-datasetSeries
+|Test purpose: |<</req/eowcs/timePeriod-in-datasetSeries>>
+|Test method:
+a|
+For each `EOWCS::DatasetSeries` offered by the server under test:
+
+* Obtain the `timePeriod` element _s_ of `EOWCS::DatasetSeries` via
+  _DescribeEOCoverageSet_. Check that s is expressed in ISO 8601and that:
+* For each Stitched Mosaics and Datasets the Dataset Series refers to:
+** retrieve the time interval _d_ via _DescribeCoverage_,
+   _DescribeEOCoverageSet_, and _GetCoverage_ operations. Check that all
+   responses contain the same time interval information.
+** Check that _d_ is enclosed by the temporal validities of _s_.
+
+Test passes if all individual tests pass.
+|===

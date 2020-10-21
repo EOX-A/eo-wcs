@@ -1,0 +1,11 @@
+==== eowcs_soap/getEOCoverageSet-wsdl
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_soap/getEOCoverageSet-wsdl
+|Test purpose: |<</req/eowcs_soap/getEOCoverageSet-wsdl>>
+|Test method:
+a|
+For the service under test, retrieve the WSDL description and issue requests
+which make use of this service definition. Check that the service can be
+addressed and that queries can be retrieved properly.
+|===

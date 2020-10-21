@@ -1,0 +1,11 @@
+==== Describe Coverage Response Coverage Subtype
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeCoverage-response-coverageSubtype
+|Test purpose: |<</req/eowcs/describeCoverage-response-coverageSubtype>>
+|Test method:
+a|
+Send a valid _DescribeCoverage_ request to the server under test, check that
+each EO Coverage listed contains the corresponding value in its
+`WCS::CoverageSubtype` element.
+|===

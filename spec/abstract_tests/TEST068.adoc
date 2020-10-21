@@ -1,0 +1,23 @@
+==== DescribeEOCoverageSet Response Containment
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-containment
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-containment>>
+|Test method:
+a|
+Send otherwise valid _DescribeEOCoverageSet_ requests containing a
+`wcs:CoverageDescription` section and a spatial trim to server under test. Check
+that:
+
+* if the request parameter `containment` is of value `overlaps` or is omitted,
+  the response contains only descriptions of those EO Coverages whose spatial
+  footprint defined by its
+  `eop:EarthObservation/om:featureOfInterest/eop:Footprint` overlaps with the
+  spatial request extent;
+* if the request parameter `containment` is of value `contains`, the response
+  contains only descriptions of those EO Coverages whose spatial footprint
+  defined by its `eop:EarthObservation/om:featureOfInterest/eop:Footprint` is
+  completely contained within the spatial request extent.
+
+Pass test if both checks succeed.
+|===

@@ -1,0 +1,10 @@
+[#/req/eowcs_soap/describeEOCoverageSet-response-structure,reftext='Requirement {counter:requirement_id} /req/eowcs_soap/describeEOCoverageSet-response-structure']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_soap/describeEOCoverageSet-response-structure +
+ +
+In the response to a successful _DescribeEOCoverageSet_ request, the SOAP
+`Envelope` *shall* contain exactly one `Body` element which contains a
+`EOWCS::EOCoverageSetDescription` as its single element.
+{set:cellbgcolor:#FFFFFF}
+|===

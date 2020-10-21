@@ -1,0 +1,11 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat +
+ +
+The contents of the response to a successful _GetEOCoverageSet_ request *shall*
+be encoded as specified by the `packageFormat` parameter, if this parameter is
+present in the request, and in the service's default package format as reported
+in the `wcseo:defaultPackageFormat` element of the Capabilities if this
+parameter is not present. {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,11 @@
+[#/req/eowcs/getCapabilities-response-countDefault,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-response-countDefault']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-response-countDefault +
+ +
+If the response to a successful _GetCapabilities_ request contains an
+`ows:Constraint` element in its `ows:OperationsMetadata` element then its name
+attribute *shall* hold a value as defined in <<contraint_values>> and the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
+standard. {set:cellbgcolor:#FFFFFF}
+|===

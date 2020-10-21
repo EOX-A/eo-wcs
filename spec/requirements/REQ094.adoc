@@ -1,0 +1,11 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-cid,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-cid']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-cid +
+ +
+The first part of the response to a successful _GetEOCoverageSet_ request
+containing a `mediaType` parameter with value `multipart/related` *shall*
+reference individual coverages inside the package in the second part of the
+multipart response by appending the filename after a `;` character to the
+`cid`. {set:cellbgcolor:#FFFFFF}
+|===

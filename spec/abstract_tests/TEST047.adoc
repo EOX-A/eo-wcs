@@ -1,0 +1,9 @@
+==== GetCapabilities Response packageFormatSupported
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported
+|Test purpose: |<</req/eowcs_geteocoverageset/getCapabilities-response-packageFormatSupported>>
+|Test method:
+a|
+TODO
+|===

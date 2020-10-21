@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response previous attribute
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getEOCoverageSet-response-previous
+|Test purpose: |<</req/eowcs/getEOCoverageSet-response-previous>>
+|Test method:
+a|
+TODO
+|===

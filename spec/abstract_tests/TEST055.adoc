@@ -1,0 +1,19 @@
+==== GetCoverage Response Lineage in EO Metadata
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCoverage-response-lineage-in-eo-metadata
+|Test purpose: |<</req/eowcs/getCoverage-response-lineage-in-eo-metadata>>
+|Test method:
+a|
+For each EO Coverage offered by the server under test:
+
+* retrieve Lineage component information via _DescribeCoverage_,
+  _DescribeEOCoverageSet_, and _GetCoverage_ operations. Check that all
+  responses contain the same information.
+* Send a valid _GetCoverage_ request to server under test. Check that the
+  Lineage component consists of the Lineage component of the coverage requested
+  with one record appended containing the complete, verbatim _GetCoverage_
+  request leading to this response.
+
+Test passes if all individual tests pass.
+|===

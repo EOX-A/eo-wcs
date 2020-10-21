@@ -1,0 +1,16 @@
+==== Referenceable Stitched Mosaic-structure
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/referenceableStitchedMosaic-structure
+|Test purpose: |<</req/eowcs/referenceableStitchedMosaic-structure>>
+|Test method:
+a|
+For each `EOWCS::ReferenceableStitchedMosaic` offered by the server under test:
+
+* retrieve coverage information via _GetCoverage_ operation.
+* Check that all responses consist of an XML document of type
+  `EOWCS::ReferenceableStitchedMosaic` as described in the references stated by
+  the requirement.
+
+Test passes if all individual tests pass.
+|===

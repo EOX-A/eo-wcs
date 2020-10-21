@@ -1,0 +1,9 @@
+==== DescribeEOCoverageSet Response defaultPackageFormat
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getCapabilities-response-defaultPackageFormat
+|Test purpose: |<</req/eowcs_geteocoverageset/getCapabilities-response-defaultPackageFormat>>
+|Test method:
+a|
+TODO
+|===

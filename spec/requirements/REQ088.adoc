@@ -1,0 +1,9 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-scaling,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-scaling']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-scaling +
+ +
+If a _GetCoverage_ request contains a `Scaling` parameter then this parameter
+*shall* follow the specification given in the WCS Scaling Extension
+[OGC 12-039]. {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,29 @@
+[#wcs_extensions,reftext='8']
+== WCS extensions
+
+=== Overview
+
+Requirements class _eowcs_ normatively depends on the WCS Extension
+specifications listed in this Clause. In other words, any implementation
+claiming to conform to this requirements class must also implement the
+specifications required in this Clause.
+
+=== Band subsetting
+
+include::requirements/REQ114.adoc[]
+
+=== Scaling
+
+include::requirements/REQ115.adoc[]
+
+=== Interpolation
+
+include::requirements/REQ116.adoc[]
+
+=== CRSs
+
+include::requirements/REQ117.adoc[]
+
+=== Coverage format encodings
+
+include::requirements/REQ118.adoc[]

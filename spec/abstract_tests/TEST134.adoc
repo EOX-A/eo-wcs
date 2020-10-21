@@ -1,0 +1,9 @@
+==== eowcs_get-kvp/getEOCoverageSet mediaType
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_get-kvp/getEOCoverageSet-mediaType
+|Test purpose: |<</req/eowcs_get-kvp/getEOCoverageSet-mediaType>>
+|Test method:
+a|
+TODO
+|===

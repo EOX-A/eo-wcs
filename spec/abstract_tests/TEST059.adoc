@@ -1,0 +1,16 @@
+==== DescribeEOCoverageSet Request Containment
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-request-containment
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-request-containment>>
+|Test method:
+a|
+Send otherwise valid _DescribeEOCoverageSet_ requests contain a `containment`
+parameter and this parameter has one of the values:
+
+* "contains"
+* "overlaps"
+* invalid values
+
+Pass test if appropriate valid results or exceptions, resp., are delivered.
+|===

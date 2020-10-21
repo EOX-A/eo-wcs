@@ -1,0 +1,14 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-mediaType,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-mediaType']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-mediaType +
+ +
+The response to a successful _GetEOCoverageSet_ request containing a `mediaType`
+parameter with value `multipart/related` *shall* consist of a
+`wcseo:EOCoverageSet` structure as defined in the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
+standard in its first part. The second part of the multipart response *shall*
+be encoded as specified by
+<</req/eowcs_geteocoverageset/getEOCoverageSet-packageFormat>>.
+{set:cellbgcolor:#FFFFFF}
+|===

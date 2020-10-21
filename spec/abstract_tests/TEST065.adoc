@@ -1,0 +1,16 @@
+==== DescribeEOCoverageSet Response EO Section DatasetSeriesDescriptions
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions
+|Test purpose: |<</req/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions>>
+|Test method:
+a|
+Send otherwise valid _DescribeEOCoverageSet_ requests contain a `sections`
+element and this element contains one of the section parameter values:
+
+* "DatasetSeriesDescriptions"
+* "All"
+* invalid values
+
+Pass test if appropriate valid results or exceptions, resp., are delivered.
+|===

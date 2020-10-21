@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Response eoId
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getEOCoverageSet-response-eoId
+|Test purpose: |<</req/eowcs/getEOCoverageSet-response-eoId>>
+|Test method:
+a|
+TODO
+|===

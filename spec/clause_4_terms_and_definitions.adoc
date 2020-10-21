@@ -1,0 +1,65 @@
+== Terms and Definitions
+
+This document uses the standard terms defined in Subclause 5.3 of [OGC
+06-121r9], which is based on the ISO/IEC Directives, Part 2, Rules for the
+structure and drafting of International Standards. In particular, the word
+"shall" (not "must") is the verb form used to indicate a requirement to be
+strictly followed to conform to this standard.
+
+For the purposes of this document, the following additional terms and
+definitions apply. An arrow "->" indicates that the following term is defined
+in this Clause.
+
+=== Coverage
+
+digital representation of a spatio-temporally varying phenomenon as defined
+in [OGC 09-146r2]
+
+=== Dataset
+
+-> <<EO Coverage>>
+
+NOTE: A Dataset usually represents observations obtained by satellite
+instruments.
+
+=== Dataset Series
+
+collection of -> <<EO Coverage,EO Coverages>>
+
+=== EO Coverage
+
+Rectified Grid -> <<Coverage>> or Referenceable Grid -> <<Coverage>> having an
+-> <<EO Metadata>> record and a WGS84 footprint
+
+=== EO Metadata
+
+-> <<EO Coverage,EO Coverage's>> metadata record
+
+=== Stitched Mosaic
+
+-> <<EO Coverage>> composed from subsets of one or more co-referenced ->
+<<Dataset,Datasets>>
+
+=== EO Product
+
+An EO Product contains one or more related -> <<EO Product>> Datasets plus metadata
+and optionally auxiliary data like -> <<EO Product>> Quicklooks.
+
+=== EO Product Dataset
+
+One or more files each containing one or more -> <<EO Coverage,EO Coverages>>.
+
+=== EO Product Quicklook
+
+A visual representation of a usually reduced -> <<EO Product>> Dataset encoded
+in an image format. The -> <<EO Product>> Dataset may combine different bands.
+
+=== Lineage record
+
+Data structure documenting an operation that has been applied to the ->
+<<Coverage>> of which it is part
+
+=== refers to
+
+contains, in its -> <<EO Metadata>> element as defined in [OGC 10-157r4], the
+-> <<EO Metadata>> element

@@ -1,0 +1,9 @@
+==== GetEOCoverageSet Request CRSs
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss
+|Test purpose: |<</req/eowcs_geteocoverageset/getEOCoverageSet-acceptable-crss>>
+|Test method:
+a|
+TODO
+|===

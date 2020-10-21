@@ -1,0 +1,13 @@
+[#/req/eowcs/getCoverage-response-coverage-type,reftext='Requirement {counter:requirement_id} /req/eowcs/getCoverage-response-coverage-type']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCoverage-response-coverage-type +
+ +
+The response to a successful _GetCoverage_ request +
+- on a Rectified Stitched Mosaic *shall* be of type RectifiedStitchedMosaic, +
+- on a Rectified Dataset *shall* be of type RectifiedDataset, +
+- on a Referenceable Stitched Mosaic *shall* be of type
+  ReferenceableStitchedMosaic, and +
+- on a Referenceable Dataset *shall* be of type ReferenceableDataset.
+{set:cellbgcolor:#FFFFFF}
+|===

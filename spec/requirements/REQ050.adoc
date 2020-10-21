@@ -1,0 +1,8 @@
+[#/req/eowcs/getCoverage-request-no-slicing,reftext='Requirement {counter:requirement_id} /req/eowcs/getCoverage-request-no-slicing']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCoverage-request-no-slicing +
+ +
+A _GetCoverage_ request on EO Coverages *shall* not contain a slicing operation.
+{set:cellbgcolor:#FFFFFF}
+|===

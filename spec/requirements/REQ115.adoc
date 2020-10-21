@@ -1,0 +1,11 @@
+[#/req/eowcs/scaling,reftext='Requirement {counter:requirement_id} /req/eowcs/scaling']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/scaling +
+ +
+Implementations of this EO-WCS *shall* support the OGC® Web Coverage Service
+Interface Standard - Scaling Extension [OGC 12-039]. +
+*Dependency*:
+http://www.opengis.net/spec/WCS_service-extension_scaling/1.0/conf/scaling
+{set:cellbgcolor:#FFFFFF}
+|===

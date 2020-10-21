@@ -1,0 +1,10 @@
+[#/req/eowcs/getCapabilities-response-coverageSummary,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-response-coverageSummary']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-response-coverageSummary +
+ +
+In the response to a successful _GetCapabilities_ request containing an EO
+Coverage in a `WCS::CoverageSummary` section, each coverage identifier listed as
+EO Coverage *shall* refer to an EO Coverage offered by the server.
+{set:cellbgcolor:#FFFFFF}
+|===

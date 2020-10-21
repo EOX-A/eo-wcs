@@ -1,0 +1,14 @@
+==== Dataset Series Structure
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/datasetSeries-structure
+|Test purpose: |<</req/eowcs/datasetSeries-structure>>
+|Test method:
+a|
+For each `EOWCS::DatasetSeries` offered by the server under test:
+
+* Obtain the `EOWCS::DatasetSeries` via _DescribeEOCoverageSet_. Check that all
+  responses consist of an XML document as defined in the places referenced.
+
+Test passes if all individual tests pass.
+|===

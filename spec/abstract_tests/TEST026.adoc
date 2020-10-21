@@ -1,0 +1,18 @@
+==== Nil Values in Stitched Mosaic
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/nil-values-in-stitched-mosaic
+|Test purpose: |<</req/eowcs/nil-values-in-stitched-mosaic>>
+|Test method:
+a|
+For each Stitched Mosaic offered by the server under test:
+
+* Obtain the domain set via _DescribeCoverage_, _DescribeEOCoverageSet_, and
+  _GetCoverage_ operations.
+* Check that all responses contain the same domain set information.
+* Check that if the domain set contains locations which are not inside any
+  contributingFootprint the Stitched Mosaic refers to then the nil value set of
+  that Stitched Mosaic are not empty.
+
+Test passes if all individual tests pass.
+|===

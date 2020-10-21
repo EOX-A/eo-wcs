@@ -1,0 +1,9 @@
+[#/req/eowcs/contributingFootprint-pairwise-disjoint,reftext='Requirement {counter:requirement_id} /req/eowcs/contributingFootprint-pairwise-disjoint']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/contributingFootprint-pairwise-disjoint +
+ +
+For all Stitched Mosaics _sm_ referring to Datasets _d~1~_ and _d~2~_, with an
+associated `contributingFootprint`, the ``contributingFootprint``s of the _d~1~_
+and _d~2~_ references *shall* be pair-wise disjoint. {set:cellbgcolor:#FFFFFF}
+|===

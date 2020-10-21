@@ -1,0 +1,16 @@
+==== EO Metadata
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/eo-metadata-structure
+|Test purpose: |<</req/eowcs/eo-metadata-structure>>
+|Test method:
+a|
+For each EO Coverage offered by the server under test:
+
+* retrieve coverage information via _DescribeCoverage_,
+  _DescribeEOCoverageSet_, and _GetCoverage_ operations.
+* Check that the responses contain a `EOWCS::EOMetadata` corresponding to the
+  definition and that all responses contain the same information.
+
+Test passes if all individual tests pass.
+|===

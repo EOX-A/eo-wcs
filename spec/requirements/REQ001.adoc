@@ -1,0 +1,10 @@
+[#/req/eowcs/eo-metadata-structure,reftext='Requirement {counter:requirement_id} /req/eowcs/eo-metadata-structure']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/eo-metadata-structure +
+ +
+A `EOWCS::EOMetadata` instance *shall* conform to <<eometadata_components>>,
+<<uml_model>>, <<uml_lineage_class>>, and the
+http://schemas.opengis.net/wcs/wcseo/1.1/[XML Schema] being part of this
+standard. {set:cellbgcolor:#FFFFFF}
+|===

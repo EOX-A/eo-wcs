@@ -1,0 +1,19 @@
+==== Dataset Domain Set in Set in Stitched Mosaic Domain Set
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/dataset-domain-set-in-stitched-mosaic-domain-set
+|Test purpose: |<</req/eowcs/dataset-domain-set-in-stitched-mosaic-domain-set>>
+|Test method:
+a|
+For each Stitched Mosaic offered by the server under test:
+
+* Obtain all cells of _s_ as defined by domain set of _s_ via _GetCoverage_
+  operation.
+* For each obtained `dataset` _d_:
+** Obtain all cells of _d_ as defined by domain set of _d_ via _GetCoverage_
+   operation.
+** Check that all cells of _d_ as defined by domain set of _d_ are included in
+   the set of all cells of _s_ as defined by domain set of _s_.
+
+Test passes if all individual tests pass.
+|===

@@ -1,0 +1,9 @@
+[#/req/eowcs/describeEOCoverageSet-response-bound-omitted,reftext='Requirement {counter:requirement_id} /req/eowcs/describeEOCoverageSet-response-bound-omitted']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/describeEOCoverageSet-response-bound-omitted +
+ +
+In a _DescribeEOCoverageSet_ request, a lower or upper bound omitted *shall* be
+interpreted as indicating the actual lower or upper bound of the objects
+requested in the axis omitted. {set:cellbgcolor:#FFFFFF}
+|===

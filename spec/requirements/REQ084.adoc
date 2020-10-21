@@ -1,0 +1,9 @@
+[#/req/eowcs_geteocoverageset/getEOCoverageSet-request-crs,reftext='Requirement {counter:requirement_id} /req/eowcs_geteocoverageset/getEOCoverageSet-request-crs']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_geteocoverageset/getEOCoverageSet-request-crs +
+ +
+A _GetEOCoverageSet_ request *shall* use WGS84 <<b4>> as spatial and
+ISO 8601 <<b2>> as temporal CRS for the coordinates in trim requests if no
+`subsettingCrs` element is present. {set:cellbgcolor:#FFFFFF}
+|===

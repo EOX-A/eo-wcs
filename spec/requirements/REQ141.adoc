@@ -1,0 +1,9 @@
+[#/req/eowcs_soap/describeEOCoverageSet-request-structure,reftext='Requirement {counter:requirement_id} /req/eowcs_soap/describeEOCoverageSet-request-structure']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs_soap/describeEOCoverageSet-request-structure +
+ +
+A _DescribeEOCoverageSet_ request *shall* contain exactly one `Body` element
+containing exactly one `DescribeEOCoverageSet` element.
+{set:cellbgcolor:#FFFFFF}
+|===

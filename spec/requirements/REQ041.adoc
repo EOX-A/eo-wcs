@@ -1,0 +1,10 @@
+[#/req/eowcs/getCapabilities-response-datasetSeriesSummary-section,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-response-datasetSeriesSummary-section']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-response-datasetSeriesSummary-section +
+ +
+If a _GetCapabilities_ request contains a `sections` parameter then a successful
+response *shall* contain `wcseo:DatasetSeriesSummary` elements if and only if
+the section parameter list contains one of the values "DatasetSeriesSummary",
+"Contents", or "All". {set:cellbgcolor:#FFFFFF}
+|===

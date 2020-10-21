@@ -1,0 +1,19 @@
+==== eowcs_soap/getEOCoverageSet Request Structure
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_soap/getEOCoverageSet-request-structure
+|Test purpose: |<</req/eowcs_soap/getEOCoverageSet-request-structure>>
+|Test method:
+a|
+Send otherwise valid soap _GetEOCoverageSet_ requests containing:
+
+* exactly one Body element containing exactly one GetEOCoverageSet
+  element;
+* exactly one Body element containing more than one GetEOCoverageSet
+  element;
+* exactly one Body element containing no GetEOCoverageSet element;
+* more than one Body element;
+* without a Body element;
+
+Pass test if appropriate valid results or exceptions, resp., are delivered.
+|===

@@ -1,0 +1,19 @@
+==== Datasets in Rectified Stitched Mosaic Same Offset Vector
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/datasets-in-rectifiedStitcheMosaic-same-offsetVector
+|Test purpose: |<</req/eowcs/datasets-in-rectifiedStitcheMosaic-same-offsetVector>>
+|Test method:
+a|
+For each Rectified Stitched Mosaic offered by the server under test:
+
+* For each obtained `dataset` _d_:
+** retrieve coverage information via _DescribeCoverage_,
+   _DescribeEOCoverageSet_, and _GetCoverage_ operations.
+** Check that all responses contain the same `gml:offsetVector` information in
+   their domain sets.
+* Check that all Datasets have identical values in the `gml:offsetVector`
+  elements of their domain sets.
+
+Test passes if all individual tests pass.
+|===

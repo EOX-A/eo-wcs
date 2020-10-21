@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.opengis.net/wcs/wcseo/1.1"
+    xmlns:wcseo="http://www.opengis.net/wcs/wcseo/1.1"
+    xmlns:wcs="http://www.opengis.net/wcs/2.0"
+    xmlns:ows="http://www.opengis.net/ows/2.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0"
+    xmlns:eop="http://www.opengis.net/eop/2.1"
+    xmlns:scal="http://www.opengis.net/WCS_service-extension_scaling/1.0"
+    xmlns:int="http://www.opengis.net/WCS_service-extension_interpolation/1.0"
+    xmlns:crs="http://www.opengis.net/wcs/crs/1.0"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+    <annotation>
+        <appinfo>wcsEOGetCoverageSet.xsd</appinfo>
+        <documentation>This XML Schema Document defines the GetEOCoverageSet operation request and response XML elements and types, used by the OGC Web Coverage Service (WCS) Earth Observation Application Profile (EO-WCS).
+            The OGC Web Coverage Service (WCS) Earth Observation Application Profile (EO-WCS) is an OGC Standard.
+            Last updated: 2016-may-11
+            Copyright (c) 2016 Open Geospatial Consortium. All Rights Reserved.
+            To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
+        </documentation>
+    </annotation>
+
+    <!-- =========================================================== -->
+    <!-- includes and imports                                        -->
+    <!-- =========================================================== -->
+    <import namespace="http://www.opengis.net/ows/2.0" schemaLocation="http://schemas.opengis.net/ows/2.0/owsAll.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.opengis.net/gmlcov/1.0" schemaLocation="http://schemas.opengis.net/gmlcov/1.0/gmlcovAll.xsd"/>
+    <import namespace="http://www.opengis.net/wcs/2.0" schemaLocation="http://schemas.opengis.net/wcs/2.0/wcsAll.xsd"/>
+    <import namespace="http://www.opengis.net/eop/2.1" schemaLocation="http://schemas.opengis.net/eompom/1.1/xsd/eop.xsd"/>
+    <import namespace="http://www.opengis.net/WCS_service-extension_scaling/1.0" schemaLocation="http://schemas.opengis.net/wcs/scaling/1.0/wcsScal.xsd"/>
+<!--    <import namespace="http://www.opengis.net/wcs/scaling/1.0" schemaLocation="http://schemas.opengis.net/wcs/scaling/1.0/wcsScal.xsd"/>-->
+    <import namespace="http://www.opengis.net/WCS_service-extension_interpolation/1.0" schemaLocation="http://schemas.opengis.net/wcs/interpolation/1.0/wcsInt.xsd"/>
+<!--    <import namespace="http://www.opengis.net/wcs/interpolation/1.0" schemaLocation="http://schemas.opengis.net/wcs/interpolation/1.0/wcsInt.xsd"/>-->
+    <import namespace="http://www.opengis.net/wcs/crs/1.0" schemaLocation="http://schemas.opengis.net/wcs/crs/1.0/wcsCrs.xsd"/>
+    <include schemaLocation="wcsEOAll.xsd"/>
+
+    <!-- =========================================================== -->
+    <!-- elements and types                                          -->
+    <!-- =========================================================== -->
+    <element name="GetEOCoverageSet" type="wcseo:GetEOCoverageSetType">
+        <annotation>
+            <documentation>Request to a WCS to perform the DescribeCoverage operation. This operation allows a client to retrieve descriptions of one or more coverages. In this XML encoding, no "request" parameter is included, since the element name specifies the specific operation. </documentation>
+        </annotation>
+    </element>
+    <complexType name="GetEOCoverageSetType">
+        <complexContent>
+            <extension base="wcs:RequestBaseType">
+                <sequence>
+                    <element ref="wcseo:eoId" maxOccurs="unbounded"/>
+                    <element ref="wcseo:containment" minOccurs="0"/>
+                    <element ref="wcs:DimensionTrim" minOccurs="0" maxOccurs="3"/>
+                    <element name="packageFormat" type="anyURI" minOccurs="0">
+                        <annotation>
+                            <documentation>MimeType of the format the resulting set of coverages shall be packaged in. Default is specified in GetCapabilities response. Type is anyURI because of the type of the element "mimeType" in "gml:FileType".</documentation>
+                        </annotation>
+                    </element>
+                    <element name="mediaType" type="anyURI" minOccurs="0">
+                        <annotation>
+                            <documentation>Optional element indicating the MimeType of the response of a GetEOCoverageSet request. Only allowed valued is "multipart/related".</documentation>
+                        </annotation>
+                    </element>
+                    <element name="format" type="anyURI" minOccurs="0"/>
+                    <element name="applySubset" type="boolean" minOccurs="0"/>
+                    <element ref="scal:Scaling" minOccurs="0"/>
+                    <element ref="int:Interpolation" minOccurs="0"/>
+                    <element ref="crs:subsettingCrs" minOccurs="0"/>
+                    <element ref="crs:outputCrs" minOccurs="0"/>
+                </sequence>
+                <attribute name="count" type="nonNegativeInteger"/>
+                <attribute name="startIndex" type="nonNegativeInteger" default="0"/>
+            </extension>
+        </complexContent>
+    </complexType>
+    <!-- =========================================================== -->
+    <element name="EOCoverageSet" type="wcseo:EOCoverageSetType">
+        <annotation>
+            <documentation>Response from an EO-WCS GetEOCoverageSet operation, containing wcseo:RectifiedDataset, wcseo:ReferenceableDataset, wcseo:RectifiedStitchedMosaic, wcseo:ReferenceableStitchedMosaic, and wcseo:DatasetSeries elements.</documentation>
+        </annotation>
+    </element>
+    <complexType name="EOCoverageSetType">
+        <sequence>
+            <element ref="wcseo:RectifiedDataset" minOccurs="0" maxOccurs="unbounded"/>
+            <element ref="wcseo:ReferenceableDataset" minOccurs="0" maxOccurs="unbounded"/>
+            <element ref="wcseo:RectifiedStitchedMosaic" minOccurs="0" maxOccurs="unbounded"/>
+            <element ref="wcseo:ReferenceableStitchedMosaic" minOccurs="0" maxOccurs="unbounded"/>
+            <element ref="wcseo:DatasetSeries" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="numberMatched" type="nonNegativeInteger" use="required"/>
+        <attribute name="numberReturned" type="nonNegativeInteger" use="required"/>
+        <attribute name="startIndex" type="nonNegativeInteger" default="0"/>
+        <attribute name="next" type="anyURI"/>
+        <attribute name="previous" type="anyURI"/>
+    </complexType>
+</schema>

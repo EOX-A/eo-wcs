@@ -1,0 +1,24 @@
+==== Composed-of in Stitched mosaic
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/composedOf-in-stitched-mosaic
+|Test purpose: |<</req/eowcs/composedOf-in-stitched-mosaic>>
+|Test method:
+a|
+For each `EOWCS::RectifiedStitchedMosaic` and `EOWCS::RectifiedStitchedMosaic`
+offered by the server under test:
+
+* Obtain the set of `dataset` identifiers contained in
+  `eop:EarthObservation/eop:metaDataProperty/eop:EarthObservationMetaData/eop:composedOf`
+   via _DescribeCoverage_, _DescribeEOCoverageSet_, and _GetCoverage_
+   operations.
+* Check that all responses contain the same identifier information.
+* Obtain the contained set of dataset identifiers of the Stitched Mosaic. Check
+  that all responses contain the same identifier information.
+* If the `eop:composedOf` element is present then check that the contained set
+  of `dataset` identifiers in
+  `eop:EarthObservation/eop:metaDataProperty/eop:EarthObservationMetaData/eop:composedOf`
+  is equal to the set of `dataset` identifiers of the Stitched Mosaic.
+
+Test passes if all individual tests pass.
+|===

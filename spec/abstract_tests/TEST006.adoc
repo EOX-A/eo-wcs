@@ -1,0 +1,18 @@
+==== Footprint inside BoundedBy
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/footprint-inside-boundedBy
+|Test purpose: |<</req/eowcs/footprint-inside-boundedBy>>
+|Test method:
+a|
+For each EO Coverage offered by the server under test:
+
+* retrieve coverage information via _DescribeCoverage_, _DescribeEOCoverageSet_,
+  and _GetCoverage_ operations.
+* Check that all polygons listed in
+  `eop:EarthObservation/om:featureOfInterest/eop:Footprint` element are
+  contained in the bounding box of the `gml:boundedBy` element of the
+  `gml:Envelope`.
+
+Test passes if all individual tests pass.
+|===

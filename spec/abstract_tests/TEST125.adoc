@@ -1,0 +1,9 @@
+==== eowcs_get-kvp/describeEOCoverageSet count
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs_get-kvp/describeEOCoverageSet-count
+|Test purpose: |<</req/eowcs_get-kvp/describeEOCoverageSet-count>>
+|Test method:
+a|
+TODO
+|===

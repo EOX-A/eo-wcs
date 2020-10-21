@@ -1,0 +1,9 @@
+[#/req/eowcs/referenceableStitchedMosaic-domain-set,reftext='Requirement {counter:requirement_id} /req/eowcs/referenceableStitchedMosaic-domain-set']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/referenceableStitchedMosaic-domain-set +
+ +
+For any pair _d~1~_ and _d~2~_ of Datasets referred to by a given Stitched
+Mosaic, the set of point locations in the geographic overlap of the _d~1~_ and
+_d~2~_ domain set *shall* be identical. {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,11 @@
+[#/req/eowcs/getCapabilities-response-conformance-class-in-profile,reftext='Requirement {counter:requirement_id} /req/eowcs/getCapabilities-response-conformance-class-in-profile']
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:requirement_id}* {set:cellbgcolor:#CACCCE}|/req/eowcs/getCapabilities-response-conformance-class-in-profile +
+ +
+A WCS service implementing this extension *shall* include the following URI in a
+`Profile` element in the `ServiceIdentification` in a _GetCapabilities_
+response:
+`http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.1/conf/eowcs`
+{set:cellbgcolor:#FFFFFF}
+|===

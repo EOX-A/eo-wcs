@@ -1,0 +1,23 @@
+==== Rectified Stitched Mosaic OffsetVector
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/rectifiedStitchedMosaic-offsetVector
+|Test purpose: |<</req/eowcs/rectifiedStitchedMosaic-offsetVector>>
+|Test method:
+a|
+For each Rectified Stitched Mosaic offered by the server under test:
+
+* retrieve the value of the `gml:offsetVector` elements of the domain set via
+  _DescribeCoverage_, _DescribeEOCoverageSet_, and _GetCoverage_ operations.
+* Check that all responses contain the same `offsetVector` information.
+* For each obtained `dataset` _d_:
+** retrieve coverage information via _DescribeCoverage_,
+   _DescribeEOCoverageSet_, and _GetCoverage_ operations.
+** Check that all responses contain the same `gml:offsetVector` information in
+   their domain sets.
+* Check that both the Rectified Stitched Mosaic and the Datasets the Rectified
+  Stitched Mosaic refers to have identical values in the `gml:offsetVector`
+  elements of their domain sets.
+
+Test passes if all individual tests pass.
+|===

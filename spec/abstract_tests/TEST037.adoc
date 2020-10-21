@@ -1,0 +1,13 @@
+==== GetCapabilities Response DatasetSeriesSummary
+[cols=">20h,<80d",width="100%"]
+|===
+|Test id: |/conf/eowcs/getCapabilities-response-datasetSeriesSummary
+|Test purpose: |<</req/eowcs/getCapabilities-response-datasetSeriesSummary>>
+|Test method:
+a|
+Send a valid _GetCapabilities_ request to the service under test. If a
+`EOWCS::DatasetSeriesSummary` section is contained in the response then send,
+for each `DatasetSeriesId`, a valid _DescribeEOCoverageSet_ request. Check that
+none of these requests results in an exception. Test passes if all checks are
+successful.
+|===
